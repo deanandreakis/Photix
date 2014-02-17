@@ -1,1091 +1,615 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>22EA2F45EE8F4BFE9D9AE4DF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EF75F98384E448F887006AB5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>31CAA7E591C940559339E88B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>401F71447EDE497DABE6D499</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Pods.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>AA2204BE68BD49A1BEF1E3BC</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Pods-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>C1DBBCD418A6BFEF007BF4CE</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C1DBBCE818A6BFEF007BF4CE</string>
-				<string>C1DBBD0518A6BFEF007BF4CE</string>
-				<string>C1DBBCDF18A6BFEF007BF4CE</string>
-				<string>C1DBBCDE18A6BFEF007BF4CE</string>
-				<string>401F71447EDE497DABE6D499</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C1DBBCD518A6BFEF007BF4CE</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>CLASSPREFIX</key>
-				<string>DNW</string>
-				<key>LastUpgradeCheck</key>
-				<string>0500</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>deanware</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>C1DBBCFC18A6BFEF007BF4CE</key>
-					<dict>
-						<key>TestTargetID</key>
-						<string>C1DBBCDC18A6BFEF007BF4CE</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>C1DBBCD818A6BFEF007BF4CE</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>C1DBBCD418A6BFEF007BF4CE</string>
-			<key>productRefGroup</key>
-			<string>C1DBBCDE18A6BFEF007BF4CE</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>C1DBBCDC18A6BFEF007BF4CE</string>
-				<string>C1DBBCFC18A6BFEF007BF4CE</string>
-			</array>
-		</dict>
-		<key>C1DBBCD818A6BFEF007BF4CE</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>C1DBBD0D18A6BFEF007BF4CE</string>
-				<string>C1DBBD0E18A6BFEF007BF4CE</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>C1DBBCD918A6BFEF007BF4CE</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>C1DBBCF618A6BFEF007BF4CE</string>
-				<string>C1DBBCF318A6BFEF007BF4CE</string>
-				<string>C1DBBCEF18A6BFEF007BF4CE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C1DBBCDA18A6BFEF007BF4CE</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>C1DBBCE318A6BFEF007BF4CE</string>
-				<string>C1DBBCE718A6BFEF007BF4CE</string>
-				<string>C1DBBCE518A6BFEF007BF4CE</string>
-				<string>C1DBBCE118A6BFEF007BF4CE</string>
-				<string>22EA2F45EE8F4BFE9D9AE4DF</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C1DBBCDB18A6BFEF007BF4CE</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>C1DBBCED18A6BFEF007BF4CE</string>
-				<string>C1DBBCF818A6BFEF007BF4CE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C1DBBCDC18A6BFEF007BF4CE</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>C1DBBD0F18A6BFEF007BF4CE</string>
-			<key>buildPhases</key>
-			<array>
-				<string>31CAA7E591C940559339E88B</string>
-				<string>C1DBBCD918A6BFEF007BF4CE</string>
-				<string>C1DBBCDA18A6BFEF007BF4CE</string>
-				<string>C1DBBCDB18A6BFEF007BF4CE</string>
-				<string>AA2204BE68BD49A1BEF1E3BC</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Photix</string>
-			<key>productName</key>
-			<string>Photix</string>
-			<key>productReference</key>
-			<string>C1DBBCDD18A6BFEF007BF4CE</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>C1DBBCDD18A6BFEF007BF4CE</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Photix.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>C1DBBCDE18A6BFEF007BF4CE</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C1DBBCDD18A6BFEF007BF4CE</string>
-				<string>C1DBBCFD18A6BFEF007BF4CE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C1DBBCDF18A6BFEF007BF4CE</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C1DBBCE018A6BFEF007BF4CE</string>
-				<string>C1DBBCE218A6BFEF007BF4CE</string>
-				<string>C1DBBCE418A6BFEF007BF4CE</string>
-				<string>C1DBBCE618A6BFEF007BF4CE</string>
-				<string>C1DBBCFE18A6BFEF007BF4CE</string>
-				<string>EF75F98384E448F887006AB5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C1DBBCE018A6BFEF007BF4CE</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>C1DBBCE118A6BFEF007BF4CE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C1DBBCE018A6BFEF007BF4CE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C1DBBCE218A6BFEF007BF4CE</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CoreGraphics.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/CoreGraphics.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>C1DBBCE318A6BFEF007BF4CE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C1DBBCE218A6BFEF007BF4CE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C1DBBCE418A6BFEF007BF4CE</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>UIKit.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/UIKit.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>C1DBBCE518A6BFEF007BF4CE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C1DBBCE418A6BFEF007BF4CE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C1DBBCE618A6BFEF007BF4CE</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CoreData.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/CoreData.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>C1DBBCE718A6BFEF007BF4CE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C1DBBCE618A6BFEF007BF4CE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C1DBBCE818A6BFEF007BF4CE</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C1DBBCF118A6BFEF007BF4CE</string>
-				<string>C1DBBCF218A6BFEF007BF4CE</string>
-				<string>C1DBBCF718A6BFEF007BF4CE</string>
-				<string>C1DBBCF418A6BFEF007BF4CE</string>
-				<string>C1DBBCE918A6BFEF007BF4CE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Photix</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C1DBBCE918A6BFEF007BF4CE</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C1DBBCEA18A6BFEF007BF4CE</string>
-				<string>C1DBBCEB18A6BFEF007BF4CE</string>
-				<string>C1DBBCEE18A6BFEF007BF4CE</string>
-				<string>C1DBBCF018A6BFEF007BF4CE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C1DBBCEA18A6BFEF007BF4CE</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Photix-Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C1DBBCEB18A6BFEF007BF4CE</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C1DBBCEC18A6BFEF007BF4CE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C1DBBCEC18A6BFEF007BF4CE</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.strings</string>
-			<key>name</key>
-			<string>en</string>
-			<key>path</key>
-			<string>en.lproj/InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C1DBBCED18A6BFEF007BF4CE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C1DBBCEB18A6BFEF007BF4CE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C1DBBCEE18A6BFEF007BF4CE</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>main.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C1DBBCEF18A6BFEF007BF4CE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C1DBBCEE18A6BFEF007BF4CE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C1DBBCF018A6BFEF007BF4CE</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Photix-Prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C1DBBCF118A6BFEF007BF4CE</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>DNWAppDelegate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C1DBBCF218A6BFEF007BF4CE</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>DNWAppDelegate.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C1DBBCF318A6BFEF007BF4CE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C1DBBCF218A6BFEF007BF4CE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C1DBBCF418A6BFEF007BF4CE</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C1DBBCF518A6BFEF007BF4CE</string>
-			</array>
-			<key>currentVersion</key>
-			<string>C1DBBCF518A6BFEF007BF4CE</string>
-			<key>isa</key>
-			<string>XCVersionGroup</string>
-			<key>path</key>
-			<string>Photix.xcdatamodeld</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-			<key>versionGroupType</key>
-			<string>wrapper.xcdatamodel</string>
-		</dict>
-		<key>C1DBBCF518A6BFEF007BF4CE</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.xcdatamodel</string>
-			<key>path</key>
-			<string>Photix.xcdatamodel</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C1DBBCF618A6BFEF007BF4CE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C1DBBCF418A6BFEF007BF4CE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C1DBBCF718A6BFEF007BF4CE</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Images.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C1DBBCF818A6BFEF007BF4CE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C1DBBCF718A6BFEF007BF4CE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C1DBBCF918A6BFEF007BF4CE</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>C1DBBD0C18A6BFEF007BF4CE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C1DBBCFA18A6BFEF007BF4CE</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>C1DBBCFF18A6BFEF007BF4CE</string>
-				<string>C1DBBD0218A6BFEF007BF4CE</string>
-				<string>C1DBBD0118A6BFEF007BF4CE</string>
-				<string>C1DBBD0018A6BFEF007BF4CE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C1DBBCFB18A6BFEF007BF4CE</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>C1DBBD0A18A6BFEF007BF4CE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C1DBBCFC18A6BFEF007BF4CE</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>C1DBBD1218A6BFEF007BF4CE</string>
-			<key>buildPhases</key>
-			<array>
-				<string>C1DBBCF918A6BFEF007BF4CE</string>
-				<string>C1DBBCFA18A6BFEF007BF4CE</string>
-				<string>C1DBBCFB18A6BFEF007BF4CE</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>C1DBBD0418A6BFEF007BF4CE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>PhotixTests</string>
-			<key>productName</key>
-			<string>PhotixTests</string>
-			<key>productReference</key>
-			<string>C1DBBCFD18A6BFEF007BF4CE</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>C1DBBCFD18A6BFEF007BF4CE</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>PhotixTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>C1DBBCFE18A6BFEF007BF4CE</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>XCTest.framework</string>
-			<key>path</key>
-			<string>Library/Frameworks/XCTest.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>C1DBBCFF18A6BFEF007BF4CE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C1DBBCFE18A6BFEF007BF4CE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C1DBBD0018A6BFEF007BF4CE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C1DBBCE018A6BFEF007BF4CE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C1DBBD0118A6BFEF007BF4CE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C1DBBCE418A6BFEF007BF4CE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C1DBBD0218A6BFEF007BF4CE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C1DBBCE618A6BFEF007BF4CE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C1DBBD0318A6BFEF007BF4CE</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>C1DBBCD518A6BFEF007BF4CE</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>C1DBBCDC18A6BFEF007BF4CE</string>
-			<key>remoteInfo</key>
-			<string>Photix</string>
-		</dict>
-		<key>C1DBBD0418A6BFEF007BF4CE</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>C1DBBCDC18A6BFEF007BF4CE</string>
-			<key>targetProxy</key>
-			<string>C1DBBD0318A6BFEF007BF4CE</string>
-		</dict>
-		<key>C1DBBD0518A6BFEF007BF4CE</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C1DBBD0B18A6BFEF007BF4CE</string>
-				<string>C1DBBD0618A6BFEF007BF4CE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>PhotixTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C1DBBD0618A6BFEF007BF4CE</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C1DBBD0718A6BFEF007BF4CE</string>
-				<string>C1DBBD0818A6BFEF007BF4CE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C1DBBD0718A6BFEF007BF4CE</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>PhotixTests-Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C1DBBD0818A6BFEF007BF4CE</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C1DBBD0918A6BFEF007BF4CE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C1DBBD0918A6BFEF007BF4CE</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.strings</string>
-			<key>name</key>
-			<string>en</string>
-			<key>path</key>
-			<string>en.lproj/InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C1DBBD0A18A6BFEF007BF4CE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C1DBBD0818A6BFEF007BF4CE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C1DBBD0B18A6BFEF007BF4CE</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>PhotixTests.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C1DBBD0C18A6BFEF007BF4CE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C1DBBD0B18A6BFEF007BF4CE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C1DBBD0D18A6BFEF007BF4CE</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>ARCHS</key>
-				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.0</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>C1DBBD0E18A6BFEF007BF4CE</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>ARCHS</key>
-				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.0</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>C1DBBD0F18A6BFEF007BF4CE</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>C1DBBD1018A6BFEF007BF4CE</string>
-				<string>C1DBBD1118A6BFEF007BF4CE</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>C1DBBD1018A6BFEF007BF4CE</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>401F71447EDE497DABE6D499</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
-				<string>LaunchImage</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Photix/Photix-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Photix/Photix-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>app</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>C1DBBD1118A6BFEF007BF4CE</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>401F71447EDE497DABE6D499</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
-				<string>LaunchImage</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Photix/Photix-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Photix/Photix-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>app</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>C1DBBD1218A6BFEF007BF4CE</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>C1DBBD1318A6BFEF007BF4CE</string>
-				<string>C1DBBD1418A6BFEF007BF4CE</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>C1DBBD1318A6BFEF007BF4CE</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ARCHS</key>
-				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
-				<key>BUNDLE_LOADER</key>
-				<string>$(BUILT_PRODUCTS_DIR)/Photix.app/Photix</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
-				</array>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Photix/Photix-Prefix.pch</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>PhotixTests/PhotixTests-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUNDLE_LOADER)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>xctest</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>C1DBBD1418A6BFEF007BF4CE</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ARCHS</key>
-				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
-				<key>BUNDLE_LOADER</key>
-				<string>$(BUILT_PRODUCTS_DIR)/Photix.app/Photix</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
-				</array>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Photix/Photix-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>PhotixTests/PhotixTests-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUNDLE_LOADER)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>xctest</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>EF75F98384E448F887006AB5</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>C1DBBCD518A6BFEF007BF4CE</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		22EA2F45EE8F4BFE9D9AE4DF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF75F98384E448F887006AB5 /* libPods.a */; };
+		C1BAFD2A18B14B4E0078C88D /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BAFD2918B14B4E0078C88D /* DatabaseManager.m */; };
+		C1BAFD3118B158570078C88D /* UIImage+normalizedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BAFD3018B158570078C88D /* UIImage+normalizedImage.m */; };
+		C1BAFD3718B15D720078C88D /* DNWPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BAFD3618B15D720078C88D /* DNWPictureViewController.m */; };
+		C1DBBCE118A6BFEF007BF4CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1DBBCE018A6BFEF007BF4CE /* Foundation.framework */; };
+		C1DBBCE318A6BFEF007BF4CE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1DBBCE218A6BFEF007BF4CE /* CoreGraphics.framework */; };
+		C1DBBCE518A6BFEF007BF4CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1DBBCE418A6BFEF007BF4CE /* UIKit.framework */; };
+		C1DBBCE718A6BFEF007BF4CE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1DBBCE618A6BFEF007BF4CE /* CoreData.framework */; };
+		C1DBBCED18A6BFEF007BF4CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C1DBBCEB18A6BFEF007BF4CE /* InfoPlist.strings */; };
+		C1DBBCEF18A6BFEF007BF4CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C1DBBCEE18A6BFEF007BF4CE /* main.m */; };
+		C1DBBCF318A6BFEF007BF4CE /* DNWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C1DBBCF218A6BFEF007BF4CE /* DNWAppDelegate.m */; };
+		C1DBBCF618A6BFEF007BF4CE /* Photix.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C1DBBCF418A6BFEF007BF4CE /* Photix.xcdatamodeld */; };
+		C1DBBCF818A6BFEF007BF4CE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1DBBCF718A6BFEF007BF4CE /* Images.xcassets */; };
+		C1DBBCFF18A6BFEF007BF4CE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1DBBCFE18A6BFEF007BF4CE /* XCTest.framework */; };
+		C1DBBD0018A6BFEF007BF4CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1DBBCE018A6BFEF007BF4CE /* Foundation.framework */; };
+		C1DBBD0118A6BFEF007BF4CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1DBBCE418A6BFEF007BF4CE /* UIKit.framework */; };
+		C1DBBD0218A6BFEF007BF4CE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1DBBCE618A6BFEF007BF4CE /* CoreData.framework */; };
+		C1DBBD0A18A6BFEF007BF4CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C1DBBD0818A6BFEF007BF4CE /* InfoPlist.strings */; };
+		C1DBBD0C18A6BFEF007BF4CE /* PhotixTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C1DBBD0B18A6BFEF007BF4CE /* PhotixTests.m */; };
+		C1DBBD1618A70940007BF4CE /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1DBBD1518A70940007BF4CE /* MainStoryboard.storyboard */; };
+		C1DBBD1818A70A2C007BF4CE /* MainStoryboardiPhone5.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1DBBD1718A70A2C007BF4CE /* MainStoryboardiPhone5.storyboard */; };
+		C1DBBD1C18A7186E007BF4CE /* DNWMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1DBBD1B18A7186E007BF4CE /* DNWMainViewController.m */; };
+		C1DBBD1D18A7186E007BF4CE /* DNWMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1DBBD1B18A7186E007BF4CE /* DNWMainViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C1DBBD0318A6BFEF007BF4CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1DBBCD518A6BFEF007BF4CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1DBBCDC18A6BFEF007BF4CE;
+			remoteInfo = Photix;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		401F71447EDE497DABE6D499 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		C1BAFD2718B14B2A0078C88D /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
+		C1BAFD2818B14B410078C88D /* DatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseManager.h; sourceTree = "<group>"; };
+		C1BAFD2918B14B4E0078C88D /* DatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseManager.m; sourceTree = "<group>"; };
+		C1BAFD2E18B14D130078C88D /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		C1BAFD2F18B1584D0078C88D /* UIImage+normalizedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+normalizedImage.h"; sourceTree = "<group>"; };
+		C1BAFD3018B158570078C88D /* UIImage+normalizedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+normalizedImage.m"; sourceTree = "<group>"; };
+		C1BAFD3518B15D720078C88D /* DNWPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNWPictureViewController.h; sourceTree = "<group>"; };
+		C1BAFD3618B15D720078C88D /* DNWPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNWPictureViewController.m; sourceTree = "<group>"; };
+		C1DBBCDD18A6BFEF007BF4CE /* Photix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photix.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1DBBCE018A6BFEF007BF4CE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C1DBBCE218A6BFEF007BF4CE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C1DBBCE418A6BFEF007BF4CE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C1DBBCE618A6BFEF007BF4CE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		C1DBBCEA18A6BFEF007BF4CE /* Photix-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Photix-Info.plist"; sourceTree = "<group>"; };
+		C1DBBCEC18A6BFEF007BF4CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C1DBBCEE18A6BFEF007BF4CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C1DBBCF018A6BFEF007BF4CE /* Photix-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Photix-Prefix.pch"; sourceTree = "<group>"; };
+		C1DBBCF118A6BFEF007BF4CE /* DNWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNWAppDelegate.h; sourceTree = "<group>"; };
+		C1DBBCF218A6BFEF007BF4CE /* DNWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DNWAppDelegate.m; sourceTree = "<group>"; };
+		C1DBBCF518A6BFEF007BF4CE /* Photix.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photix.xcdatamodel; sourceTree = "<group>"; };
+		C1DBBCF718A6BFEF007BF4CE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C1DBBCFD18A6BFEF007BF4CE /* PhotixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotixTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1DBBCFE18A6BFEF007BF4CE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C1DBBD0718A6BFEF007BF4CE /* PhotixTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PhotixTests-Info.plist"; sourceTree = "<group>"; };
+		C1DBBD0918A6BFEF007BF4CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C1DBBD0B18A6BFEF007BF4CE /* PhotixTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotixTests.m; sourceTree = "<group>"; };
+		C1DBBD1518A70940007BF4CE /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		C1DBBD1718A70A2C007BF4CE /* MainStoryboardiPhone5.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboardiPhone5.storyboard; sourceTree = "<group>"; };
+		C1DBBD1A18A7186E007BF4CE /* DNWMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNWMainViewController.h; sourceTree = "<group>"; };
+		C1DBBD1B18A7186E007BF4CE /* DNWMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNWMainViewController.m; sourceTree = "<group>"; };
+		EF75F98384E448F887006AB5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C1DBBCDA18A6BFEF007BF4CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1DBBCE318A6BFEF007BF4CE /* CoreGraphics.framework in Frameworks */,
+				C1DBBCE718A6BFEF007BF4CE /* CoreData.framework in Frameworks */,
+				C1DBBCE518A6BFEF007BF4CE /* UIKit.framework in Frameworks */,
+				C1DBBCE118A6BFEF007BF4CE /* Foundation.framework in Frameworks */,
+				22EA2F45EE8F4BFE9D9AE4DF /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1DBBCFA18A6BFEF007BF4CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1DBBCFF18A6BFEF007BF4CE /* XCTest.framework in Frameworks */,
+				C1DBBD0218A6BFEF007BF4CE /* CoreData.framework in Frameworks */,
+				C1DBBD0118A6BFEF007BF4CE /* UIKit.framework in Frameworks */,
+				C1DBBD0018A6BFEF007BF4CE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C1BAFD2518B14AF10078C88D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C1BAFD2918B14B4E0078C88D /* DatabaseManager.m */,
+				C1BAFD2818B14B410078C88D /* DatabaseManager.h */,
+				C1DBBCF418A6BFEF007BF4CE /* Photix.xcdatamodeld */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C1BAFD2618B14B040078C88D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				C1BAFD2F18B1584D0078C88D /* UIImage+normalizedImage.h */,
+				C1BAFD3018B158570078C88D /* UIImage+normalizedImage.m */,
+				C1BAFD2E18B14D130078C88D /* Constants.h */,
+				C1BAFD2718B14B2A0078C88D /* SynthesizeSingleton.h */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		C1BAFD2B18B14B600078C88D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C1DBBD1718A70A2C007BF4CE /* MainStoryboardiPhone5.storyboard */,
+				C1DBBD1518A70940007BF4CE /* MainStoryboard.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		C1BAFD2C18B14B8D0078C88D /* Application Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				C1DBBCF218A6BFEF007BF4CE /* DNWAppDelegate.m */,
+				C1DBBCF118A6BFEF007BF4CE /* DNWAppDelegate.h */,
+			);
+			name = "Application Delegate";
+			sourceTree = "<group>";
+		};
+		C1BAFD2D18B14BA20078C88D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C1DBBCF718A6BFEF007BF4CE /* Images.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C1DBBCD418A6BFEF007BF4CE = {
+			isa = PBXGroup;
+			children = (
+				C1DBBCE818A6BFEF007BF4CE /* Photix */,
+				C1DBBD0518A6BFEF007BF4CE /* PhotixTests */,
+				C1DBBCDF18A6BFEF007BF4CE /* Frameworks */,
+				C1DBBCDE18A6BFEF007BF4CE /* Products */,
+				401F71447EDE497DABE6D499 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		C1DBBCDE18A6BFEF007BF4CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C1DBBCDD18A6BFEF007BF4CE /* Photix.app */,
+				C1DBBCFD18A6BFEF007BF4CE /* PhotixTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C1DBBCDF18A6BFEF007BF4CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C1DBBCE018A6BFEF007BF4CE /* Foundation.framework */,
+				C1DBBCE218A6BFEF007BF4CE /* CoreGraphics.framework */,
+				C1DBBCE418A6BFEF007BF4CE /* UIKit.framework */,
+				C1DBBCE618A6BFEF007BF4CE /* CoreData.framework */,
+				C1DBBCFE18A6BFEF007BF4CE /* XCTest.framework */,
+				EF75F98384E448F887006AB5 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C1DBBCE818A6BFEF007BF4CE /* Photix */ = {
+			isa = PBXGroup;
+			children = (
+				C1BAFD2D18B14BA20078C88D /* Resources */,
+				C1BAFD2C18B14B8D0078C88D /* Application Delegate */,
+				C1BAFD2B18B14B600078C88D /* Views */,
+				C1BAFD2618B14B040078C88D /* Utilities */,
+				C1BAFD2518B14AF10078C88D /* Model */,
+				C1DBBD1918A717C9007BF4CE /* Controllers */,
+				C1DBBCE918A6BFEF007BF4CE /* Supporting Files */,
+			);
+			path = Photix;
+			sourceTree = "<group>";
+		};
+		C1DBBCE918A6BFEF007BF4CE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C1DBBCEA18A6BFEF007BF4CE /* Photix-Info.plist */,
+				C1DBBCEB18A6BFEF007BF4CE /* InfoPlist.strings */,
+				C1DBBCEE18A6BFEF007BF4CE /* main.m */,
+				C1DBBCF018A6BFEF007BF4CE /* Photix-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C1DBBD0518A6BFEF007BF4CE /* PhotixTests */ = {
+			isa = PBXGroup;
+			children = (
+				C1DBBD0B18A6BFEF007BF4CE /* PhotixTests.m */,
+				C1DBBD0618A6BFEF007BF4CE /* Supporting Files */,
+			);
+			path = PhotixTests;
+			sourceTree = "<group>";
+		};
+		C1DBBD0618A6BFEF007BF4CE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C1DBBD0718A6BFEF007BF4CE /* PhotixTests-Info.plist */,
+				C1DBBD0818A6BFEF007BF4CE /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C1DBBD1918A717C9007BF4CE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C1DBBD1A18A7186E007BF4CE /* DNWMainViewController.h */,
+				C1DBBD1B18A7186E007BF4CE /* DNWMainViewController.m */,
+				C1BAFD3518B15D720078C88D /* DNWPictureViewController.h */,
+				C1BAFD3618B15D720078C88D /* DNWPictureViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C1DBBCDC18A6BFEF007BF4CE /* Photix */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1DBBD0F18A6BFEF007BF4CE /* Build configuration list for PBXNativeTarget "Photix" */;
+			buildPhases = (
+				31CAA7E591C940559339E88B /* Check Pods Manifest.lock */,
+				C1DBBCD918A6BFEF007BF4CE /* Sources */,
+				C1DBBCDA18A6BFEF007BF4CE /* Frameworks */,
+				C1DBBCDB18A6BFEF007BF4CE /* Resources */,
+				AA2204BE68BD49A1BEF1E3BC /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Photix;
+			productName = Photix;
+			productReference = C1DBBCDD18A6BFEF007BF4CE /* Photix.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C1DBBCFC18A6BFEF007BF4CE /* PhotixTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1DBBD1218A6BFEF007BF4CE /* Build configuration list for PBXNativeTarget "PhotixTests" */;
+			buildPhases = (
+				C1DBBCF918A6BFEF007BF4CE /* Sources */,
+				C1DBBCFA18A6BFEF007BF4CE /* Frameworks */,
+				C1DBBCFB18A6BFEF007BF4CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C1DBBD0418A6BFEF007BF4CE /* PBXTargetDependency */,
+			);
+			name = PhotixTests;
+			productName = PhotixTests;
+			productReference = C1DBBCFD18A6BFEF007BF4CE /* PhotixTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C1DBBCD518A6BFEF007BF4CE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DNW;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = deanware;
+				TargetAttributes = {
+					C1DBBCFC18A6BFEF007BF4CE = {
+						TestTargetID = C1DBBCDC18A6BFEF007BF4CE;
+					};
+				};
+			};
+			buildConfigurationList = C1DBBCD818A6BFEF007BF4CE /* Build configuration list for PBXProject "Photix" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C1DBBCD418A6BFEF007BF4CE;
+			productRefGroup = C1DBBCDE18A6BFEF007BF4CE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C1DBBCDC18A6BFEF007BF4CE /* Photix */,
+				C1DBBCFC18A6BFEF007BF4CE /* PhotixTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C1DBBCDB18A6BFEF007BF4CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1DBBD1618A70940007BF4CE /* MainStoryboard.storyboard in Resources */,
+				C1DBBCED18A6BFEF007BF4CE /* InfoPlist.strings in Resources */,
+				C1DBBD1818A70A2C007BF4CE /* MainStoryboardiPhone5.storyboard in Resources */,
+				C1DBBCF818A6BFEF007BF4CE /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1DBBCFB18A6BFEF007BF4CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1DBBD0A18A6BFEF007BF4CE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		31CAA7E591C940559339E88B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AA2204BE68BD49A1BEF1E3BC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C1DBBCD918A6BFEF007BF4CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1BAFD3118B158570078C88D /* UIImage+normalizedImage.m in Sources */,
+				C1DBBCF618A6BFEF007BF4CE /* Photix.xcdatamodeld in Sources */,
+				C1DBBCF318A6BFEF007BF4CE /* DNWAppDelegate.m in Sources */,
+				C1BAFD3718B15D720078C88D /* DNWPictureViewController.m in Sources */,
+				C1DBBCEF18A6BFEF007BF4CE /* main.m in Sources */,
+				C1BAFD2A18B14B4E0078C88D /* DatabaseManager.m in Sources */,
+				C1DBBD1C18A7186E007BF4CE /* DNWMainViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1DBBCF918A6BFEF007BF4CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1DBBD0C18A6BFEF007BF4CE /* PhotixTests.m in Sources */,
+				C1DBBD1D18A7186E007BF4CE /* DNWMainViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C1DBBD0418A6BFEF007BF4CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C1DBBCDC18A6BFEF007BF4CE /* Photix */;
+			targetProxy = C1DBBD0318A6BFEF007BF4CE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C1DBBCEB18A6BFEF007BF4CE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C1DBBCEC18A6BFEF007BF4CE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C1DBBD0818A6BFEF007BF4CE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C1DBBD0918A6BFEF007BF4CE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C1DBBD0D18A6BFEF007BF4CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C1DBBD0E18A6BFEF007BF4CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C1DBBD1018A6BFEF007BF4CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 401F71447EDE497DABE6D499 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Photix/Photix-Prefix.pch";
+				INFOPLIST_FILE = "Photix/Photix-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C1DBBD1118A6BFEF007BF4CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 401F71447EDE497DABE6D499 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Photix/Photix-Prefix.pch";
+				INFOPLIST_FILE = "Photix/Photix-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C1DBBD1318A6BFEF007BF4CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Photix.app/Photix";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Photix/Photix-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "PhotixTests/PhotixTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C1DBBD1418A6BFEF007BF4CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Photix.app/Photix";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Photix/Photix-Prefix.pch";
+				INFOPLIST_FILE = "PhotixTests/PhotixTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C1DBBCD818A6BFEF007BF4CE /* Build configuration list for PBXProject "Photix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1DBBD0D18A6BFEF007BF4CE /* Debug */,
+				C1DBBD0E18A6BFEF007BF4CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1DBBD0F18A6BFEF007BF4CE /* Build configuration list for PBXNativeTarget "Photix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1DBBD1018A6BFEF007BF4CE /* Debug */,
+				C1DBBD1118A6BFEF007BF4CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1DBBD1218A6BFEF007BF4CE /* Build configuration list for PBXNativeTarget "PhotixTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1DBBD1318A6BFEF007BF4CE /* Debug */,
+				C1DBBD1418A6BFEF007BF4CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C1DBBCF418A6BFEF007BF4CE /* Photix.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C1DBBCF518A6BFEF007BF4CE /* Photix.xcdatamodel */,
+			);
+			currentVersion = C1DBBCF518A6BFEF007BF4CE /* Photix.xcdatamodel */;
+			path = Photix.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C1DBBCD518A6BFEF007BF4CE /* Project object */;
+}
