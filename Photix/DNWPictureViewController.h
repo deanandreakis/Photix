@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <GPUImage.h>
+#import <MessageUI/MessageUI.h>
+#import <MessageUI/MFMailComposeViewController.h>
 
-@interface DNWPictureViewController : UIViewController
+@interface DNWPictureViewController : UIViewController <MFMailComposeViewControllerDelegate, UIActionSheetDelegate>
 
 @property UIImage *imageToSet;
 

@@ -1,10 +1,16 @@
 PODS:
   - GPUImage (0.1.2)
+  - MBProgressHUD (0.8)
+  - MGInstagram (0.0.2)
 
 DEPENDENCIES:
   - GPUImage
+  - MBProgressHUD
+  - MGInstagram
 
 SPEC CHECKSUMS:
   GPUImage: 007145faa0e27f1ddbcab93e07f026c9776e2fa2
+  MBProgressHUD: 2bbc6f470111daf7f3eaa4eb12b8cbf01c4c0622
+  MGInstagram: 9cd3d8b0ef99b9a1ac64a327c5ca47e3618dc853
 
 COCOAPODS: 0.29.0

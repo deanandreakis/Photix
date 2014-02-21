@@ -11,6 +11,8 @@
 		C1BAFD2A18B14B4E0078C88D /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BAFD2918B14B4E0078C88D /* DatabaseManager.m */; };
 		C1BAFD3118B158570078C88D /* UIImage+normalizedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BAFD3018B158570078C88D /* UIImage+normalizedImage.m */; };
 		C1BAFD3718B15D720078C88D /* DNWPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BAFD3618B15D720078C88D /* DNWPictureViewController.m */; };
+		C1BAFD3918B1B4E70078C88D /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BAFD3818B1B4E70078C88D /* Social.framework */; };
+		C1BAFD3B18B1B58F0078C88D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BAFD3A18B1B58F0078C88D /* MessageUI.framework */; };
 		C1DBBCE118A6BFEF007BF4CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1DBBCE018A6BFEF007BF4CE /* Foundation.framework */; };
 		C1DBBCE318A6BFEF007BF4CE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1DBBCE218A6BFEF007BF4CE /* CoreGraphics.framework */; };
 		C1DBBCE518A6BFEF007BF4CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1DBBCE418A6BFEF007BF4CE /* UIKit.framework */; };
@@ -52,6 +54,8 @@
 		C1BAFD3018B158570078C88D /* UIImage+normalizedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+normalizedImage.m"; sourceTree = "<group>"; };
 		C1BAFD3518B15D720078C88D /* DNWPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNWPictureViewController.h; sourceTree = "<group>"; };
 		C1BAFD3618B15D720078C88D /* DNWPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNWPictureViewController.m; sourceTree = "<group>"; };
+		C1BAFD3818B1B4E70078C88D /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		C1BAFD3A18B1B58F0078C88D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		C1DBBCDD18A6BFEF007BF4CE /* Photix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1DBBCE018A6BFEF007BF4CE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C1DBBCE218A6BFEF007BF4CE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -82,6 +86,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1BAFD3B18B1B58F0078C88D /* MessageUI.framework in Frameworks */,
+				C1BAFD3918B1B4E70078C88D /* Social.framework in Frameworks */,
 				C1DBBCE318A6BFEF007BF4CE /* CoreGraphics.framework in Frameworks */,
 				C1DBBCE718A6BFEF007BF4CE /* CoreData.framework in Frameworks */,
 				C1DBBCE518A6BFEF007BF4CE /* UIKit.framework in Frameworks */,
@@ -174,6 +180,8 @@
 		C1DBBCDF18A6BFEF007BF4CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C1BAFD3A18B1B58F0078C88D /* MessageUI.framework */,
+				C1BAFD3818B1B4E70078C88D /* Social.framework */,
 				C1DBBCE018A6BFEF007BF4CE /* Foundation.framework */,
 				C1DBBCE218A6BFEF007BF4CE /* CoreGraphics.framework */,
 				C1DBBCE418A6BFEF007BF4CE /* UIKit.framework */,

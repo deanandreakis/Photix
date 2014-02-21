@@ -71,7 +71,7 @@
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     [imagePicker dismissViewControllerAnimated:YES completion:nil];
     DNWPictureViewController *pictureViewController = [[UIStoryboard storyboardWithName:kAppDelegate.storyboardName bundle:nil] instantiateViewControllerWithIdentifier:@"MyPicture"];
-    UIImage *temp = [info objectForKey:UIImagePickerControllerOriginalImage];
+    UIImage *temp = [info objectForKey:UIImagePickerControllerEditedImage];
     kAppDelegate.imageToSet = [temp normalizedImage];
     pictureViewController.imageToSet = kAppDelegate.imageToSet;
     [self.navigationController pushViewController:pictureViewController animated:YES];
