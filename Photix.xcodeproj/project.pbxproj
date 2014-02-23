@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		22EA2F45EE8F4BFE9D9AE4DF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF75F98384E448F887006AB5 /* libPods.a */; };
+		C154481518B8445C007B54D1 /* DNWOtherApps.m in Sources */ = {isa = PBXBuildFile; fileRef = C154481418B8445C007B54D1 /* DNWOtherApps.m */; };
 		C1BAFD2A18B14B4E0078C88D /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BAFD2918B14B4E0078C88D /* DatabaseManager.m */; };
 		C1BAFD3118B158570078C88D /* UIImage+normalizedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BAFD3018B158570078C88D /* UIImage+normalizedImage.m */; };
 		C1BAFD3718B15D720078C88D /* DNWPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BAFD3618B15D720078C88D /* DNWPictureViewController.m */; };
@@ -32,6 +33,7 @@
 		C1DBBD1818A70A2C007BF4CE /* MainStoryboardiPhone5.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1DBBD1718A70A2C007BF4CE /* MainStoryboardiPhone5.storyboard */; };
 		C1DBBD1C18A7186E007BF4CE /* DNWMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1DBBD1B18A7186E007BF4CE /* DNWMainViewController.m */; };
 		C1DBBD1D18A7186E007BF4CE /* DNWMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1DBBD1B18A7186E007BF4CE /* DNWMainViewController.m */; };
+		C1E20FB218B980E1001A2BE3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1E20FB118B980E1001A2BE3 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 
 /* Begin PBXFileReference section */
 		401F71447EDE497DABE6D499 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		C154481318B8445C007B54D1 /* DNWOtherApps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNWOtherApps.h; sourceTree = "<group>"; };
+		C154481418B8445C007B54D1 /* DNWOtherApps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNWOtherApps.m; sourceTree = "<group>"; };
 		C1BAFD2718B14B2A0078C88D /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
 		C1BAFD2818B14B410078C88D /* DatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseManager.h; sourceTree = "<group>"; };
 		C1BAFD2918B14B4E0078C88D /* DatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseManager.m; sourceTree = "<group>"; };
@@ -78,6 +82,7 @@
 		C1DBBD1718A70A2C007BF4CE /* MainStoryboardiPhone5.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboardiPhone5.storyboard; sourceTree = "<group>"; };
 		C1DBBD1A18A7186E007BF4CE /* DNWMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNWMainViewController.h; sourceTree = "<group>"; };
 		C1DBBD1B18A7186E007BF4CE /* DNWMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNWMainViewController.m; sourceTree = "<group>"; };
+		C1E20FB118B980E1001A2BE3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		EF75F98384E448F887006AB5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -86,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1E20FB218B980E1001A2BE3 /* QuartzCore.framework in Frameworks */,
 				C1BAFD3B18B1B58F0078C88D /* MessageUI.framework in Frameworks */,
 				C1BAFD3918B1B4E70078C88D /* Social.framework in Frameworks */,
 				C1DBBCE318A6BFEF007BF4CE /* CoreGraphics.framework in Frameworks */,
@@ -127,6 +133,8 @@
 				C1BAFD3018B158570078C88D /* UIImage+normalizedImage.m */,
 				C1BAFD2E18B14D130078C88D /* Constants.h */,
 				C1BAFD2718B14B2A0078C88D /* SynthesizeSingleton.h */,
+				C154481318B8445C007B54D1 /* DNWOtherApps.h */,
+				C154481418B8445C007B54D1 /* DNWOtherApps.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -180,6 +188,7 @@
 		C1DBBCDF18A6BFEF007BF4CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C1E20FB118B980E1001A2BE3 /* QuartzCore.framework */,
 				C1BAFD3A18B1B58F0078C88D /* MessageUI.framework */,
 				C1BAFD3818B1B4E70078C88D /* Social.framework */,
 				C1DBBCE018A6BFEF007BF4CE /* Foundation.framework */,
@@ -379,6 +388,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C154481518B8445C007B54D1 /* DNWOtherApps.m in Sources */,
 				C1BAFD3118B158570078C88D /* UIImage+normalizedImage.m in Sources */,
 				C1DBBCF618A6BFEF007BF4CE /* Photix.xcdatamodeld in Sources */,
 				C1DBBCF318A6BFEF007BF4CE /* DNWAppDelegate.m in Sources */,
@@ -506,6 +516,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 401F71447EDE497DABE6D499 /* Pods.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -513,6 +524,7 @@
 				INFOPLIST_FILE = "Photix/Photix-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -521,6 +533,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 401F71447EDE497DABE6D499 /* Pods.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -528,6 +541,7 @@
 				INFOPLIST_FILE = "Photix/Photix-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

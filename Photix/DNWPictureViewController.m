@@ -10,6 +10,9 @@
 #import <Social/Social.h>
 #import "MGInstagram.h"
 #import "MBProgressHUD.h"
+#import "DNWOtherApps.h"
+#import "Constants.h"
+#import <QuartzCore/QuartzCore.h>
 
 #define ACTION_SHEET_TAG 22
 #define reviewString @"itms-apps://itunes.apple.com/app/idXXXXXXXXX"//TODO put app ID in here when we know it
@@ -23,9 +26,9 @@
 -(IBAction)EmailButtonPressed:(id)sender;
 -(IBAction)ShareButtonPressed:(id)sender;
 -(IBAction)InstagramButtonPressed:(id)sender;
--(IBAction)DropboxButtonPressed:(id)sender;
-
-//TODO: add order prints (like walgreens api), tumblr, dropbox
+-(IBAction)DropboxButtonPressed:(id)sender;//other apps to open into
+-(IBAction)PostcardButtonPressed:(id)sender;
+-(IBAction)ReviewButtonPressed:(id)sender;
 
 @property (strong, nonatomic) IBOutlet UIImageView* pictureImageView;
 
@@ -48,12 +51,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [self performSelector:@selector(processImage) withObject:nil afterDelay:1.0];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    [self performSelector:@selector(processImage) withObject:nil afterDelay:1.0];
+    
 }
 
 - (void)processImage
@@ -73,6 +77,7 @@
         [stillImageSource processImage];
         
         currentFilteredImage = [oilPaintingTransformFilter imageFromCurrentlyProcessedOutput];
+        NSLog(@"currentFilteredImage Image Size:%f,%f", currentFilteredImage.size.width, currentFilteredImage.size.height);
         
         // Hide the HUD in the main tread
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -80,7 +85,69 @@
             [MBProgressHUD hideHUDForView:self.view animated:YES];
         });
     });
+    
+    NSLog(@"pictureImageView Image Size:%f,%f", pictureImageView.image.size.width, pictureImageView.image.size.height);
+    NSLog(@"imageToSet Image Size:%f,%f", imageToSet.size.width, imageToSet.size.height);
 }
+
+- (UIImage *)resizeImageToSize:(CGSize)targetSize
+{
+    UIImage *sourceImage = pictureImageView.image;
+    UIImage *newImage = nil;
+    
+    CGSize imageSize = sourceImage.size;
+    CGFloat width = imageSize.width;
+    CGFloat height = imageSize.height;
+    
+    CGFloat targetWidth = targetSize.width;
+    CGFloat targetHeight = targetSize.height;
+    
+    CGFloat scaleFactor = 0.0;
+    CGFloat scaledWidth = targetWidth;
+    CGFloat scaledHeight = targetHeight;
+    
+    CGPoint thumbnailPoint = CGPointMake(0.0,0.0);
+    
+    if (CGSizeEqualToSize(imageSize, targetSize) == NO) {
+        
+        CGFloat widthFactor = targetWidth / width;
+        CGFloat heightFactor = targetHeight / height;
+        
+        if (widthFactor < heightFactor)
+        scaleFactor = widthFactor;
+        else
+        scaleFactor = heightFactor;
+        
+        scaledWidth  = width * scaleFactor;
+        scaledHeight = height * scaleFactor;
+        
+        // make image center aligned
+        if (widthFactor < heightFactor)
+        {
+            thumbnailPoint.y = (targetHeight - scaledHeight) * 0.5;
+        }
+        else if (widthFactor > heightFactor)
+        {
+            thumbnailPoint.x = (targetWidth - scaledWidth) * 0.5;
+        }
+    }
+    
+    UIGraphicsBeginImageContext(targetSize);
+    CGRect thumbnailRect = CGRectZero;
+    thumbnailRect.origin = thumbnailPoint;
+    thumbnailRect.size.width  = scaledWidth;
+    thumbnailRect.size.height = scaledHeight;
+    
+    [sourceImage drawInRect:thumbnailRect];
+    newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    if(newImage == nil)
+    NSLog(@"could not scale image");
+    
+    return newImage ;
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -208,7 +275,15 @@
 
 -(IBAction)DropboxButtonPressed:(id)sender
 {
-    //see https://www.dropbox.com/developers/core/start/ios
+    NSString *prefixString = @"MyPhotix";
+    
+    NSString *guid = [[NSUUID new] UUIDString];
+    NSString *uniqueFileName = [NSString stringWithFormat:@"%@_%@.jpeg", prefixString, guid];
+    
+    NSLog(@"uniqueFileName: '%@'", uniqueFileName);
+    
+    [DNWOtherApps setPhotoFileName:uniqueFileName];
+    [DNWOtherApps postImage:pictureImageView.image inView:self.view];
 }
 
 #pragma mark MFMailComposeViewControllerDelegate
@@ -242,6 +317,61 @@
         default:
             break;
     }
+}
+
+-(IBAction)PostcardButtonPressed:(id)sender
+{
+    UIImage* newImage = [self resizeImageToSize:CGSizeMake(1838, 1238)];
+    
+    NSArray* imageArray = [NSArray arrayWithObject:newImage];
+    
+    SYSincerelyController *controller = [[SYSincerelyController alloc] initWithImages:imageArray
+                                                                              product:SYProductTypePostcard
+                                                                       applicationKey:SINCERELY_KEY
+                                                                             delegate:self];
+    
+    if (controller) {
+        [controller setShouldSkipCrop:YES];
+        [self presentViewController:controller animated:YES completion:NULL];
+    }
+}
+
+#pragma mark SYSincerelyController delegate callbacks
+
+- (void)sincerelyControllerDidFinish:(SYSincerelyController *)controller {
+    /*
+     * Here I know that the user made a purchase and I can do something with it
+     */
+    
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+- (void)sincerelyControllerDidCancel:(SYSincerelyController *)controller {
+    /*
+     * Here I know that the user hit the cancel button and they want to leave the Sincerely controller
+     */
+    
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+- (void)sincerelyControllerDidFailInitiationWithError:(NSError *)error {
+    /*
+     * Here I know that incorrect inputs were given to initWithImages:product:applicationKey:delegate;
+     */
+    
+    UIAlertView *alertView = [[UIAlertView alloc]
+                              initWithTitle:@"Sorry"
+                              message:[error localizedFailureReason]
+                              delegate:self
+                              cancelButtonTitle:@"OK"
+                              otherButtonTitles:nil];
+    [alertView show];
+}
+
+#pragma mark review me!
+-(IBAction)ReviewButtonPressed:(id)sender
+{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:reviewString]];
 }
 
 @end
