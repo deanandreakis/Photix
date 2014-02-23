@@ -11,8 +11,9 @@
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
 #import <ShipLib/ShipLib.h>
+#import <iAd/iAd.h>
 
-@interface DNWPictureViewController : UIViewController <MFMailComposeViewControllerDelegate, UIActionSheetDelegate, SYSincerelyControllerDelegate>
+@interface DNWPictureViewController : UIViewController <MFMailComposeViewControllerDelegate, UIActionSheetDelegate, SYSincerelyControllerDelegate, ADBannerViewDelegate>
 
 @property UIImage *imageToSet;
 

@@ -280,7 +280,7 @@
     NSString *guid = [[NSUUID new] UUIDString];
     NSString *uniqueFileName = [NSString stringWithFormat:@"%@_%@.jpeg", prefixString, guid];
     
-    NSLog(@"uniqueFileName: '%@'", uniqueFileName);
+    //NSLog(@"uniqueFileName: '%@'", uniqueFileName);
     
     [DNWOtherApps setPhotoFileName:uniqueFileName];
     [DNWOtherApps postImage:pictureImageView.image inView:self.view];
@@ -373,5 +373,33 @@
 {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:reviewString]];
 }
+
+#pragma mark iAd delegate methods
+
+-(void) bannerViewDidLoadAd:(ADBannerView *)banner
+{
+    [UIView beginAnimations:nil context:nil];
+    
+    [UIView setAnimationDuration:1];
+    
+    [banner setAlpha:1];
+    
+    [UIView commitAnimations];
+}
+
+-(void) bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
+{
+    [UIView beginAnimations:nil context:nil];
+    
+    [UIView setAnimationDuration:1];
+    
+    [banner setAlpha:0];
+    
+    [UIView commitAnimations];
+}
+
+
+
+
 
 @end
