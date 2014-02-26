@@ -44,6 +44,11 @@
     [self.navigationController setNavigationBarHidden:TRUE];
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -52,6 +57,7 @@
 
 -(IBAction)TakePhotoButtonPressed:(id)sender
 {
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
     picker.sourceType = UIImagePickerControllerSourceTypeCamera;
     picker.cameraDevice = UIImagePickerControllerCameraDeviceRear;
     [self presentViewController:picker animated:YES completion:nil];
@@ -59,6 +65,7 @@
 
 -(IBAction)ChooseExistingButtonPressed:(id)sender
 {
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
     picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     [self presentViewController:picker animated:YES completion:nil];
 }
@@ -68,7 +75,7 @@
 -(void)imagePickerController:(UIImagePickerController *)imagePicker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     [[UIApplication sharedApplication] setStatusBarHidden:NO];
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    //[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     [imagePicker dismissViewControllerAnimated:YES completion:nil];
     DNWPictureViewController *pictureViewController = [[UIStoryboard storyboardWithName:kAppDelegate.storyboardName bundle:nil] instantiateViewControllerWithIdentifier:@"MyPicture"];
     UIImage *temp = [info objectForKey:UIImagePickerControllerEditedImage];

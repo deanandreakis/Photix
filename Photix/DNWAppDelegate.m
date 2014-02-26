@@ -9,6 +9,7 @@
 #import "DNWAppDelegate.h"
 #import "DatabaseManager.h"
 #import "Constants.h"
+#import "Flurry.h"
 
 @implementation DNWAppDelegate
 
@@ -16,6 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [Flurry startSession:FLURRY_KEY];
     //initialize CoreData
     //[[DatabaseManager sharedDatabaseManager] managedObjectContext];
     

@@ -15,7 +15,7 @@
 #import <QuartzCore/QuartzCore.h>
 
 #define ACTION_SHEET_TAG 22
-#define reviewString @"itms-apps://itunes.apple.com/app/idXXXXXXXXX"//TODO put app ID in here when we know it
+#define reviewString @"itms-apps://itunes.apple.com/app/id827491007"
 
 
 @interface DNWPictureViewController ()
@@ -52,12 +52,12 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    [self performSelector:@selector(processImage) withObject:nil afterDelay:1.0];
+    [self performSelector:@selector(processImage) withObject:nil afterDelay:0.5];
 }
 
-- (void)viewWillAppear:(BOOL)animated
+-(void)viewWillAppear:(BOOL)animated
 {
-    
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
 }
 
 - (void)processImage
@@ -179,7 +179,7 @@
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook])
     {
         SLComposeViewController *fbSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
-        [fbSheet setInitialText:@"Look at my Oil Painting! #PictOil"];
+        [fbSheet setInitialText:@"Look at my Oil Painting! #OilPaint+"];
         //may need to resize image
         [fbSheet addImage:pictureImageView.image];
         [self presentViewController:fbSheet animated:YES completion:nil];
@@ -203,7 +203,7 @@
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
     {
         SLComposeViewController *tweetSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
-        [tweetSheet setInitialText:@"Look at my Oil Painting! #PictOil"];
+        [tweetSheet setInitialText:@"Look at my Oil Painting! #OilPaint+"];
         [tweetSheet addImage:pictureImageView.image];
         [self presentViewController:tweetSheet animated:YES completion:nil];
     }
@@ -226,7 +226,7 @@
     MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
     mailViewController.mailComposeDelegate = self;
     [mailViewController setSubject:@"Oil Painting!"];
-    [mailViewController setMessageBody:@"I had fun using the PictOil app to make my photo lool like an oil painting!" isHTML:NO];
+    [mailViewController setMessageBody:@"I had fun using the OilPaint+ app to make my photo lool like an oil painting!" isHTML:NO];
     NSData *myData = UIImageJPEGRepresentation(pictureImageView.image, 1.0);
     [mailViewController addAttachmentData:myData mimeType:@"image/jpeg" fileName:@"PictOil.jpg"];
     [self presentViewController:mailViewController animated:YES completion:nil];
@@ -248,7 +248,7 @@
     [actionSheet showInView:self.view];*/
     
     UIActivityViewController * controller = [[UIActivityViewController alloc] initWithActivityItems:@[pictureImageView.image]                                                                  applicationActivities:nil];
-    controller.excludedActivityTypes = @[UIActivityTypeMail, UIActivityTypePostToFacebook, UIActivityTypePostToTwitter];
+    //controller.excludedActivityTypes = @[UIActivityTypeMail, UIActivityTypePostToFacebook, UIActivityTypePostToTwitter];
     [self presentViewController:controller
                        animated:YES
                      completion:^{
@@ -257,7 +257,7 @@
 
 -(IBAction)InstagramButtonPressed:(id)sender
 {
-    if ([MGInstagram isAppInstalled] && [MGInstagram isImageCorrectSize:pictureImageView.image])
+    if ([MGInstagram isAppInstalled])// && [MGInstagram isImageCorrectSize:pictureImageView.image])
     {
         [MGInstagram postImage:pictureImageView.image inView:self.view];
     }
@@ -265,7 +265,7 @@
     {
         UIAlertView *alertView = [[UIAlertView alloc]
                                   initWithTitle:@"Sorry"
-                                  message:@"Instagram is either not installed or the image is an incorrect size"
+                                  message:@"Instagram is not installed"
                                   delegate:self
                                   cancelButtonTitle:@"OK"
                                   otherButtonTitles:nil];
