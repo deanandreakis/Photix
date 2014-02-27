@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		22EA2F45EE8F4BFE9D9AE4DF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF75F98384E448F887006AB5 /* libPods.a */; };
+		C11CCED918BED47200C9E03B /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11CCED818BED47200C9E03B /* Crashlytics.framework */; };
 		C154481518B8445C007B54D1 /* DNWOtherApps.m in Sources */ = {isa = PBXBuildFile; fileRef = C154481418B8445C007B54D1 /* DNWOtherApps.m */; };
 		C1908E8818BA3D80006B4461 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1908E8718BA3D80006B4461 /* iAd.framework */; };
 		C1BAFD2A18B14B4E0078C88D /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BAFD2918B14B4E0078C88D /* DatabaseManager.m */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		401F71447EDE497DABE6D499 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		C11CCED818BED47200C9E03B /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		C154481318B8445C007B54D1 /* DNWOtherApps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNWOtherApps.h; sourceTree = "<group>"; };
 		C154481418B8445C007B54D1 /* DNWOtherApps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNWOtherApps.m; sourceTree = "<group>"; };
 		C1908E8718BA3D80006B4461 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
@@ -99,6 +101,7 @@
 				C1BAFD3918B1B4E70078C88D /* Social.framework in Frameworks */,
 				C1DBBCE318A6BFEF007BF4CE /* CoreGraphics.framework in Frameworks */,
 				C1DBBCE718A6BFEF007BF4CE /* CoreData.framework in Frameworks */,
+				C11CCED918BED47200C9E03B /* Crashlytics.framework in Frameworks */,
 				C1DBBCE518A6BFEF007BF4CE /* UIKit.framework in Frameworks */,
 				C1DBBCE118A6BFEF007BF4CE /* Foundation.framework in Frameworks */,
 				22EA2F45EE8F4BFE9D9AE4DF /* libPods.a in Frameworks */,
@@ -191,6 +194,7 @@
 		C1DBBCDF18A6BFEF007BF4CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C11CCED818BED47200C9E03B /* Crashlytics.framework */,
 				C1908E8718BA3D80006B4461 /* iAd.framework */,
 				C1E20FB118B980E1001A2BE3 /* QuartzCore.framework */,
 				C1BAFD3A18B1B58F0078C88D /* MessageUI.framework */,
@@ -271,6 +275,7 @@
 				C1DBBCDA18A6BFEF007BF4CE /* Frameworks */,
 				C1DBBCDB18A6BFEF007BF4CE /* Resources */,
 				AA2204BE68BD49A1BEF1E3BC /* Copy Pods Resources */,
+				C11CCED718BED41800C9E03B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -384,6 +389,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		C11CCED718BED41800C9E03B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Crashlytics.framework/run 2eaad7ad1fecfce6c414905676a8175bb2a1c253 1b87ad473cb8ac189cc245935c8f083c87fb1700b9d629c028086db540d14b95";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -523,6 +541,10 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/dean_macmini/Documents/Photix,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Photix/Photix-Prefix.pch";
 				INFOPLIST_FILE = "Photix/Photix-Info.plist";
@@ -540,6 +562,10 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/dean_macmini/Documents/Photix,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Photix/Photix-Prefix.pch";
 				INFOPLIST_FILE = "Photix/Photix-Info.plist";

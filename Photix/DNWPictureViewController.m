@@ -71,7 +71,7 @@
         stillImageSource = [[GPUImagePicture alloc] initWithImage:imageToSet];
         
         GPUImageKuwaharaFilter *oilPaintingTransformFilter = [[GPUImageKuwaharaFilter alloc] init];
-        oilPaintingTransformFilter.radius = 6.0;
+        oilPaintingTransformFilter.radius = 10.0;
         
         [stillImageSource addTarget:oilPaintingTransformFilter];
         [stillImageSource processImage];

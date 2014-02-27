@@ -10,6 +10,7 @@
 #import "DatabaseManager.h"
 #import "Constants.h"
 #import "Flurry.h"
+#import <Crashlytics/Crashlytics.h>
 
 @implementation DNWAppDelegate
 
@@ -18,6 +19,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [Flurry startSession:FLURRY_KEY];
+    
+    [Crashlytics startWithAPIKey:@"2eaad7ad1fecfce6c414905676a8175bb2a1c253"];
+    
     //initialize CoreData
     //[[DatabaseManager sharedDatabaseManager] managedObjectContext];
     
