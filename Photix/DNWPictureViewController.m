@@ -71,13 +71,13 @@
         stillImageSource = [[GPUImagePicture alloc] initWithImage:imageToSet];
         
         GPUImageKuwaharaFilter *oilPaintingTransformFilter = [[GPUImageKuwaharaFilter alloc] init];
-        oilPaintingTransformFilter.radius = 10.0;
+        oilPaintingTransformFilter.radius = 8.0;
         
         [stillImageSource addTarget:oilPaintingTransformFilter];
         [stillImageSource processImage];
         
         currentFilteredImage = [oilPaintingTransformFilter imageFromCurrentlyProcessedOutput];
-        NSLog(@"currentFilteredImage Image Size:%f,%f", currentFilteredImage.size.width, currentFilteredImage.size.height);
+        //NSLog(@"currentFilteredImage Image Size:%f,%f", currentFilteredImage.size.width, currentFilteredImage.size.height);
         
         // Hide the HUD in the main tread
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -86,8 +86,8 @@
         });
     });
     
-    NSLog(@"pictureImageView Image Size:%f,%f", pictureImageView.image.size.width, pictureImageView.image.size.height);
-    NSLog(@"imageToSet Image Size:%f,%f", imageToSet.size.width, imageToSet.size.height);
+    //NSLog(@"pictureImageView Image Size:%f,%f", pictureImageView.image.size.width, pictureImageView.image.size.height);
+    //NSLog(@"imageToSet Image Size:%f,%f", imageToSet.size.width, imageToSet.size.height);
 }
 
 - (UIImage *)resizeImageToSize:(CGSize)targetSize
@@ -142,8 +142,8 @@
     newImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
-    if(newImage == nil)
-    NSLog(@"could not scale image");
+    //if(newImage == nil)
+    //NSLog(@"could not scale image");
     
     return newImage ;
 }
@@ -247,12 +247,24 @@
     actionSheet.actionSheetStyle = UIActionSheetStyleBlackOpaque;
     [actionSheet showInView:self.view];*/
     
-    UIActivityViewController * controller = [[UIActivityViewController alloc] initWithActivityItems:@[pictureImageView.image]                                                                  applicationActivities:nil];
-    //controller.excludedActivityTypes = @[UIActivityTypeMail, UIActivityTypePostToFacebook, UIActivityTypePostToTwitter];
-    [self presentViewController:controller
-                       animated:YES
-                     completion:^{
-                     }];
+    UIImage* newImage = [self resizeImageToSize:CGSizeMake(640, 640)];
+    
+    if (newImage == nil) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Sorry"
+                                                        message:@"Your picture could not be properly scaled. Please try again"
+                                                       delegate:self
+                                              cancelButtonTitle:@"Ok"
+                                              otherButtonTitles:nil];
+        [alert show];
+    } else {
+
+        UIActivityViewController * controller = [[UIActivityViewController alloc] initWithActivityItems:@[newImage]                                                                  applicationActivities:nil];
+        //controller.excludedActivityTypes = @[UIActivityTypeMail, UIActivityTypePostToFacebook, UIActivityTypePostToTwitter];
+        [self presentViewController:controller
+                           animated:YES
+                         completion:^{
+                         }];
+    }
 }
 
 -(IBAction)InstagramButtonPressed:(id)sender
