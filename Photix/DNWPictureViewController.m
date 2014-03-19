@@ -64,11 +64,13 @@
 {
     dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
         
+        UIImage* newImage = imageToSet;
+        
         // Do the task in the background
         GPUImagePicture *stillImageSource;
         UIImage *currentFilteredImage;
         
-        stillImageSource = [[GPUImagePicture alloc] initWithImage:imageToSet];
+        stillImageSource = [[GPUImagePicture alloc] initWithImage:newImage];
         
         GPUImageKuwaharaFilter *oilPaintingTransformFilter = [[GPUImageKuwaharaFilter alloc] init];
         oilPaintingTransformFilter.radius = 8.0;
@@ -90,9 +92,8 @@
     //NSLog(@"imageToSet Image Size:%f,%f", imageToSet.size.width, imageToSet.size.height);
 }
 
-- (UIImage *)resizeImageToSize:(CGSize)targetSize
+- (UIImage *)resizeImageToSize:(CGSize)targetSize Image:(UIImage*)sourceImage
 {
-    UIImage *sourceImage = pictureImageView.image;
     UIImage *newImage = nil;
     
     CGSize imageSize = sourceImage.size;
@@ -247,7 +248,7 @@
     actionSheet.actionSheetStyle = UIActionSheetStyleBlackOpaque;
     [actionSheet showInView:self.view];*/
     
-    UIImage* newImage = [self resizeImageToSize:CGSizeMake(640, 640)];
+    UIImage* newImage = [self resizeImageToSize:CGSizeMake(640, 640) Image:pictureImageView.image];
     
     if (newImage == nil) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Sorry"
@@ -333,7 +334,7 @@
 
 -(IBAction)PostcardButtonPressed:(id)sender
 {
-    UIImage* newImage = [self resizeImageToSize:CGSizeMake(1838, 1238)];
+    UIImage* newImage = [self resizeImageToSize:CGSizeMake(1838, 1238) Image:pictureImageView.image];
     
     NSArray* imageArray = [NSArray arrayWithObject:newImage];
     

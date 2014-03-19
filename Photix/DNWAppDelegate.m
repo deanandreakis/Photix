@@ -75,4 +75,19 @@
     [[DatabaseManager sharedDatabaseManager] saveContext];
 }
 
+-(void)executeBlock:(void (^)(void))block
+{
+    [self performSelectorInBackground:@selector(executeBlockInBG:) withObject:block];
+}
+
+-(void)executeBlockInBG:(void (^)(void))block
+{
+    block();
+}
+
++ (DNWAppDelegate *)appDelegate
+{
+    return (DNWAppDelegate *)[[UIApplication sharedApplication] delegate];
+}
+
 @end

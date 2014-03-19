@@ -37,15 +37,7 @@
     
     picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
-    
-    CGSize result = [[UIScreen mainScreen] bounds].size;
-    if(result.height == 568)
-    {
-        picker.allowsEditing = NO;
-    } else {
-        picker.allowsEditing = YES;
-    }
-    
+    picker.allowsEditing = YES;
     //added to hide the nav bar on main screen to see full background
     [self.navigationController setNavigationBarHidden:TRUE];
 }
@@ -84,16 +76,7 @@
     //[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     [imagePicker dismissViewControllerAnimated:YES completion:nil];
     DNWPictureViewController *pictureViewController = [[UIStoryboard storyboardWithName:kAppDelegate.storyboardName bundle:nil] instantiateViewControllerWithIdentifier:@"MyPicture"];
-    
-    UIImage *temp;
-    CGSize result = [[UIScreen mainScreen] bounds].size;
-    if(result.height == 568)
-    {
-        temp = [info objectForKey:UIImagePickerControllerOriginalImage];
-    } else {
-        temp = [info objectForKey:UIImagePickerControllerEditedImage];
-    }
-    
+    UIImage *temp = [info objectForKey:UIImagePickerControllerEditedImage];
     kAppDelegate.imageToSet = [temp normalizedImage];
     pictureViewController.imageToSet = kAppDelegate.imageToSet;
     [self.navigationController pushViewController:pictureViewController animated:YES];

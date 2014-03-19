@@ -6,11 +6,8 @@
 //  Copyright (c) 2014 deanware. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+#import "PhotixTests.h"
 
-@interface PhotixTests : XCTestCase
-
-@end
 
 @implementation PhotixTests
 
@@ -26,9 +23,41 @@
     [super tearDown];
 }
 
-- (void)testExample
++ (BOOL)waitForCompletion:(NSTimeInterval)timeoutSecs
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    NSDate *timeoutDate = [NSDate dateWithTimeIntervalSinceNow:timeoutSecs];
+    
+    do {
+        [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:timeoutDate];
+        if([timeoutDate timeIntervalSinceNow] < 0.0)
+            break;
+    } while (1);
+    
+    return YES;
+}
+
++(BOOL) doesActionViewExist
+{
+    for (UIWindow* window in [UIApplication sharedApplication].windows) {
+        NSArray* subviews = window.subviews;
+        if ([subviews count] > 0) {
+            BOOL action = [[subviews objectAtIndex:0] isKindOfClass:[UIActionSheet class]];
+            if (action)
+                return YES;
+        }
+    }
+    return NO;
+}
+
++(void) dismissAlertViews
+{
+    for (UIWindow* window in [UIApplication sharedApplication].windows) {
+        NSArray* subviews = window.subviews;
+        if ([subviews count] > 0)
+            if ([[subviews objectAtIndex:0] isKindOfClass:[UIAlertView class]]){
+                [[subviews objectAtIndex:0] dismissWithClickedButtonIndex:0 animated:NO];
+            }
+    }
 }
 
 @end

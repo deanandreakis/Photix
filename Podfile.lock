@@ -1,5 +1,7 @@
 PODS:
-  - FlurrySDK (4.3.2)
+  - FlurrySDK (4.3.2):
+    - FlurrySDK/FlurrySDK
+  - FlurrySDK/FlurrySDK (4.3.2)
   - GPUImage (0.1.2)
   - MBProgressHUD (0.8)
   - MGInstagram (0.0.2)
@@ -13,7 +15,7 @@ DEPENDENCIES:
   - ShipLib
 
 SPEC CHECKSUMS:
-  FlurrySDK: 508afbd655fe2ff935d3e9543cb1c8aa432794de
+  FlurrySDK: 0ba42379fd272d69246ae06386a2c5688516ffd8
   GPUImage: 007145faa0e27f1ddbcab93e07f026c9776e2fa2
   MBProgressHUD: 2bbc6f470111daf7f3eaa4eb12b8cbf01c4c0622
   MGInstagram: 9cd3d8b0ef99b9a1ac64a327c5ca47e3618dc853

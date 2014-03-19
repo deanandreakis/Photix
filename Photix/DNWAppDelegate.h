@@ -14,4 +14,7 @@
 @property NSString *storyboardName;
 @property (strong, nonatomic) UIWindow *window;
 
++ (DNWAppDelegate *)appDelegate;
+- (void)executeBlock:(void (^)(void))block;
+
 @end

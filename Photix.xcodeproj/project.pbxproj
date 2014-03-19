@@ -16,6 +16,30 @@
 		C1BAFD3718B15D720078C88D /* DNWPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BAFD3618B15D720078C88D /* DNWPictureViewController.m */; };
 		C1BAFD3918B1B4E70078C88D /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BAFD3818B1B4E70078C88D /* Social.framework */; };
 		C1BAFD3B18B1B58F0078C88D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BAFD3A18B1B58F0078C88D /* MessageUI.framework */; };
+		C1C1163B18D5FB9C00247E0F /* DNWImageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C1C1163A18D5FB9C00247E0F /* DNWImageTests.m */; };
+		C1C1163C18D60C4F00247E0F /* DNWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C1DBBCF218A6BFEF007BF4CE /* DNWAppDelegate.m */; };
+		C1C1163D18D60C4F00247E0F /* UIImage+normalizedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BAFD3018B158570078C88D /* UIImage+normalizedImage.m */; };
+		C1C1163E18D60C4F00247E0F /* DNWOtherApps.m in Sources */ = {isa = PBXBuildFile; fileRef = C154481418B8445C007B54D1 /* DNWOtherApps.m */; };
+		C1C1163F18D60C4F00247E0F /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BAFD2918B14B4E0078C88D /* DatabaseManager.m */; };
+		C1C1164018D60C4F00247E0F /* DNWMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1DBBD1B18A7186E007BF4CE /* DNWMainViewController.m */; };
+		C1C1164118D60C4F00247E0F /* DNWPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BAFD3618B15D720078C88D /* DNWPictureViewController.m */; };
+		C1C1164218D60C4F00247E0F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C1DBBCEE18A6BFEF007BF4CE /* main.m */; };
+		C1C1164318D60D2D00247E0F /* Photix.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C1DBBCF418A6BFEF007BF4CE /* Photix.xcdatamodeld */; };
+		C1C1164618D60D9400247E0F /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1908E8718BA3D80006B4461 /* iAd.framework */; };
+		C1C1164718D60D9F00247E0F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1E20FB118B980E1001A2BE3 /* QuartzCore.framework */; };
+		C1C1164818D60DA900247E0F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BAFD3A18B1B58F0078C88D /* MessageUI.framework */; };
+		C1C1164918D60DB300247E0F /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BAFD3818B1B4E70078C88D /* Social.framework */; };
+		C1C1164A18D60DBF00247E0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1DBBCE218A6BFEF007BF4CE /* CoreGraphics.framework */; };
+		C1C1164B18D60F5A00247E0F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1DBBCF718A6BFEF007BF4CE /* Images.xcassets */; };
+		C1C1164C18D60F5A00247E0F /* MainStoryboardiPhone5.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1DBBD1718A70A2C007BF4CE /* MainStoryboardiPhone5.storyboard */; };
+		C1C1164D18D60F5A00247E0F /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1DBBD1518A70940007BF4CE /* MainStoryboard.storyboard */; };
+		C1C1165C18D62DC100247E0F /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11CCED818BED47200C9E03B /* Crashlytics.framework */; };
+		C1C1165F18D65F9A00247E0F /* test1_2448_3264.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C1C1165E18D65F9A00247E0F /* test1_2448_3264.jpg */; };
+		C1C1166018D65F9A00247E0F /* test1_2448_3264.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C1C1165E18D65F9A00247E0F /* test1_2448_3264.jpg */; };
+		C1C1166218D65FAA00247E0F /* test2_3264_2448.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C1C1166118D65FAA00247E0F /* test2_3264_2448.jpg */; };
+		C1C1166318D65FAA00247E0F /* test2_3264_2448.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C1C1166118D65FAA00247E0F /* test2_3264_2448.jpg */; };
+		C1C1166518D65FB200247E0F /* test3_640_640.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C1C1166418D65FB200247E0F /* test3_640_640.jpg */; };
+		C1C1166618D65FB200247E0F /* test3_640_640.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C1C1166418D65FB200247E0F /* test3_640_640.jpg */; };
 		C1DBBCE118A6BFEF007BF4CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1DBBCE018A6BFEF007BF4CE /* Foundation.framework */; };
 		C1DBBCE318A6BFEF007BF4CE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1DBBCE218A6BFEF007BF4CE /* CoreGraphics.framework */; };
 		C1DBBCE518A6BFEF007BF4CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1DBBCE418A6BFEF007BF4CE /* UIKit.framework */; };
@@ -34,8 +58,8 @@
 		C1DBBD1618A70940007BF4CE /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1DBBD1518A70940007BF4CE /* MainStoryboard.storyboard */; };
 		C1DBBD1818A70A2C007BF4CE /* MainStoryboardiPhone5.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1DBBD1718A70A2C007BF4CE /* MainStoryboardiPhone5.storyboard */; };
 		C1DBBD1C18A7186E007BF4CE /* DNWMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1DBBD1B18A7186E007BF4CE /* DNWMainViewController.m */; };
-		C1DBBD1D18A7186E007BF4CE /* DNWMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1DBBD1B18A7186E007BF4CE /* DNWMainViewController.m */; };
 		C1E20FB218B980E1001A2BE3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1E20FB118B980E1001A2BE3 /* QuartzCore.framework */; };
+		E28014F0A07B4A5DA328C69A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF75F98384E448F887006AB5 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +88,18 @@
 		C1BAFD3618B15D720078C88D /* DNWPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNWPictureViewController.m; sourceTree = "<group>"; };
 		C1BAFD3818B1B4E70078C88D /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		C1BAFD3A18B1B58F0078C88D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		C1C1163818D495DC00247E0F /* PhotixTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotixTests.h; sourceTree = "<group>"; };
+		C1C1163918D5FB9C00247E0F /* DNWImageTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNWImageTests.h; sourceTree = "<group>"; };
+		C1C1163A18D5FB9C00247E0F /* DNWImageTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNWImageTests.m; sourceTree = "<group>"; };
+		C1C1164418D60D6500247E0F /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
+		C1C1165218D6297300247E0F /* libPods-FlurrySDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-FlurrySDK.a"; path = "Pods/build/Debug-iphoneos/libPods-FlurrySDK.a"; sourceTree = "<group>"; };
+		C1C1165318D6297300247E0F /* libPods-GPUImage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-GPUImage.a"; path = "Pods/build/Debug-iphoneos/libPods-GPUImage.a"; sourceTree = "<group>"; };
+		C1C1165418D6297300247E0F /* libPods-MBProgressHUD.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-MBProgressHUD.a"; path = "Pods/build/Debug-iphoneos/libPods-MBProgressHUD.a"; sourceTree = "<group>"; };
+		C1C1165518D6297300247E0F /* libPods-MGInstagram.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-MGInstagram.a"; path = "Pods/build/Debug-iphoneos/libPods-MGInstagram.a"; sourceTree = "<group>"; };
+		C1C1165618D6297300247E0F /* libPods-ShipLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-ShipLib.a"; path = "Pods/build/Debug-iphoneos/libPods-ShipLib.a"; sourceTree = "<group>"; };
+		C1C1165E18D65F9A00247E0F /* test1_2448_3264.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test1_2448_3264.jpg; sourceTree = "<group>"; };
+		C1C1166118D65FAA00247E0F /* test2_3264_2448.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test2_3264_2448.jpg; sourceTree = "<group>"; };
+		C1C1166418D65FB200247E0F /* test3_640_640.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test3_640_640.jpg; sourceTree = "<group>"; };
 		C1DBBCDD18A6BFEF007BF4CE /* Photix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1DBBCE018A6BFEF007BF4CE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C1DBBCE218A6BFEF007BF4CE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -112,10 +148,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1C1165C18D62DC100247E0F /* Crashlytics.framework in Frameworks */,
+				C1C1164A18D60DBF00247E0F /* CoreGraphics.framework in Frameworks */,
+				C1C1164918D60DB300247E0F /* Social.framework in Frameworks */,
+				C1C1164818D60DA900247E0F /* MessageUI.framework in Frameworks */,
+				C1C1164718D60D9F00247E0F /* QuartzCore.framework in Frameworks */,
+				C1C1164618D60D9400247E0F /* iAd.framework in Frameworks */,
 				C1DBBCFF18A6BFEF007BF4CE /* XCTest.framework in Frameworks */,
 				C1DBBD0218A6BFEF007BF4CE /* CoreData.framework in Frameworks */,
 				C1DBBD0118A6BFEF007BF4CE /* UIKit.framework in Frameworks */,
 				C1DBBD0018A6BFEF007BF4CE /* Foundation.framework in Frameworks */,
+				E28014F0A07B4A5DA328C69A /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +209,9 @@
 		C1BAFD2D18B14BA20078C88D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C1C1166418D65FB200247E0F /* test3_640_640.jpg */,
+				C1C1165E18D65F9A00247E0F /* test1_2448_3264.jpg */,
+				C1C1166118D65FAA00247E0F /* test2_3264_2448.jpg */,
 				C1DBBCF718A6BFEF007BF4CE /* Images.xcassets */,
 			);
 			name = Resources;
@@ -194,6 +240,12 @@
 		C1DBBCDF18A6BFEF007BF4CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C1C1165218D6297300247E0F /* libPods-FlurrySDK.a */,
+				C1C1165318D6297300247E0F /* libPods-GPUImage.a */,
+				C1C1165418D6297300247E0F /* libPods-MBProgressHUD.a */,
+				C1C1165518D6297300247E0F /* libPods-MGInstagram.a */,
+				C1C1165618D6297300247E0F /* libPods-ShipLib.a */,
+				C1C1164418D60D6500247E0F /* libPods.a */,
 				C11CCED818BED47200C9E03B /* Crashlytics.framework */,
 				C1908E8718BA3D80006B4461 /* iAd.framework */,
 				C1E20FB118B980E1001A2BE3 /* QuartzCore.framework */,
@@ -238,6 +290,9 @@
 			isa = PBXGroup;
 			children = (
 				C1DBBD0B18A6BFEF007BF4CE /* PhotixTests.m */,
+				C1C1163818D495DC00247E0F /* PhotixTests.h */,
+				C1C1163918D5FB9C00247E0F /* DNWImageTests.h */,
+				C1C1163A18D5FB9C00247E0F /* DNWImageTests.m */,
 				C1DBBD0618A6BFEF007BF4CE /* Supporting Files */,
 			);
 			path = PhotixTests;
@@ -290,9 +345,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C1DBBD1218A6BFEF007BF4CE /* Build configuration list for PBXNativeTarget "PhotixTests" */;
 			buildPhases = (
+				A5DE8CCE43944DAFB980E4D7 /* Check Pods Manifest.lock */,
 				C1DBBCF918A6BFEF007BF4CE /* Sources */,
 				C1DBBCFA18A6BFEF007BF4CE /* Frameworks */,
 				C1DBBCFB18A6BFEF007BF4CE /* Resources */,
+				091E524E26904749B6150E6F /* Copy Pods Resources */,
+				C1C1165018D626BA00247E0F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -314,6 +372,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = deanware;
 				TargetAttributes = {
+					C1DBBCDC18A6BFEF007BF4CE = {
+						DevelopmentTeam = 6XBQPB83GR;
+					};
 					C1DBBCFC18A6BFEF007BF4CE = {
 						TestTargetID = C1DBBCDC18A6BFEF007BF4CE;
 					};
@@ -343,8 +404,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1DBBD1618A70940007BF4CE /* MainStoryboard.storyboard in Resources */,
+				C1C1166218D65FAA00247E0F /* test2_3264_2448.jpg in Resources */,
 				C1DBBCED18A6BFEF007BF4CE /* InfoPlist.strings in Resources */,
 				C1DBBD1818A70A2C007BF4CE /* MainStoryboardiPhone5.storyboard in Resources */,
+				C1C1166518D65FB200247E0F /* test3_640_640.jpg in Resources */,
+				C1C1165F18D65F9A00247E0F /* test1_2448_3264.jpg in Resources */,
 				C1DBBCF818A6BFEF007BF4CE /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,6 +417,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1C1164B18D60F5A00247E0F /* Images.xcassets in Resources */,
+				C1C1166318D65FAA00247E0F /* test2_3264_2448.jpg in Resources */,
+				C1C1164C18D60F5A00247E0F /* MainStoryboardiPhone5.storyboard in Resources */,
+				C1C1164D18D60F5A00247E0F /* MainStoryboard.storyboard in Resources */,
+				C1C1166618D65FB200247E0F /* test3_640_640.jpg in Resources */,
+				C1C1166018D65F9A00247E0F /* test1_2448_3264.jpg in Resources */,
 				C1DBBD0A18A6BFEF007BF4CE /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,7 +430,37 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		091E524E26904749B6150E6F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		31CAA7E591C940559339E88B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A5DE8CCE43944DAFB980E4D7 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -403,6 +503,19 @@
 			shellPath = /bin/sh;
 			shellScript = "./Crashlytics.framework/run 2eaad7ad1fecfce6c414905676a8175bb2a1c253 1b87ad473cb8ac189cc245935c8f083c87fb1700b9d629c028086db540d14b95";
 		};
+		C1C1165018D626BA00247E0F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Crashlytics.framework/run 2eaad7ad1fecfce6c414905676a8175bb2a1c253 1b87ad473cb8ac189cc245935c8f083c87fb1700b9d629c028086db540d14b95";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -425,8 +538,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1C1163E18D60C4F00247E0F /* DNWOtherApps.m in Sources */,
+				C1C1163D18D60C4F00247E0F /* UIImage+normalizedImage.m in Sources */,
+				C1C1164318D60D2D00247E0F /* Photix.xcdatamodeld in Sources */,
+				C1C1163C18D60C4F00247E0F /* DNWAppDelegate.m in Sources */,
+				C1C1164118D60C4F00247E0F /* DNWPictureViewController.m in Sources */,
+				C1C1164218D60C4F00247E0F /* main.m in Sources */,
+				C1C1163F18D60C4F00247E0F /* DatabaseManager.m in Sources */,
+				C1C1164018D60C4F00247E0F /* DNWMainViewController.m in Sources */,
 				C1DBBD0C18A6BFEF007BF4CE /* PhotixTests.m in Sources */,
-				C1DBBD1D18A7186E007BF4CE /* DNWMainViewController.m in Sources */,
+				C1C1163B18D5FB9C00247E0F /* DNWImageTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,7 +598,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Dean Andreakis (6XBQPB83GR)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Dean Andreakis (6XBQPB83GR)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -494,9 +616,11 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				PROVISIONING_PROFILE = "578135B8-EF60-47DF-B72F-6668F330F720";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -517,7 +641,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Dean Andreakis (6XBQPB83GR)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Dean Andreakis (6XBQPB83GR)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -528,9 +653,11 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PROVISIONING_PROFILE = "578135B8-EF60-47DF-B72F-6668F330F720";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Release;
 		};
@@ -541,6 +668,8 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/dean_macmini/Documents/Photix,
@@ -549,6 +678,7 @@
 				GCC_PREFIX_HEADER = "Photix/Photix-Prefix.pch";
 				INFOPLIST_FILE = "Photix/Photix-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
@@ -562,6 +692,8 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/dean_macmini/Documents/Photix,
@@ -570,6 +702,7 @@
 				GCC_PREFIX_HEADER = "Photix/Photix-Prefix.pch";
 				INFOPLIST_FILE = "Photix/Photix-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
@@ -578,6 +711,7 @@
 		};
 		C1DBBD1318A6BFEF007BF4CE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 401F71447EDE497DABE6D499 /* Pods.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Photix.app/Photix";
@@ -585,6 +719,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Photix/Photix-Prefix.pch";
@@ -593,6 +728,10 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "PhotixTests/PhotixTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -601,6 +740,7 @@
 		};
 		C1DBBD1418A6BFEF007BF4CE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 401F71447EDE497DABE6D499 /* Pods.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Photix.app/Photix";
@@ -608,10 +748,15 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Photix/Photix-Prefix.pch";
 				INFOPLIST_FILE = "PhotixTests/PhotixTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;

@@ -16,5 +16,6 @@
 @interface DNWPictureViewController : UIViewController <MFMailComposeViewControllerDelegate, UIActionSheetDelegate, SYSincerelyControllerDelegate, ADBannerViewDelegate>
 
 @property UIImage *imageToSet;
+- (void)processImage;
 
 @end
