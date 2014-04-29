@@ -617,7 +617,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = NO;
-				PROVISIONING_PROFILE = "578135B8-EF60-47DF-B72F-6668F330F720";
+				PROVISIONING_PROFILE = "8828BDBC-BECB-4DBC-8051-870B84160D80";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s";
@@ -653,7 +653,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PROVISIONING_PROFILE = "578135B8-EF60-47DF-B72F-6668F330F720";
+				PROVISIONING_PROFILE = "8828BDBC-BECB-4DBC-8051-870B84160D80";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -668,8 +668,8 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Dean Andreakis (6XBQPB83GR)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Dean Andreakis (6XBQPB83GR)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/dean_macmini/Documents/Photix,
@@ -678,7 +678,7 @@
 				GCC_PREFIX_HEADER = "Photix/Photix-Prefix.pch";
 				INFOPLIST_FILE = "Photix/Photix-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "8828BDBC-BECB-4DBC-8051-870B84160D80";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
@@ -692,8 +692,8 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Dean Andreakis (6XBQPB83GR)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Dean Andreakis (6XBQPB83GR)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/dean_macmini/Documents/Photix,
@@ -702,7 +702,7 @@
 				GCC_PREFIX_HEADER = "Photix/Photix-Prefix.pch";
 				INFOPLIST_FILE = "Photix/Photix-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "8828BDBC-BECB-4DBC-8051-870B84160D80";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
