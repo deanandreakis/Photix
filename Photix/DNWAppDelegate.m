@@ -11,6 +11,7 @@
 #import "Constants.h"
 #import "Flurry.h"
 #import <Crashlytics/Crashlytics.h>
+#import "Appirater.h"
 
 @implementation DNWAppDelegate
 
@@ -18,6 +19,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [Appirater setAppId:@"827491007"];
+    [Appirater setDaysUntilPrompt:1];
+    [Appirater setUsesUntilPrompt:5];
+    [Appirater setSignificantEventsUntilPrompt:-1];
+    [Appirater setTimeBeforeReminding:3];
+    //[Appirater setDebug:YES];
+    
     [Flurry startSession:FLURRY_KEY];
     
     [Crashlytics startWithAPIKey:@"2eaad7ad1fecfce6c414905676a8175bb2a1c253"];
@@ -44,6 +52,8 @@
         storyboardName = @"MainStoryboard";
     }
     
+    [Appirater appLaunched:YES];
+    
     return YES;
 }
 
@@ -62,6 +72,7 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    [Appirater appEnteredForeground:YES];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application

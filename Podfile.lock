@@ -1,4 +1,5 @@
 PODS:
+  - Appirater (2.0.2)
   - FlurrySDK (4.3.2):
     - FlurrySDK/FlurrySDK
   - FlurrySDK/FlurrySDK (4.3.2)
@@ -8,6 +9,7 @@ PODS:
   - ShipLib (1.7.5)
 
 DEPENDENCIES:
+  - Appirater
   - FlurrySDK
   - GPUImage
   - MBProgressHUD
@@ -15,10 +17,11 @@ DEPENDENCIES:
   - ShipLib
 
 SPEC CHECKSUMS:
-  FlurrySDK: 0ba42379fd272d69246ae06386a2c5688516ffd8
+  Appirater: 32fb9089615b5e542c7ad7b5749741a8aed55290
+  FlurrySDK: 2b2a1e80385e4716cfefdbc107967a88256531bf
   GPUImage: 007145faa0e27f1ddbcab93e07f026c9776e2fa2
   MBProgressHUD: 2bbc6f470111daf7f3eaa4eb12b8cbf01c4c0622
   MGInstagram: 9cd3d8b0ef99b9a1ac64a327c5ca47e3618dc853
   ShipLib: b50d6a6a73f87fe8a61347c6d15a1bc666ed2509
 
-COCOAPODS: 0.29.0
+COCOAPODS: 0.32.1
