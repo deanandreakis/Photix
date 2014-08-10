@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		22EA2F45EE8F4BFE9D9AE4DF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF75F98384E448F887006AB5 /* libPods.a */; };
 		C11CCED918BED47200C9E03B /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11CCED818BED47200C9E03B /* Crashlytics.framework */; };
+		C1210EB71996812000C1E4E7 /* DNWFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1210EB61996812000C1E4E7 /* DNWFilterViewController.m */; };
+		C1210EB81996812000C1E4E7 /* DNWFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1210EB61996812000C1E4E7 /* DNWFilterViewController.m */; };
 		C154481518B8445C007B54D1 /* DNWOtherApps.m in Sources */ = {isa = PBXBuildFile; fileRef = C154481418B8445C007B54D1 /* DNWOtherApps.m */; };
 		C1908E8818BA3D80006B4461 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1908E8718BA3D80006B4461 /* iAd.framework */; };
 		C1BAFD2A18B14B4E0078C88D /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BAFD2918B14B4E0078C88D /* DatabaseManager.m */; };
@@ -75,6 +77,8 @@
 /* Begin PBXFileReference section */
 		401F71447EDE497DABE6D499 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		C11CCED818BED47200C9E03B /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		C1210EB51996812000C1E4E7 /* DNWFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNWFilterViewController.h; sourceTree = "<group>"; };
+		C1210EB61996812000C1E4E7 /* DNWFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNWFilterViewController.m; sourceTree = "<group>"; };
 		C154481318B8445C007B54D1 /* DNWOtherApps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNWOtherApps.h; sourceTree = "<group>"; };
 		C154481418B8445C007B54D1 /* DNWOtherApps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNWOtherApps.m; sourceTree = "<group>"; };
 		C1908E8718BA3D80006B4461 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
@@ -314,6 +318,8 @@
 				C1DBBD1B18A7186E007BF4CE /* DNWMainViewController.m */,
 				C1BAFD3518B15D720078C88D /* DNWPictureViewController.h */,
 				C1BAFD3618B15D720078C88D /* DNWPictureViewController.m */,
+				C1210EB51996812000C1E4E7 /* DNWFilterViewController.h */,
+				C1210EB61996812000C1E4E7 /* DNWFilterViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -528,6 +534,7 @@
 				C1DBBCF618A6BFEF007BF4CE /* Photix.xcdatamodeld in Sources */,
 				C1DBBCF318A6BFEF007BF4CE /* DNWAppDelegate.m in Sources */,
 				C1BAFD3718B15D720078C88D /* DNWPictureViewController.m in Sources */,
+				C1210EB71996812000C1E4E7 /* DNWFilterViewController.m in Sources */,
 				C1DBBCEF18A6BFEF007BF4CE /* main.m in Sources */,
 				C1BAFD2A18B14B4E0078C88D /* DatabaseManager.m in Sources */,
 				C1DBBD1C18A7186E007BF4CE /* DNWMainViewController.m in Sources */,
@@ -548,6 +555,7 @@
 				C1C1164018D60C4F00247E0F /* DNWMainViewController.m in Sources */,
 				C1DBBD0C18A6BFEF007BF4CE /* PhotixTests.m in Sources */,
 				C1C1163B18D5FB9C00247E0F /* DNWImageTests.m in Sources */,
+				C1210EB81996812000C1E4E7 /* DNWFilterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,8 +606,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Dean Andreakis (6XBQPB83GR)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Dean Andreakis (6XBQPB83GR)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Dean Andreakis (97QXDB3QP7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Dean Andreakis (97QXDB3QP7)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -617,7 +625,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = NO;
-				PROVISIONING_PROFILE = "8828BDBC-BECB-4DBC-8051-870B84160D80";
+				PROVISIONING_PROFILE = "EFE10421-95FE-4987-8C55-33CE01C81C1E";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s";
@@ -641,8 +649,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Dean Andreakis (6XBQPB83GR)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Dean Andreakis (6XBQPB83GR)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Dean Andreakis (97QXDB3QP7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Dean Andreakis (97QXDB3QP7)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -653,7 +661,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PROVISIONING_PROFILE = "8828BDBC-BECB-4DBC-8051-870B84160D80";
+				PROVISIONING_PROFILE = "EFE10421-95FE-4987-8C55-33CE01C81C1E";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -668,8 +676,8 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Dean Andreakis (6XBQPB83GR)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Dean Andreakis (6XBQPB83GR)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Dean Andreakis (97QXDB3QP7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Dean Andreakis (97QXDB3QP7)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/dean_macmini/Documents/Photix,
@@ -678,7 +686,7 @@
 				GCC_PREFIX_HEADER = "Photix/Photix-Prefix.pch";
 				INFOPLIST_FILE = "Photix/Photix-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8828BDBC-BECB-4DBC-8051-870B84160D80";
+				PROVISIONING_PROFILE = "EFE10421-95FE-4987-8C55-33CE01C81C1E";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
@@ -692,8 +700,8 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Dean Andreakis (6XBQPB83GR)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Dean Andreakis (6XBQPB83GR)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Dean Andreakis (97QXDB3QP7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Dean Andreakis (97QXDB3QP7)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/dean_macmini/Documents/Photix,
@@ -702,7 +710,7 @@
 				GCC_PREFIX_HEADER = "Photix/Photix-Prefix.pch";
 				INFOPLIST_FILE = "Photix/Photix-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8828BDBC-BECB-4DBC-8051-870B84160D80";
+				PROVISIONING_PROFILE = "EFE10421-95FE-4987-8C55-33CE01C81C1E";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;

@@ -1,0 +1,13 @@
+//
+//  DNWFilterViewController.h
+//  Photix
+//
+//  Created by Dean Andreakis on 8/9/14.
+//  Copyright (c) 2014 deanware. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface DNWFilterViewController : UIViewController <UIScrollViewDelegate>
+
+@end
