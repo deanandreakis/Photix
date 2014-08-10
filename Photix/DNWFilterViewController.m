@@ -7,8 +7,13 @@
 //
 
 #import "DNWFilterViewController.h"
+#import "Constants.h"
+#import "DNWPictureViewController.h"
 
 @interface DNWFilterViewController ()
+
+-(IBAction)StartOverButtonPressed:(id)sender;
+-(IBAction)DoneButtonPressed:(id)sender;
 
 @property (strong, nonatomic) IBOutlet UIImageView* pictureImageView;
 @property (strong, nonatomic) IBOutlet UIScrollView* filterScrollView;
@@ -19,8 +24,21 @@
 
 @synthesize pictureImageView, filterScrollView;
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [pictureImageView setImage:kAppDelegate.imageToSet];
+    NSArray* imageArray = [self filterImage:kAppDelegate.imageToSet];
+    [self setupScrollView:imageArray];
     // Do any additional setup after loading the view.
     // 1. Call method that returns array of UIImage objects that are the filtered thumbnails.
     // Pass an argument of the thumbnail of the original unfiltered image.
@@ -45,6 +63,20 @@
 }
 */
 
+- (NSArray*)filterImage:(UIImage*)imageToFilter
+{
+    //CGSize pageSize = filterScrollView.frame.size;
+    NSMutableArray* retVal = [NSMutableArray array];
+    for (int x = 0; x<50; x++) {
+        UIImageView* imageView = [[UIImageView alloc] initWithImage:nil];
+        imageView.contentMode = UIViewContentModeScaleAspectFit;
+        //imageView.frame = CGRectMake(0, 0, pageSize.height-10, pageSize.height-10);
+        [imageView setImage:imageToFilter];
+        [retVal addObject:imageView];
+    }
+    return retVal;
+}
+
 //https://gist.github.com/nyoron/363423
 - (void)setupScrollView:(NSArray*)imageArray
 {
@@ -54,14 +86,38 @@
         [filterScrollView addSubview:view];
         
         // This is the important line
-        view.frame = CGRectMake(pageSize.width * page++ + 10, 0, pageSize.height, pageSize.height);
+        //view.frame = CGRectMake(pageSize.width * page++ + 10, 0, pageSize.width - 20, pageSize.height);
+        view.frame = CGRectMake(pageSize.height * page++, 0, pageSize.height-10, pageSize.height-10);
         // We're making use of the scrollView's frame size (pageSize) so we need to;
         // +10 to left offset of image pos (1/2 the gap)
         // -20 for UIImageView's width (to leave 10 gap at left and right)
     }
     
-    filterScrollView.contentSize = CGSizeMake(pageSize.width * [imageArray count], pageSize.height);
+    //filterScrollView.contentSize = CGSizeMake(pageSize.width * [imageArray count], pageSize.height);
+    filterScrollView.contentSize = CGSizeMake(pageSize.height * [imageArray count], pageSize.height-10);
     
+    
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)aScrollView
+{
+    //[aScrollView setContentOffset: CGPointMake(aScrollView.contentOffset.x, oldY)];
+    // or if you are sure you wanna it always on top:
+    [aScrollView setContentOffset: CGPointMake(aScrollView.contentOffset.x, 0)];
+}
+
+-(IBAction)StartOverButtonPressed:(id)sender
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+-(IBAction)DoneButtonPressed:(id)sender
+{
+    DNWPictureViewController *pictureViewController = [[UIStoryboard storyboardWithName:kAppDelegate.storyboardName bundle:nil] instantiateViewControllerWithIdentifier:@"MyPicture"];
+     //UIImage *temp = [info objectForKey:UIImagePickerControllerEditedImage];
+     //kAppDelegate.imageToSet = [temp normalizedImage];
+     pictureViewController.imageToSet = pictureImageView.image;
+     [self.navigationController pushViewController:pictureViewController animated:YES];
 }
 
 @end

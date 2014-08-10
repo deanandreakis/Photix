@@ -10,6 +10,7 @@
 #import "Constants.h"
 #import "UIImage+normalizedImage.h"
 #import "DNWPictureViewController.h"
+#import "DNWFilterViewController.h"
 
 @interface DNWMainViewController ()
 
@@ -75,11 +76,17 @@
     [[UIApplication sharedApplication] setStatusBarHidden:NO];
     //[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     [imagePicker dismissViewControllerAnimated:YES completion:nil];
-    DNWPictureViewController *pictureViewController = [[UIStoryboard storyboardWithName:kAppDelegate.storyboardName bundle:nil] instantiateViewControllerWithIdentifier:@"MyPicture"];
+    
+    /*DNWPictureViewController *pictureViewController = [[UIStoryboard storyboardWithName:kAppDelegate.storyboardName bundle:nil] instantiateViewControllerWithIdentifier:@"MyPicture"];
     UIImage *temp = [info objectForKey:UIImagePickerControllerEditedImage];
     kAppDelegate.imageToSet = [temp normalizedImage];
     pictureViewController.imageToSet = kAppDelegate.imageToSet;
-    [self.navigationController pushViewController:pictureViewController animated:YES];
+    [self.navigationController pushViewController:pictureViewController animated:YES];*/
+    
+    DNWFilterViewController *filterViewController = [[UIStoryboard storyboardWithName:kAppDelegate.storyboardName bundle:nil] instantiateViewControllerWithIdentifier:@"MyFilter"];
+    UIImage *temp = [info objectForKey:UIImagePickerControllerEditedImage];
+    kAppDelegate.imageToSet = [temp normalizedImage];
+    [self.navigationController pushViewController:filterViewController animated:YES];
 }
 
 -(void)imagePickerControllerDidCancel:(UIImagePickerController *)imagePicker
