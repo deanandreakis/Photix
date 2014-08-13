@@ -9,6 +9,7 @@
 #import "DNWFilterViewController.h"
 #import "Constants.h"
 #import "DNWPictureViewController.h"
+#import "DNWFilterImage.h"
 
 @interface DNWFilterViewController ()
 
@@ -37,8 +38,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [pictureImageView setImage:kAppDelegate.imageToSet];
-    NSArray* imageArray = [self filterImage:kAppDelegate.imageToSet];
-    [self setupScrollView:imageArray];
+    [self filterImage:kAppDelegate.imageToSet];
     // Do any additional setup after loading the view.
     // 1. Call method that returns array of UIImage objects that are the filtered thumbnails.
     // Pass an argument of the thumbnail of the original unfiltered image.
@@ -62,19 +62,29 @@
     // Pass the selected object to the new view controller.
 }
 */
-
-- (NSArray*)filterImage:(UIImage*)imageToFilter
+#pragma mark FilteringCompleteDelegate
+-(void)filteringComplete:(NSArray*)filteredImages
 {
-    //CGSize pageSize = filterScrollView.frame.size;
     NSMutableArray* retVal = [NSMutableArray array];
-    for (int x = 0; x<50; x++) {
+    
+    //TODO: update to parse thru DNWFilteredImageModel objects instead
+    //of UIImage objects
+    for (int x = 0; x<filteredImages.count; x++) {
         UIImageView* imageView = [[UIImageView alloc] initWithImage:nil];
         imageView.contentMode = UIViewContentModeScaleAspectFit;
-        //imageView.frame = CGRectMake(0, 0, pageSize.height-10, pageSize.height-10);
-        [imageView setImage:imageToFilter];
+        [imageView setImage:[filteredImages objectAtIndex:x]];
         [retVal addObject:imageView];
     }
-    return retVal;
+    //dispatch_async(dispatch_get_main_queue(), ^{
+        [self setupScrollView:retVal];
+    //});
+}
+
+- (void)filterImage:(UIImage*)imageToFilter
+{
+    DNWFilterImage* filterImageManager = [[DNWFilterImage alloc] init];
+    filterImageManager.filterDelegate = self;
+    [filterImageManager filterImage:imageToFilter];
 }
 
 //https://gist.github.com/nyoron/363423

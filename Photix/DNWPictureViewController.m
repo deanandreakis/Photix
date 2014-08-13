@@ -51,8 +51,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    [self performSelector:@selector(processImage) withObject:nil afterDelay:0.5];
+    [pictureImageView setImage:imageToSet];
+    //[MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    //[self performSelector:@selector(processImage) withObject:nil afterDelay:0.5];
 }
 
 -(void)viewWillAppear:(BOOL)animated

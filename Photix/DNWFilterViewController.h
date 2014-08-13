@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DNWFilterImage.h"
 
-@interface DNWFilterViewController : UIViewController <UIScrollViewDelegate>
+@interface DNWFilterViewController : UIViewController <UIScrollViewDelegate, FilteringCompleteDelegate>
 
 @end

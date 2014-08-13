@@ -11,6 +11,8 @@
 		C11CCED918BED47200C9E03B /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11CCED818BED47200C9E03B /* Crashlytics.framework */; };
 		C1210EB71996812000C1E4E7 /* DNWFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1210EB61996812000C1E4E7 /* DNWFilterViewController.m */; };
 		C1210EB81996812000C1E4E7 /* DNWFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1210EB61996812000C1E4E7 /* DNWFilterViewController.m */; };
+		C149F4021999941A00584382 /* DNWFilteredImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C149F4011999941A00584382 /* DNWFilteredImageModel.m */; };
+		C149F4031999941A00584382 /* DNWFilteredImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C149F4011999941A00584382 /* DNWFilteredImageModel.m */; };
 		C154481518B8445C007B54D1 /* DNWOtherApps.m in Sources */ = {isa = PBXBuildFile; fileRef = C154481418B8445C007B54D1 /* DNWOtherApps.m */; };
 		C1908E8818BA3D80006B4461 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1908E8718BA3D80006B4461 /* iAd.framework */; };
 		C1BAFD2A18B14B4E0078C88D /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BAFD2918B14B4E0078C88D /* DatabaseManager.m */; };
@@ -60,6 +62,8 @@
 		C1DBBD1618A70940007BF4CE /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1DBBD1518A70940007BF4CE /* MainStoryboard.storyboard */; };
 		C1DBBD1818A70A2C007BF4CE /* MainStoryboardiPhone5.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1DBBD1718A70A2C007BF4CE /* MainStoryboardiPhone5.storyboard */; };
 		C1DBBD1C18A7186E007BF4CE /* DNWMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1DBBD1B18A7186E007BF4CE /* DNWMainViewController.m */; };
+		C1E0E410199826EB00D3FD21 /* DNWFilterImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E0E40F199826EB00D3FD21 /* DNWFilterImage.m */; };
+		C1E0E411199826EB00D3FD21 /* DNWFilterImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E0E40F199826EB00D3FD21 /* DNWFilterImage.m */; };
 		C1E20FB218B980E1001A2BE3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1E20FB118B980E1001A2BE3 /* QuartzCore.framework */; };
 		E28014F0A07B4A5DA328C69A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF75F98384E448F887006AB5 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -79,6 +83,8 @@
 		C11CCED818BED47200C9E03B /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		C1210EB51996812000C1E4E7 /* DNWFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNWFilterViewController.h; sourceTree = "<group>"; };
 		C1210EB61996812000C1E4E7 /* DNWFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNWFilterViewController.m; sourceTree = "<group>"; };
+		C149F4001999941A00584382 /* DNWFilteredImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNWFilteredImageModel.h; sourceTree = "<group>"; };
+		C149F4011999941A00584382 /* DNWFilteredImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNWFilteredImageModel.m; sourceTree = "<group>"; };
 		C154481318B8445C007B54D1 /* DNWOtherApps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNWOtherApps.h; sourceTree = "<group>"; };
 		C154481418B8445C007B54D1 /* DNWOtherApps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNWOtherApps.m; sourceTree = "<group>"; };
 		C1908E8718BA3D80006B4461 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
@@ -126,6 +132,8 @@
 		C1DBBD1718A70A2C007BF4CE /* MainStoryboardiPhone5.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboardiPhone5.storyboard; sourceTree = "<group>"; };
 		C1DBBD1A18A7186E007BF4CE /* DNWMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNWMainViewController.h; sourceTree = "<group>"; };
 		C1DBBD1B18A7186E007BF4CE /* DNWMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNWMainViewController.m; sourceTree = "<group>"; };
+		C1E0E40E199826EB00D3FD21 /* DNWFilterImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNWFilterImage.h; sourceTree = "<group>"; };
+		C1E0E40F199826EB00D3FD21 /* DNWFilterImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNWFilterImage.m; sourceTree = "<group>"; };
 		C1E20FB118B980E1001A2BE3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		EF75F98384E448F887006AB5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -175,6 +183,8 @@
 				C1BAFD2918B14B4E0078C88D /* DatabaseManager.m */,
 				C1BAFD2818B14B410078C88D /* DatabaseManager.h */,
 				C1DBBCF418A6BFEF007BF4CE /* Photix.xcdatamodeld */,
+				C149F4001999941A00584382 /* DNWFilteredImageModel.h */,
+				C149F4011999941A00584382 /* DNWFilteredImageModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -188,6 +198,8 @@
 				C1BAFD2718B14B2A0078C88D /* SynthesizeSingleton.h */,
 				C154481318B8445C007B54D1 /* DNWOtherApps.h */,
 				C154481418B8445C007B54D1 /* DNWOtherApps.m */,
+				C1E0E40E199826EB00D3FD21 /* DNWFilterImage.h */,
+				C1E0E40F199826EB00D3FD21 /* DNWFilterImage.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -531,7 +543,9 @@
 			files = (
 				C154481518B8445C007B54D1 /* DNWOtherApps.m in Sources */,
 				C1BAFD3118B158570078C88D /* UIImage+normalizedImage.m in Sources */,
+				C1E0E410199826EB00D3FD21 /* DNWFilterImage.m in Sources */,
 				C1DBBCF618A6BFEF007BF4CE /* Photix.xcdatamodeld in Sources */,
+				C149F4021999941A00584382 /* DNWFilteredImageModel.m in Sources */,
 				C1DBBCF318A6BFEF007BF4CE /* DNWAppDelegate.m in Sources */,
 				C1BAFD3718B15D720078C88D /* DNWPictureViewController.m in Sources */,
 				C1210EB71996812000C1E4E7 /* DNWFilterViewController.m in Sources */,
@@ -547,8 +561,10 @@
 			files = (
 				C1C1163E18D60C4F00247E0F /* DNWOtherApps.m in Sources */,
 				C1C1163D18D60C4F00247E0F /* UIImage+normalizedImage.m in Sources */,
+				C1E0E411199826EB00D3FD21 /* DNWFilterImage.m in Sources */,
 				C1C1164318D60D2D00247E0F /* Photix.xcdatamodeld in Sources */,
 				C1C1163C18D60C4F00247E0F /* DNWAppDelegate.m in Sources */,
+				C149F4031999941A00584382 /* DNWFilteredImageModel.m in Sources */,
 				C1C1164118D60C4F00247E0F /* DNWPictureViewController.m in Sources */,
 				C1C1164218D60C4F00247E0F /* main.m in Sources */,
 				C1C1163F18D60C4F00247E0F /* DatabaseManager.m in Sources */,
