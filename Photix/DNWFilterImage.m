@@ -9,6 +9,7 @@
 #import "DNWFilterImage.h"
 #import <GPUImage.h>
 #import <QuartzCore/QuartzCore.h>
+#import "DNWFilteredImageModel.h"
 
 @interface DNWFilterImage ()
 
@@ -24,10 +25,10 @@
     if (self = [super init]) {
         filterNameDictionary = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"GPUImageKuwaharaFilter", @"Oil Paint",
                                  @"GPUImagePixellateFilter",@"Pixels",
-                                 @"GPUImagePolarPixellateFilter",@"Polar Pixels",
-                                 @"GPUImagePolkaDotFilter",@"Polka-Dots",
-                                 @"GPUImageHalftoneFilter",@"Half Tone",
-                                 @"GPUImageCrosshatchFilter",@"Cross Hatch",
+                                 @"GPUImagePolarPixellateFilter",@"PolarPix",
+                                 @"GPUImagePolkaDotFilter",@"Dots",
+                                 @"GPUImageHalftoneFilter",@"HalfTone",
+                                 @"GPUImageCrosshatchFilter",@"Crossy",
                                  @"GPUImageSketchFilter",@"Sketch",nil];
     }
     return self;
@@ -66,7 +67,11 @@
             
             currentFilteredImage = [oilPaintingTransformFilter imageFromCurrentlyProcessedOutput];
             
-            [retVal addObject:currentFilteredImage];
+            DNWFilteredImageModel* imageModel = [[DNWFilteredImageModel alloc] init];
+            imageModel.imageName = (NSString*)key;
+            imageModel.filteredImage = currentFilteredImage;
+            
+            [retVal addObject:imageModel];
             //NSLog(@"currentFilteredImage Image Size:%f,%f", currentFilteredImage.size.width, currentFilteredImage.size.height);
         }
         

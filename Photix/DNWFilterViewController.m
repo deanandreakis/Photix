@@ -10,6 +10,7 @@
 #import "Constants.h"
 #import "DNWPictureViewController.h"
 #import "DNWFilterImage.h"
+#import "DNWFilteredImageModel.h"
 
 @interface DNWFilterViewController ()
 
@@ -63,21 +64,9 @@
 }
 */
 #pragma mark FilteringCompleteDelegate
--(void)filteringComplete:(NSArray*)filteredImages
+-(void)filteringComplete:(NSArray*)filteredImages //array of DNWFilteredImageModel objects
 {
-    NSMutableArray* retVal = [NSMutableArray array];
-    
-    //TODO: update to parse thru DNWFilteredImageModel objects instead
-    //of UIImage objects
-    for (int x = 0; x<filteredImages.count; x++) {
-        UIImageView* imageView = [[UIImageView alloc] initWithImage:nil];
-        imageView.contentMode = UIViewContentModeScaleAspectFit;
-        [imageView setImage:[filteredImages objectAtIndex:x]];
-        [retVal addObject:imageView];
-    }
-    //dispatch_async(dispatch_get_main_queue(), ^{
-        [self setupScrollView:retVal];
-    //});
+    [self setupScrollView:filteredImages];
 }
 
 - (void)filterImage:(UIImage*)imageToFilter
@@ -88,25 +77,33 @@
 }
 
 //https://gist.github.com/nyoron/363423
-- (void)setupScrollView:(NSArray*)imageArray
+- (void)setupScrollView:(NSArray*)imageArray//array of DNWFilteredImageModel objects
 {
     CGSize pageSize = filterScrollView.frame.size; // scrollView is an IBOutlet for our UIScrollView
     NSUInteger page = 0;
-    for(UIView *view in imageArray) {
-        [filterScrollView addSubview:view];
+    NSUInteger imageWidth = 80;
+    NSUInteger imageHeight = 80;
+    
+    for(DNWFilteredImageModel *model in imageArray) {
         
-        // This is the important line
-        //view.frame = CGRectMake(pageSize.width * page++ + 10, 0, pageSize.width - 20, pageSize.height);
-        view.frame = CGRectMake(pageSize.height * page++, 0, pageSize.height-10, pageSize.height-10);
-        // We're making use of the scrollView's frame size (pageSize) so we need to;
-        // +10 to left offset of image pos (1/2 the gap)
-        // -20 for UIImageView's width (to leave 10 gap at left and right)
+        UIImageView* imageView = [[UIImageView alloc] initWithImage:nil];
+        imageView.contentMode = UIViewContentModeScaleAspectFit;
+        [imageView setImage:model.filteredImage];
+        imageView.frame = CGRectMake(imageWidth * page + 5, 0, imageWidth - 10, imageHeight);
+        [filterScrollView addSubview:imageView];
+        
+        UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(imageWidth * page + 5, pageSize.height-20, imageWidth-10, 15)];
+        label.font = [UIFont fontWithName:@"SnellRoundhand-Black" size:12];
+        [label setTextColor:[UIColor blackColor]];
+        [label setBackgroundColor:[UIColor clearColor]];
+        label.textAlignment = NSTextAlignmentCenter;
+        label.text = model.imageName;
+        [filterScrollView addSubview:label];
+        
+        page++;
     }
     
-    //filterScrollView.contentSize = CGSizeMake(pageSize.width * [imageArray count], pageSize.height);
-    filterScrollView.contentSize = CGSizeMake(pageSize.height * [imageArray count], pageSize.height-10);
-    
-    
+    filterScrollView.contentSize = CGSizeMake(imageWidth * [imageArray count], pageSize.height);
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)aScrollView
