@@ -29,7 +29,16 @@
                                  @"GPUImagePolkaDotFilter",@"Dots",
                                  @"GPUImageHalftoneFilter",@"HalfTone",
                                  @"GPUImageCrosshatchFilter",@"Crossy",
-                                 @"GPUImageSketchFilter",@"Sketch",nil];
+                                 @"GPUImageSketchFilter",@"Sketch",
+                                 @"GPUImageToonFilter",@"Cartoon",
+                                 @"GPUImageSmoothToonFilter",@"Smoothy",
+                                 @"GPUImageEmbossFilter",@"Emboss",
+                                 @"GPUImagePosterizeFilter",@"Poster",
+                                 @"GPUImageSwirlFilter",@"Swirly",
+                                @"GPUImageBulgeDistortionFilter",@"Bulge",
+                                @"GPUImagePinchDistortionFilter",@"Pinch",
+                                @"GPUImageStretchDistortionFilter",@"Stretch",
+                                @"GPUImageSphereRefractionFilter",@"Sphere", nil];
     }
     return self;
 }

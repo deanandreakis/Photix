@@ -19,12 +19,13 @@
 
 @property (strong, nonatomic) IBOutlet UIImageView* pictureImageView;
 @property (strong, nonatomic) IBOutlet UIScrollView* filterScrollView;
+@property (strong, nonatomic) NSMutableArray* thumbArray;
 
 @end
 
 @implementation DNWFilterViewController
 
-@synthesize pictureImageView, filterScrollView;
+@synthesize pictureImageView, filterScrollView, thumbArray;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -40,6 +41,7 @@
     [super viewDidLoad];
     [pictureImageView setImage:kAppDelegate.imageToSet];
     [self filterImage:kAppDelegate.imageToSet];
+    thumbArray = [NSMutableArray array];
     // Do any additional setup after loading the view.
     // 1. Call method that returns array of UIImage objects that are the filtered thumbnails.
     // Pass an argument of the thumbnail of the original unfiltered image.
@@ -84,12 +86,15 @@
     NSUInteger imageWidth = 80;
     NSUInteger imageHeight = 80;
     
+    [thumbArray removeAllObjects];
+    
     for(DNWFilteredImageModel *model in imageArray) {
         
         UIImageView* imageView = [[UIImageView alloc] initWithImage:nil];
         imageView.contentMode = UIViewContentModeScaleAspectFit;
         [imageView setImage:model.filteredImage];
         imageView.frame = CGRectMake(imageWidth * page + 5, 0, imageWidth - 10, imageHeight);
+        [thumbArray addObject:imageView];
         [filterScrollView addSubview:imageView];
         
         UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(imageWidth * page + 5, pageSize.height-20, imageWidth-10, 15)];
@@ -99,6 +104,12 @@
         label.textAlignment = NSTextAlignmentCenter;
         label.text = model.imageName;
         [filterScrollView addSubview:label];
+        
+        UIButton* btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        btn.frame = imageView.frame;
+        [btn addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
+        btn.tag = page;
+        [filterScrollView addSubview:btn];
         
         page++;
     }
@@ -125,6 +136,16 @@
      //kAppDelegate.imageToSet = [temp normalizedImage];
      pictureViewController.imageToSet = pictureImageView.image;
      [self.navigationController pushViewController:pictureViewController animated:YES];
+}
+
+//Image selected
+- (void) buttonClicked: (id) sender
+{
+    NSInteger tag = ((UIButton *)sender).tag;
+    
+    UIImageView* tempView = (UIImageView*)[thumbArray objectAtIndex:tag];
+    
+    pictureImageView.image = tempView.image;
 }
 
 @end
