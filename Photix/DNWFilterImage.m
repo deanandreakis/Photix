@@ -14,15 +14,18 @@
 @interface DNWFilterImage ()
 
 @property (strong, nonatomic) NSMutableDictionary* filterNameDictionary;//lists all the names of the GPUImage filters we use
-    
+@property (strong, nonatomic) NSArray* guideArray;
 @end
 
 @implementation DNWFilterImage
 
-@synthesize filterDelegate, filterNameDictionary;
+@synthesize filterDelegate, filterNameDictionary, guideArray;
 
 - (id) init {
     if (self = [super init]) {
+        //NOTE: All strings representing the keys from the filterNameDictionary MUST be present in
+        //the guideArray as the guideArray is used to define the order that the filters show up from left
+        //to right in the DNWFilterViewController.
         filterNameDictionary = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"GPUImageKuwaharaFilter", @"Oil Paint",
                                  @"GPUImagePixellateFilter",@"Pixels",
                                  @"GPUImagePolarPixellateFilter",@"PolarPix",
@@ -38,7 +41,15 @@
                                 @"GPUImageBulgeDistortionFilter",@"Bulge",
                                 @"GPUImagePinchDistortionFilter",@"Pinch",
                                 @"GPUImageStretchDistortionFilter",@"Stretch",
-                                @"GPUImageSphereRefractionFilter",@"Sphere", nil];
+                                @"GPUImageSphereRefractionFilter",@"Sphere",
+                                @"GPUImageGlassSphereFilter",@"Glass",
+                                @"GPUImageVignetteFilter",@"Vignette",
+                                @"GPUImageCGAColorspaceFilter",@"CGA",
+                                @"GPUImageSepiaFilter",@"Sepia",nil];
+        
+        guideArray = [[NSArray alloc] initWithObjects:@"Oil Paint",@"Pixels",@"PolarPix",@"Dots",@"HalfTone",@"Crossy",
+                      @"Sketch",@"Cartoon",@"Smoothy",@"Emboss",@"Poster",@"Swirly",@"Bulge",@"Pinch",@"Stretch",
+                      @"Sphere",@"Glass",@"Vignette",@"CGA",@"Sepia",nil];
     }
     return self;
 }
@@ -83,6 +94,14 @@
             [retVal addObject:imageModel];
             //NSLog(@"currentFilteredImage Image Size:%f,%f", currentFilteredImage.size.width, currentFilteredImage.size.height);
         }
+        
+        [retVal sortUsingComparator:^(id o1, id o2) {
+            DNWFilteredImageModel *item1 = o1;
+            DNWFilteredImageModel *item2 = o2;
+            NSInteger idx1 = [guideArray indexOfObject:item1.imageName];
+            NSInteger idx2 = [guideArray indexOfObject:item2.imageName];
+            return idx1 - idx2;
+        }];
         
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.filterDelegate filteringComplete:retVal];
