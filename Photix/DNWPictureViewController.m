@@ -61,7 +61,7 @@
     [[UIApplication sharedApplication] setStatusBarHidden:NO];
 }
 
-- (void)processImage
+/*- (void)processImage
 {
     dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
         
@@ -79,7 +79,7 @@
         [stillImageSource addTarget:oilPaintingTransformFilter];
         [stillImageSource processImage];
         
-        currentFilteredImage = [oilPaintingTransformFilter imageFromCurrentlyProcessedOutput];
+        currentFilteredImage = [oilPaintingTransformFilter imageFromCurrentFramebuffer];
         //NSLog(@"currentFilteredImage Image Size:%f,%f", currentFilteredImage.size.width, currentFilteredImage.size.height);
         
         // Hide the HUD in the main tread
@@ -91,7 +91,7 @@
     
     //NSLog(@"pictureImageView Image Size:%f,%f", pictureImageView.image.size.width, pictureImageView.image.size.height);
     //NSLog(@"imageToSet Image Size:%f,%f", imageToSet.size.width, imageToSet.size.height);
-}
+}*/
 
 - (UIImage *)resizeImageToSize:(CGSize)targetSize Image:(UIImage*)sourceImage
 {

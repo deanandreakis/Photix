@@ -227,7 +227,7 @@
                                 </connections>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="no5-JM-Gb1">
-                                <rect key="frame" x="268" y="22" width="44" height="44"/>
+                                <rect key="frame" x="265" y="22" width="44" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="GreenCheck">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -272,7 +272,7 @@
         <image name="Instagram" width="64" height="64"/>
         <image name="Other Apps" width="512" height="512"/>
         <image name="Postcard" width="256" height="256"/>
-        <image name="Share" width="512" height="512"/>
+        <image name="Share" width="38" height="53"/>
         <image name="Start Over" width="64" height="64"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

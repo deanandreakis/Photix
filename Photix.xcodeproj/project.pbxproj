@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		22EA2F45EE8F4BFE9D9AE4DF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF75F98384E448F887006AB5 /* libPods.a */; };
+		C1054CE719A434D800A4D8F3 /* PhotosUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1054CE619A434D800A4D8F3 /* PhotosUI.framework */; };
+		C1054CE919A434D800A4D8F3 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1054CE819A434D800A4D8F3 /* Photos.framework */; };
+		C1054CEF19A434D800A4D8F3 /* PhotoEditingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1054CEE19A434D800A4D8F3 /* PhotoEditingViewController.m */; };
+		C1054CF119A434D800A4D8F3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1054CF019A434D800A4D8F3 /* MainInterface.storyboard */; };
+		C1054CF419A434D800A4D8F3 /* OilPaintPlus.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C1054CE519A434D800A4D8F3 /* OilPaintPlus.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C11CCED918BED47200C9E03B /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11CCED818BED47200C9E03B /* Crashlytics.framework */; };
 		C1210EB71996812000C1E4E7 /* DNWFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1210EB61996812000C1E4E7 /* DNWFilterViewController.m */; };
 		C1210EB81996812000C1E4E7 /* DNWFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1210EB61996812000C1E4E7 /* DNWFilterViewController.m */; };
@@ -69,6 +74,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C1054CF219A434D800A4D8F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1DBBCD518A6BFEF007BF4CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1054CE419A434D800A4D8F3;
+			remoteInfo = OilPaintPlus;
+		};
+		C1054CF519A434D800A4D8F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1DBBCD518A6BFEF007BF4CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1054CE419A434D800A4D8F3;
+			remoteInfo = OilPaintPlus;
+		};
 		C1DBBD0318A6BFEF007BF4CE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C1DBBCD518A6BFEF007BF4CE /* Project object */;
@@ -78,8 +97,29 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		C1054CFA19A434D800A4D8F3 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C1054CF419A434D800A4D8F3 /* OilPaintPlus.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		401F71447EDE497DABE6D499 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		C1054CE519A434D800A4D8F3 /* OilPaintPlus.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OilPaintPlus.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1054CE619A434D800A4D8F3 /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = System/Library/Frameworks/PhotosUI.framework; sourceTree = SDKROOT; };
+		C1054CE819A434D800A4D8F3 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		C1054CEC19A434D800A4D8F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1054CED19A434D800A4D8F3 /* PhotoEditingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoEditingViewController.h; sourceTree = "<group>"; };
+		C1054CEE19A434D800A4D8F3 /* PhotoEditingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoEditingViewController.m; sourceTree = "<group>"; };
+		C1054CF019A434D800A4D8F3 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		C11CCED818BED47200C9E03B /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		C1210EB51996812000C1E4E7 /* DNWFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNWFilterViewController.h; sourceTree = "<group>"; };
 		C1210EB61996812000C1E4E7 /* DNWFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNWFilterViewController.m; sourceTree = "<group>"; };
@@ -139,6 +179,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C1054CE219A434D800A4D8F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1054CE719A434D800A4D8F3 /* PhotosUI.framework in Frameworks */,
+				C1054CE919A434D800A4D8F3 /* Photos.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C1DBBCDA18A6BFEF007BF4CE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -177,6 +226,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C1054CEA19A434D800A4D8F3 /* OilPaintPlus */ = {
+			isa = PBXGroup;
+			children = (
+				C1054CED19A434D800A4D8F3 /* PhotoEditingViewController.h */,
+				C1054CEE19A434D800A4D8F3 /* PhotoEditingViewController.m */,
+				C1054CF019A434D800A4D8F3 /* MainInterface.storyboard */,
+				C1054CEB19A434D800A4D8F3 /* Supporting Files */,
+			);
+			path = OilPaintPlus;
+			sourceTree = "<group>";
+		};
+		C1054CEB19A434D800A4D8F3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C1054CEC19A434D800A4D8F3 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		C1BAFD2518B14AF10078C88D /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +306,7 @@
 			children = (
 				C1DBBCE818A6BFEF007BF4CE /* Photix */,
 				C1DBBD0518A6BFEF007BF4CE /* PhotixTests */,
+				C1054CEA19A434D800A4D8F3 /* OilPaintPlus */,
 				C1DBBCDF18A6BFEF007BF4CE /* Frameworks */,
 				C1DBBCDE18A6BFEF007BF4CE /* Products */,
 				401F71447EDE497DABE6D499 /* Pods.xcconfig */,
@@ -249,6 +318,7 @@
 			children = (
 				C1DBBCDD18A6BFEF007BF4CE /* Photix.app */,
 				C1DBBCFD18A6BFEF007BF4CE /* PhotixTests.xctest */,
+				C1054CE519A434D800A4D8F3 /* OilPaintPlus.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -273,6 +343,8 @@
 				C1DBBCE618A6BFEF007BF4CE /* CoreData.framework */,
 				C1DBBCFE18A6BFEF007BF4CE /* XCTest.framework */,
 				EF75F98384E448F887006AB5 /* libPods.a */,
+				C1054CE619A434D800A4D8F3 /* PhotosUI.framework */,
+				C1054CE819A434D800A4D8F3 /* Photos.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -339,6 +411,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C1054CE419A434D800A4D8F3 /* OilPaintPlus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1054CF919A434D800A4D8F3 /* Build configuration list for PBXNativeTarget "OilPaintPlus" */;
+			buildPhases = (
+				C1054CE119A434D800A4D8F3 /* Sources */,
+				C1054CE219A434D800A4D8F3 /* Frameworks */,
+				C1054CE319A434D800A4D8F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OilPaintPlus;
+			productName = OilPaintPlus;
+			productReference = C1054CE519A434D800A4D8F3 /* OilPaintPlus.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		C1DBBCDC18A6BFEF007BF4CE /* Photix */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C1DBBD0F18A6BFEF007BF4CE /* Build configuration list for PBXNativeTarget "Photix" */;
@@ -349,10 +438,13 @@
 				C1DBBCDB18A6BFEF007BF4CE /* Resources */,
 				AA2204BE68BD49A1BEF1E3BC /* Copy Pods Resources */,
 				C11CCED718BED41800C9E03B /* ShellScript */,
+				C1054CFA19A434D800A4D8F3 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C1054CF319A434D800A4D8F3 /* PBXTargetDependency */,
+				C1054CF619A434D800A4D8F3 /* PBXTargetDependency */,
 			);
 			name = Photix;
 			productName = Photix;
@@ -390,6 +482,10 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = deanware;
 				TargetAttributes = {
+					C1054CE419A434D800A4D8F3 = {
+						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 6XBQPB83GR;
+					};
 					C1DBBCDC18A6BFEF007BF4CE = {
 						DevelopmentTeam = 6XBQPB83GR;
 					};
@@ -412,11 +508,20 @@
 			targets = (
 				C1DBBCDC18A6BFEF007BF4CE /* Photix */,
 				C1DBBCFC18A6BFEF007BF4CE /* PhotixTests */,
+				C1054CE419A434D800A4D8F3 /* OilPaintPlus */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C1054CE319A434D800A4D8F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1054CF119A434D800A4D8F3 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C1DBBCDB18A6BFEF007BF4CE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -537,6 +642,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C1054CE119A434D800A4D8F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1054CEF19A434D800A4D8F3 /* PhotoEditingViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C1DBBCD918A6BFEF007BF4CE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -578,6 +691,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		C1054CF319A434D800A4D8F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C1054CE419A434D800A4D8F3 /* OilPaintPlus */;
+			targetProxy = C1054CF219A434D800A4D8F3 /* PBXContainerItemProxy */;
+		};
+		C1054CF619A434D800A4D8F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C1054CE419A434D800A4D8F3 /* OilPaintPlus */;
+			targetProxy = C1054CF519A434D800A4D8F3 /* PBXContainerItemProxy */;
+		};
 		C1DBBD0418A6BFEF007BF4CE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C1DBBCDC18A6BFEF007BF4CE /* Photix */;
@@ -605,6 +728,45 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C1054CF719A434D800A4D8F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Dean Andreakis (97QXDB3QP7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Dean Andreakis (97QXDB3QP7)";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = OilPaintPlus/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C1054CF819A434D800A4D8F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Dean Andreakis (97QXDB3QP7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Dean Andreakis (97QXDB3QP7)";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = OilPaintPlus/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		C1DBBD0D18A6BFEF007BF4CE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -790,6 +952,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C1054CF919A434D800A4D8F3 /* Build configuration list for PBXNativeTarget "OilPaintPlus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1054CF719A434D800A4D8F3 /* Debug */,
+				C1054CF819A434D800A4D8F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		C1DBBCD818A6BFEF007BF4CE /* Build configuration list for PBXProject "Photix" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

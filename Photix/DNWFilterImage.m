@@ -25,7 +25,7 @@
     if (self = [super init]) {
         //NOTE: All strings representing the keys from the filterNameDictionary MUST be present in
         //the guideArray as the guideArray is used to define the order that the filters show up from left
-        //to right in the DNWFilterViewController.
+        //to right in the DNWFilterViewController..
         filterNameDictionary = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"GPUImageKuwaharaFilter", @"Oil Paint",
                                  @"GPUImagePixellateFilter",@"Pixels",
                                  @"GPUImagePolarPixellateFilter",@"PolarPix",
@@ -45,11 +45,17 @@
                                 @"GPUImageGlassSphereFilter",@"Glass",
                                 @"GPUImageVignetteFilter",@"Vignette",
                                 @"GPUImageCGAColorspaceFilter",@"CGA",
-                                @"GPUImageSepiaFilter",@"Sepia",nil];
+                                @"GPUImageSepiaFilter",@"Sepia",
+                                @"GPUImageiOSBlurFilter",@"Blur",
+                                @"GPUImageColorInvertFilter",@"Invert",
+                                @"GPUImageGrayscaleFilter",@"Gray",
+                                @"GPUImageFalseColorFilter",@"False",
+                                @"GPUImageSoftEleganceFilter",@"Soft",
+                                @"GPUImageHazeFilter",@"Haze",nil];
         
-        guideArray = [[NSArray alloc] initWithObjects:@"Oil Paint",@"Pixels",@"PolarPix",@"Dots",@"HalfTone",@"Crossy",
+        guideArray = [[NSArray alloc] initWithObjects:@"Oil Paint",@"Blur",@"Pixels",@"PolarPix",@"Dots",@"HalfTone",@"Crossy",
                       @"Sketch",@"Cartoon",@"Smoothy",@"Emboss",@"Poster",@"Swirly",@"Bulge",@"Pinch",@"Stretch",
-                      @"Sphere",@"Glass",@"Vignette",@"CGA",@"Sepia",nil];
+                      @"Sphere",@"Glass",@"Vignette",@"CGA",@"Sepia",@"Invert",@"Gray",@"False",@"Soft",@"Haze",nil];
     }
     return self;
 }
@@ -68,12 +74,12 @@
         UIImage* newImage = imageToFilter;
         
         // Do the task in the background
-        GPUImagePicture *stillImageSource;
+        //GPUImagePicture *stillImageSource;
         UIImage *currentFilteredImage;
         
         for (id key in filterNameDictionary) {
             
-            stillImageSource = [[GPUImagePicture alloc] initWithImage:newImage];
+            //stillImageSource = [[GPUImagePicture alloc] initWithImage:newImage];
             
             NSString* filterName = (NSString*)filterNameDictionary[key];
             Class filterClass = NSClassFromString(filterName);
@@ -82,10 +88,11 @@
             //oilPaintingTransformFilter.radius = 8.0;
             //oilPaintingTransformFilter.fractionalWidthOfAPixel = 0.05;
             
-            [stillImageSource addTarget:oilPaintingTransformFilter];
-            [stillImageSource processImage];
+            //[stillImageSource addTarget:oilPaintingTransformFilter];
+            //[stillImageSource processImage];
             
-            currentFilteredImage = [oilPaintingTransformFilter imageFromCurrentlyProcessedOutput];
+            ///currentFilteredImage = [oilPaintingTransformFilter imageFromCurrentFramebuffer];
+            currentFilteredImage = [oilPaintingTransformFilter imageByFilteringImage:newImage];
             
             DNWFilteredImageModel* imageModel = [[DNWFilteredImageModel alloc] init];
             imageModel.imageName = (NSString*)key;

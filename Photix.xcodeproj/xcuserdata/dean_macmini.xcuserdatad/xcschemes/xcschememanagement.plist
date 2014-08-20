@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>OilPaintPlus.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
 		<key>Photix.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>C1054CE419A434D800A4D8F3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>C1DBBCDC18A6BFEF007BF4CE</key>
 		<dict>
 			<key>primary</key>
