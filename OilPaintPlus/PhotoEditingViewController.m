@@ -9,15 +9,22 @@
 #import "PhotoEditingViewController.h"
 #import <Photos/Photos.h>
 #import <PhotosUI/PhotosUI.h>
+//#import "DNWFilteredImageModel.h"
 
 @interface PhotoEditingViewController () <PHContentEditingController>
 @property (strong) PHContentEditingInput *input;
+@property (strong, nonatomic) IBOutlet UIImageView* bigImageView;
+@property (strong, nonatomic) IBOutlet UIScrollView* filterScrollView;
+@property (strong, nonatomic) NSMutableArray* thumbArray;
 @end
 
 @implementation PhotoEditingViewController
 
+@synthesize bigImageView, filterScrollView, thumbArray;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    thumbArray = [NSMutableArray array];
     // Do any additional setup after loading the view.
 }
 
@@ -39,6 +46,8 @@
     // If you returned YES from canHandleAdjustmentData:, contentEditingInput has the original image and adjustment data.
     // If you returned NO, the contentEditingInput has past edits "baked in".
     self.input = contentEditingInput;
+    bigImageView.image = placeholderImage;
+    //[self filterImage:placeholderImage];
 }
 
 - (void)finishContentEditingWithCompletionHandler:(void (^)(PHContentEditingOutput *))completionHandler {
@@ -71,5 +80,75 @@
     // Clean up temporary files, etc.
     // May be called after finishContentEditingWithCompletionHandler: while you prepare output.
 }
+
+/*
+#pragma mark FilteringCompleteDelegate
+-(void)filteringComplete:(NSArray*)filteredImages //array of DNWFilteredImageModel objects
+{
+    [self setupScrollView:filteredImages];
+}
+
+- (void)filterImage:(UIImage*)imageToFilter
+{
+    DNWFilterImage* filterImageManager = [[DNWFilterImage alloc] init];
+    filterImageManager.filterDelegate = self;
+    [filterImageManager filterImage:imageToFilter];
+}
+
+//https://gist.github.com/nyoron/363423
+- (void)setupScrollView:(NSArray*)imageArray//array of DNWFilteredImageModel objects
+{
+    CGSize pageSize = filterScrollView.frame.size; // scrollView is an IBOutlet for our UIScrollView
+    NSUInteger page = 0;
+    NSUInteger imageWidth = 80;
+    NSUInteger imageHeight = 80;
+    
+    [thumbArray removeAllObjects];
+    
+    for(DNWFilteredImageModel *model in imageArray) {
+        
+        UIImageView* imageView = [[UIImageView alloc] initWithImage:nil];
+        imageView.contentMode = UIViewContentModeScaleAspectFit;
+        [imageView setImage:model.filteredImage];
+        imageView.frame = CGRectMake(imageWidth * page + 5, 0, imageWidth - 10, imageHeight);
+        [thumbArray addObject:imageView];
+        [filterScrollView addSubview:imageView];
+        
+        UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(imageWidth * page + 5, pageSize.height-20, imageWidth-10, 15)];
+        label.font = [UIFont fontWithName:@"SnellRoundhand-Black" size:12];
+        [label setTextColor:[UIColor blackColor]];
+        [label setBackgroundColor:[UIColor clearColor]];
+        label.textAlignment = NSTextAlignmentCenter;
+        label.text = model.imageName;
+        [filterScrollView addSubview:label];
+        
+        UIButton* btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        btn.frame = imageView.frame;
+        [btn addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
+        btn.tag = page;
+        [filterScrollView addSubview:btn];
+        
+        page++;
+    }
+    
+    filterScrollView.contentSize = CGSizeMake(imageWidth * [imageArray count], pageSize.height);
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)aScrollView
+{
+    //[aScrollView setContentOffset: CGPointMake(aScrollView.contentOffset.x, oldY)];
+    // or if you are sure you wanna it always on top:
+    [aScrollView setContentOffset: CGPointMake(aScrollView.contentOffset.x, 0)];
+}
+
+//Image selected
+- (void) buttonClicked: (id) sender
+{
+    NSInteger tag = ((UIButton *)sender).tag;
+    
+    UIImageView* tempView = (UIImageView*)[thumbArray objectAtIndex:tag];
+    
+    bigImageView.image = tempView.image;
+}*/
 
 @end

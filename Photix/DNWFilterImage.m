@@ -7,9 +7,9 @@
 //
 
 #import "DNWFilterImage.h"
-#import <GPUImage.h>
 #import <QuartzCore/QuartzCore.h>
 #import "DNWFilteredImageModel.h"
+#import "GPUImage.h"
 
 @interface DNWFilterImage ()
 

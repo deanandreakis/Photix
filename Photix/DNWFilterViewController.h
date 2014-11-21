@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "DNWFilterImage.h"
+@import PhotixFilter;
 
 @interface DNWFilterViewController : UIViewController <UIScrollViewDelegate, FilteringCompleteDelegate>
 

@@ -9,8 +9,8 @@
 #import "DNWFilterViewController.h"
 #import "Constants.h"
 #import "DNWPictureViewController.h"
-#import "DNWFilterImage.h"
-#import "DNWFilteredImageModel.h"
+//#import "DNWFilterImage.h"
+//#import "DNWFilteredImageModel.h"
 
 @interface DNWFilterViewController ()
 

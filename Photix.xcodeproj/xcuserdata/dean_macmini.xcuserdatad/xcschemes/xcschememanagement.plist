@@ -7,17 +7,32 @@
 		<key>OilPaintPlus.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>9</integer>
+			<integer>1</integer>
 		</dict>
 		<key>Photix.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>PhotixFilter.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>10</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>C1054CE419A434D800A4D8F3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C1A9F3F31A1D9B8400513812</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C1A9F3FD1A1D9B8400513812</key>
 		<dict>
 			<key>primary</key>
 			<true/>
