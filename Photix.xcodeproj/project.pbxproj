@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		12F708DFE8CAAE3664448C71 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF75F98384E448F887006AB5 /* libPods.a */; };
+		C10182251A2149080071A793 /* ShipLibResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C10182241A2149080071A793 /* ShipLibResources.bundle */; };
+		C10182261A2153DA0071A793 /* lookup_soft_elegance_1.png in Resources */ = {isa = PBXBuildFile; fileRef = C1A9F41B1A1EE1BA00513812 /* lookup_soft_elegance_1.png */; };
+		C10182271A2153E50071A793 /* lookup_soft_elegance_2.png in Resources */ = {isa = PBXBuildFile; fileRef = C1A9F41E1A1EE1CC00513812 /* lookup_soft_elegance_2.png */; };
 		C1054CE719A434D800A4D8F3 /* PhotosUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1054CE619A434D800A4D8F3 /* PhotosUI.framework */; };
 		C1054CE919A434D800A4D8F3 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1054CE819A434D800A4D8F3 /* Photos.framework */; };
 		C1054CEF19A434D800A4D8F3 /* PhotoEditingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1054CEE19A434D800A4D8F3 /* PhotoEditingViewController.m */; };
@@ -154,6 +157,7 @@
 
 /* Begin PBXFileReference section */
 		372EB0A09762E440B29E4A95 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		C10182241A2149080071A793 /* ShipLibResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ShipLibResources.bundle; path = Pods/ShipLib/ShipLibResources.bundle; sourceTree = "<group>"; };
 		C1054CE519A434D800A4D8F3 /* OilPaintPlus.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OilPaintPlus.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1054CE619A434D800A4D8F3 /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = System/Library/Frameworks/PhotosUI.framework; sourceTree = SDKROOT; };
 		C1054CE819A434D800A4D8F3 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
@@ -407,6 +411,7 @@
 		C1DBBCD418A6BFEF007BF4CE = {
 			isa = PBXGroup;
 			children = (
+				C10182241A2149080071A793 /* ShipLibResources.bundle */,
 				C1DBBCE818A6BFEF007BF4CE /* Photix */,
 				C1DBBD0518A6BFEF007BF4CE /* PhotixTests */,
 				C1054CEA19A434D800A4D8F3 /* OilPaintPlus */,
@@ -695,6 +700,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C10182271A2153E50071A793 /* lookup_soft_elegance_2.png in Resources */,
+				C10182261A2153DA0071A793 /* lookup_soft_elegance_1.png in Resources */,
 				C1054CF119A434D800A4D8F3 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -719,6 +726,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C10182251A2149080071A793 /* ShipLibResources.bundle in Resources */,
 				C1DBBD1618A70940007BF4CE /* MainStoryboard.storyboard in Resources */,
 				C1C1166218D65FAA00247E0F /* test2_3264_2448.jpg in Resources */,
 				C1DBBCED18A6BFEF007BF4CE /* InfoPlist.strings in Resources */,
@@ -939,6 +947,48 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-l\"Flurry_5.4.0\"",
+					"-l\"Pods-Appirater\"",
+					"-l\"Pods-FlurrySDK\"",
+					"-l\"Pods-MBProgressHUD\"",
+					"-l\"Pods-MGInstagram\"",
+					"-l\"Pods-ShipLib\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"AddressBook\"",
+					"-framework",
+					"\"AddressBookUI\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreMedia\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"MediaPlayer\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"ShipLib\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-weak_framework",
+					"\"AdSupport\"",
+					"-weak_framework",
+					"\"StoreKit\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -958,6 +1008,48 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-l\"Flurry_5.4.0\"",
+					"-l\"Pods-Appirater\"",
+					"-l\"Pods-FlurrySDK\"",
+					"-l\"Pods-MBProgressHUD\"",
+					"-l\"Pods-MGInstagram\"",
+					"-l\"Pods-ShipLib\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"AddressBook\"",
+					"-framework",
+					"\"AddressBookUI\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreMedia\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"MediaPlayer\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"ShipLib\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-weak_framework",
+					"\"AdSupport\"",
+					"-weak_framework",
+					"\"StoreKit\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				VALID_ARCHS = "armv7 armv7s arm64";

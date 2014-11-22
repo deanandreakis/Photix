@@ -9,7 +9,7 @@
 #import "PhotoEditingViewController.h"
 #import <Photos/Photos.h>
 #import <PhotosUI/PhotosUI.h>
-//#import "DNWFilteredImageModel.h"
+#import "DNWFilteredImageModel.h"
 
 @interface PhotoEditingViewController () <PHContentEditingController>
 @property (strong) PHContentEditingInput *input;
@@ -47,7 +47,7 @@
     // If you returned NO, the contentEditingInput has past edits "baked in".
     self.input = contentEditingInput;
     bigImageView.image = placeholderImage;
-    //[self filterImage:placeholderImage];
+    [self filterImage:placeholderImage];
 }
 
 - (void)finishContentEditingWithCompletionHandler:(void (^)(PHContentEditingOutput *))completionHandler {
@@ -59,9 +59,9 @@
         PHContentEditingOutput *output = [[PHContentEditingOutput alloc] initWithContentEditingInput:self.input];
         
         // Provide new adjustments and render output to given location.
-        // output.adjustmentData = <#new adjustment data#>;
-        // NSData *renderedJPEGData = <#output JPEG#>;
-        // [renderedJPEGData writeToURL:output.renderedContentURL atomically:YES];
+         output.adjustmentData = [[PHAdjustmentData alloc] initWithFormatIdentifier:@"AdjustementDataIdentifier" formatVersion:@"1.0" data:nil];
+        NSData *renderedJPEGData = UIImageJPEGRepresentation(bigImageView.image, 1.0);
+        [renderedJPEGData writeToURL:output.renderedContentURL atomically:YES];
         
         // Call completion handler to commit edit to Photos.
         completionHandler(output);
@@ -81,7 +81,7 @@
     // May be called after finishContentEditingWithCompletionHandler: while you prepare output.
 }
 
-/*
+
 #pragma mark FilteringCompleteDelegate
 -(void)filteringComplete:(NSArray*)filteredImages //array of DNWFilteredImageModel objects
 {
@@ -149,6 +149,6 @@
     UIImageView* tempView = (UIImageView*)[thumbArray objectAtIndex:tag];
     
     bigImageView.image = tempView.image;
-}*/
+}
 
 @end

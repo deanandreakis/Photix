@@ -9,10 +9,10 @@
 #import "DNWPictureViewController.h"
 #import <Social/Social.h>
 #import "MGInstagram.h"
-#import "MBProgressHUD.h"
+//#import "MBProgressHUD.h"
 #import "DNWOtherApps.h"
 #import "Constants.h"
-#import <QuartzCore/QuartzCore.h>
+//#import <QuartzCore/QuartzCore.h>
 
 #define ACTION_SHEET_TAG 22
 #define reviewString @"itms-apps://itunes.apple.com/app/id827491007"
