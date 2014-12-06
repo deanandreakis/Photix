@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ObA-dk-sSI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ObA-dk-sSI">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--Photo Editing View Controller-->
@@ -9,21 +9,39 @@
             <objects>
                 <viewController id="ObA-dk-sSI" customClass="PhotoEditingViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="qkL-Od-lgU"/>
-                        <viewControllerLayoutGuide type="bottom" id="n38-gi-rB5"/>
+                        <viewControllerLayoutGuide type="top" id="AD3-eO-VO2"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Xf-tJ-7SL"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zMn-AG-sqS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="278" translatesAutoresizingMaskIntoConstraints="NO" id="xbs-Ft-tQC">
-                                <rect key="frame" x="0.0" y="28" width="320" height="278"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="278" translatesAutoresizingMaskIntoConstraints="NO" id="xbs-Ft-tQC">
+                                <rect key="frame" x="0.0" y="28" width="320" height="366"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="366" id="08B-eb-eWw"/>
+                                    <constraint firstAttribute="width" constant="320" id="hIR-WI-XGa"/>
+                                </constraints>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M52-rZ-URP">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M52-rZ-URP">
                                 <rect key="frame" x="0.0" y="408" width="320" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Za2-Bc-paZ"/>
+                                    <constraint firstAttribute="width" constant="320" id="a7P-zB-y99"/>
+                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xbs-Ft-tQC" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" id="2mg-VL-JkH"/>
+                            <constraint firstAttribute="centerX" secondItem="xbs-Ft-tQC" secondAttribute="centerX" id="4Bm-7s-5wK"/>
+                            <constraint firstItem="M52-rZ-URP" firstAttribute="top" secondItem="xbs-Ft-tQC" secondAttribute="bottom" constant="14" id="Rh3-eN-8rM"/>
+                            <constraint firstAttribute="bottom" secondItem="M52-rZ-URP" secondAttribute="bottom" constant="20" symbolic="YES" id="S9B-ZT-LHg"/>
+                            <constraint firstItem="xbs-Ft-tQC" firstAttribute="trailing" secondItem="M52-rZ-URP" secondAttribute="trailing" id="eRi-cT-EcJ"/>
+                            <constraint firstItem="xbs-Ft-tQC" firstAttribute="leading" secondItem="M52-rZ-URP" secondAttribute="leading" id="mUZ-xp-eK1"/>
+                            <constraint firstAttribute="centerX" secondItem="M52-rZ-URP" secondAttribute="centerX" id="mac-0e-BFf"/>
+                            <constraint firstItem="xbs-Ft-tQC" firstAttribute="top" secondItem="AD3-eO-VO2" secondAttribute="bottom" constant="8" symbolic="YES" id="xnU-2k-9JJ"/>
+                        </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="528"/>

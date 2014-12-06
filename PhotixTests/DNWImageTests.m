@@ -37,7 +37,7 @@
     _picController.imageToSet = [UIImage imageWithContentsOfFile:path];
     
     for (int x=0; x<200; x++) {
-        [_picController processImage];
+        //TODO: update using new filters [_picController processImage];
         [PhotixTests waitForCompletion:5];
     }
     

@@ -65,6 +65,30 @@
     [self processGPUImageFilters:imageToFilter];
 }
 
+- (void)processCoreImageFilters:(UIImage*)imageToFilter
+{
+    CIImage* beginImage = [CIImage imageWithCGImage:imageToFilter.CGImage];
+
+    // 1
+    CIContext *context = [CIContext contextWithOptions:nil];
+    
+    CIFilter *filter = [CIFilter filterWithName:@"CISepiaTone"
+                                  keysAndValues: kCIInputImageKey, beginImage,
+                        @"inputIntensity", @0.8, nil];
+    CIImage *outputImage = [filter outputImage];
+    
+    // 2
+    CGImageRef cgimg =
+    [context createCGImage:outputImage fromRect:[outputImage extent]];
+    
+    // 3
+    UIImage *newImage = [UIImage imageWithCGImage:cgimg];
+    //self.imageView.image = newImage;
+    
+    // 4
+    CGImageRelease(cgimg);
+}
+
 - (void)processGPUImageFilters:(UIImage*)imageToFilter
 {
     NSMutableArray* retVal = [NSMutableArray array];
