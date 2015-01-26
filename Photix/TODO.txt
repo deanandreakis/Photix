@@ -1,0 +1,6 @@
+1. Memory issues crashing extension when using outside of debugger. Need to use just CoreImage
+and kuwahara of GPUImage...meed to define limited set if filter chains/recipes.
+
+See http://stackoverflow.com/q/26405876/35499
+
+2. Adaptive layout for extension and main app
