@@ -100,8 +100,8 @@
 {
     CGSize pageSize = filterScrollView.frame.size; // scrollView is an IBOutlet for our UIScrollView
     NSUInteger page = 0;
-    NSUInteger imageWidth = 80;
-    NSUInteger imageHeight = 80;
+    NSUInteger imageWidth = filterScrollView.frame.size.height * 0.8;//80;
+    NSUInteger imageHeight = imageWidth;//80;
     
     [thumbArray removeAllObjects];
     
