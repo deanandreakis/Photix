@@ -186,6 +186,12 @@
                                   @"CIPhotoEffectTonal",@"Tonal",
                                   @"CIPhotoEffectTransfer",@"Transfer",
                                   @"CISepiaTone",@"Sepia",
+                                  @"CIColorPosterize",@"Posterize",
+                                  @"CIColorInvert", @"Invert",
+                                  @"CIFalseColor", @"False",
+                                  @"CIGloom", @"Gloom",
+                                  @"CIPixellate", @"8-bit Retro",
+                                  @"CIVignetteEffect", @"Vignette",
                                   nil];
         
         guideArray = [[NSArray alloc] initWithObjects:@"Oil Paint",@"Blur",@"Pixels",@"PolarPix",@"Dots",@"HalfTone",@"Crossy",
@@ -228,10 +234,57 @@
 
     CIContext *context = [CIContext contextWithOptions:nil];
     
+    /*for (NSString *name in [CIFilter filterNamesInCategory:kCICategoryBuiltIn])
+    {
+        CIFilter *filter = [CIFilter filterWithName:name];
+        
+        NSArray* ikeys = [filter inputKeys];
+        NSLog(@"FILTER NAMES: %@", name);
+        
+        if([ikeys containsObject:@"inputImage"]){
+            [filter setValue:beginImage forKey:kCIInputImageKey];
+            
+            CIImage *outputImage = [filter outputImage];
+            
+            CGImageRef cgimg =
+            [context createCGImage:outputImage fromRect:[outputImage extent]];
+            
+            UIImage *newImage = [UIImage imageWithCGImage:cgimg scale:1.0 orientation:orientation];
+            
+            DNWFilteredImageModel* imageModel = [[DNWFilteredImageModel alloc] init];
+            imageModel.imageName = name;
+            imageModel.filteredImage = newImage;
+            
+            [self.retVal addObject:imageModel];
+            
+            CGImageRelease(cgimg);
+        }
+    }*/
+    
     for (id key in filterNameDictionaryCITest) {
         
-        CIFilter *filter = [CIFilter filterWithName:(NSString*)filterNameDictionaryCITest[key]
-                                      keysAndValues: kCIInputImageKey, beginImage, nil];
+        NSString* filterName = (NSString*)filterNameDictionaryCITest[key];
+        
+        CIFilter *filter = [CIFilter filterWithName:filterName];
+        
+        [filter setValue:beginImage forKey:kCIInputImageKey];
+        
+        if([filterName isEqualToString:@"CIVignetteEffect"]) {
+            CGFloat centerX = beginImage.extent.size.width/2.0;
+            CGFloat centerY = beginImage.extent.size.height/2.0;
+            CIVector* vector = [CIVector vectorWithX:centerX Y:centerY];
+            [filter setValue:vector forKey:kCIInputCenterKey];
+            [filter setValue:[NSNumber numberWithFloat:1.0] forKey:@"inputIntensity"];
+            
+            if(centerX > centerY) {
+                [filter setValue:[NSNumber numberWithFloat:(centerY - .2*centerY)] forKey:@"inputRadius"];
+            } else {
+                [filter setValue:[NSNumber numberWithFloat:(centerX - .2*centerX)] forKey:@"inputRadius"];
+            }
+            
+            //NSArray* ikeys = [filter inputKeys];
+            //NSLog(@"KEYS: %@", ikeys);
+        }
         
         CIImage *outputImage = [filter outputImage];
         
