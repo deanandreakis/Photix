@@ -16,6 +16,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView* bigImageView;
 @property (strong, nonatomic) IBOutlet UIScrollView* filterScrollView;
 @property (strong, nonatomic) NSMutableArray* thumbArray;
+@property (nonatomic) NSInteger imageArrayCount;
 @end
 
 @implementation PhotoEditingViewController
@@ -25,6 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     thumbArray = [NSMutableArray array];
+    self.imageArrayCount = 0;
     // Do any additional setup after loading the view.
 }
 
@@ -131,6 +133,8 @@
         page++;
     }
     
+    self.imageArrayCount = [imageArray count];
+    
     filterScrollView.contentSize = CGSizeMake(imageWidth * [imageArray count], pageSize.height);
 }
 
@@ -138,7 +142,11 @@
 {
     //[aScrollView setContentOffset: CGPointMake(aScrollView.contentOffset.x, oldY)];
     // or if you are sure you wanna it always on top:
-    [aScrollView setContentOffset: CGPointMake(aScrollView.contentOffset.x, 0)];
+    //if(aScrollView.frame.size.width > aScrollView.frame.size.height) {
+        [aScrollView setContentOffset: CGPointMake(aScrollView.contentOffset.x, 0)];
+   // } else {
+     //   [aScrollView setContentOffset: CGPointMake(0, aScrollView.contentOffset.y)];
+    //}
 }
 
 //Image selected
@@ -150,5 +158,24 @@
     
     bigImageView.image = tempView.image;
 }
+/*
+- (void)willTransitionToTraitCollection:(UITraitCollection *)newCollection withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
+{
+    [super willTransitionToTraitCollection:newCollection withTransitionCoordinator:coordinator];
+    
+    if(newCollection.horizontalSizeClass == UIUserInterfaceSizeClassCompact &&
+       newCollection.verticalSizeClass == UIUserInterfaceSizeClassCompact)
+    {
+        //[filterScrollView setContentOffset: CGPointMake(0, filterScrollView.contentOffset.y)];
+        //filterScrollView.contentSize = CGSizeMake(100, 381);
+        filterScrollView.contentSize = CGSizeMake(filterScrollView.frame.size.width,(filterScrollView.frame.size.width * 0.8) * self.imageArrayCount);
+        
+    } else {
+        //[filterScrollView setContentOffset: CGPointMake(filterScrollView.contentOffset.x, 0)];
+        //filterScrollView.contentSize = CGSizeMake(filterScrollView.frame.size.width+1, filterScrollView.frame.size.height);
+        filterScrollView.contentSize = CGSizeMake((filterScrollView.frame.size.height * 0.8) * self.imageArrayCount, filterScrollView.frame.size.height);
+    }
+    
+}*/
 
 @end

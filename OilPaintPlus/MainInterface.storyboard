@@ -13,17 +13,17 @@
                         <viewControllerLayoutGuide type="bottom" id="wPm-lR-nSa"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zMn-AG-sqS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="278" translatesAutoresizingMaskIntoConstraints="NO" id="xbs-Ft-tQC">
-                                <rect key="frame" x="0.0" y="28" width="320" height="366"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="366"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="366" id="0AG-xa-tlE"/>
                                 </constraints>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M52-rZ-URP">
-                                <rect key="frame" x="0.0" y="408" width="320" height="100"/>
+                                <rect key="frame" x="0.0" y="408" width="600" height="172"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -37,8 +37,6 @@
                             <constraint firstItem="xbs-Ft-tQC" firstAttribute="top" secondItem="gex-lX-nRM" secondAttribute="bottom" constant="8" symbolic="YES" id="x23-NK-rUa"/>
                         </constraints>
                     </view>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="528"/>
                     <connections>
                         <outlet property="bigImageView" destination="xbs-Ft-tQC" id="GwX-cR-qh2"/>
                         <outlet property="filterScrollView" destination="M52-rZ-URP" id="Aqn-vb-Pla"/>

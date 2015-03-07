@@ -64,7 +64,7 @@
 		C1C1166318D65FAA00247E0F /* test2_3264_2448.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C1C1166118D65FAA00247E0F /* test2_3264_2448.jpg */; };
 		C1C1166518D65FB200247E0F /* test3_640_640.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C1C1166418D65FB200247E0F /* test3_640_640.jpg */; };
 		C1C1166618D65FB200247E0F /* test3_640_640.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C1C1166418D65FB200247E0F /* test3_640_640.jpg */; };
-		C1CB31871A339B2400B515AE /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1CB31861A339B2400B515AE /* Launch Screen.xib */; };
+		C1CB31871A339B2400B515AE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1CB31861A339B2400B515AE /* LaunchScreen.xib */; };
 		C1CB31891A33A40900B515AE /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1CB31881A33A40900B515AE /* CoreImage.framework */; };
 		C1DBBCE118A6BFEF007BF4CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1DBBCE018A6BFEF007BF4CE /* Foundation.framework */; };
 		C1DBBCE318A6BFEF007BF4CE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1DBBCE218A6BFEF007BF4CE /* CoreGraphics.framework */; };
@@ -206,7 +206,7 @@
 		C1C1165E18D65F9A00247E0F /* test1_2448_3264.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test1_2448_3264.jpg; sourceTree = "<group>"; };
 		C1C1166118D65FAA00247E0F /* test2_3264_2448.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test2_3264_2448.jpg; sourceTree = "<group>"; };
 		C1C1166418D65FB200247E0F /* test3_640_640.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test3_640_640.jpg; sourceTree = "<group>"; };
-		C1CB31861A339B2400B515AE /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
+		C1CB31861A339B2400B515AE /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		C1CB31881A33A40900B515AE /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		C1DBBCDD18A6BFEF007BF4CE /* Photix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1DBBCE018A6BFEF007BF4CE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -388,7 +388,7 @@
 			children = (
 				C1DBBD1718A70A2C007BF4CE /* MainStoryboardiPhone5.storyboard */,
 				C1DBBD1518A70940007BF4CE /* MainStoryboard.storyboard */,
-				C1CB31861A339B2400B515AE /* Launch Screen.xib */,
+				C1CB31861A339B2400B515AE /* LaunchScreen.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -741,7 +741,7 @@
 				C1C1166218D65FAA00247E0F /* test2_3264_2448.jpg in Resources */,
 				C1DBBCED18A6BFEF007BF4CE /* InfoPlist.strings in Resources */,
 				C1DBBD1818A70A2C007BF4CE /* MainStoryboardiPhone5.storyboard in Resources */,
-				C1CB31871A339B2400B515AE /* Launch Screen.xib in Resources */,
+				C1CB31871A339B2400B515AE /* LaunchScreen.xib in Resources */,
 				C1C1166518D65FB200247E0F /* test3_640_640.jpg in Resources */,
 				C1A9F41F1A1EE1CC00513812 /* lookup_soft_elegance_2.png in Resources */,
 				C1A9F41C1A1EE1BA00513812 /* lookup_soft_elegance_1.png in Resources */,
