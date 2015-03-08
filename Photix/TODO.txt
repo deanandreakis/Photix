@@ -4,7 +4,7 @@ and kuwahara of GPUImage...meed to define limited set if filter chains/recipes.
 See http://stackoverflow.com/q/26405876/35499
 DONE
 
-2. Adaptive layout for extension and main app
+2. Adaptive layout for extension (DONE) and main app
 
 3. Remove post card and replace with Walgreens integration
 

@@ -38,7 +38,9 @@
       //  [[DatabaseManager sharedDatabaseManager] prePopulate];
     //}
     
-    CGSize result = [[UIScreen mainScreen] bounds].size;
+    storyboardName = @"MainStoryboard";
+    
+    /*CGSize result = [[UIScreen mainScreen] bounds].size;
     if(result.height == 568)
     {
         storyboardName = @"MainStoryboardiPhone5";
@@ -50,7 +52,7 @@
     else
     {
         storyboardName = @"MainStoryboard";
-    }
+    }*/
     
     //[Appirater appLaunched:YES];
     
