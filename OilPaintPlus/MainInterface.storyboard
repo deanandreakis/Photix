@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ObA-dk-sSI">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Photo Editing View Controller-->
@@ -17,13 +18,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="278" translatesAutoresizingMaskIntoConstraints="NO" id="xbs-Ft-tQC">
-                                <rect key="frame" x="0.0" y="28" width="600" height="366"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="278"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="366" id="0AG-xa-tlE"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0AG-xa-tlE"/>
+                                    </mask>
+                                </variation>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M52-rZ-URP">
-                                <rect key="frame" x="0.0" y="408" width="600" height="172"/>
+                                <rect key="frame" x="0.0" y="480" width="600" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="b1S-8c-H21"/>
+                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -31,11 +40,18 @@
                             <constraint firstAttribute="centerX" secondItem="xbs-Ft-tQC" secondAttribute="centerX" id="4NF-2c-jsv"/>
                             <constraint firstItem="M52-rZ-URP" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" id="EPi-aL-eVs"/>
                             <constraint firstItem="M52-rZ-URP" firstAttribute="leading" secondItem="xbs-Ft-tQC" secondAttribute="leading" id="FIn-I1-Amt"/>
+                            <constraint firstItem="xbs-Ft-tQC" firstAttribute="height" relation="lessThanOrEqual" secondItem="zMn-AG-sqS" secondAttribute="height" multiplier="0.8" id="PPE-TC-CPq"/>
                             <constraint firstItem="M52-rZ-URP" firstAttribute="trailing" secondItem="xbs-Ft-tQC" secondAttribute="trailing" id="RlA-P6-Fvz"/>
-                            <constraint firstItem="M52-rZ-URP" firstAttribute="top" secondItem="xbs-Ft-tQC" secondAttribute="bottom" constant="14" id="WZa-no-9c1"/>
+                            <constraint firstItem="M52-rZ-URP" firstAttribute="top" relation="greaterThanOrEqual" secondItem="xbs-Ft-tQC" secondAttribute="bottom" priority="999" constant="10" id="WZa-no-9c1"/>
                             <constraint firstAttribute="bottom" secondItem="M52-rZ-URP" secondAttribute="bottom" constant="20" symbolic="YES" id="ZTe-C6-kp8"/>
+                            <constraint firstItem="M52-rZ-URP" firstAttribute="height" relation="greaterThanOrEqual" secondItem="zMn-AG-sqS" secondAttribute="height" multiplier="0.2" id="cQk-2M-Dwb"/>
                             <constraint firstItem="xbs-Ft-tQC" firstAttribute="top" secondItem="gex-lX-nRM" secondAttribute="bottom" constant="8" symbolic="YES" id="x23-NK-rUa"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="cQk-2M-Dwb"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="bigImageView" destination="xbs-Ft-tQC" id="GwX-cR-qh2"/>
