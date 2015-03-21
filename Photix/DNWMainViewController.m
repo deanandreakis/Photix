@@ -45,7 +45,7 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    [[UIApplication sharedApplication] setStatusBarHidden:NO];
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
 }
 
 - (void)didReceiveMemoryWarning

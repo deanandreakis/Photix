@@ -55,7 +55,6 @@
 		C1C1164918D60DB300247E0F /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BAFD3818B1B4E70078C88D /* Social.framework */; };
 		C1C1164A18D60DBF00247E0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1DBBCE218A6BFEF007BF4CE /* CoreGraphics.framework */; };
 		C1C1164B18D60F5A00247E0F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1DBBCF718A6BFEF007BF4CE /* Images.xcassets */; };
-		C1C1164C18D60F5A00247E0F /* MainStoryboardiPhone5.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1DBBD1718A70A2C007BF4CE /* MainStoryboardiPhone5.storyboard */; };
 		C1C1164D18D60F5A00247E0F /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1DBBD1518A70940007BF4CE /* MainStoryboard.storyboard */; };
 		C1C1165C18D62DC100247E0F /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11CCED818BED47200C9E03B /* Crashlytics.framework */; };
 		C1C1165F18D65F9A00247E0F /* test1_2448_3264.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C1C1165E18D65F9A00247E0F /* test1_2448_3264.jpg */; };
@@ -82,7 +81,6 @@
 		C1DBBD0A18A6BFEF007BF4CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C1DBBD0818A6BFEF007BF4CE /* InfoPlist.strings */; };
 		C1DBBD0C18A6BFEF007BF4CE /* PhotixTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C1DBBD0B18A6BFEF007BF4CE /* PhotixTests.m */; };
 		C1DBBD1618A70940007BF4CE /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1DBBD1518A70940007BF4CE /* MainStoryboard.storyboard */; };
-		C1DBBD1818A70A2C007BF4CE /* MainStoryboardiPhone5.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1DBBD1718A70A2C007BF4CE /* MainStoryboardiPhone5.storyboard */; };
 		C1DBBD1C18A7186E007BF4CE /* DNWMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1DBBD1B18A7186E007BF4CE /* DNWMainViewController.m */; };
 		C1E20FB218B980E1001A2BE3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1E20FB118B980E1001A2BE3 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
@@ -227,7 +225,6 @@
 		C1DBBD0918A6BFEF007BF4CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C1DBBD0B18A6BFEF007BF4CE /* PhotixTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotixTests.m; sourceTree = "<group>"; };
 		C1DBBD1518A70940007BF4CE /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
-		C1DBBD1718A70A2C007BF4CE /* MainStoryboardiPhone5.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboardiPhone5.storyboard; sourceTree = "<group>"; };
 		C1DBBD1A18A7186E007BF4CE /* DNWMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNWMainViewController.h; sourceTree = "<group>"; };
 		C1DBBD1B18A7186E007BF4CE /* DNWMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNWMainViewController.m; sourceTree = "<group>"; };
 		C1E0E40E199826EB00D3FD21 /* DNWFilterImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DNWFilterImage.h; path = ../Photix/DNWFilterImage.h; sourceTree = "<group>"; };
@@ -386,7 +383,6 @@
 		C1BAFD2B18B14B600078C88D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C1DBBD1718A70A2C007BF4CE /* MainStoryboardiPhone5.storyboard */,
 				C1DBBD1518A70940007BF4CE /* MainStoryboard.storyboard */,
 				C1CB31861A339B2400B515AE /* LaunchScreen.xib */,
 			);
@@ -740,7 +736,6 @@
 				C1DBBD1618A70940007BF4CE /* MainStoryboard.storyboard in Resources */,
 				C1C1166218D65FAA00247E0F /* test2_3264_2448.jpg in Resources */,
 				C1DBBCED18A6BFEF007BF4CE /* InfoPlist.strings in Resources */,
-				C1DBBD1818A70A2C007BF4CE /* MainStoryboardiPhone5.storyboard in Resources */,
 				C1CB31871A339B2400B515AE /* LaunchScreen.xib in Resources */,
 				C1C1166518D65FB200247E0F /* test3_640_640.jpg in Resources */,
 				C1A9F41F1A1EE1CC00513812 /* lookup_soft_elegance_2.png in Resources */,
@@ -756,7 +751,6 @@
 			files = (
 				C1C1164B18D60F5A00247E0F /* Images.xcassets in Resources */,
 				C1C1166318D65FAA00247E0F /* test2_3264_2448.jpg in Resources */,
-				C1C1164C18D60F5A00247E0F /* MainStoryboardiPhone5.storyboard in Resources */,
 				C1C1164D18D60F5A00247E0F /* MainStoryboard.storyboard in Resources */,
 				C1C1166618D65FB200247E0F /* test3_640_640.jpg in Resources */,
 				C1C1166018D65F9A00247E0F /* test1_2448_3264.jpg in Resources */,

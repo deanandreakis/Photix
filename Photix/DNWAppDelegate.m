@@ -26,7 +26,7 @@
     //[Appirater setTimeBeforeReminding:3];
     //[Appirater setDebug:YES];
     
-    [Flurry startSession:FLURRY_KEY];
+    //[Flurry startSession:FLURRY_KEY];
     
     [Crashlytics startWithAPIKey:@"2eaad7ad1fecfce6c414905676a8175bb2a1c253"];
     
