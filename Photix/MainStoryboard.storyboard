@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BFI-CK-iBK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BFI-CK-iBK">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -102,7 +102,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="General" translatesAutoresizingMaskIntoConstraints="NO" id="OD8-Pp-DHk">
-                                <rect key="frame" x="135" y="128" width="330" height="330"/>
+                                <rect key="frame" x="135" y="153" width="330" height="330"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="OD8-Pp-DHk" secondAttribute="height" multiplier="1:1" id="ShK-ty-NCj"/>
                                 </constraints>
@@ -130,7 +130,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="1ty-gT-d66" secondAttribute="trailing" id="9h2-aG-hIm"/>
                             <constraint firstAttribute="centerX" secondItem="OD8-Pp-DHk" secondAttribute="centerX" id="F1j-aN-Ab8"/>
                             <constraint firstAttribute="centerX" secondItem="tpt-kQ-jAY" secondAttribute="centerX" constant="-7" id="HaV-Nl-zPb"/>
-                            <constraint firstItem="OD8-Pp-DHk" firstAttribute="top" secondItem="tpt-kQ-jAY" secondAttribute="bottom" id="JOk-lP-Ete"/>
+                            <constraint firstItem="OD8-Pp-DHk" firstAttribute="top" secondItem="tpt-kQ-jAY" secondAttribute="bottom" constant="25" id="JOk-lP-Ete"/>
                             <constraint firstAttribute="centerX" secondItem="kT1-A0-s8F" secondAttribute="centerX" id="OHo-KO-43T"/>
                             <constraint firstItem="bPP-Ip-mQA" firstAttribute="bottom" secondItem="1ty-gT-d66" secondAttribute="top" constant="-5" id="Ozk-78-X2b"/>
                             <constraint firstItem="mZQ-nB-uld" firstAttribute="top" secondItem="1ty-gT-d66" secondAttribute="bottom" constant="10" id="TPb-T7-2zs"/>
@@ -162,7 +162,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2mA-zc-gA8">
-                                <rect key="frame" x="120" y="104" width="360" height="360"/>
+                                <rect key="frame" x="120" y="122" width="360" height="360"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2mA-zc-gA8" secondAttribute="height" multiplier="1:1" id="oiC-vx-cU3"/>
                                 </constraints>
@@ -247,10 +247,7 @@
                                 </connections>
                             </button>
                             <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="g31-s0-Dkz">
-                                <rect key="frame" x="1" y="69" width="480" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="jwk-rr-S2c"/>
-                                </constraints>
+                                <rect key="frame" x="1" y="69" width="320" height="50"/>
                                 <connections>
                                     <outlet property="delegate" destination="Tag-Li-bGF" id="q0f-8m-Bgh"/>
                                 </connections>
@@ -259,13 +256,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2mA-zc-gA8" firstAttribute="height" secondItem="Zii-gS-t0K" secondAttribute="height" multiplier="0.6" id="4UM-jM-dJX"/>
-                            <constraint firstItem="g31-s0-Dkz" firstAttribute="top" secondItem="C3U-Im-eGV" secondAttribute="bottom" constant="3" id="4rn-wB-8rg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NX0-r7-xty" secondAttribute="trailing" constant="-12" id="6eJ-xX-YW7"/>
                             <constraint firstItem="C3U-Im-eGV" firstAttribute="top" secondItem="Uya-Wf-krY" secondAttribute="bottom" constant="2" id="7Zs-L3-sd9"/>
                             <constraint firstItem="t4d-4v-JHg" firstAttribute="centerX" secondItem="Zii-gS-t0K" secondAttribute="centerX" multiplier="0.53" id="8O3-v0-4Cj"/>
                             <constraint firstItem="ikm-qk-1xF" firstAttribute="top" secondItem="t4d-4v-JHg" secondAttribute="bottom" constant="15" id="EU0-fw-p5z"/>
                             <constraint firstItem="ikm-qk-1xF" firstAttribute="top" secondItem="Kvh-uX-kVz" secondAttribute="bottom" constant="15" id="Jeu-ZM-f2L"/>
-                            <constraint firstItem="2mA-zc-gA8" firstAttribute="top" secondItem="g31-s0-Dkz" secondAttribute="bottom" constant="5" id="MiY-X9-aW5"/>
+                            <constraint firstItem="g31-s0-Dkz" firstAttribute="top" secondItem="C3U-Im-eGV" secondAttribute="bottom" constant="3" id="Oqd-4r-JQe"/>
                             <constraint firstItem="ikm-qk-1xF" firstAttribute="top" secondItem="SY8-nB-2wV" secondAttribute="bottom" constant="15" id="RCV-V1-MiN"/>
                             <constraint firstItem="ikm-qk-1xF" firstAttribute="top" secondItem="NX0-r7-xty" secondAttribute="bottom" constant="15" id="Rna-0Y-bm9"/>
                             <constraint firstItem="ikm-qk-1xF" firstAttribute="top" secondItem="GxJ-pc-HbN" secondAttribute="bottom" constant="15" id="Von-Gs-lrp"/>
@@ -273,9 +269,9 @@
                             <constraint firstItem="2mA-zc-gA8" firstAttribute="centerX" secondItem="Zii-gS-t0K" secondAttribute="centerX" id="Xk8-va-lds"/>
                             <constraint firstItem="SY8-nB-2wV" firstAttribute="leading" secondItem="Zii-gS-t0K" secondAttribute="leadingMargin" constant="-15" id="b8y-k1-adc"/>
                             <constraint firstAttribute="centerX" secondItem="GxJ-pc-HbN" secondAttribute="centerX" id="deP-RH-bYi"/>
+                            <constraint firstItem="2mA-zc-gA8" firstAttribute="top" secondItem="g31-s0-Dkz" secondAttribute="bottom" constant="3" id="eea-hQ-FOt"/>
+                            <constraint firstItem="g31-s0-Dkz" firstAttribute="leading" secondItem="C3U-Im-eGV" secondAttribute="leading" id="lZ5-9e-oOr"/>
                             <constraint firstItem="Kvh-uX-kVz" firstAttribute="centerX" secondItem="Zii-gS-t0K" secondAttribute="centerX" multiplier="1.45" id="qCb-sb-fCF"/>
-                            <constraint firstItem="g31-s0-Dkz" firstAttribute="width" secondItem="Zii-gS-t0K" secondAttribute="width" id="xln-fL-e0C"/>
-                            <constraint firstItem="g31-s0-Dkz" firstAttribute="leading" secondItem="Zii-gS-t0K" secondAttribute="leadingMargin" constant="-15" id="zCT-pr-nfH"/>
                         </constraints>
                     </view>
                     <connections>
