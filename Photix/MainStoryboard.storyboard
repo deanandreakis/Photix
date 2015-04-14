@@ -275,6 +275,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="adBannerView" destination="g31-s0-Dkz" id="nLQ-gz-sJf"/>
                         <outlet property="pictureImageView" destination="2mA-zc-gA8" id="15p-dT-d84"/>
                     </connections>
                 </viewController>

@@ -30,13 +30,15 @@
 -(IBAction)PostcardButtonPressed:(id)sender;
 -(IBAction)ReviewButtonPressed:(id)sender;
 
+
 @property (strong, nonatomic) IBOutlet UIImageView* pictureImageView;
+@property (strong, nonatomic) IBOutlet UIView* adBannerView;
 
 @end
 
 @implementation DNWPictureViewController
 
-@synthesize pictureImageView, imageToSet;
+@synthesize pictureImageView, imageToSet, adBannerView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -413,7 +415,18 @@
 }
 
 
-
+- (void) traitCollectionDidChange: (UITraitCollection *) previousTraitCollection {
+    [super traitCollectionDidChange: previousTraitCollection];
+    if ((self.traitCollection.verticalSizeClass != previousTraitCollection.verticalSizeClass)
+        || self.traitCollection.horizontalSizeClass != previousTraitCollection.horizontalSizeClass) {
+        // hide the ad banner view
+        if(self.traitCollection.verticalSizeClass == UIUserInterfaceSizeClassCompact) {
+            adBannerView.hidden = YES;
+        } else {
+            adBannerView.hidden = NO;
+        }
+    }
+}
 
 
 @end
