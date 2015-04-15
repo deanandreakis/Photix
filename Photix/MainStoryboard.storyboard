@@ -42,7 +42,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SnellRoundhand-Black" family="Snell Roundhand" pointSize="18"/>
                                 <state key="normal" image="Camera">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="TakePhotoButtonPressed:" destination="tF0-p8-vEE" eventType="touchUpInside" id="PiO-YM-xg8"/>
@@ -53,7 +53,7 @@
                                 <attributedString key="attributedText">
                                     <fragment content="OilPaint+">
                                         <attributes>
-                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="36" name="SnellRoundhand-Black"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
@@ -66,7 +66,7 @@
                                 <attributedString key="attributedText">
                                     <fragment content="Take a Picture">
                                         <attributes>
-                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="18" name="SnellRoundhand-Black"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
@@ -79,7 +79,7 @@
                                 <attributedString key="attributedText">
                                     <fragment content="Choose a Picture">
                                         <attributes>
-                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="18" name="SnellRoundhand-Black"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
@@ -95,7 +95,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SnellRoundhand-Black" family="Snell Roundhand" pointSize="18"/>
                                 <state key="normal" image="Album">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="ChooseExistingButtonPressed:" destination="tF0-p8-vEE" eventType="touchUpInside" id="ctP-PO-Y3w"/>
@@ -115,7 +115,7 @@
                                 <attributedString key="attributedText">
                                     <fragment content="v1.2">
                                         <attributes>
-                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="14" name="SnellRoundhand"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
@@ -175,7 +175,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SnellRoundhand-Black" family="Snell Roundhand" pointSize="18"/>
                                 <state key="normal" image="Start Over">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="StartOverButtonPressed:" destination="Tag-Li-bGF" eventType="touchUpInside" id="JLW-st-26i"/>
@@ -264,6 +264,7 @@
                             <constraint firstItem="g31-s0-Dkz" firstAttribute="top" secondItem="C3U-Im-eGV" secondAttribute="bottom" constant="3" id="Oqd-4r-JQe"/>
                             <constraint firstItem="ikm-qk-1xF" firstAttribute="top" secondItem="SY8-nB-2wV" secondAttribute="bottom" constant="15" id="RCV-V1-MiN"/>
                             <constraint firstItem="ikm-qk-1xF" firstAttribute="top" secondItem="NX0-r7-xty" secondAttribute="bottom" constant="15" id="Rna-0Y-bm9"/>
+                            <constraint firstItem="2mA-zc-gA8" firstAttribute="top" secondItem="Uya-Wf-krY" secondAttribute="bottom" constant="63" id="Ucy-TB-bfu"/>
                             <constraint firstItem="ikm-qk-1xF" firstAttribute="top" secondItem="GxJ-pc-HbN" secondAttribute="bottom" constant="15" id="Von-Gs-lrp"/>
                             <constraint firstItem="C3U-Im-eGV" firstAttribute="leading" secondItem="Zii-gS-t0K" secondAttribute="leadingMargin" constant="-15" id="XJp-yE-zSH"/>
                             <constraint firstItem="2mA-zc-gA8" firstAttribute="centerX" secondItem="Zii-gS-t0K" secondAttribute="centerX" id="Xk8-va-lds"/>
@@ -273,6 +274,17 @@
                             <constraint firstItem="g31-s0-Dkz" firstAttribute="leading" secondItem="C3U-Im-eGV" secondAttribute="leading" id="lZ5-9e-oOr"/>
                             <constraint firstItem="Kvh-uX-kVz" firstAttribute="centerX" secondItem="Zii-gS-t0K" secondAttribute="centerX" multiplier="1.45" id="qCb-sb-fCF"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Ucy-TB-bfu"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="Ucy-TB-bfu"/>
+                                <exclude reference="eea-hQ-FOt"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="adBannerView" destination="g31-s0-Dkz" id="nLQ-gz-sJf"/>
