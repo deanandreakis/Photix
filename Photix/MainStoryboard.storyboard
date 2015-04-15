@@ -264,7 +264,7 @@
                             <constraint firstItem="g31-s0-Dkz" firstAttribute="top" secondItem="C3U-Im-eGV" secondAttribute="bottom" constant="3" id="Oqd-4r-JQe"/>
                             <constraint firstItem="ikm-qk-1xF" firstAttribute="top" secondItem="SY8-nB-2wV" secondAttribute="bottom" constant="15" id="RCV-V1-MiN"/>
                             <constraint firstItem="ikm-qk-1xF" firstAttribute="top" secondItem="NX0-r7-xty" secondAttribute="bottom" constant="15" id="Rna-0Y-bm9"/>
-                            <constraint firstItem="2mA-zc-gA8" firstAttribute="top" secondItem="Uya-Wf-krY" secondAttribute="bottom" constant="63" id="Ucy-TB-bfu"/>
+                            <constraint firstItem="2mA-zc-gA8" firstAttribute="top" secondItem="Uya-Wf-krY" secondAttribute="bottom" id="Ucy-TB-bfu"/>
                             <constraint firstItem="ikm-qk-1xF" firstAttribute="top" secondItem="GxJ-pc-HbN" secondAttribute="bottom" constant="15" id="Von-Gs-lrp"/>
                             <constraint firstItem="C3U-Im-eGV" firstAttribute="leading" secondItem="Zii-gS-t0K" secondAttribute="leadingMargin" constant="-15" id="XJp-yE-zSH"/>
                             <constraint firstItem="2mA-zc-gA8" firstAttribute="centerX" secondItem="Zii-gS-t0K" secondAttribute="centerX" id="Xk8-va-lds"/>
@@ -272,17 +272,21 @@
                             <constraint firstAttribute="centerX" secondItem="GxJ-pc-HbN" secondAttribute="centerX" id="deP-RH-bYi"/>
                             <constraint firstItem="2mA-zc-gA8" firstAttribute="top" secondItem="g31-s0-Dkz" secondAttribute="bottom" constant="3" id="eea-hQ-FOt"/>
                             <constraint firstItem="g31-s0-Dkz" firstAttribute="leading" secondItem="C3U-Im-eGV" secondAttribute="leading" id="lZ5-9e-oOr"/>
+                            <constraint firstItem="2mA-zc-gA8" firstAttribute="height" secondItem="Zii-gS-t0K" secondAttribute="height" multiplier="0.8" id="ocf-pc-K9M"/>
                             <constraint firstItem="Kvh-uX-kVz" firstAttribute="centerX" secondItem="Zii-gS-t0K" secondAttribute="centerX" multiplier="1.45" id="qCb-sb-fCF"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="Ucy-TB-bfu"/>
+                                <exclude reference="ocf-pc-K9M"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="constraints">
+                                <exclude reference="4UM-jM-dJX"/>
                                 <include reference="Ucy-TB-bfu"/>
                                 <exclude reference="eea-hQ-FOt"/>
+                                <include reference="ocf-pc-K9M"/>
                             </mask>
                         </variation>
                     </view>
