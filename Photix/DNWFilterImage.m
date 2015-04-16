@@ -207,6 +207,11 @@
 {
     dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
         
+        DNWFilteredImageModel* imageModel = [[DNWFilteredImageModel alloc] init];
+        imageModel.imageName = @"Original";
+        imageModel.filteredImage = imageToFilter;
+        [self.retVal addObject:imageModel];
+        
         [self processGPUImageFilters:imageToFilter];
         
         [self processCoreImageFilters:imageToFilter];

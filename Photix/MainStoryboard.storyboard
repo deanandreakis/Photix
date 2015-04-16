@@ -167,6 +167,34 @@
                                     <constraint firstAttribute="width" secondItem="2mA-zc-gA8" secondAttribute="height" multiplier="1:1" id="oiC-vx-cU3"/>
                                 </constraints>
                             </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fYA-no-ebA">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Instagram" id="WD0-UM-cI4">
+                                        <connections>
+                                            <action selector="InstagramButtonPressed:" destination="Tag-Li-bGF" id="cqD-h2-qip"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="wzQ-Di-KB3"/>
+                                    <barButtonItem systemItem="action" id="Omt-Hc-3hu">
+                                        <connections>
+                                            <action selector="ShareButtonPressed:" destination="Tag-Li-bGF" id="wtD-31-Tvu"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="UAO-pN-XwF"/>
+                                    <barButtonItem title="Postcard" id="OnA-DM-cQ2">
+                                        <connections>
+                                            <action selector="PostcardButtonPressed:" destination="Tag-Li-bGF" id="bqK-9r-ShI"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="9ww-z3-tiW"/>
+                                    <barButtonItem title="Heart" id="h0e-go-Wkv">
+                                        <connections>
+                                            <action selector="ReviewButtonPressed:" destination="Tag-Li-bGF" id="JZl-99-zSu"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C3U-Im-eGV" userLabel="Button-Reset">
                                 <rect key="frame" x="1" y="22" width="44" height="44"/>
                                 <constraints>
@@ -181,71 +209,6 @@
                                     <action selector="StartOverButtonPressed:" destination="Tag-Li-bGF" eventType="touchUpInside" id="JLW-st-26i"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kvh-uX-kVz" userLabel="Button-Share">
-                                <rect key="frame" x="413" y="541" width="44" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="44" id="K3D-El-dfd"/>
-                                    <constraint firstAttribute="height" constant="44" id="LvO-Pq-gW2"/>
-                                </constraints>
-                                <state key="normal" image="Share">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="ShareButtonPressed:" destination="Tag-Li-bGF" eventType="touchUpInside" id="hvK-le-oq9"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SY8-nB-2wV" userLabel="Button-Instagram">
-                                <rect key="frame" x="1" y="541" width="44" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="44" id="c5J-E5-DiU"/>
-                                    <constraint firstAttribute="height" constant="44" id="k41-gh-nh5"/>
-                                </constraints>
-                                <state key="normal" image="Instagram">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="InstagramButtonPressed:" destination="Tag-Li-bGF" eventType="touchUpInside" id="SsF-zv-Do6"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4d-4v-JHg" userLabel="Button-More">
-                                <rect key="frame" x="137" y="541" width="44" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="13h-Vo-GJg"/>
-                                    <constraint firstAttribute="width" constant="44" id="7Yh-53-RPx"/>
-                                </constraints>
-                                <state key="normal" image="Other Apps">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="DropboxButtonPressed:" destination="Tag-Li-bGF" eventType="touchUpInside" id="u6e-jd-8T3"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GxJ-pc-HbN" userLabel="Button-Postcard">
-                                <rect key="frame" x="278" y="541" width="44" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="9do-ut-vOo"/>
-                                    <constraint firstAttribute="width" constant="44" id="qHc-Oh-eUl"/>
-                                </constraints>
-                                <state key="normal" image="Postcard">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="PostcardButtonPressed:" destination="Tag-Li-bGF" eventType="touchUpInside" id="Ua5-h6-ed1"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NX0-r7-xty" userLabel="Button-Heart">
-                                <rect key="frame" x="552" y="541" width="44" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="KXF-tD-66S"/>
-                                    <constraint firstAttribute="width" constant="44" id="dhV-dz-EFB"/>
-                                </constraints>
-                                <state key="normal" image="Heart">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="ReviewButtonPressed:" destination="Tag-Li-bGF" eventType="touchUpInside" id="bnp-Au-C1M"/>
-                                </connections>
-                            </button>
                             <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="g31-s0-Dkz">
                                 <rect key="frame" x="1" y="69" width="320" height="50"/>
                                 <connections>
@@ -256,24 +219,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2mA-zc-gA8" firstAttribute="height" secondItem="Zii-gS-t0K" secondAttribute="height" multiplier="0.6" id="4UM-jM-dJX"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="NX0-r7-xty" secondAttribute="trailing" constant="-12" id="6eJ-xX-YW7"/>
                             <constraint firstItem="C3U-Im-eGV" firstAttribute="top" secondItem="Uya-Wf-krY" secondAttribute="bottom" constant="2" id="7Zs-L3-sd9"/>
-                            <constraint firstItem="t4d-4v-JHg" firstAttribute="centerX" secondItem="Zii-gS-t0K" secondAttribute="centerX" multiplier="0.53" id="8O3-v0-4Cj"/>
-                            <constraint firstItem="ikm-qk-1xF" firstAttribute="top" secondItem="t4d-4v-JHg" secondAttribute="bottom" constant="15" id="EU0-fw-p5z"/>
-                            <constraint firstItem="ikm-qk-1xF" firstAttribute="top" secondItem="Kvh-uX-kVz" secondAttribute="bottom" constant="15" id="Jeu-ZM-f2L"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fYA-no-ebA" secondAttribute="trailing" constant="-16" id="FOa-rM-Yhi"/>
                             <constraint firstItem="g31-s0-Dkz" firstAttribute="top" secondItem="C3U-Im-eGV" secondAttribute="bottom" constant="3" id="Oqd-4r-JQe"/>
-                            <constraint firstItem="ikm-qk-1xF" firstAttribute="top" secondItem="SY8-nB-2wV" secondAttribute="bottom" constant="15" id="RCV-V1-MiN"/>
-                            <constraint firstItem="ikm-qk-1xF" firstAttribute="top" secondItem="NX0-r7-xty" secondAttribute="bottom" constant="15" id="Rna-0Y-bm9"/>
                             <constraint firstItem="2mA-zc-gA8" firstAttribute="top" secondItem="Uya-Wf-krY" secondAttribute="bottom" id="Ucy-TB-bfu"/>
-                            <constraint firstItem="ikm-qk-1xF" firstAttribute="top" secondItem="GxJ-pc-HbN" secondAttribute="bottom" constant="15" id="Von-Gs-lrp"/>
+                            <constraint firstItem="ikm-qk-1xF" firstAttribute="top" secondItem="fYA-no-ebA" secondAttribute="bottom" id="WIb-Zk-vuB"/>
                             <constraint firstItem="C3U-Im-eGV" firstAttribute="leading" secondItem="Zii-gS-t0K" secondAttribute="leadingMargin" constant="-15" id="XJp-yE-zSH"/>
                             <constraint firstItem="2mA-zc-gA8" firstAttribute="centerX" secondItem="Zii-gS-t0K" secondAttribute="centerX" id="Xk8-va-lds"/>
-                            <constraint firstItem="SY8-nB-2wV" firstAttribute="leading" secondItem="Zii-gS-t0K" secondAttribute="leadingMargin" constant="-15" id="b8y-k1-adc"/>
-                            <constraint firstAttribute="centerX" secondItem="GxJ-pc-HbN" secondAttribute="centerX" id="deP-RH-bYi"/>
                             <constraint firstItem="2mA-zc-gA8" firstAttribute="top" secondItem="g31-s0-Dkz" secondAttribute="bottom" constant="3" id="eea-hQ-FOt"/>
+                            <constraint firstItem="fYA-no-ebA" firstAttribute="leading" secondItem="Zii-gS-t0K" secondAttribute="leadingMargin" constant="-16" id="lTh-ma-biw"/>
                             <constraint firstItem="g31-s0-Dkz" firstAttribute="leading" secondItem="C3U-Im-eGV" secondAttribute="leading" id="lZ5-9e-oOr"/>
                             <constraint firstItem="2mA-zc-gA8" firstAttribute="height" secondItem="Zii-gS-t0K" secondAttribute="height" multiplier="0.8" id="ocf-pc-K9M"/>
-                            <constraint firstItem="Kvh-uX-kVz" firstAttribute="centerX" secondItem="Zii-gS-t0K" secondAttribute="centerX" multiplier="1.45" id="qCb-sb-fCF"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -381,11 +337,6 @@
         <image name="Camera" width="128" height="128"/>
         <image name="General" width="512" height="512"/>
         <image name="GreenCheck" width="64" height="49"/>
-        <image name="Heart" width="64" height="64"/>
-        <image name="Instagram" width="64" height="64"/>
-        <image name="Other Apps" width="512" height="512"/>
-        <image name="Postcard" width="256" height="256"/>
-        <image name="Share" width="38" height="53"/>
         <image name="Start Over" width="64" height="64"/>
     </resources>
 </document>
