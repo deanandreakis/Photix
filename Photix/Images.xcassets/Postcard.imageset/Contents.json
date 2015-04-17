@@ -2,16 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "Feedback-22.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "postale_icon_512x512.png"
+      "filename" : "Feedback-44.png"
     },
     {
       "idiom" : "universal",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "Feedback-66.png"
     }
   ],
   "info" : {

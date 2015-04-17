@@ -238,19 +238,6 @@
 
 -(IBAction)ShareButtonPressed:(id)sender
 {
-    /*UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Select Sharing Option:"
-                                                             delegate:self
-                                                    cancelButtonTitle:@"Cancel"
-                                               destructiveButtonTitle:nil
-                                                    otherButtonTitles:
-                                  @"Save to Camera Roll",
-                                  @"Rate This App",
-                                  nil];
-    
-    actionSheet.tag = ACTION_SHEET_TAG;
-    actionSheet.actionSheetStyle = UIActionSheetStyleBlackOpaque;
-    [actionSheet showInView:self.view];*/
-    
     UIImage* newImage = [self resizeImageToSize:CGSizeMake(640, 640) Image:pictureImageView.image];
     
     if (newImage == nil) {
@@ -263,11 +250,16 @@
     } else {
 
         UIActivityViewController * controller = [[UIActivityViewController alloc] initWithActivityItems:@[newImage]                                                                  applicationActivities:nil];
-        //controller.excludedActivityTypes = @[UIActivityTypeMail, UIActivityTypePostToFacebook, UIActivityTypePostToTwitter];
-        [self presentViewController:controller
-                           animated:YES
-                         completion:^{
-                         }];
+        //if iPhone
+        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+            [self presentViewController:controller animated:YES completion:nil];
+        }
+        //if iPad
+        else {
+            // Change Rect to position Popover
+            UIPopoverController *popup = [[UIPopoverController alloc] initWithContentViewController:controller];
+            [popup presentPopoverFromRect:CGRectMake(self.view.frame.size.width/2, self.view.frame.size.height/4, 0, 0)inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+        }
     }
 }
 
@@ -421,6 +413,9 @@
         || self.traitCollection.horizontalSizeClass != previousTraitCollection.horizontalSizeClass) {
         // hide the ad banner view
         if(self.traitCollection.verticalSizeClass == UIUserInterfaceSizeClassCompact) {
+           //||
+           //(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad &&
+            //UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation))) {
             adBannerView.hidden = YES;
         } else {
             adBannerView.hidden = NO;

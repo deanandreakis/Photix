@@ -102,7 +102,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="General" translatesAutoresizingMaskIntoConstraints="NO" id="OD8-Pp-DHk">
-                                <rect key="frame" x="135" y="153" width="330" height="330"/>
+                                <rect key="frame" x="135" y="135" width="330" height="330"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="OD8-Pp-DHk" secondAttribute="height" multiplier="1:1" id="ShK-ty-NCj"/>
                                 </constraints>
@@ -127,6 +127,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="OD8-Pp-DHk" firstAttribute="height" relation="lessThanOrEqual" secondItem="6Xg-x6-sIu" secondAttribute="height" multiplier="0.55" id="7rv-YN-PNm"/>
+                            <constraint firstAttribute="centerY" secondItem="OD8-Pp-DHk" secondAttribute="centerY" id="8aA-er-3Je"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1ty-gT-d66" secondAttribute="trailing" id="9h2-aG-hIm"/>
                             <constraint firstAttribute="centerX" secondItem="OD8-Pp-DHk" secondAttribute="centerX" id="F1j-aN-Ab8"/>
                             <constraint firstAttribute="centerX" secondItem="tpt-kQ-jAY" secondAttribute="centerX" constant="-7" id="HaV-Nl-zPb"/>
@@ -142,6 +143,11 @@
                             <constraint firstItem="mB2-pk-7Ca" firstAttribute="leading" secondItem="6Xg-x6-sIu" secondAttribute="leadingMargin" id="twg-ZK-o21"/>
                             <constraint firstItem="Pdg-oQ-XMq" firstAttribute="centerX" secondItem="mB2-pk-7Ca" secondAttribute="centerX" constant="-0.5" id="yMq-Ul-h6r"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="JOk-lP-Ete"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="Hok-h4-msX"/>
                 </viewController>
@@ -162,7 +168,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2mA-zc-gA8">
-                                <rect key="frame" x="120" y="122" width="360" height="360"/>
+                                <rect key="frame" x="120" y="126" width="360" height="360"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2mA-zc-gA8" secondAttribute="height" multiplier="1:1" id="oiC-vx-cU3"/>
                                 </constraints>
@@ -170,7 +176,7 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fYA-no-ebA">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
-                                    <barButtonItem title="Instagram" id="WD0-UM-cI4">
+                                    <barButtonItem image="Instagram" id="WD0-UM-cI4">
                                         <connections>
                                             <action selector="InstagramButtonPressed:" destination="Tag-Li-bGF" id="cqD-h2-qip"/>
                                         </connections>
@@ -182,13 +188,13 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="UAO-pN-XwF"/>
-                                    <barButtonItem title="Postcard" id="OnA-DM-cQ2">
+                                    <barButtonItem image="Postcard" id="OnA-DM-cQ2">
                                         <connections>
                                             <action selector="PostcardButtonPressed:" destination="Tag-Li-bGF" id="bqK-9r-ShI"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="9ww-z3-tiW"/>
-                                    <barButtonItem title="Heart" id="h0e-go-Wkv">
+                                    <barButtonItem image="Like" id="h0e-go-Wkv">
                                         <connections>
                                             <action selector="ReviewButtonPressed:" destination="Tag-Li-bGF" id="JZl-99-zSu"/>
                                         </connections>
@@ -210,7 +216,7 @@
                                 </connections>
                             </button>
                             <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="g31-s0-Dkz">
-                                <rect key="frame" x="1" y="69" width="320" height="50"/>
+                                <rect key="frame" x="140" y="69" width="320" height="50"/>
                                 <connections>
                                     <outlet property="delegate" destination="Tag-Li-bGF" id="q0f-8m-Bgh"/>
                                 </connections>
@@ -219,20 +225,22 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2mA-zc-gA8" firstAttribute="height" secondItem="Zii-gS-t0K" secondAttribute="height" multiplier="0.6" id="4UM-jM-dJX"/>
+                            <constraint firstItem="g31-s0-Dkz" firstAttribute="leading" secondItem="C3U-Im-eGV" secondAttribute="leading" id="6e2-m5-bc3"/>
                             <constraint firstItem="C3U-Im-eGV" firstAttribute="top" secondItem="Uya-Wf-krY" secondAttribute="bottom" constant="2" id="7Zs-L3-sd9"/>
+                            <constraint firstAttribute="centerX" secondItem="g31-s0-Dkz" secondAttribute="centerX" id="Dnu-QD-KDT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fYA-no-ebA" secondAttribute="trailing" constant="-16" id="FOa-rM-Yhi"/>
-                            <constraint firstItem="g31-s0-Dkz" firstAttribute="top" secondItem="C3U-Im-eGV" secondAttribute="bottom" constant="3" id="Oqd-4r-JQe"/>
                             <constraint firstItem="2mA-zc-gA8" firstAttribute="top" secondItem="Uya-Wf-krY" secondAttribute="bottom" id="Ucy-TB-bfu"/>
                             <constraint firstItem="ikm-qk-1xF" firstAttribute="top" secondItem="fYA-no-ebA" secondAttribute="bottom" id="WIb-Zk-vuB"/>
                             <constraint firstItem="C3U-Im-eGV" firstAttribute="leading" secondItem="Zii-gS-t0K" secondAttribute="leadingMargin" constant="-15" id="XJp-yE-zSH"/>
                             <constraint firstItem="2mA-zc-gA8" firstAttribute="centerX" secondItem="Zii-gS-t0K" secondAttribute="centerX" id="Xk8-va-lds"/>
-                            <constraint firstItem="2mA-zc-gA8" firstAttribute="top" secondItem="g31-s0-Dkz" secondAttribute="bottom" constant="3" id="eea-hQ-FOt"/>
+                            <constraint firstItem="2mA-zc-gA8" firstAttribute="top" secondItem="g31-s0-Dkz" secondAttribute="bottom" constant="7" id="eW2-JS-Pqe"/>
+                            <constraint firstItem="g31-s0-Dkz" firstAttribute="top" secondItem="C3U-Im-eGV" secondAttribute="bottom" constant="3" id="jPl-hA-Ev4"/>
                             <constraint firstItem="fYA-no-ebA" firstAttribute="leading" secondItem="Zii-gS-t0K" secondAttribute="leadingMargin" constant="-16" id="lTh-ma-biw"/>
-                            <constraint firstItem="g31-s0-Dkz" firstAttribute="leading" secondItem="C3U-Im-eGV" secondAttribute="leading" id="lZ5-9e-oOr"/>
                             <constraint firstItem="2mA-zc-gA8" firstAttribute="height" secondItem="Zii-gS-t0K" secondAttribute="height" multiplier="0.8" id="ocf-pc-K9M"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="6e2-m5-bc3"/>
                                 <exclude reference="Ucy-TB-bfu"/>
                                 <exclude reference="ocf-pc-K9M"/>
                             </mask>
@@ -241,7 +249,6 @@
                             <mask key="constraints">
                                 <exclude reference="4UM-jM-dJX"/>
                                 <include reference="Ucy-TB-bfu"/>
-                                <exclude reference="eea-hQ-FOt"/>
                                 <include reference="ocf-pc-K9M"/>
                             </mask>
                         </variation>
@@ -303,7 +310,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w0M-UL-ECr">
-                                <rect key="frame" x="0.0" y="28" width="600" height="454"/>
+                                <rect key="frame" x="0.0" y="71" width="600" height="411"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -318,9 +325,15 @@
                             <constraint firstItem="zxM-ce-yoe" firstAttribute="leading" secondItem="w0M-UL-ECr" secondAttribute="leading" id="XIh-dW-h4p"/>
                             <constraint firstItem="zxM-ce-yoe" firstAttribute="top" secondItem="w0M-UL-ECr" secondAttribute="bottom" priority="999" constant="10" id="dvS-rN-Nga"/>
                             <constraint firstItem="w0M-UL-ECr" firstAttribute="top" secondItem="YVo-eX-MlJ" secondAttribute="bottom" constant="8" symbolic="YES" id="gRB-64-5A3"/>
+                            <constraint firstItem="w0M-UL-ECr" firstAttribute="top" secondItem="rEX-MD-IwD" secondAttribute="bottom" constant="5" id="nHe-8V-lBm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="h5k-JG-qiE" secondAttribute="trailing" constant="15" id="nP4-pL-bQU"/>
                             <constraint firstItem="rEX-MD-IwD" firstAttribute="top" secondItem="YVo-eX-MlJ" secondAttribute="bottom" constant="2" id="sOk-Lb-moU"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="gRB-64-5A3"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="filterScrollView" destination="zxM-ce-yoe" id="KvM-Oo-6A2"/>
@@ -337,6 +350,9 @@
         <image name="Camera" width="128" height="128"/>
         <image name="General" width="512" height="512"/>
         <image name="GreenCheck" width="64" height="49"/>
+        <image name="Instagram" width="22" height="22"/>
+        <image name="Like" width="22" height="22"/>
+        <image name="Postcard" width="22" height="22"/>
         <image name="Start Over" width="64" height="64"/>
     </resources>
 </document>
