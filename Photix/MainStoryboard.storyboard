@@ -317,7 +317,10 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w0M-UL-ECr">
-                                <rect key="frame" x="0.0" y="71" width="600" height="411"/>
+                                <rect key="frame" x="120" y="71" width="360" height="360"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="w0M-UL-ECr" secondAttribute="height" multiplier="1:1" id="Us3-mO-Vug"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -327,18 +330,27 @@
                             <constraint firstItem="rEX-MD-IwD" firstAttribute="leading" secondItem="yN1-aY-rdE" secondAttribute="leadingMargin" constant="-12" id="8ig-Cz-Gub"/>
                             <constraint firstItem="h5k-JG-qiE" firstAttribute="top" secondItem="YVo-eX-MlJ" secondAttribute="bottom" constant="2" id="EVK-f4-hZq"/>
                             <constraint firstItem="9FS-0A-ZOQ" firstAttribute="top" secondItem="zxM-ce-yoe" secondAttribute="bottom" constant="8" symbolic="YES" id="EaJ-wS-oCW"/>
-                            <constraint firstItem="w0M-UL-ECr" firstAttribute="height" relation="lessThanOrEqual" secondItem="yN1-aY-rdE" secondAttribute="height" multiplier="0.8" id="VLc-zg-loL"/>
+                            <constraint firstItem="w0M-UL-ECr" firstAttribute="height" relation="lessThanOrEqual" secondItem="yN1-aY-rdE" secondAttribute="height" multiplier="0.6" id="VLc-zg-loL"/>
                             <constraint firstItem="zxM-ce-yoe" firstAttribute="trailing" secondItem="w0M-UL-ECr" secondAttribute="trailing" id="VTk-3r-bT2"/>
+                            <constraint firstItem="w0M-UL-ECr" firstAttribute="top" secondItem="rEX-MD-IwD" secondAttribute="bottom" constant="5" id="W4u-A6-Xa3"/>
                             <constraint firstItem="zxM-ce-yoe" firstAttribute="leading" secondItem="w0M-UL-ECr" secondAttribute="leading" id="XIh-dW-h4p"/>
+                            <constraint firstItem="zxM-ce-yoe" firstAttribute="trailing" secondItem="yN1-aY-rdE" secondAttribute="trailing" id="bgx-4e-8JE"/>
                             <constraint firstItem="zxM-ce-yoe" firstAttribute="top" secondItem="w0M-UL-ECr" secondAttribute="bottom" priority="999" constant="10" id="dvS-rN-Nga"/>
                             <constraint firstItem="w0M-UL-ECr" firstAttribute="top" secondItem="YVo-eX-MlJ" secondAttribute="bottom" constant="8" symbolic="YES" id="gRB-64-5A3"/>
-                            <constraint firstItem="w0M-UL-ECr" firstAttribute="top" secondItem="rEX-MD-IwD" secondAttribute="bottom" constant="5" id="nHe-8V-lBm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="h5k-JG-qiE" secondAttribute="trailing" constant="15" id="nP4-pL-bQU"/>
                             <constraint firstItem="rEX-MD-IwD" firstAttribute="top" secondItem="YVo-eX-MlJ" secondAttribute="bottom" constant="2" id="sOk-Lb-moU"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="gRB-64-5A3"/>
+                                <exclude reference="VTk-3r-bT2"/>
+                                <exclude reference="XIh-dW-h4p"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="W4u-A6-Xa3"/>
+                                <include reference="gRB-64-5A3"/>
                             </mask>
                         </variation>
                     </view>
