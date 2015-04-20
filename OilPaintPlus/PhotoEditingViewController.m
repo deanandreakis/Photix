@@ -117,7 +117,7 @@
         [filterScrollView addSubview:imageView];
         
         UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(imageWidth * page + 5, pageSize.height-20, imageWidth-10, 15)];
-        label.font = [UIFont fontWithName:@"SnellRoundhand-Black" size:12];
+        label.font = [UIFont fontWithName:@"GillSans" size:12];
         [label setTextColor:[UIColor blackColor]];
         [label setBackgroundColor:[UIColor clearColor]];
         label.textAlignment = NSTextAlignmentCenter;

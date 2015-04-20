@@ -35,12 +35,12 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pdg-oQ-XMq">
-                                <rect key="frame" x="55" y="518" width="44" height="44"/>
+                                <rect key="frame" x="45" y="520" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="44" id="NDO-N2-UN2"/>
                                     <constraint firstAttribute="height" constant="44" id="yO2-am-b0N"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="SnellRoundhand-Black" family="Snell Roundhand" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="18"/>
                                 <state key="normal" image="Camera">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -49,12 +49,12 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kT1-A0-s8F">
-                                <rect key="frame" x="218" y="64" width="165" height="46"/>
+                                <rect key="frame" x="231" y="64" width="139" height="42"/>
                                 <attributedString key="attributedText">
                                     <fragment content="OilPaint+">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="36" name="SnellRoundhand-Black"/>
+                                            <font key="NSFont" size="36" name="GillSans"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
@@ -62,12 +62,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mB2-pk-7Ca">
-                                <rect key="frame" x="16" y="567" width="123" height="23"/>
+                                <rect key="frame" x="16" y="569" width="103" height="21"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Take a Picture">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="18" name="SnellRoundhand-Black"/>
+                                            <font key="NSFont" size="18" name="GillSans"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
@@ -75,12 +75,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ty-gT-d66">
-                                <rect key="frame" x="445" y="567" width="139" height="23"/>
+                                <rect key="frame" x="457" y="569" width="127" height="21"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Choose a Picture">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="18" name="SnellRoundhand-Black"/>
+                                            <font key="NSFont" size="18" name="GillSans"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
@@ -88,7 +88,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPP-Ip-mQA">
-                                <rect key="frame" x="493" y="518" width="44" height="44"/>
+                                <rect key="frame" x="499" y="520" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="44" id="MPM-gR-4eX"/>
                                     <constraint firstAttribute="height" constant="44" id="UKA-RR-jVH"/>
@@ -108,7 +108,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpt-kQ-jAY">
-                                <rect key="frame" x="291" y="110" width="32" height="18"/>
+                                <rect key="frame" x="291" y="106" width="32" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="32" id="v1f-0S-z0x"/>
                                 </constraints>
@@ -116,7 +116,7 @@
                                     <fragment content="v1.2">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="14" name="SnellRoundhand"/>
+                                            <font key="NSFont" size="14" name="GillSans"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
@@ -168,7 +168,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2mA-zc-gA8">
-                                <rect key="frame" x="120" y="126" width="360" height="360"/>
+                                <rect key="frame" x="120" y="121" width="360" height="360"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2mA-zc-gA8" secondAttribute="height" multiplier="1:1" id="oiC-vx-cU3"/>
                                 </constraints>
@@ -221,8 +221,8 @@
                                     <action selector="StartOverButtonPressed:" destination="Tag-Li-bGF" eventType="touchUpInside" id="JLW-st-26i"/>
                                 </connections>
                             </button>
-                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="g31-s0-Dkz">
-                                <rect key="frame" x="140" y="69" width="320" height="50"/>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="center" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g31-s0-Dkz">
+                                <rect key="frame" x="0.0" y="69" width="600" height="32"/>
                                 <connections>
                                     <outlet property="delegate" destination="Tag-Li-bGF" id="q0f-8m-Bgh"/>
                                 </connections>
@@ -231,22 +231,22 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2mA-zc-gA8" firstAttribute="height" secondItem="Zii-gS-t0K" secondAttribute="height" multiplier="0.6" id="4UM-jM-dJX"/>
-                            <constraint firstItem="g31-s0-Dkz" firstAttribute="leading" secondItem="C3U-Im-eGV" secondAttribute="leading" id="6e2-m5-bc3"/>
                             <constraint firstItem="C3U-Im-eGV" firstAttribute="top" secondItem="Uya-Wf-krY" secondAttribute="bottom" constant="2" id="7Zs-L3-sd9"/>
                             <constraint firstAttribute="centerX" secondItem="g31-s0-Dkz" secondAttribute="centerX" id="Dnu-QD-KDT"/>
+                            <constraint firstItem="g31-s0-Dkz" firstAttribute="leading" secondItem="Zii-gS-t0K" secondAttribute="leading" id="FKT-sn-gIR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fYA-no-ebA" secondAttribute="trailing" constant="-16" id="FOa-rM-Yhi"/>
+                            <constraint firstItem="g31-s0-Dkz" firstAttribute="trailing" secondItem="Zii-gS-t0K" secondAttribute="trailing" id="SPP-YZ-sTW"/>
                             <constraint firstItem="2mA-zc-gA8" firstAttribute="top" secondItem="Uya-Wf-krY" secondAttribute="bottom" constant="7" id="Ucy-TB-bfu"/>
                             <constraint firstItem="ikm-qk-1xF" firstAttribute="top" secondItem="fYA-no-ebA" secondAttribute="bottom" id="WIb-Zk-vuB"/>
                             <constraint firstItem="C3U-Im-eGV" firstAttribute="leading" secondItem="Zii-gS-t0K" secondAttribute="leadingMargin" constant="-15" id="XJp-yE-zSH"/>
                             <constraint firstItem="2mA-zc-gA8" firstAttribute="centerX" secondItem="Zii-gS-t0K" secondAttribute="centerX" id="Xk8-va-lds"/>
-                            <constraint firstItem="2mA-zc-gA8" firstAttribute="top" secondItem="g31-s0-Dkz" secondAttribute="bottom" constant="7" id="eW2-JS-Pqe"/>
+                            <constraint firstItem="2mA-zc-gA8" firstAttribute="top" secondItem="g31-s0-Dkz" secondAttribute="bottom" constant="20" id="eW2-JS-Pqe"/>
                             <constraint firstItem="g31-s0-Dkz" firstAttribute="top" secondItem="C3U-Im-eGV" secondAttribute="bottom" constant="3" id="jPl-hA-Ev4"/>
                             <constraint firstItem="fYA-no-ebA" firstAttribute="leading" secondItem="Zii-gS-t0K" secondAttribute="leadingMargin" constant="-16" id="lTh-ma-biw"/>
                             <constraint firstItem="2mA-zc-gA8" firstAttribute="height" secondItem="Zii-gS-t0K" secondAttribute="height" multiplier="0.8" id="ocf-pc-K9M"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="6e2-m5-bc3"/>
                                 <exclude reference="Ucy-TB-bfu"/>
                                 <exclude reference="ocf-pc-K9M"/>
                             </mask>

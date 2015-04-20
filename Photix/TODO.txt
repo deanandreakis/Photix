@@ -6,6 +6,18 @@ DONE
 
 2. Adaptive layout for extension (DONE) and main app (DONE)
 
-3. Remove post card and replace with Walgreens integration
+3. Remove post card and replace with Walgreens integration (bad idea)
 
 4. Remove heart icon that links to review and add settings page. Put heart on settings page. Add tip jar like _david smith's weather app. Make sure and add function that any tip results in removal of adverts.
+
+5. Consider renaming app to OilPaintPlus so we dont have a weird symbol in our name.
+
+6. List of Keywords (App Store Optimization)
+
+7. Screenshots in each size
+
+8. Preview Video
+
+9. Updated Description for new version.
+
+10. Write emails to the press (federico viticci, etc.)

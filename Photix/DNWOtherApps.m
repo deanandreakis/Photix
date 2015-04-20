@@ -68,7 +68,16 @@ NSString* const kOnlyPhotoFileName = @"tempphoto.jpeg";
     documentInteractionController.delegate = self;
     if (caption)
         documentInteractionController.annotation = [NSDictionary dictionaryWithObject:caption forKey:@"InstagramCaption"];
-    [documentInteractionController presentOpenInMenuFromRect:CGRectZero inView:view animated:YES];
+    CGRect rect;
+    //if iPhone
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        rect = CGRectZero;
+    }
+    //if iPad
+    else {
+        rect = CGRectMake(view.frame.size.width/2, view.frame.size.height/4, 0, 0);
+    }
+    [documentInteractionController presentOpenInMenuFromRect:rect inView:view animated:YES];
 }
 
 @end
