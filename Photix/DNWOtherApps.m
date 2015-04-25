@@ -48,14 +48,14 @@ NSString* const kOnlyPhotoFileName = @"tempphoto.jpeg";
     return [NSString stringWithFormat:@"%@/%@",[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"],self.photoFileName];
 }
 
-+ (void) postImage:(UIImage*)image inView:(UIView*)view {
-    [[DNWOtherApps sharedInstance] postImage:image withCaption:nil inView:view];
++ (void) postImage:(UIImage*)image withBarItem:(UIBarButtonItem*)barItem inView:(UIView*)view {
+    [[DNWOtherApps sharedInstance] postImage:image withCaption:nil withBarItem:barItem inView:view];
 }
 + (void) postImage:(UIImage*)image withCaption:(NSString*)caption inView:(UIView*)view {
-    [[DNWOtherApps sharedInstance] postImage:image withCaption:caption inView:view];
+    [[DNWOtherApps sharedInstance] postImage:image withCaption:caption withBarItem:nil inView:view];
 }
 
-- (void) postImage:(UIImage*)image withCaption:(NSString*)caption inView:(UIView*)view
+- (void) postImage:(UIImage*)image withCaption:(NSString*)caption withBarItem:(UIBarButtonItem*)barItem inView:(UIView*)view
 {
     if (!image)
         [NSException raise:NSInternalInconsistencyException format:@"Image cannot be nil!"];
@@ -72,12 +72,13 @@ NSString* const kOnlyPhotoFileName = @"tempphoto.jpeg";
     //if iPhone
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
         rect = CGRectZero;
+        [documentInteractionController presentOpenInMenuFromRect:rect inView:view animated:YES];
     }
     //if iPad
     else {
-        rect = CGRectMake(view.frame.size.width/2, view.frame.size.height/4, 0, 0);
+        [documentInteractionController presentOpenInMenuFromBarButtonItem:barItem animated:YES];
     }
-    [documentInteractionController presentOpenInMenuFromRect:rect inView:view animated:YES];
+    
 }
 
 @end

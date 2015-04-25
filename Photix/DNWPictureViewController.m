@@ -33,12 +33,15 @@
 
 @property (strong, nonatomic) IBOutlet UIImageView* pictureImageView;
 @property (strong, nonatomic) IBOutlet UIView* adBannerView;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem* shareButton;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem* instagramButton;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem* moreButton;
 
 @end
 
 @implementation DNWPictureViewController
 
-@synthesize pictureImageView, imageToSet, adBannerView;
+@synthesize pictureImageView, imageToSet, adBannerView, shareButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -258,7 +261,7 @@
         else {
             // Change Rect to position Popover
             UIPopoverController *popup = [[UIPopoverController alloc] initWithContentViewController:controller];
-            [popup presentPopoverFromRect:CGRectMake(self.view.frame.size.width/2, self.view.frame.size.height/4, 0, 0)inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+            [popup presentPopoverFromBarButtonItem:shareButton permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
         }
     }
 }
@@ -267,7 +270,7 @@
 {
     if ([MGInstagram isAppInstalled])// && [MGInstagram isImageCorrectSize:pictureImageView.image])
     {
-        [MGInstagram postImage:pictureImageView.image inView:self.view];
+        [MGInstagram postImage:pictureImageView.image withBarButtonItem:self.instagramButton inView:self.view];
     }
     else
     {
@@ -291,7 +294,7 @@
     //NSLog(@"uniqueFileName: '%@'", uniqueFileName);
     
     [DNWOtherApps setPhotoFileName:uniqueFileName];
-    [DNWOtherApps postImage:pictureImageView.image inView:self.view];
+    [DNWOtherApps postImage:pictureImageView.image withBarItem:self.moreButton inView:self.view];
 }
 
 #pragma mark MFMailComposeViewControllerDelegate
