@@ -83,6 +83,7 @@
 		C1DBBD1618A70940007BF4CE /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1DBBD1518A70940007BF4CE /* MainStoryboard.storyboard */; };
 		C1DBBD1C18A7186E007BF4CE /* DNWMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1DBBD1B18A7186E007BF4CE /* DNWMainViewController.m */; };
 		C1E20FB218B980E1001A2BE3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1E20FB118B980E1001A2BE3 /* QuartzCore.framework */; };
+		C1F694F71AEF1CBF0062D187 /* DNWSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F694F61AEF1CBF0062D187 /* DNWSettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -231,6 +232,8 @@
 		C1E0E40F199826EB00D3FD21 /* DNWFilterImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DNWFilterImage.m; path = ../Photix/DNWFilterImage.m; sourceTree = "<group>"; };
 		C1E20FB118B980E1001A2BE3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C1F3B28E1A3E78600064CF67 /* TODO.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = TODO.txt; sourceTree = "<group>"; };
+		C1F694F51AEF1CBF0062D187 /* DNWSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNWSettingsViewController.h; sourceTree = "<group>"; };
+		C1F694F61AEF1CBF0062D187 /* DNWSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNWSettingsViewController.m; sourceTree = "<group>"; };
 		DBF5E5725E8AD18B72030E01 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EF75F98384E448F887006AB5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -516,6 +519,8 @@
 		C1DBBD1918A717C9007BF4CE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C1F694F51AEF1CBF0062D187 /* DNWSettingsViewController.h */,
+				C1F694F61AEF1CBF0062D187 /* DNWSettingsViewController.m */,
 				C1DBBD1A18A7186E007BF4CE /* DNWMainViewController.h */,
 				C1DBBD1B18A7186E007BF4CE /* DNWMainViewController.m */,
 				C1BAFD3518B15D720078C88D /* DNWPictureViewController.h */,
@@ -854,6 +859,7 @@
 				C1DBBCF618A6BFEF007BF4CE /* Photix.xcdatamodeld in Sources */,
 				C1DBBCF318A6BFEF007BF4CE /* DNWAppDelegate.m in Sources */,
 				C1BAFD3718B15D720078C88D /* DNWPictureViewController.m in Sources */,
+				C1F694F71AEF1CBF0062D187 /* DNWSettingsViewController.m in Sources */,
 				C1210EB71996812000C1E4E7 /* DNWFilterViewController.m in Sources */,
 				C1DBBCEF18A6BFEF007BF4CE /* main.m in Sources */,
 				C1BAFD2A18B14B4E0078C88D /* DatabaseManager.m in Sources */,
