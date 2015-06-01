@@ -19,6 +19,7 @@
 		C11CCED918BED47200C9E03B /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11CCED818BED47200C9E03B /* Crashlytics.framework */; };
 		C1210EB71996812000C1E4E7 /* DNWFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1210EB61996812000C1E4E7 /* DNWFilterViewController.m */; };
 		C1210EB81996812000C1E4E7 /* DNWFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1210EB61996812000C1E4E7 /* DNWFilterViewController.m */; };
+		C148EFA91B1BDFDE00EAF834 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C148EFA81B1BDFDE00EAF834 /* Fabric.framework */; };
 		C154481518B8445C007B54D1 /* DNWOtherApps.m in Sources */ = {isa = PBXBuildFile; fileRef = C154481418B8445C007B54D1 /* DNWOtherApps.m */; };
 		C1908E8818BA3D80006B4461 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1908E8718BA3D80006B4461 /* iAd.framework */; };
 		C1A9F3F91A1D9B8400513812 /* PhotixFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = C1A9F3F81A1D9B8400513812 /* PhotixFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -169,6 +170,7 @@
 		C11CCED818BED47200C9E03B /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		C1210EB51996812000C1E4E7 /* DNWFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNWFilterViewController.h; sourceTree = "<group>"; };
 		C1210EB61996812000C1E4E7 /* DNWFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNWFilterViewController.m; sourceTree = "<group>"; };
+		C148EFA81B1BDFDE00EAF834 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		C149F4001999941A00584382 /* DNWFilteredImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DNWFilteredImageModel.h; path = ../Photix/DNWFilteredImageModel.h; sourceTree = "<group>"; };
 		C149F4011999941A00584382 /* DNWFilteredImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DNWFilteredImageModel.m; path = ../Photix/DNWFilteredImageModel.m; sourceTree = "<group>"; };
 		C154481318B8445C007B54D1 /* DNWOtherApps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNWOtherApps.h; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 				C1DBBCE518A6BFEF007BF4CE /* UIKit.framework in Frameworks */,
 				C1DBBCE118A6BFEF007BF4CE /* Foundation.framework in Frameworks */,
 				C1A9F40B1A1D9B8400513812 /* PhotixFilter.framework in Frameworks */,
+				C148EFA91B1BDFDE00EAF834 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +457,7 @@
 				C1C1165618D6297300247E0F /* libPods-ShipLib.a */,
 				C1C1164418D60D6500247E0F /* libPods.a */,
 				C11CCED818BED47200C9E03B /* Crashlytics.framework */,
+				C148EFA81B1BDFDE00EAF834 /* Fabric.framework */,
 				C1908E8718BA3D80006B4461 /* iAd.framework */,
 				C1E20FB118B980E1001A2BE3 /* QuartzCore.framework */,
 				C1BAFD3A18B1B58F0078C88D /* MessageUI.framework */,
@@ -1342,6 +1346,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/dean_macmini/Documents/Photix,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Photix/Photix-Prefix.pch";
@@ -1408,6 +1413,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/dean_macmini/Documents/Photix,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Photix/Photix-Prefix.pch";

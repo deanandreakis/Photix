@@ -54,6 +54,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)exitSettings:(UIStoryboardSegue *)segue {
+}
+
 -(IBAction)TakePhotoButtonPressed:(id)sender
 {
     [[UIApplication sharedApplication] setStatusBarHidden:YES];
