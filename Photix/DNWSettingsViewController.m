@@ -40,15 +40,15 @@
 */
 
 -(IBAction)tip99ButtonSelected:(id)sender {
-    
+    NSLog(@"99 cent tip");
 }
 
 -(IBAction)tip199ButtonSelected:(id)sender {
-    
+    NSLog(@"199 cent tip");
 }
 
 -(IBAction)tip499ButtonSelected:(id)sender {
-    
+    NSLog(@"499 cent tip");
 }
 
 -(IBAction)emailButtonSelected:(id)sender {

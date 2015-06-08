@@ -52,54 +52,82 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kId-P9-WN6">
-                                <rect key="frame" x="16" y="213" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Generous Tip of $0.99" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kId-P9-WN6">
+                                <rect key="frame" x="16" y="192" width="65" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="57I-X9-PP2"/>
+                                    <constraint firstAttribute="width" constant="65" id="oj9-da-p00"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" name="selectedMenuItemColor" catalog="System" colorSpace="catalog"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNS-be-fjD">
-                                <rect key="frame" x="279" y="213" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Massive Tip of $1.99" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wyd-zd-RUq">
+                                <rect key="frame" x="268" y="192" width="65" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="3GJ-By-Wuh"/>
+                                    <constraint firstAttribute="height" constant="65" id="rC8-SB-JGD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" name="selectedMenuItemColor" catalog="System" colorSpace="catalog"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCb-XG-C0x">
-                                <rect key="frame" x="542" y="213" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amazing Tip of $4.99" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2m-2k-Bkc">
+                                <rect key="frame" x="519" y="192" width="65" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="6rQ-BX-UF6"/>
+                                    <constraint firstAttribute="height" constant="65" id="hJO-I3-U2E"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" name="selectedMenuItemColor" catalog="System" colorSpace="catalog"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDy-Qu-ber">
-                                <rect key="frame" x="14" y="252" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDy-Qu-ber" userLabel="Button_generous">
+                                <rect key="frame" x="16" y="192" width="65" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="jN4-TX-5zE"/>
+                                    <constraint firstAttribute="height" constant="65" id="nzV-Ps-Ngw"/>
+                                </constraints>
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="tip99ButtonSelected:" destination="5yj-JE-PWb" eventType="touchUpInside" id="Kxe-J7-wPl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NoU-Lk-o6Y">
-                                <rect key="frame" x="277" y="252" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="slL-gp-MlB" userLabel="Button_massive">
+                                <rect key="frame" x="268" y="192" width="65" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="Wvo-Lb-JM1"/>
+                                    <constraint firstAttribute="height" constant="65" id="mVp-aj-GaK"/>
+                                </constraints>
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="tip199ButtonSelected:" destination="5yj-JE-PWb" eventType="touchUpInside" id="jON-J0-A0m"/>
+                                    <action selector="tip199ButtonSelected:" destination="5yj-JE-PWb" eventType="touchUpInside" id="ZEs-93-Q0S"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Igs-Ia-tR6">
-                                <rect key="frame" x="540" y="252" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kyk-e9-Si1" userLabel="Button_amazing">
+                                <rect key="frame" x="519" y="192" width="65" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="iBL-DI-SJn"/>
+                                    <constraint firstAttribute="height" constant="65" id="uPs-ox-rBu"/>
+                                </constraints>
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="tip499ButtonSelected:" destination="5yj-JE-PWb" eventType="touchUpInside" id="Sub-SQ-IBp"/>
+                                    <action selector="tip499ButtonSelected:" destination="5yj-JE-PWb" eventType="touchUpInside" id="o1e-3v-2NC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7Q-So-yV9">
-                                <rect key="frame" x="277" y="391" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7Q-So-yV9">
+                                <rect key="frame" x="278" y="277" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="G1P-RH-4G3"/>
+                                    <constraint firstAttribute="width" constant="44" id="cv9-fo-xxP"/>
+                                </constraints>
+                                <state key="normal" title="Email">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -125,9 +153,23 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="8bt-Ic-hqG" firstAttribute="leading" secondItem="UKe-aX-wjB" secondAttribute="leading" id="1Ax-kC-N7L"/>
+                            <constraint firstItem="VDy-Qu-ber" firstAttribute="top" secondItem="8bt-Ic-hqG" secondAttribute="bottom" constant="148" id="3UW-IE-Om3"/>
                             <constraint firstItem="8bt-Ic-hqG" firstAttribute="top" secondItem="UKe-aX-wjB" secondAttribute="top" id="3eJ-AU-oN8"/>
+                            <constraint firstItem="kId-P9-WN6" firstAttribute="leading" secondItem="UKe-aX-wjB" secondAttribute="leadingMargin" id="HXg-vJ-nXv"/>
+                            <constraint firstItem="slL-gp-MlB" firstAttribute="top" secondItem="8bt-Ic-hqG" secondAttribute="bottom" constant="148" id="Ha5-6h-Rl1"/>
+                            <constraint firstAttribute="centerX" secondItem="A7Q-So-yV9" secondAttribute="centerX" id="K4g-lJ-nuD"/>
+                            <constraint firstItem="d2m-2k-Bkc" firstAttribute="top" secondItem="8bt-Ic-hqG" secondAttribute="bottom" constant="148" id="N4y-F0-qXE"/>
+                            <constraint firstItem="Kyk-e9-Si1" firstAttribute="top" secondItem="8bt-Ic-hqG" secondAttribute="bottom" constant="148" id="NNp-Xf-Bqm"/>
+                            <constraint firstAttribute="centerX" secondItem="wyd-zd-RUq" secondAttribute="centerX" id="UD1-cw-XPd"/>
+                            <constraint firstItem="VDy-Qu-ber" firstAttribute="leading" secondItem="UKe-aX-wjB" secondAttribute="leadingMargin" id="WPt-0O-BTY"/>
                             <constraint firstAttribute="centerX" secondItem="PBY-99-LLg" secondAttribute="centerX" id="auM-WU-RvR"/>
+                            <constraint firstAttribute="centerX" secondItem="slL-gp-MlB" secondAttribute="centerX" id="fhd-fg-VWu"/>
+                            <constraint firstItem="A7Q-So-yV9" firstAttribute="top" secondItem="slL-gp-MlB" secondAttribute="bottom" constant="20" id="g1C-bb-211"/>
+                            <constraint firstItem="d2m-2k-Bkc" firstAttribute="trailing" secondItem="UKe-aX-wjB" secondAttribute="trailingMargin" id="gX1-rG-xSR"/>
                             <constraint firstAttribute="trailing" secondItem="8bt-Ic-hqG" secondAttribute="trailing" id="l81-Zx-lD3"/>
+                            <constraint firstItem="kId-P9-WN6" firstAttribute="top" secondItem="8bt-Ic-hqG" secondAttribute="bottom" constant="148" id="pHe-Mm-afb"/>
+                            <constraint firstItem="wyd-zd-RUq" firstAttribute="top" secondItem="8bt-Ic-hqG" secondAttribute="bottom" constant="148" id="tKU-fQ-h0Y"/>
+                            <constraint firstItem="Kyk-e9-Si1" firstAttribute="trailing" secondItem="UKe-aX-wjB" secondAttribute="trailingMargin" id="yQI-s3-j4L"/>
                             <constraint firstItem="PBY-99-LLg" firstAttribute="top" secondItem="8bt-Ic-hqG" secondAttribute="bottom" constant="32" id="yjf-dE-zbT"/>
                         </constraints>
                     </view>
