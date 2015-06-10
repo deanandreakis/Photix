@@ -85,6 +85,9 @@
 		C1DBBD1C18A7186E007BF4CE /* DNWMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1DBBD1B18A7186E007BF4CE /* DNWMainViewController.m */; };
 		C1E20FB218B980E1001A2BE3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1E20FB118B980E1001A2BE3 /* QuartzCore.framework */; };
 		C1F694F71AEF1CBF0062D187 /* DNWSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F694F61AEF1CBF0062D187 /* DNWSettingsViewController.m */; };
+		C1F699301B25EA1E0077C3FF /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F6992F1B25EA1E0077C3FF /* StoreKit.framework */; };
+		C1F699361B25EABA0077C3FF /* IAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F699331B25EABA0077C3FF /* IAPHelper.m */; };
+		C1F699371B25EABA0077C3FF /* PhotixIAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F699351B25EABA0077C3FF /* PhotixIAPHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -236,6 +239,11 @@
 		C1F3B28E1A3E78600064CF67 /* TODO.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = TODO.txt; sourceTree = "<group>"; };
 		C1F694F51AEF1CBF0062D187 /* DNWSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNWSettingsViewController.h; sourceTree = "<group>"; };
 		C1F694F61AEF1CBF0062D187 /* DNWSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNWSettingsViewController.m; sourceTree = "<group>"; };
+		C1F6992F1B25EA1E0077C3FF /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		C1F699321B25EABA0077C3FF /* IAPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAPHelper.h; sourceTree = "<group>"; };
+		C1F699331B25EABA0077C3FF /* IAPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAPHelper.m; sourceTree = "<group>"; };
+		C1F699341B25EABA0077C3FF /* PhotixIAPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotixIAPHelper.h; sourceTree = "<group>"; };
+		C1F699351B25EABA0077C3FF /* PhotixIAPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotixIAPHelper.m; sourceTree = "<group>"; };
 		DBF5E5725E8AD18B72030E01 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EF75F98384E448F887006AB5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -275,6 +283,7 @@
 				C1908E8818BA3D80006B4461 /* iAd.framework in Frameworks */,
 				C1E20FB218B980E1001A2BE3 /* QuartzCore.framework in Frameworks */,
 				C1BAFD3B18B1B58F0078C88D /* MessageUI.framework in Frameworks */,
+				C1F699301B25EA1E0077C3FF /* StoreKit.framework in Frameworks */,
 				C1BAFD3918B1B4E70078C88D /* Social.framework in Frameworks */,
 				C1DBBCE318A6BFEF007BF4CE /* CoreGraphics.framework in Frameworks */,
 				C1DBBCE718A6BFEF007BF4CE /* CoreData.framework in Frameworks */,
@@ -448,6 +457,7 @@
 		C1DBBCDF18A6BFEF007BF4CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C1F6992F1B25EA1E0077C3FF /* StoreKit.framework */,
 				C1CB31881A33A40900B515AE /* CoreImage.framework */,
 				C1A9F4191A1ED01200513812 /* libPods.a */,
 				C1C1165218D6297300247E0F /* libPods-FlurrySDK.a */,
@@ -477,6 +487,7 @@
 		C1DBBCE818A6BFEF007BF4CE /* Photix */ = {
 			isa = PBXGroup;
 			children = (
+				C1F699311B25EA8F0077C3FF /* IAP */,
 				C1BAFD2D18B14BA20078C88D /* Resources */,
 				C1BAFD2C18B14B8D0078C88D /* Application Delegate */,
 				C1BAFD2B18B14B600078C88D /* Views */,
@@ -533,6 +544,17 @@
 				C1210EB61996812000C1E4E7 /* DNWFilterViewController.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		C1F699311B25EA8F0077C3FF /* IAP */ = {
+			isa = PBXGroup;
+			children = (
+				C1F699321B25EABA0077C3FF /* IAPHelper.h */,
+				C1F699331B25EABA0077C3FF /* IAPHelper.m */,
+				C1F699341B25EABA0077C3FF /* PhotixIAPHelper.h */,
+				C1F699351B25EABA0077C3FF /* PhotixIAPHelper.m */,
+			);
+			name = IAP;
 			sourceTree = "<group>";
 		};
 		C783FEA67B66018BCA656469 /* Pods */ = {
@@ -683,6 +705,11 @@
 					};
 					C1DBBCDC18A6BFEF007BF4CE = {
 						DevelopmentTeam = 6XBQPB83GR;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 					C1DBBCFC18A6BFEF007BF4CE = {
 						TestTargetID = C1DBBCDC18A6BFEF007BF4CE;
@@ -858,12 +885,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1F699371B25EABA0077C3FF /* PhotixIAPHelper.m in Sources */,
 				C154481518B8445C007B54D1 /* DNWOtherApps.m in Sources */,
 				C1BAFD3118B158570078C88D /* UIImage+normalizedImage.m in Sources */,
 				C1DBBCF618A6BFEF007BF4CE /* Photix.xcdatamodeld in Sources */,
 				C1DBBCF318A6BFEF007BF4CE /* DNWAppDelegate.m in Sources */,
 				C1BAFD3718B15D720078C88D /* DNWPictureViewController.m in Sources */,
 				C1F694F71AEF1CBF0062D187 /* DNWSettingsViewController.m in Sources */,
+				C1F699361B25EABA0077C3FF /* IAPHelper.m in Sources */,
 				C1210EB71996812000C1E4E7 /* DNWFilterViewController.m in Sources */,
 				C1DBBCEF18A6BFEF007BF4CE /* main.m in Sources */,
 				C1BAFD2A18B14B4E0078C88D /* DatabaseManager.m in Sources */,
@@ -1341,8 +1370,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Dean Andreakis (97QXDB3QP7)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Dean Andreakis (97QXDB3QP7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/dean_macmini/Documents/Photix,
@@ -1395,7 +1424,7 @@
 					"\"StoreKit\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1f8a23d3-b2b3-43ec-accb-8d4adb84d666";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
@@ -1408,8 +1437,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Dean Andreakis (97QXDB3QP7)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Dean Andreakis (97QXDB3QP7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/dean_macmini/Documents/Photix,
@@ -1462,7 +1491,7 @@
 					"\"StoreKit\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1f8a23d3-b2b3-43ec-accb-8d4adb84d666";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;

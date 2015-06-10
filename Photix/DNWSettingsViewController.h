@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 @import MessageUI;
 
-@interface DNWSettingsViewController : UIViewController <MFMailComposeViewControllerDelegate>
+@interface DNWSettingsViewController : UIViewController <MFMailComposeViewControllerDelegate, UIAlertViewDelegate>
 
 @end

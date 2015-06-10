@@ -20,4 +20,8 @@
 
 #define kAppDelegate ((DNWAppDelegate *)[[UIApplication sharedApplication] delegate])
 
+#define STOREKIT_PRODUCT_ID_GENEROUS_99 @"tip99"
+#define STOREKIT_PRODUCT_ID_MASSIVE_199 @"tip199"
+#define STOREKIT_PRODUCT_ID_AMAZING_499 @"tip499"
+
 #endif
