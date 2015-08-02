@@ -20,6 +20,7 @@
 		C1210EB81996812000C1E4E7 /* DNWFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1210EB61996812000C1E4E7 /* DNWFilterViewController.m */; };
 		C148EFA91B1BDFDE00EAF834 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C148EFA81B1BDFDE00EAF834 /* Fabric.framework */; };
 		C154481518B8445C007B54D1 /* DNWOtherApps.m in Sources */ = {isa = PBXBuildFile; fileRef = C154481418B8445C007B54D1 /* DNWOtherApps.m */; };
+		C16D78181B6ECF5600673C86 /* DNWInstagram.m in Sources */ = {isa = PBXBuildFile; fileRef = C16D78171B6ECF5600673C86 /* DNWInstagram.m */; };
 		C1908E8818BA3D80006B4461 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1908E8718BA3D80006B4461 /* iAd.framework */; };
 		C1A9F3F91A1D9B8400513812 /* PhotixFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = C1A9F3F81A1D9B8400513812 /* PhotixFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C1A9F3FF1A1D9B8400513812 /* PhotixFilter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A9F3F41A1D9B8400513812 /* PhotixFilter.framework */; };
@@ -176,6 +177,8 @@
 		C149F4011999941A00584382 /* DNWFilteredImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DNWFilteredImageModel.m; path = ../Photix/DNWFilteredImageModel.m; sourceTree = "<group>"; };
 		C154481318B8445C007B54D1 /* DNWOtherApps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNWOtherApps.h; sourceTree = "<group>"; };
 		C154481418B8445C007B54D1 /* DNWOtherApps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNWOtherApps.m; sourceTree = "<group>"; };
+		C16D78161B6ECF5600673C86 /* DNWInstagram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNWInstagram.h; sourceTree = "<group>"; };
+		C16D78171B6ECF5600673C86 /* DNWInstagram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNWInstagram.m; sourceTree = "<group>"; };
 		C1908E8718BA3D80006B4461 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		C1A9F3F41A1D9B8400513812 /* PhotixFilter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PhotixFilter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1A9F3F71A1D9B8400513812 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -389,6 +392,8 @@
 				C1BAFD2718B14B2A0078C88D /* SynthesizeSingleton.h */,
 				C154481318B8445C007B54D1 /* DNWOtherApps.h */,
 				C154481418B8445C007B54D1 /* DNWOtherApps.m */,
+				C16D78161B6ECF5600673C86 /* DNWInstagram.h */,
+				C16D78171B6ECF5600673C86 /* DNWInstagram.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -882,6 +887,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1F699371B25EABA0077C3FF /* PhotixIAPHelper.m in Sources */,
+				C16D78181B6ECF5600673C86 /* DNWInstagram.m in Sources */,
 				C154481518B8445C007B54D1 /* DNWOtherApps.m in Sources */,
 				C1BAFD3118B158570078C88D /* UIImage+normalizedImage.m in Sources */,
 				C1DBBCF618A6BFEF007BF4CE /* Photix.xcdatamodeld in Sources */,

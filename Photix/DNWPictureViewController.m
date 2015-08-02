@@ -8,7 +8,7 @@
 
 #import "DNWPictureViewController.h"
 #import <Social/Social.h>
-#import "MGInstagram.h"
+#import "DNWInstagram.h"
 //#import "MBProgressHUD.h"
 #import "DNWOtherApps.h"
 #import "Constants.h"
@@ -272,10 +272,10 @@
 
 -(IBAction)InstagramButtonPressed:(id)sender
 {
-    if ([MGInstagram isAppInstalled])// && [MGInstagram isImageCorrectSize:pictureImageView.image])
+    if ([DNWInstagram isAppInstalled])// && [MGInstagram isImageCorrectSize:pictureImageView.image])
     {
         //[MGInstagram postImage:pictureImageView.image withBarButtonItem:self.instagramButton inView:self.view];
-        [MGInstagram postImage:pictureImageView.image inView:self.view];
+        [DNWInstagram postImage:pictureImageView.image withBarItem:self.instagramButton inView:self.view];
     }
     else
     {
