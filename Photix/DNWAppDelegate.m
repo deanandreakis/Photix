@@ -9,9 +9,7 @@
 #import "DNWAppDelegate.h"
 #import "DatabaseManager.h"
 #import "Constants.h"
-#import "Flurry.h"
 #import <Crashlytics/Crashlytics.h>
-#import "Appirater.h"
 
 @implementation DNWAppDelegate
 
@@ -19,42 +17,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    //[Appirater setAppId:@"827491007"];
-    //[Appirater setDaysUntilPrompt:1];
-    //[Appirater setUsesUntilPrompt:5];
-    //[Appirater setSignificantEventsUntilPrompt:-1];
-    //[Appirater setTimeBeforeReminding:3];
-    //[Appirater setDebug:YES];
-    
-    //[Flurry startSession:FLURRY_KEY];
-    
-    [Crashlytics startWithAPIKey:@"2eaad7ad1fecfce6c414905676a8175bb2a1c253"];
-    
-    //initialize CoreData
-    //[[DatabaseManager sharedDatabaseManager] managedObjectContext];
-    
-    //if([[DatabaseManager sharedDatabaseManager] isDBNotExist])
-    //{
-      //  [[DatabaseManager sharedDatabaseManager] prePopulate];
-    //}
+    [Crashlytics startWithAPIKey:CRASHLYTICS_KEY];
     
     storyboardName = @"MainStoryboard";
-    
-    /*CGSize result = [[UIScreen mainScreen] bounds].size;
-    if(result.height == 568)
-    {
-        storyboardName = @"MainStoryboardiPhone5";
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle:[NSBundle mainBundle]];
-        UIViewController *launchViewController = [storyboard instantiateInitialViewController];
-        [self.window.rootViewController.view removeFromSuperview];
-        self.window.rootViewController = launchViewController;
-    }
-    else
-    {
-        storyboardName = @"MainStoryboard";
-    }*/
-    
-    //[Appirater appLaunched:YES];
     
     return YES;
 }

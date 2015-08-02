@@ -64,6 +64,10 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [[UIApplication sharedApplication] setStatusBarHidden:YES];
+    BOOL productPurchased = [[NSUserDefaults standardUserDefaults] boolForKey:USER_PURCHASED_TIP];
+    if (productPurchased) {
+        adBannerView.hidden = YES;
+    }
 }
 
 /*- (void)processImage
@@ -270,7 +274,8 @@
 {
     if ([MGInstagram isAppInstalled])// && [MGInstagram isImageCorrectSize:pictureImageView.image])
     {
-        [MGInstagram postImage:pictureImageView.image withBarButtonItem:self.instagramButton inView:self.view];
+        //[MGInstagram postImage:pictureImageView.image withBarButtonItem:self.instagramButton inView:self.view];
+        [MGInstagram postImage:pictureImageView.image inView:self.view];
     }
     else
     {
@@ -332,51 +337,7 @@
 
 -(IBAction)PostcardButtonPressed:(id)sender
 {
-    UIImage* newImage = [self resizeImageToSize:CGSizeMake(1838, 1238) Image:pictureImageView.image];
     
-    NSArray* imageArray = [NSArray arrayWithObject:newImage];
-    
-    SYSincerelyController *controller = [[SYSincerelyController alloc] initWithImages:imageArray
-                                                                              product:SYProductTypePostcard
-                                                                       applicationKey:SINCERELY_KEY
-                                                                             delegate:self];
-    
-    if (controller) {
-        [controller setShouldSkipCrop:YES];
-        [self presentViewController:controller animated:YES completion:NULL];
-    }
-}
-
-#pragma mark SYSincerelyController delegate callbacks
-
-- (void)sincerelyControllerDidFinish:(SYSincerelyController *)controller {
-    /*
-     * Here I know that the user made a purchase and I can do something with it
-     */
-    
-    [self dismissViewControllerAnimated:YES completion:NULL];
-}
-
-- (void)sincerelyControllerDidCancel:(SYSincerelyController *)controller {
-    /*
-     * Here I know that the user hit the cancel button and they want to leave the Sincerely controller
-     */
-    
-    [self dismissViewControllerAnimated:YES completion:NULL];
-}
-
-- (void)sincerelyControllerDidFailInitiationWithError:(NSError *)error {
-    /*
-     * Here I know that incorrect inputs were given to initWithImages:product:applicationKey:delegate;
-     */
-    
-    UIAlertView *alertView = [[UIAlertView alloc]
-                              initWithTitle:@"Sorry"
-                              message:[error localizedFailureReason]
-                              delegate:self
-                              cancelButtonTitle:@"OK"
-                              otherButtonTitles:nil];
-    [alertView show];
 }
 
 #pragma mark review me!
@@ -421,7 +382,10 @@
             //UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation))) {
             adBannerView.hidden = YES;
         } else {
-            adBannerView.hidden = NO;
+            BOOL productPurchased = [[NSUserDefaults standardUserDefaults] boolForKey:USER_PURCHASED_TIP];
+            if (!productPurchased) {
+                adBannerView.hidden = NO;
+            }
         }
     }
 }

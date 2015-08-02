@@ -1,6 +1,5 @@
 //
 //  IAPHelper.m
-//  SleepMate
 //
 //  Created by Dean Andreakis on 9/17/13.
 //

@@ -88,26 +88,15 @@
 - (void)productPurchased:(NSNotification *)notification {
     [self.activityIndicatorView stopAnimating];
     [self.pleaseWaitAlertView dismissWithClickedButtonIndex:0 animated:YES];
+    
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:USER_PURCHASED_TIP];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 - (void)transactionFailed:(NSNotification *)notification {
     
     [self.activityIndicatorView stopAnimating];
     [self.pleaseWaitAlertView dismissWithClickedButtonIndex:0 animated:YES];
-    
-    /*UIAlertView *tmp = [[UIAlertView alloc]
-     
-     initWithTitle:NSLocalizedString(@"Transaction Failed",nil)
-     
-     message:NSLocalizedString(@"The payment transaction failed. Please try again later.",nil)
-     
-     delegate:nil
-     
-     cancelButtonTitle:nil
-     
-     otherButtonTitles:NSLocalizedString(@"Ok",nil), nil];
-     
-     [tmp show];*/
 }
 
 - (void)getProducts {
@@ -141,14 +130,194 @@
 
 -(IBAction)tip99ButtonSelected:(id)sender {
     NSLog(@"99 cent tip");
+    
+        if(_99Product != nil) {
+            if (![[PhotixIAPHelper sharedInstance] productPurchased:_99Product.productIdentifier]) { //have not purchased product
+                if ([SKPaymentQueue canMakePayments]) { //make sure they are allowed to perform IAP per parental controls settings
+                    
+                    [_priceFormatter setLocale:_99Product.priceLocale];
+                    
+                    NSMutableString* myString = [[NSMutableString alloc] initWithCapacity:25];
+                    [myString appendString:_99Product.localizedTitle];
+                    [myString appendString:@": "];
+                    [myString appendString:_99Product.localizedDescription];
+                    [myString appendString:@"\n"];
+                    [myString appendString:NSLocalizedString(@"Price: ",nil)];
+                    [myString appendString:[_priceFormatter stringFromNumber:_99Product.price]];
+                    
+                    UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Confirm Purchase of the Generous Tip",nil)
+                                                                        message:myString
+                                                                       delegate:self
+                                                              cancelButtonTitle:NSLocalizedString(@"Cancel",nil)
+                                                              otherButtonTitles:NSLocalizedString(@"Buy",nil), nil];
+                    alertView.tag = ALERTVIEW_99_BUY;
+                    [alertView show];
+                    
+                } else {
+                    
+                    UIAlertView *tmp = [[UIAlertView alloc]
+                                        
+                                        initWithTitle:NSLocalizedString(@"Prohibited",nil)
+                                        
+                                        message:NSLocalizedString(@"This feature is available via In-App Purchase. Parental Control is enabled, cannot make a purchase!",nil)
+                                        
+                                        delegate:self
+                                        
+                                        cancelButtonTitle:nil
+                                        
+                                        otherButtonTitles:NSLocalizedString(@"Ok",nil), nil];
+                    
+                    tmp.tag = ALERTVIEW_99_IAP_DISABLED;
+                    
+                    [tmp show];
+                }
+            }
+        } else {
+            //the products are nil so the original product fetch in getProducts() failed
+            UIAlertView *tmp = [[UIAlertView alloc]
+                                
+                                initWithTitle:NSLocalizedString(@"Product Not Available",nil)
+                                
+                                message:NSLocalizedString(@"This product is not currently available. Please try again later.",nil)
+                                
+                                delegate:self
+                                
+                                cancelButtonTitle:nil
+                                
+                                otherButtonTitles:NSLocalizedString(@"Ok",nil), nil];
+            
+            tmp.tag = ALERTVIEW_99_IAP_PRODUCT_NOT_AVAILABLE;
+            
+            [tmp show];
+        }
 }
 
 -(IBAction)tip199ButtonSelected:(id)sender {
     NSLog(@"199 cent tip");
+    
+    if(_199Product != nil) {
+        if (![[PhotixIAPHelper sharedInstance] productPurchased:_199Product.productIdentifier]) { //have not purchased product
+            if ([SKPaymentQueue canMakePayments]) { //make sure they are allowed to perform IAP per parental controls settings
+                
+                [_priceFormatter setLocale:_199Product.priceLocale];
+                
+                NSMutableString* myString = [[NSMutableString alloc] initWithCapacity:25];
+                [myString appendString:_199Product.localizedTitle];
+                [myString appendString:@": "];
+                [myString appendString:_199Product.localizedDescription];
+                [myString appendString:@"\n"];
+                [myString appendString:NSLocalizedString(@"Price: ",nil)];
+                [myString appendString:[_priceFormatter stringFromNumber:_199Product.price]];
+                
+                UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Confirm Purchase of the Massive Tip",nil)
+                                                                    message:myString
+                                                                   delegate:self
+                                                          cancelButtonTitle:NSLocalizedString(@"Cancel",nil)
+                                                          otherButtonTitles:NSLocalizedString(@"Buy",nil), nil];
+                alertView.tag = ALERTVIEW_199_BUY;
+                [alertView show];
+                
+            } else {
+                
+                UIAlertView *tmp = [[UIAlertView alloc]
+                                    
+                                    initWithTitle:NSLocalizedString(@"Prohibited",nil)
+                                    
+                                    message:NSLocalizedString(@"This feature is available via In-App Purchase. Parental Control is enabled, cannot make a purchase!",nil)
+                                    
+                                    delegate:self
+                                    
+                                    cancelButtonTitle:nil
+                                    
+                                    otherButtonTitles:NSLocalizedString(@"Ok",nil), nil];
+                
+                tmp.tag = ALERTVIEW_199_IAP_DISABLED;
+                
+                [tmp show];
+            }
+        }
+    } else {
+        //the products are nil so the original product fetch in getProducts() failed
+        UIAlertView *tmp = [[UIAlertView alloc]
+                            
+                            initWithTitle:NSLocalizedString(@"Product Not Available",nil)
+                            
+                            message:NSLocalizedString(@"This product is not currently available. Please try again later.",nil)
+                            
+                            delegate:self
+                            
+                            cancelButtonTitle:nil
+                            
+                            otherButtonTitles:NSLocalizedString(@"Ok",nil), nil];
+        
+        tmp.tag = ALERTVIEW_199_IAP_PRODUCT_NOT_AVAILABLE;
+        
+        [tmp show];
+    }
 }
 
 -(IBAction)tip499ButtonSelected:(id)sender {
     NSLog(@"499 cent tip");
+    
+    if(_499Product != nil) {
+        if (![[PhotixIAPHelper sharedInstance] productPurchased:_499Product.productIdentifier]) { //have not purchased product
+            if ([SKPaymentQueue canMakePayments]) { //make sure they are allowed to perform IAP per parental controls settings
+                
+                [_priceFormatter setLocale:_499Product.priceLocale];
+                
+                NSMutableString* myString = [[NSMutableString alloc] initWithCapacity:25];
+                [myString appendString:_499Product.localizedTitle];
+                [myString appendString:@": "];
+                [myString appendString:_499Product.localizedDescription];
+                [myString appendString:@"\n"];
+                [myString appendString:NSLocalizedString(@"Price: ",nil)];
+                [myString appendString:[_priceFormatter stringFromNumber:_499Product.price]];
+                
+                UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Confirm Purchase of the Amazing Tip",nil)
+                                                                    message:myString
+                                                                   delegate:self
+                                                          cancelButtonTitle:NSLocalizedString(@"Cancel",nil)
+                                                          otherButtonTitles:NSLocalizedString(@"Buy",nil), nil];
+                alertView.tag = ALERTVIEW_499_BUY;
+                [alertView show];
+                
+            } else {
+                
+                UIAlertView *tmp = [[UIAlertView alloc]
+                                    
+                                    initWithTitle:NSLocalizedString(@"Prohibited",nil)
+                                    
+                                    message:NSLocalizedString(@"This feature is available via In-App Purchase. Parental Control is enabled, cannot make a purchase!",nil)
+                                    
+                                    delegate:self
+                                    
+                                    cancelButtonTitle:nil
+                                    
+                                    otherButtonTitles:NSLocalizedString(@"Ok",nil), nil];
+                
+                tmp.tag = ALERTVIEW_499_IAP_DISABLED;
+                
+                [tmp show];
+            }
+        }
+    } else {
+        //the products are nil so the original product fetch in getProducts() failed
+        UIAlertView *tmp = [[UIAlertView alloc]
+                            
+                            initWithTitle:NSLocalizedString(@"Product Not Available",nil)
+                            
+                            message:NSLocalizedString(@"This product is not currently available. Please try again later.",nil)
+                            
+                            delegate:self
+                            
+                            cancelButtonTitle:nil
+                            
+                            otherButtonTitles:NSLocalizedString(@"Ok",nil), nil];
+        
+        tmp.tag = ALERTVIEW_499_IAP_PRODUCT_NOT_AVAILABLE;
+        
+        [tmp show];
+    }
 }
 
 -(IBAction)emailButtonSelected:(id)sender {
@@ -193,6 +362,18 @@
         case ALERTVIEW_199_IAP_DISABLED:
             break;
         case ALERTVIEW_199_IAP_PRODUCT_NOT_AVAILABLE:
+            break;
+        case ALERTVIEW_499_BUY:
+            if(buttonIndex == 0) {//CANCEL
+            } else if(buttonIndex == 1) { //BUY
+                [[PhotixIAPHelper sharedInstance] buyProduct:_499Product];
+                [self.pleaseWaitAlertView show];
+                [self.activityIndicatorView startAnimating];
+            }
+            break;
+        case ALERTVIEW_499_IAP_DISABLED:
+            break;
+        case ALERTVIEW_499_IAP_PRODUCT_NOT_AVAILABLE:
             break;
         default:
             break;
