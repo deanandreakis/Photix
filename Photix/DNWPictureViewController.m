@@ -354,7 +354,12 @@
     
     [UIView setAnimationDuration:1];
     
-    [banner setAlpha:1];
+    BOOL productPurchased = [[NSUserDefaults standardUserDefaults] boolForKey:USER_PURCHASED_TIP];
+    if (productPurchased) {
+        [banner setAlpha:0];
+    } else {
+        [banner setAlpha:1];
+    }
     
     [UIView commitAnimations];
 }
