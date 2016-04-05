@@ -9,7 +9,7 @@
 #import "DNWAppDelegate.h"
 #import "DatabaseManager.h"
 #import "Constants.h"
-#import <Crashlytics/Crashlytics.h>
+//#import <Crashlytics/Crashlytics.h>
 
 @implementation DNWAppDelegate
 
@@ -17,7 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [Crashlytics startWithAPIKey:CRASHLYTICS_KEY];
+    //[Crashlytics startWithAPIKey:CRASHLYTICS_KEY];
     
     storyboardName = @"MainStoryboard";
     

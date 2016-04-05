@@ -15,10 +15,8 @@
 		C1054CEF19A434D800A4D8F3 /* PhotoEditingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1054CEE19A434D800A4D8F3 /* PhotoEditingViewController.m */; };
 		C1054CF119A434D800A4D8F3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1054CF019A434D800A4D8F3 /* MainInterface.storyboard */; };
 		C1054CF419A434D800A4D8F3 /* OilPaintPlus.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C1054CE519A434D800A4D8F3 /* OilPaintPlus.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		C11CCED918BED47200C9E03B /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11CCED818BED47200C9E03B /* Crashlytics.framework */; };
 		C1210EB71996812000C1E4E7 /* DNWFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1210EB61996812000C1E4E7 /* DNWFilterViewController.m */; };
 		C1210EB81996812000C1E4E7 /* DNWFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1210EB61996812000C1E4E7 /* DNWFilterViewController.m */; };
-		C148EFA91B1BDFDE00EAF834 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C148EFA81B1BDFDE00EAF834 /* Fabric.framework */; };
 		C154481518B8445C007B54D1 /* DNWOtherApps.m in Sources */ = {isa = PBXBuildFile; fileRef = C154481418B8445C007B54D1 /* DNWOtherApps.m */; };
 		C16D78181B6ECF5600673C86 /* DNWInstagram.m in Sources */ = {isa = PBXBuildFile; fileRef = C16D78171B6ECF5600673C86 /* DNWInstagram.m */; };
 		C1908E8818BA3D80006B4461 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1908E8718BA3D80006B4461 /* iAd.framework */; };
@@ -57,7 +55,6 @@
 		C1C1164A18D60DBF00247E0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1DBBCE218A6BFEF007BF4CE /* CoreGraphics.framework */; };
 		C1C1164B18D60F5A00247E0F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1DBBCF718A6BFEF007BF4CE /* Images.xcassets */; };
 		C1C1164D18D60F5A00247E0F /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1DBBD1518A70940007BF4CE /* MainStoryboard.storyboard */; };
-		C1C1165C18D62DC100247E0F /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11CCED818BED47200C9E03B /* Crashlytics.framework */; };
 		C1C1165F18D65F9A00247E0F /* test1_2448_3264.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C1C1165E18D65F9A00247E0F /* test1_2448_3264.jpg */; };
 		C1C1166018D65F9A00247E0F /* test1_2448_3264.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C1C1165E18D65F9A00247E0F /* test1_2448_3264.jpg */; };
 		C1C1166218D65FAA00247E0F /* test2_3264_2448.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C1C1166118D65FAA00247E0F /* test2_3264_2448.jpg */; };
@@ -169,10 +166,8 @@
 		C1054CED19A434D800A4D8F3 /* PhotoEditingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoEditingViewController.h; sourceTree = "<group>"; };
 		C1054CEE19A434D800A4D8F3 /* PhotoEditingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoEditingViewController.m; sourceTree = "<group>"; };
 		C1054CF019A434D800A4D8F3 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
-		C11CCED818BED47200C9E03B /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		C1210EB51996812000C1E4E7 /* DNWFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNWFilterViewController.h; sourceTree = "<group>"; };
 		C1210EB61996812000C1E4E7 /* DNWFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNWFilterViewController.m; sourceTree = "<group>"; };
-		C148EFA81B1BDFDE00EAF834 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		C149F4001999941A00584382 /* DNWFilteredImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DNWFilteredImageModel.h; path = ../Photix/DNWFilteredImageModel.h; sourceTree = "<group>"; };
 		C149F4011999941A00584382 /* DNWFilteredImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DNWFilteredImageModel.m; path = ../Photix/DNWFilteredImageModel.m; sourceTree = "<group>"; };
 		C154481318B8445C007B54D1 /* DNWOtherApps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNWOtherApps.h; sourceTree = "<group>"; };
@@ -288,11 +283,9 @@
 				C1BAFD3918B1B4E70078C88D /* Social.framework in Frameworks */,
 				C1DBBCE318A6BFEF007BF4CE /* CoreGraphics.framework in Frameworks */,
 				C1DBBCE718A6BFEF007BF4CE /* CoreData.framework in Frameworks */,
-				C11CCED918BED47200C9E03B /* Crashlytics.framework in Frameworks */,
 				C1DBBCE518A6BFEF007BF4CE /* UIKit.framework in Frameworks */,
 				C1DBBCE118A6BFEF007BF4CE /* Foundation.framework in Frameworks */,
 				C1A9F40B1A1D9B8400513812 /* PhotixFilter.framework in Frameworks */,
-				C148EFA91B1BDFDE00EAF834 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +293,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1C1165C18D62DC100247E0F /* Crashlytics.framework in Frameworks */,
 				C1C1164A18D60DBF00247E0F /* CoreGraphics.framework in Frameworks */,
 				C1C1164918D60DB300247E0F /* Social.framework in Frameworks */,
 				C1C1164818D60DA900247E0F /* MessageUI.framework in Frameworks */,
@@ -468,8 +460,6 @@
 				C1C1165518D6297300247E0F /* libPods-MGInstagram.a */,
 				C1C1165618D6297300247E0F /* libPods-ShipLib.a */,
 				C1C1164418D60D6500247E0F /* libPods.a */,
-				C11CCED818BED47200C9E03B /* Crashlytics.framework */,
-				C148EFA81B1BDFDE00EAF834 /* Fabric.framework */,
 				C1908E8718BA3D80006B4461 /* iAd.framework */,
 				C1E20FB118B980E1001A2BE3 /* QuartzCore.framework */,
 				C1BAFD3A18B1B58F0078C88D /* MessageUI.framework */,
@@ -647,7 +637,6 @@
 				C1DBBCD918A6BFEF007BF4CE /* Sources */,
 				C1DBBCDA18A6BFEF007BF4CE /* Frameworks */,
 				C1DBBCDB18A6BFEF007BF4CE /* Resources */,
-				C11CCED718BED41800C9E03B /* ShellScript */,
 				C1054CFA19A434D800A4D8F3 /* Embed App Extensions */,
 				C1A9F4101A1D9B8500513812 /* Embed Frameworks */,
 			);
@@ -828,19 +817,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C11CCED718BED41800C9E03B /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "./Crashlytics.framework/run 2eaad7ad1fecfce6c414905676a8175bb2a1c253 1b87ad473cb8ac189cc245935c8f083c87fb1700b9d629c028086db540d14b95";
-		};
 		C1C1165018D626BA00247E0F /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -980,8 +956,8 @@
 			baseConfigurationReference = 372EB0A09762E440B29E4A95 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Dean Andreakis";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Dean Andreakis";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -989,7 +965,7 @@
 				);
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = OilPaintPlus/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1030,7 +1006,7 @@
 					"\"StoreKit\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5fa3789f-969a-4106-82e8-b8528734351d";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
@@ -1041,12 +1017,12 @@
 			baseConfigurationReference = DBF5E5725E8AD18B72030E01 /* Pods.release.xcconfig */;
 			buildSettings = {
 				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Dean Andreakis";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Dean Andreakis";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = OilPaintPlus/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = (
@@ -1086,7 +1062,7 @@
 					"\"StoreKit\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5fa3789f-969a-4106-82e8-b8528734351d";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
@@ -1113,7 +1089,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = PhotixFilter/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -1177,7 +1153,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = PhotixFilter/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -1308,7 +1284,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "a52830a9-30d4-4a47-9990-160bd89763fc";
 				SDKROOT = iphoneos;
@@ -1345,7 +1321,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				PROVISIONING_PROFILE = "a52830a9-30d4-4a47-9990-160bd89763fc";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1360,8 +1336,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Dean Andreakis";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Dean Andreakis";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/dean_macmini/Documents/Photix,
@@ -1370,6 +1346,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Photix/Photix-Prefix.pch";
 				INFOPLIST_FILE = "Photix/Photix-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -1408,7 +1385,7 @@
 					"\"StoreKit\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a52830a9-30d4-4a47-9990-160bd89763fc";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
@@ -1421,8 +1398,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Dean Andreakis";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Dean Andreakis";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/dean_macmini/Documents/Photix,
@@ -1431,6 +1408,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Photix/Photix-Prefix.pch";
 				INFOPLIST_FILE = "Photix/Photix-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -1469,7 +1447,7 @@
 					"\"StoreKit\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a52830a9-30d4-4a47-9990-160bd89763fc";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
