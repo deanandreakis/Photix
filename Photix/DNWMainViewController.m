@@ -45,7 +45,6 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    [[UIApplication sharedApplication] setStatusBarHidden:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -59,7 +58,6 @@
 
 -(IBAction)TakePhotoButtonPressed:(id)sender
 {
-    [[UIApplication sharedApplication] setStatusBarHidden:YES];
     picker.sourceType = UIImagePickerControllerSourceTypeCamera;
     picker.cameraDevice = UIImagePickerControllerCameraDeviceRear;
     [self presentViewController:picker animated:YES completion:nil];
@@ -67,7 +65,6 @@
 
 -(IBAction)ChooseExistingButtonPressed:(id)sender
 {
-    [[UIApplication sharedApplication] setStatusBarHidden:YES];
     picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     [self presentViewController:picker animated:YES completion:nil];
 }
@@ -76,8 +73,6 @@
 #pragma mark UIImagePickerController Delegate Methods
 -(void)imagePickerController:(UIImagePickerController *)imagePicker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    [[UIApplication sharedApplication] setStatusBarHidden:NO];
-    //[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     [imagePicker dismissViewControllerAnimated:YES completion:nil];
     
     /*DNWPictureViewController *pictureViewController = [[UIStoryboard storyboardWithName:kAppDelegate.storyboardName bundle:nil] instantiateViewControllerWithIdentifier:@"MyPicture"];
@@ -94,13 +89,11 @@
 
 -(void)imagePickerControllerDidCancel:(UIImagePickerController *)imagePicker
 {
-    [[UIApplication sharedApplication] setStatusBarHidden:NO];
     [imagePicker dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
-    [[UIApplication sharedApplication] setStatusBarHidden:YES];
 }
 
 @end

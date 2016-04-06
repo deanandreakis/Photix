@@ -9,4 +9,5 @@ DONE
 CLIENT SECRET 4ee7817f-09b7-4a16-bc60-f3a06bc1897e
 CLIENT ID (DEVELOPMENT MODE)*394fee89a3444b25bdfa485a150c40be
 
-4. 
+4. Replace iAd
+5. Redo the photo layouts to use more screen
