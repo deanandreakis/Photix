@@ -40,7 +40,7 @@
 - (BOOL)canHandleAdjustmentData:(PHAdjustmentData *)adjustmentData {
     // Inspect the adjustmentData to determine whether your extension can work with past edits.
     // (Typically, you use its formatIdentifier and formatVersion properties to do this.)
-    return NO;
+    return YES;
 }
 
 - (void)startContentEditingWithInput:(PHContentEditingInput *)contentEditingInput placeholderImage:(UIImage *)placeholderImage {
@@ -61,7 +61,8 @@
         PHContentEditingOutput *output = [[PHContentEditingOutput alloc] initWithContentEditingInput:self.input];
         
         // Provide new adjustments and render output to given location.
-         output.adjustmentData = [[PHAdjustmentData alloc] initWithFormatIdentifier:@"AdjustementDataIdentifier" formatVersion:@"1.0" data:nil];
+        NSData *adjData = [NSKeyedArchiver archivedDataWithRootObject:self.input];
+        output.adjustmentData = [[PHAdjustmentData alloc] initWithFormatIdentifier:@"AdjustementDataIdentifier" formatVersion:@"1.0" data:adjData];
         NSData *renderedJPEGData = UIImageJPEGRepresentation(bigImageView.image, 1.0);
         [renderedJPEGData writeToURL:output.renderedContentURL atomically:YES];
         
