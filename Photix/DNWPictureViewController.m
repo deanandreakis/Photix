@@ -9,12 +9,9 @@
 #import "DNWPictureViewController.h"
 #import <Social/Social.h>
 #import "DNWInstagram.h"
-//#import "MBProgressHUD.h"
 #import "DNWOtherApps.h"
 #import "Constants.h"
-//#import <QuartzCore/QuartzCore.h>
 
-#define ACTION_SHEET_TAG 22
 #define reviewString @"itms-apps://itunes.apple.com/app/id827491007"
 
 
@@ -169,12 +166,19 @@
                     didFinishSavingWithError:(NSError *)error
                                  contextInfo:(void *)contextInfo
 {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oil Painting Complete!"
-                                                    message:@"Oil Painting has been saved to the camera roll."
-                                                   delegate:self
-                                          cancelButtonTitle:@"Ok"
-                                          otherButtonTitles:nil];
-    [alert show];
+    UIAlertController *alertController = [UIAlertController
+                                          alertControllerWithTitle:NSLocalizedString(@"Oil Painting Complete!",nil)
+                                          message:@"Oil Painting has been saved to the camera roll."
+                                          preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cancelAction = [UIAlertAction
+                                   actionWithTitle:NSLocalizedString(@"Ok",nil)
+                                   style:UIAlertActionStyleCancel
+                                   handler:^(UIAlertAction *action)
+                                   {
+                                   }];
+    
+    [alertController addAction:cancelAction];
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 #pragma mark button press callbacks
@@ -196,15 +200,21 @@
     }
     else
     {
-        UIAlertView *alertView = [[UIAlertView alloc]
-                                  initWithTitle:@"Sorry"
-                                  message:@"You can't facebook right now, make sure \
-                                  your device has an internet connection and you have \
-                                  at least one Facebook account setup"
-                                  delegate:self
-                                  cancelButtonTitle:@"OK"
-                                  otherButtonTitles:nil];
-        [alertView show];
+        UIAlertController *alertController = [UIAlertController
+                                              alertControllerWithTitle:NSLocalizedString(@"Sorry",nil)
+                                              message:@"You can't facebook right now, make sure \
+                                              your device has an internet connection and you have \
+                                              at least one Facebook account setup"
+                                              preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *cancelAction = [UIAlertAction
+                                       actionWithTitle:NSLocalizedString(@"Ok",nil)
+                                       style:UIAlertActionStyleCancel
+                                       handler:^(UIAlertAction *action)
+                                       {
+                                       }];
+        
+        [alertController addAction:cancelAction];
+        [self presentViewController:alertController animated:YES completion:nil];
     }
 }
 
@@ -219,15 +229,21 @@
     }
     else
     {
-        UIAlertView *alertView = [[UIAlertView alloc]
-                                  initWithTitle:@"Sorry"
-                                  message:@"You can't send a tweet right now, make sure \
-                                  your device has an internet connection and you have \
-                                  at least one Twitter account setup"
-                                  delegate:self
-                                  cancelButtonTitle:@"OK"
-                                  otherButtonTitles:nil];
-        [alertView show];
+        UIAlertController *alertController = [UIAlertController
+                                              alertControllerWithTitle:NSLocalizedString(@"Sorry",nil)
+                                              message:@"You can't send a tweet right now, make sure \
+                                              your device has an internet connection and you have \
+                                              at least one Twitter account setup"
+                                              preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *cancelAction = [UIAlertAction
+                                       actionWithTitle:NSLocalizedString(@"Ok",nil)
+                                       style:UIAlertActionStyleCancel
+                                       handler:^(UIAlertAction *action)
+                                       {
+                                       }];
+        
+        [alertController addAction:cancelAction];
+        [self presentViewController:alertController animated:YES completion:nil];
     }
 }
 
@@ -247,12 +263,19 @@
     UIImage* newImage = [self resizeImageToSize:CGSizeMake(640, 640) Image:pictureImageView.image];
     
     if (newImage == nil) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Sorry"
-                                                        message:@"Your picture could not be properly scaled. Please try again"
-                                                       delegate:self
-                                              cancelButtonTitle:@"Ok"
-                                              otherButtonTitles:nil];
-        [alert show];
+        UIAlertController *alertController = [UIAlertController
+                                              alertControllerWithTitle:NSLocalizedString(@"Sorry",nil)
+                                              message:@"Your picture could not be properly scaled. Please try again"
+                                              preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *cancelAction = [UIAlertAction
+                                       actionWithTitle:NSLocalizedString(@"Ok",nil)
+                                       style:UIAlertActionStyleCancel
+                                       handler:^(UIAlertAction *action)
+                                       {
+                                       }];
+        
+        [alertController addAction:cancelAction];
+        [self presentViewController:alertController animated:YES completion:nil];
     } else {
 
         UIActivityViewController * controller = [[UIActivityViewController alloc] initWithActivityItems:@[newImage]                                                                  applicationActivities:nil];
@@ -263,8 +286,9 @@
         //if iPad
         else {
             // Change Rect to position Popover
-            UIPopoverController *popup = [[UIPopoverController alloc] initWithContentViewController:controller];
-            [popup presentPopoverFromBarButtonItem:shareButton permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+            controller.modalPresentationStyle                   = UIModalPresentationPopover;
+            controller.popoverPresentationController.barButtonItem = shareButton;
+            [self presentViewController:controller animated:YES completion:nil];
         }
     }
 }
@@ -278,13 +302,19 @@
     }
     else
     {
-        UIAlertView *alertView = [[UIAlertView alloc]
-                                  initWithTitle:@"Sorry"
-                                  message:@"Instagram is not installed"
-                                  delegate:self
-                                  cancelButtonTitle:@"OK"
-                                  otherButtonTitles:nil];
-        [alertView show];
+        UIAlertController *alertController = [UIAlertController
+                                              alertControllerWithTitle:NSLocalizedString(@"Sorry",nil)
+                                              message:@"Instagram is not installed"
+                                              preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *cancelAction = [UIAlertAction
+                                       actionWithTitle:NSLocalizedString(@"Ok",nil)
+                                       style:UIAlertActionStyleCancel
+                                       handler:^(UIAlertAction *action)
+                                       {
+                                       }];
+        
+        [alertController addAction:cancelAction];
+        [self presentViewController:alertController animated:YES completion:nil];
     }
 }
 
@@ -308,31 +338,6 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-
-#pragma mark UIActionSheetDelegate
-
-- (void)actionSheet:(UIActionSheet *)popup clickedButtonAtIndex:(NSInteger)buttonIndex {
-    
-    switch (popup.tag) {
-        case ACTION_SHEET_TAG: {
-            switch (buttonIndex) {
-                case 0://save to camera roll
-                    UIImageWriteToSavedPhotosAlbum(pictureImageView.image, self,
-                                                   @selector(finishUIImageWriteToSavedPhotosAlbum:
-                                                             didFinishSavingWithError:contextInfo:), nil);
-                    break;
-                case 1://rate this app
-                    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:reviewString]];
-                    break;
-                default:
-                    break;
-            }
-            break;
-        }
-        default:
-            break;
-    }
-}
 
 -(IBAction)PostcardButtonPressed:(id)sender
 {

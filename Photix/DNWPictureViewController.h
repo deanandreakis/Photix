@@ -7,16 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-//#import <GPUImage.h>
-//#import <MessageUI/MessageUI.h>
-//#import <MessageUI/MFMailComposeViewController.h>
-//#import <ShipLib/ShipLib.h>
-//#import <iAd/iAd.h>
 @import PhotixFilter;
 
-@interface DNWPictureViewController : UIViewController <MFMailComposeViewControllerDelegate, UIActionSheetDelegate, ADBannerViewDelegate>
+@interface DNWPictureViewController : UIViewController <MFMailComposeViewControllerDelegate, ADBannerViewDelegate>
 
 @property UIImage *imageToSet;
-//- (void)processImage;
 
 @end
