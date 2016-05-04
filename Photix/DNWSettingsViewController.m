@@ -32,7 +32,7 @@
 }
 
 @property (strong, nonatomic) UIActivityIndicatorView* activityIndicatorView;
-@property (strong, nonatomic) UIAlertView* pleaseWaitAlertView;
+@property (strong, nonatomic) UIAlertController* pleaseWaitAlertController;
 
 @end
 
@@ -43,11 +43,27 @@
     // Do any additional setup after loading the view.
     
     self.activityIndicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-    self.pleaseWaitAlertView = [[UIAlertView alloc] initWithTitle:@"" message:@"Please Wait..." delegate:nil cancelButtonTitle:nil otherButtonTitles:nil];
-    [self.view addSubview:self.pleaseWaitAlertView];
-    [self.pleaseWaitAlertView addSubview:self.activityIndicatorView];
+    self.pleaseWaitAlertController = [UIAlertController alertControllerWithTitle:nil
+                                                                          message:@"Please wait...\n\n\n"
+                                                                   preferredStyle:UIAlertControllerStyleAlert];
     self.activityIndicatorView.color = [UIColor blueColor];
-    self.activityIndicatorView.center = CGPointMake(self.view.center.x, self.view.center.y + 35);
+    self.activityIndicatorView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.pleaseWaitAlertController.view addSubview:self.activityIndicatorView];
+    
+    [self.pleaseWaitAlertController.view addConstraints:@[
+                                                     [NSLayoutConstraint constraintWithItem:self.activityIndicatorView
+                                                                                  attribute:NSLayoutAttributeCenterX
+                                                                                  relatedBy:NSLayoutRelationEqual
+                                                                                     toItem:self.pleaseWaitAlertController.view
+                                                                                  attribute:NSLayoutAttributeCenterX
+                                                                                 multiplier:1 constant:0],
+                                                     [NSLayoutConstraint constraintWithItem:self.activityIndicatorView
+                                                                                  attribute:NSLayoutAttributeCenterY
+                                                                                  relatedBy:NSLayoutRelationEqual
+                                                                                     toItem:self.pleaseWaitAlertController.view
+                                                                                  attribute:NSLayoutAttributeCenterY
+                                                                                 multiplier:1 constant:0]
+                                                     ]];
     
     self.view.backgroundColor = [UIColor whiteColor];
     
@@ -87,7 +103,7 @@
 //called when transaction is completed and successfully purchased or restored.
 - (void)productPurchased:(NSNotification *)notification {
     [self.activityIndicatorView stopAnimating];
-    [self.pleaseWaitAlertView dismissWithClickedButtonIndex:0 animated:YES];
+    [self.presentedViewController dismissViewControllerAnimated:NO completion:nil];
     
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:USER_PURCHASED_TIP];
     [[NSUserDefaults standardUserDefaults] synchronize];
@@ -96,7 +112,7 @@
 - (void)transactionFailed:(NSNotification *)notification {
     
     [self.activityIndicatorView stopAnimating];
-    [self.pleaseWaitAlertView dismissWithClickedButtonIndex:0 animated:YES];
+    [self.presentedViewController dismissViewControllerAnimated:NO completion:nil];
 }
 
 - (void)getProducts {
@@ -145,50 +161,60 @@
                     [myString appendString:NSLocalizedString(@"Price: ",nil)];
                     [myString appendString:[_priceFormatter stringFromNumber:_99Product.price]];
                     
-                    UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Confirm Purchase of the Generous Tip",nil)
-                                                                        message:myString
-                                                                       delegate:self
-                                                              cancelButtonTitle:NSLocalizedString(@"Cancel",nil)
-                                                              otherButtonTitles:NSLocalizedString(@"Buy",nil), nil];
-                    alertView.tag = ALERTVIEW_99_BUY;
-                    [alertView show];
+                    UIAlertController *alertController = [UIAlertController
+                                                          alertControllerWithTitle:NSLocalizedString(@"Confirm Purchase of the Generous Tip",nil)
+                                                          message:myString
+                                                          preferredStyle:UIAlertControllerStyleAlert];
+                    UIAlertAction *cancelAction = [UIAlertAction
+                                                   actionWithTitle:NSLocalizedString(@"Cancel",nil)
+                                                   style:UIAlertActionStyleCancel
+                                                   handler:^(UIAlertAction *action)
+                                                   {}];
+                    
+                    UIAlertAction *buyAction = [UIAlertAction
+                                                actionWithTitle:NSLocalizedString(@"Buy",nil)
+                                                style:UIAlertActionStyleDefault
+                                                handler:^(UIAlertAction *action)
+                                                {
+                                                    [[PhotixIAPHelper sharedInstance] buyProduct:_99Product];
+                                                    [self presentViewController:self.pleaseWaitAlertController animated:NO completion:nil];
+                                                    [self.activityIndicatorView startAnimating];
+                                                }];
+                    
+                    [alertController addAction:cancelAction];
+                    [alertController addAction:buyAction];
+                    [self presentViewController:alertController animated:YES completion:nil];
                     
                 } else {
                     
-                    UIAlertView *tmp = [[UIAlertView alloc]
-                                        
-                                        initWithTitle:NSLocalizedString(@"Prohibited",nil)
-                                        
-                                        message:NSLocalizedString(@"This feature is available via In-App Purchase. Parental Control is enabled, cannot make a purchase!",nil)
-                                        
-                                        delegate:self
-                                        
-                                        cancelButtonTitle:nil
-                                        
-                                        otherButtonTitles:NSLocalizedString(@"Ok",nil), nil];
+                    UIAlertController *alertController = [UIAlertController
+                                                          alertControllerWithTitle:NSLocalizedString(@"Prohibited",nil)
+                                                          message:NSLocalizedString(@"This feature is available via In-App Purchase. Parental Control is enabled, cannot make a purchase!",nil)
+                                                          preferredStyle:UIAlertControllerStyleAlert];
+                    UIAlertAction *okAction = [UIAlertAction
+                                               actionWithTitle:NSLocalizedString(@"Ok",nil)
+                                               style:UIAlertActionStyleDefault
+                                               handler:^(UIAlertAction *action)
+                                               {}];
                     
-                    tmp.tag = ALERTVIEW_99_IAP_DISABLED;
-                    
-                    [tmp show];
+                    [alertController addAction:okAction];
+                    [self presentViewController:alertController animated:YES completion:nil];
                 }
             }
         } else {
             //the products are nil so the original product fetch in getProducts() failed
-            UIAlertView *tmp = [[UIAlertView alloc]
-                                
-                                initWithTitle:NSLocalizedString(@"Product Not Available",nil)
-                                
-                                message:NSLocalizedString(@"This product is not currently available. Please try again later.",nil)
-                                
-                                delegate:self
-                                
-                                cancelButtonTitle:nil
-                                
-                                otherButtonTitles:NSLocalizedString(@"Ok",nil), nil];
+            UIAlertController *alertController = [UIAlertController
+                                                  alertControllerWithTitle:NSLocalizedString(@"Product Not Available",nil)
+                                                  message:NSLocalizedString(@"This product is not currently available. Please try again later.",nil)
+                                                  preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *okAction = [UIAlertAction
+                                       actionWithTitle:NSLocalizedString(@"Ok",nil)
+                                       style:UIAlertActionStyleDefault
+                                       handler:^(UIAlertAction *action)
+                                       {}];
             
-            tmp.tag = ALERTVIEW_99_IAP_PRODUCT_NOT_AVAILABLE;
-            
-            [tmp show];
+            [alertController addAction:okAction];
+            [self presentViewController:alertController animated:YES completion:nil];
         }
 }
 
@@ -209,50 +235,60 @@
                 [myString appendString:NSLocalizedString(@"Price: ",nil)];
                 [myString appendString:[_priceFormatter stringFromNumber:_199Product.price]];
                 
-                UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Confirm Purchase of the Massive Tip",nil)
-                                                                    message:myString
-                                                                   delegate:self
-                                                          cancelButtonTitle:NSLocalizedString(@"Cancel",nil)
-                                                          otherButtonTitles:NSLocalizedString(@"Buy",nil), nil];
-                alertView.tag = ALERTVIEW_199_BUY;
-                [alertView show];
+                UIAlertController *alertController = [UIAlertController
+                                                      alertControllerWithTitle:NSLocalizedString(@"Confirm Purchase of the Massive Tip",nil)
+                                                      message:myString
+                                                      preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertAction *cancelAction = [UIAlertAction
+                                               actionWithTitle:NSLocalizedString(@"Cancel",nil)
+                                               style:UIAlertActionStyleCancel
+                                               handler:^(UIAlertAction *action)
+                                               {}];
+                
+                UIAlertAction *buyAction = [UIAlertAction
+                                            actionWithTitle:NSLocalizedString(@"Buy",nil)
+                                            style:UIAlertActionStyleDefault
+                                            handler:^(UIAlertAction *action)
+                                            {
+                                                [[PhotixIAPHelper sharedInstance] buyProduct:_199Product];
+                                                [self presentViewController:self.pleaseWaitAlertController animated:NO completion:nil];
+                                                [self.activityIndicatorView startAnimating];
+                                            }];
+                
+                [alertController addAction:cancelAction];
+                [alertController addAction:buyAction];
+                [self presentViewController:alertController animated:YES completion:nil];
                 
             } else {
                 
-                UIAlertView *tmp = [[UIAlertView alloc]
-                                    
-                                    initWithTitle:NSLocalizedString(@"Prohibited",nil)
-                                    
-                                    message:NSLocalizedString(@"This feature is available via In-App Purchase. Parental Control is enabled, cannot make a purchase!",nil)
-                                    
-                                    delegate:self
-                                    
-                                    cancelButtonTitle:nil
-                                    
-                                    otherButtonTitles:NSLocalizedString(@"Ok",nil), nil];
+                UIAlertController *alertController = [UIAlertController
+                                                      alertControllerWithTitle:NSLocalizedString(@"Prohibited",nil)
+                                                      message:NSLocalizedString(@"This feature is available via In-App Purchase. Parental Control is enabled, cannot make a purchase!",nil)
+                                                      preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertAction *okAction = [UIAlertAction
+                                           actionWithTitle:NSLocalizedString(@"Ok",nil)
+                                           style:UIAlertActionStyleDefault
+                                           handler:^(UIAlertAction *action)
+                                           {}];
                 
-                tmp.tag = ALERTVIEW_199_IAP_DISABLED;
-                
-                [tmp show];
+                [alertController addAction:okAction];
+                [self presentViewController:alertController animated:YES completion:nil];
             }
         }
     } else {
         //the products are nil so the original product fetch in getProducts() failed
-        UIAlertView *tmp = [[UIAlertView alloc]
-                            
-                            initWithTitle:NSLocalizedString(@"Product Not Available",nil)
-                            
-                            message:NSLocalizedString(@"This product is not currently available. Please try again later.",nil)
-                            
-                            delegate:self
-                            
-                            cancelButtonTitle:nil
-                            
-                            otherButtonTitles:NSLocalizedString(@"Ok",nil), nil];
+        UIAlertController *alertController = [UIAlertController
+                                              alertControllerWithTitle:NSLocalizedString(@"Product Not Available",nil)
+                                              message:NSLocalizedString(@"This product is not currently available. Please try again later.",nil)
+                                              preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *okAction = [UIAlertAction
+                                   actionWithTitle:NSLocalizedString(@"Ok",nil)
+                                   style:UIAlertActionStyleDefault
+                                   handler:^(UIAlertAction *action)
+                                   {}];
         
-        tmp.tag = ALERTVIEW_199_IAP_PRODUCT_NOT_AVAILABLE;
-        
-        [tmp show];
+        [alertController addAction:okAction];
+        [self presentViewController:alertController animated:YES completion:nil];
     }
 }
 
@@ -273,50 +309,60 @@
                 [myString appendString:NSLocalizedString(@"Price: ",nil)];
                 [myString appendString:[_priceFormatter stringFromNumber:_499Product.price]];
                 
-                UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Confirm Purchase of the Amazing Tip",nil)
-                                                                    message:myString
-                                                                   delegate:self
-                                                          cancelButtonTitle:NSLocalizedString(@"Cancel",nil)
-                                                          otherButtonTitles:NSLocalizedString(@"Buy",nil), nil];
-                alertView.tag = ALERTVIEW_499_BUY;
-                [alertView show];
+                UIAlertController *alertController = [UIAlertController
+                                                      alertControllerWithTitle:NSLocalizedString(@"Confirm Purchase of the Amazing Tip",nil)
+                                                      message:myString
+                                                      preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertAction *cancelAction = [UIAlertAction
+                                               actionWithTitle:NSLocalizedString(@"Cancel",nil)
+                                               style:UIAlertActionStyleCancel
+                                               handler:^(UIAlertAction *action)
+                                               {}];
+                
+                UIAlertAction *buyAction = [UIAlertAction
+                                            actionWithTitle:NSLocalizedString(@"Buy",nil)
+                                            style:UIAlertActionStyleDefault
+                                            handler:^(UIAlertAction *action)
+                                            {
+                                                [[PhotixIAPHelper sharedInstance] buyProduct:_499Product];
+                                                [self presentViewController:self.pleaseWaitAlertController animated:NO completion:nil];
+                                                [self.activityIndicatorView startAnimating];
+                                            }];
+                
+                [alertController addAction:cancelAction];
+                [alertController addAction:buyAction];
+                [self presentViewController:alertController animated:YES completion:nil];
                 
             } else {
                 
-                UIAlertView *tmp = [[UIAlertView alloc]
-                                    
-                                    initWithTitle:NSLocalizedString(@"Prohibited",nil)
-                                    
-                                    message:NSLocalizedString(@"This feature is available via In-App Purchase. Parental Control is enabled, cannot make a purchase!",nil)
-                                    
-                                    delegate:self
-                                    
-                                    cancelButtonTitle:nil
-                                    
-                                    otherButtonTitles:NSLocalizedString(@"Ok",nil), nil];
+                UIAlertController *alertController = [UIAlertController
+                                                      alertControllerWithTitle:NSLocalizedString(@"Prohibited",nil)
+                                                      message:NSLocalizedString(@"This feature is available via In-App Purchase. Parental Control is enabled, cannot make a purchase!",nil)
+                                                      preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertAction *okAction = [UIAlertAction
+                                           actionWithTitle:NSLocalizedString(@"Ok",nil)
+                                           style:UIAlertActionStyleDefault
+                                           handler:^(UIAlertAction *action)
+                                           {}];
                 
-                tmp.tag = ALERTVIEW_499_IAP_DISABLED;
-                
-                [tmp show];
+                [alertController addAction:okAction];
+                [self presentViewController:alertController animated:YES completion:nil];
             }
         }
     } else {
         //the products are nil so the original product fetch in getProducts() failed
-        UIAlertView *tmp = [[UIAlertView alloc]
-                            
-                            initWithTitle:NSLocalizedString(@"Product Not Available",nil)
-                            
-                            message:NSLocalizedString(@"This product is not currently available. Please try again later.",nil)
-                            
-                            delegate:self
-                            
-                            cancelButtonTitle:nil
-                            
-                            otherButtonTitles:NSLocalizedString(@"Ok",nil), nil];
+        UIAlertController *alertController = [UIAlertController
+                                              alertControllerWithTitle:NSLocalizedString(@"Product Not Available",nil)
+                                              message:NSLocalizedString(@"This product is not currently available. Please try again later.",nil)
+                                              preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *okAction = [UIAlertAction
+                                   actionWithTitle:NSLocalizedString(@"Ok",nil)
+                                   style:UIAlertActionStyleDefault
+                                   handler:^(UIAlertAction *action)
+                                   {}];
         
-        tmp.tag = ALERTVIEW_499_IAP_PRODUCT_NOT_AVAILABLE;
-        
-        [tmp show];
+        [alertController addAction:okAction];
+        [self presentViewController:alertController animated:YES completion:nil];
     }
 }
 
@@ -333,52 +379,6 @@
 - (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
 {
     [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-#pragma mark UIAlertViewDelegate
-
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    switch (alertView.tag) {
-        case ALERTVIEW_99_BUY:
-            if(buttonIndex == 0) {//CANCEL
-            } else if(buttonIndex == 1) { //BUY
-                [[PhotixIAPHelper sharedInstance] buyProduct:_99Product];
-                [self.pleaseWaitAlertView show];
-                [self.activityIndicatorView startAnimating];
-            }
-            break;
-        case ALERTVIEW_99_IAP_DISABLED:
-            break;
-        case ALERTVIEW_99_IAP_PRODUCT_NOT_AVAILABLE:
-            break;
-        case ALERTVIEW_199_BUY:
-            if(buttonIndex == 0) {//CANCEL
-            } else if(buttonIndex == 1) { //BUY
-                [[PhotixIAPHelper sharedInstance] buyProduct:_199Product];
-                [self.pleaseWaitAlertView show];
-                [self.activityIndicatorView startAnimating];
-            }
-            break;
-        case ALERTVIEW_199_IAP_DISABLED:
-            break;
-        case ALERTVIEW_199_IAP_PRODUCT_NOT_AVAILABLE:
-            break;
-        case ALERTVIEW_499_BUY:
-            if(buttonIndex == 0) {//CANCEL
-            } else if(buttonIndex == 1) { //BUY
-                [[PhotixIAPHelper sharedInstance] buyProduct:_499Product];
-                [self.pleaseWaitAlertView show];
-                [self.activityIndicatorView startAnimating];
-            }
-            break;
-        case ALERTVIEW_499_IAP_DISABLED:
-            break;
-        case ALERTVIEW_499_IAP_PRODUCT_NOT_AVAILABLE:
-            break;
-        default:
-            break;
-    }
-    
 }
 
 @end

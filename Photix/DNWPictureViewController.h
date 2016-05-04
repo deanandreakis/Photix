@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 @import PhotixFilter;
 
-@interface DNWPictureViewController : UIViewController <MFMailComposeViewControllerDelegate, ADBannerViewDelegate>
+@interface DNWPictureViewController : UIViewController <MFMailComposeViewControllerDelegate>
 
 @property UIImage *imageToSet;
 

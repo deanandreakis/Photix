@@ -29,7 +29,6 @@
 
 
 @property (strong, nonatomic) IBOutlet UIImageView* pictureImageView;
-@property (strong, nonatomic) IBOutlet UIView* adBannerView;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem* shareButton;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem* instagramButton;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem* moreButton;
@@ -38,7 +37,7 @@
 
 @implementation DNWPictureViewController
 
-@synthesize pictureImageView, imageToSet, adBannerView, shareButton;
+@synthesize pictureImageView, imageToSet, shareButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -62,41 +61,8 @@
 {
     BOOL productPurchased = [[NSUserDefaults standardUserDefaults] boolForKey:USER_PURCHASED_TIP];
     if (productPurchased) {
-        adBannerView.hidden = YES;
     }
 }
-
-/*- (void)processImage
-{
-    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
-        
-        UIImage* newImage = imageToSet;
-        
-        // Do the task in the background
-        GPUImagePicture *stillImageSource;
-        UIImage *currentFilteredImage;
-        
-        stillImageSource = [[GPUImagePicture alloc] initWithImage:newImage];
-        
-        GPUImageKuwaharaFilter *oilPaintingTransformFilter = [[GPUImageKuwaharaFilter alloc] init];
-        oilPaintingTransformFilter.radius = 8.0;
-        
-        [stillImageSource addTarget:oilPaintingTransformFilter];
-        [stillImageSource processImage];
-        
-        currentFilteredImage = [oilPaintingTransformFilter imageFromCurrentFramebuffer];
-        //NSLog(@"currentFilteredImage Image Size:%f,%f", currentFilteredImage.size.width, currentFilteredImage.size.height);
-        
-        // Hide the HUD in the main tread
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [pictureImageView setImage:currentFilteredImage];
-            [MBProgressHUD hideHUDForView:self.view animated:YES];
-        });
-    });
-    
-    //NSLog(@"pictureImageView Image Size:%f,%f", pictureImageView.image.size.width, pictureImageView.image.size.height);
-    //NSLog(@"imageToSet Image Size:%f,%f", imageToSet.size.width, imageToSet.size.height);
-}*/
 
 - (UIImage *)resizeImageToSize:(CGSize)targetSize Image:(UIImage*)sourceImage
 {
@@ -350,36 +316,6 @@
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:reviewString]];
 }
 
-#pragma mark iAd delegate methods
-
--(void) bannerViewDidLoadAd:(ADBannerView *)banner
-{
-    [UIView beginAnimations:nil context:nil];
-    
-    [UIView setAnimationDuration:1];
-    
-    BOOL productPurchased = [[NSUserDefaults standardUserDefaults] boolForKey:USER_PURCHASED_TIP];
-    if (productPurchased) {
-        [banner setAlpha:0];
-    } else {
-        [banner setAlpha:1];
-    }
-    
-    [UIView commitAnimations];
-}
-
--(void) bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
-{
-    [UIView beginAnimations:nil context:nil];
-    
-    [UIView setAnimationDuration:1];
-    
-    [banner setAlpha:0];
-    
-    [UIView commitAnimations];
-}
-
-
 - (void) traitCollectionDidChange: (UITraitCollection *) previousTraitCollection {
     [super traitCollectionDidChange: previousTraitCollection];
     if ((self.traitCollection.verticalSizeClass != previousTraitCollection.verticalSizeClass)
@@ -389,11 +325,11 @@
            //||
            //(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad &&
             //UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation))) {
-            adBannerView.hidden = YES;
+            //adBannerView.hidden = YES;
         } else {
             BOOL productPurchased = [[NSUserDefaults standardUserDefaults] boolForKey:USER_PURCHASED_TIP];
             if (!productPurchased) {
-                adBannerView.hidden = NO;
+                //adBannerView.hidden = NO;
             }
         }
     }

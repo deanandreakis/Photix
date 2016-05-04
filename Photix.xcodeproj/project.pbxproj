@@ -19,7 +19,6 @@
 		C1210EB81996812000C1E4E7 /* DNWFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1210EB61996812000C1E4E7 /* DNWFilterViewController.m */; };
 		C154481518B8445C007B54D1 /* DNWOtherApps.m in Sources */ = {isa = PBXBuildFile; fileRef = C154481418B8445C007B54D1 /* DNWOtherApps.m */; };
 		C16D78181B6ECF5600673C86 /* DNWInstagram.m in Sources */ = {isa = PBXBuildFile; fileRef = C16D78171B6ECF5600673C86 /* DNWInstagram.m */; };
-		C1908E8818BA3D80006B4461 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1908E8718BA3D80006B4461 /* iAd.framework */; };
 		C1A9F3F91A1D9B8400513812 /* PhotixFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = C1A9F3F81A1D9B8400513812 /* PhotixFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C1A9F3FF1A1D9B8400513812 /* PhotixFilter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A9F3F41A1D9B8400513812 /* PhotixFilter.framework */; };
 		C1A9F4081A1D9B8400513812 /* PhotixFilterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A9F4071A1D9B8400513812 /* PhotixFilterTests.m */; };
@@ -38,7 +37,17 @@
 		C1BAFD3118B158570078C88D /* UIImage+normalizedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BAFD3018B158570078C88D /* UIImage+normalizedImage.m */; };
 		C1BAFD3718B15D720078C88D /* DNWPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BAFD3618B15D720078C88D /* DNWPictureViewController.m */; };
 		C1BAFD3918B1B4E70078C88D /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BAFD3818B1B4E70078C88D /* Social.framework */; };
-		C1BAFD3B18B1B58F0078C88D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BAFD3A18B1B58F0078C88D /* MessageUI.framework */; };
+		C1BEFF381CD9998E0033A878 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF75F98384E448F887006AB5 /* libPods.a */; };
+		C1BEFF3C1CD9998E0033A878 /* libGPUImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BEFF391CD9998E0033A878 /* libGPUImage.a */; };
+		C1BEFF3D1CD9998E0033A878 /* libMBProgressHUD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BEFF3A1CD9998E0033A878 /* libMBProgressHUD.a */; };
+		C1BEFF3E1CD9998E0033A878 /* libMGInstagram.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BEFF3B1CD9998E0033A878 /* libMGInstagram.a */; };
+		C1BEFF3F1CD999A30033A878 /* libGPUImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BEFF391CD9998E0033A878 /* libGPUImage.a */; };
+		C1BEFF401CD999A30033A878 /* libMBProgressHUD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BEFF3A1CD9998E0033A878 /* libMBProgressHUD.a */; };
+		C1BEFF411CD999A30033A878 /* libMGInstagram.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BEFF3B1CD9998E0033A878 /* libMGInstagram.a */; };
+		C1BEFF421CD999A30033A878 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF75F98384E448F887006AB5 /* libPods.a */; };
+		C1BEFF431CD999AF0033A878 /* libGPUImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BEFF391CD9998E0033A878 /* libGPUImage.a */; };
+		C1BEFF441CD999AF0033A878 /* libMBProgressHUD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BEFF3A1CD9998E0033A878 /* libMBProgressHUD.a */; };
+		C1BEFF451CD999AF0033A878 /* libMGInstagram.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BEFF3B1CD9998E0033A878 /* libMGInstagram.a */; };
 		C1C1163B18D5FB9C00247E0F /* DNWImageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C1C1163A18D5FB9C00247E0F /* DNWImageTests.m */; };
 		C1C1163C18D60C4F00247E0F /* DNWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C1DBBCF218A6BFEF007BF4CE /* DNWAppDelegate.m */; };
 		C1C1163D18D60C4F00247E0F /* UIImage+normalizedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BAFD3018B158570078C88D /* UIImage+normalizedImage.m */; };
@@ -48,7 +57,6 @@
 		C1C1164118D60C4F00247E0F /* DNWPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BAFD3618B15D720078C88D /* DNWPictureViewController.m */; };
 		C1C1164218D60C4F00247E0F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C1DBBCEE18A6BFEF007BF4CE /* main.m */; };
 		C1C1164318D60D2D00247E0F /* Photix.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C1DBBCF418A6BFEF007BF4CE /* Photix.xcdatamodeld */; };
-		C1C1164618D60D9400247E0F /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1908E8718BA3D80006B4461 /* iAd.framework */; };
 		C1C1164718D60D9F00247E0F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1E20FB118B980E1001A2BE3 /* QuartzCore.framework */; };
 		C1C1164818D60DA900247E0F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BAFD3A18B1B58F0078C88D /* MessageUI.framework */; };
 		C1C1164918D60DB300247E0F /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BAFD3818B1B4E70078C88D /* Social.framework */; };
@@ -174,14 +182,12 @@
 		C154481418B8445C007B54D1 /* DNWOtherApps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNWOtherApps.m; sourceTree = "<group>"; };
 		C16D78161B6ECF5600673C86 /* DNWInstagram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNWInstagram.h; sourceTree = "<group>"; };
 		C16D78171B6ECF5600673C86 /* DNWInstagram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNWInstagram.m; sourceTree = "<group>"; };
-		C1908E8718BA3D80006B4461 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		C1A9F3F41A1D9B8400513812 /* PhotixFilter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PhotixFilter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1A9F3F71A1D9B8400513812 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1A9F3F81A1D9B8400513812 /* PhotixFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotixFilter.h; sourceTree = "<group>"; };
 		C1A9F3FE1A1D9B8400513812 /* PhotixFilterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotixFilterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1A9F4061A1D9B8400513812 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1A9F4071A1D9B8400513812 /* PhotixFilterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotixFilterTests.m; sourceTree = "<group>"; };
-		C1A9F4191A1ED01200513812 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		C1A9F41B1A1EE1BA00513812 /* lookup_soft_elegance_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lookup_soft_elegance_1.png; sourceTree = "<group>"; };
 		C1A9F41E1A1EE1CC00513812 /* lookup_soft_elegance_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lookup_soft_elegance_2.png; sourceTree = "<group>"; };
 		C1BAFD2718B14B2A0078C88D /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
@@ -194,15 +200,12 @@
 		C1BAFD3618B15D720078C88D /* DNWPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNWPictureViewController.m; sourceTree = "<group>"; };
 		C1BAFD3818B1B4E70078C88D /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		C1BAFD3A18B1B58F0078C88D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		C1BEFF391CD9998E0033A878 /* libGPUImage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGPUImage.a; path = "../../Library/Developer/Xcode/DerivedData/Photix-ahztdgfwpfqdzkfkacllflryeoos/Build/Products/Debug-iphoneos/libGPUImage.a"; sourceTree = "<group>"; };
+		C1BEFF3A1CD9998E0033A878 /* libMBProgressHUD.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMBProgressHUD.a; path = "../../Library/Developer/Xcode/DerivedData/Photix-ahztdgfwpfqdzkfkacllflryeoos/Build/Products/Debug-iphoneos/libMBProgressHUD.a"; sourceTree = "<group>"; };
+		C1BEFF3B1CD9998E0033A878 /* libMGInstagram.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMGInstagram.a; path = "../../Library/Developer/Xcode/DerivedData/Photix-ahztdgfwpfqdzkfkacllflryeoos/Build/Products/Debug-iphoneos/libMGInstagram.a"; sourceTree = "<group>"; };
 		C1C1163818D495DC00247E0F /* PhotixTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotixTests.h; sourceTree = "<group>"; };
 		C1C1163918D5FB9C00247E0F /* DNWImageTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNWImageTests.h; sourceTree = "<group>"; };
 		C1C1163A18D5FB9C00247E0F /* DNWImageTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNWImageTests.m; sourceTree = "<group>"; };
-		C1C1164418D60D6500247E0F /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
-		C1C1165218D6297300247E0F /* libPods-FlurrySDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-FlurrySDK.a"; path = "Pods/build/Debug-iphoneos/libPods-FlurrySDK.a"; sourceTree = "<group>"; };
-		C1C1165318D6297300247E0F /* libPods-GPUImage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-GPUImage.a"; path = "Pods/build/Debug-iphoneos/libPods-GPUImage.a"; sourceTree = "<group>"; };
-		C1C1165418D6297300247E0F /* libPods-MBProgressHUD.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-MBProgressHUD.a"; path = "Pods/build/Debug-iphoneos/libPods-MBProgressHUD.a"; sourceTree = "<group>"; };
-		C1C1165518D6297300247E0F /* libPods-MGInstagram.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-MGInstagram.a"; path = "Pods/build/Debug-iphoneos/libPods-MGInstagram.a"; sourceTree = "<group>"; };
-		C1C1165618D6297300247E0F /* libPods-ShipLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-ShipLib.a"; path = "Pods/build/Debug-iphoneos/libPods-ShipLib.a"; sourceTree = "<group>"; };
 		C1C1165E18D65F9A00247E0F /* test1_2448_3264.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test1_2448_3264.jpg; sourceTree = "<group>"; };
 		C1C1166118D65FAA00247E0F /* test2_3264_2448.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test2_3264_2448.jpg; sourceTree = "<group>"; };
 		C1C1166418D65FB200247E0F /* test3_640_640.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test3_640_640.jpg; sourceTree = "<group>"; };
@@ -259,6 +262,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1BEFF431CD999AF0033A878 /* libGPUImage.a in Frameworks */,
+				C1BEFF441CD999AF0033A878 /* libMBProgressHUD.a in Frameworks */,
+				C1BEFF451CD999AF0033A878 /* libMGInstagram.a in Frameworks */,
 				C1CB31891A33A40900B515AE /* CoreImage.framework in Frameworks */,
 				12F708DFE8CAAE3664448C71 /* libPods.a in Frameworks */,
 			);
@@ -276,9 +282,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1908E8818BA3D80006B4461 /* iAd.framework in Frameworks */,
+				C1BEFF3C1CD9998E0033A878 /* libGPUImage.a in Frameworks */,
+				C1BEFF3D1CD9998E0033A878 /* libMBProgressHUD.a in Frameworks */,
+				C1BEFF3E1CD9998E0033A878 /* libMGInstagram.a in Frameworks */,
+				C1BEFF381CD9998E0033A878 /* libPods.a in Frameworks */,
 				C1E20FB218B980E1001A2BE3 /* QuartzCore.framework in Frameworks */,
-				C1BAFD3B18B1B58F0078C88D /* MessageUI.framework in Frameworks */,
 				C1F699301B25EA1E0077C3FF /* StoreKit.framework in Frameworks */,
 				C1BAFD3918B1B4E70078C88D /* Social.framework in Frameworks */,
 				C1DBBCE318A6BFEF007BF4CE /* CoreGraphics.framework in Frameworks */,
@@ -293,11 +301,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1BEFF3F1CD999A30033A878 /* libGPUImage.a in Frameworks */,
+				C1BEFF401CD999A30033A878 /* libMBProgressHUD.a in Frameworks */,
+				C1BEFF411CD999A30033A878 /* libMGInstagram.a in Frameworks */,
+				C1BEFF421CD999A30033A878 /* libPods.a in Frameworks */,
 				C1C1164A18D60DBF00247E0F /* CoreGraphics.framework in Frameworks */,
 				C1C1164918D60DB300247E0F /* Social.framework in Frameworks */,
 				C1C1164818D60DA900247E0F /* MessageUI.framework in Frameworks */,
 				C1C1164718D60D9F00247E0F /* QuartzCore.framework in Frameworks */,
-				C1C1164618D60D9400247E0F /* iAd.framework in Frameworks */,
 				C1DBBCFF18A6BFEF007BF4CE /* XCTest.framework in Frameworks */,
 				C1DBBD0218A6BFEF007BF4CE /* CoreData.framework in Frameworks */,
 				C1DBBD0118A6BFEF007BF4CE /* UIKit.framework in Frameworks */,
@@ -451,16 +462,11 @@
 		C1DBBCDF18A6BFEF007BF4CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C1BEFF391CD9998E0033A878 /* libGPUImage.a */,
+				C1BEFF3A1CD9998E0033A878 /* libMBProgressHUD.a */,
+				C1BEFF3B1CD9998E0033A878 /* libMGInstagram.a */,
 				C1F6992F1B25EA1E0077C3FF /* StoreKit.framework */,
 				C1CB31881A33A40900B515AE /* CoreImage.framework */,
-				C1A9F4191A1ED01200513812 /* libPods.a */,
-				C1C1165218D6297300247E0F /* libPods-FlurrySDK.a */,
-				C1C1165318D6297300247E0F /* libPods-GPUImage.a */,
-				C1C1165418D6297300247E0F /* libPods-MBProgressHUD.a */,
-				C1C1165518D6297300247E0F /* libPods-MGInstagram.a */,
-				C1C1165618D6297300247E0F /* libPods-ShipLib.a */,
-				C1C1164418D60D6500247E0F /* libPods.a */,
-				C1908E8718BA3D80006B4461 /* iAd.framework */,
 				C1E20FB118B980E1001A2BE3 /* QuartzCore.framework */,
 				C1BAFD3A18B1B58F0078C88D /* MessageUI.framework */,
 				C1BAFD3818B1B4E70078C88D /* Social.framework */,
@@ -971,8 +977,8 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-ObjC",
-					"-l\"Pods-MBProgressHUD\"",
-					"-l\"Pods-MGInstagram\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"MGInstagram\"",
 					"-l\"z\"",
 					"-framework",
 					"\"AVFoundation\"",
@@ -1028,8 +1034,8 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = (
 					"-ObjC",
-					"-l\"Pods-MBProgressHUD\"",
-					"-l\"Pods-MGInstagram\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"MGInstagram\"",
 					"-l\"z\"",
 					"-framework",
 					"\"AVFoundation\"",
@@ -1097,7 +1103,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = (
 					"-ObjC",
-					"-l\"Pods-GPUImage\"",
+					"-l\"GPUImage\"",
 					"-l\"z\"",
 					"-framework",
 					"\"AVFoundation\"",
@@ -1125,8 +1131,6 @@
 					"\"SystemConfiguration\"",
 					"-framework",
 					"\"UIKit\"",
-					"-weak_framework",
-					"\"AdSupport\"",
 					"-weak_framework",
 					"\"StoreKit\"",
 				);
@@ -1162,7 +1166,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = (
 					"-ObjC",
-					"-l\"Pods-GPUImage\"",
+					"-l\"GPUImage\"",
 					"-l\"z\"",
 					"-framework",
 					"\"AVFoundation\"",
@@ -1190,8 +1194,6 @@
 					"\"SystemConfiguration\"",
 					"-framework",
 					"\"UIKit\"",
-					"-weak_framework",
-					"\"AdSupport\"",
 					"-weak_framework",
 					"\"StoreKit\"",
 				);
@@ -1339,6 +1341,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/dean_macmini/Documents/Photix,
@@ -1351,8 +1354,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",
-					"-l\"Pods-MBProgressHUD\"",
-					"-l\"Pods-MGInstagram\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"MGInstagram\"",
 					"-l\"z\"",
 					"-framework",
 					"\"AVFoundation\"",
@@ -1402,6 +1405,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/dean_macmini/Documents/Photix,
@@ -1414,8 +1418,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",
-					"-l\"Pods-MBProgressHUD\"",
-					"-l\"Pods-MGInstagram\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"MGInstagram\"",
 					"-l\"z\"",
 					"-framework",
 					"\"AVFoundation\"",

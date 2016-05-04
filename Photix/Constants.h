@@ -14,6 +14,8 @@
 
 #define CRASHLYTICS_KEY @"2eaad7ad1fecfce6c414905676a8175bb2a1c253"
 
+#define ADMOB_KEY @"ca-app-pub-1222083832444594/7907782064"
+
 #define kAppDelegate ((DNWAppDelegate *)[[UIApplication sharedApplication] delegate])
 
 #define STOREKIT_PRODUCT_ID_GENEROUS_99 @"tip99"
