@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		12F708DFE8CAAE3664448C71 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF75F98384E448F887006AB5 /* libPods.a */; };
 		C10182261A2153DA0071A793 /* lookup_soft_elegance_1.png in Resources */ = {isa = PBXBuildFile; fileRef = C1A9F41B1A1EE1BA00513812 /* lookup_soft_elegance_1.png */; };
 		C10182271A2153E50071A793 /* lookup_soft_elegance_2.png in Resources */ = {isa = PBXBuildFile; fileRef = C1A9F41E1A1EE1CC00513812 /* lookup_soft_elegance_2.png */; };
 		C1054CE719A434D800A4D8F3 /* PhotosUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1054CE619A434D800A4D8F3 /* PhotosUI.framework */; };
@@ -15,6 +14,9 @@
 		C1054CEF19A434D800A4D8F3 /* PhotoEditingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1054CEE19A434D800A4D8F3 /* PhotoEditingViewController.m */; };
 		C1054CF119A434D800A4D8F3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1054CF019A434D800A4D8F3 /* MainInterface.storyboard */; };
 		C1054CF419A434D800A4D8F3 /* OilPaintPlus.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C1054CE519A434D800A4D8F3 /* OilPaintPlus.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C11C844E1CE41F1500625DD8 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11C844A1CE41EEB00625DD8 /* SafariServices.framework */; };
+		C11C844F1CE41F1E00625DD8 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11C844C1CE41EF700625DD8 /* CoreBluetooth.framework */; };
+		C11C84521CE4266800625DD8 /* libGPUImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BEFF391CD9998E0033A878 /* libGPUImage.a */; };
 		C1210EB71996812000C1E4E7 /* DNWFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1210EB61996812000C1E4E7 /* DNWFilterViewController.m */; };
 		C1210EB81996812000C1E4E7 /* DNWFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1210EB61996812000C1E4E7 /* DNWFilterViewController.m */; };
 		C154481518B8445C007B54D1 /* DNWOtherApps.m in Sources */ = {isa = PBXBuildFile; fileRef = C154481418B8445C007B54D1 /* DNWOtherApps.m */; };
@@ -38,16 +40,12 @@
 		C1BAFD3718B15D720078C88D /* DNWPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BAFD3618B15D720078C88D /* DNWPictureViewController.m */; };
 		C1BAFD3918B1B4E70078C88D /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BAFD3818B1B4E70078C88D /* Social.framework */; };
 		C1BEFF381CD9998E0033A878 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF75F98384E448F887006AB5 /* libPods.a */; };
-		C1BEFF3C1CD9998E0033A878 /* libGPUImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BEFF391CD9998E0033A878 /* libGPUImage.a */; };
 		C1BEFF3D1CD9998E0033A878 /* libMBProgressHUD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BEFF3A1CD9998E0033A878 /* libMBProgressHUD.a */; };
 		C1BEFF3E1CD9998E0033A878 /* libMGInstagram.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BEFF3B1CD9998E0033A878 /* libMGInstagram.a */; };
 		C1BEFF3F1CD999A30033A878 /* libGPUImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BEFF391CD9998E0033A878 /* libGPUImage.a */; };
 		C1BEFF401CD999A30033A878 /* libMBProgressHUD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BEFF3A1CD9998E0033A878 /* libMBProgressHUD.a */; };
 		C1BEFF411CD999A30033A878 /* libMGInstagram.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BEFF3B1CD9998E0033A878 /* libMGInstagram.a */; };
 		C1BEFF421CD999A30033A878 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF75F98384E448F887006AB5 /* libPods.a */; };
-		C1BEFF431CD999AF0033A878 /* libGPUImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BEFF391CD9998E0033A878 /* libGPUImage.a */; };
-		C1BEFF441CD999AF0033A878 /* libMBProgressHUD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BEFF3A1CD9998E0033A878 /* libMBProgressHUD.a */; };
-		C1BEFF451CD999AF0033A878 /* libMGInstagram.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BEFF3B1CD9998E0033A878 /* libMGInstagram.a */; };
 		C1C1163B18D5FB9C00247E0F /* DNWImageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C1C1163A18D5FB9C00247E0F /* DNWImageTests.m */; };
 		C1C1163C18D60C4F00247E0F /* DNWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C1DBBCF218A6BFEF007BF4CE /* DNWAppDelegate.m */; };
 		C1C1163D18D60C4F00247E0F /* UIImage+normalizedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BAFD3018B158570078C88D /* UIImage+normalizedImage.m */; };
@@ -174,6 +172,8 @@
 		C1054CED19A434D800A4D8F3 /* PhotoEditingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoEditingViewController.h; sourceTree = "<group>"; };
 		C1054CEE19A434D800A4D8F3 /* PhotoEditingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoEditingViewController.m; sourceTree = "<group>"; };
 		C1054CF019A434D800A4D8F3 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		C11C844A1CE41EEB00625DD8 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		C11C844C1CE41EF700625DD8 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		C1210EB51996812000C1E4E7 /* DNWFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNWFilterViewController.h; sourceTree = "<group>"; };
 		C1210EB61996812000C1E4E7 /* DNWFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNWFilterViewController.m; sourceTree = "<group>"; };
 		C149F4001999941A00584382 /* DNWFilteredImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DNWFilteredImageModel.h; path = ../Photix/DNWFilteredImageModel.h; sourceTree = "<group>"; };
@@ -262,11 +262,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1BEFF431CD999AF0033A878 /* libGPUImage.a in Frameworks */,
-				C1BEFF441CD999AF0033A878 /* libMBProgressHUD.a in Frameworks */,
-				C1BEFF451CD999AF0033A878 /* libMGInstagram.a in Frameworks */,
+				C11C84521CE4266800625DD8 /* libGPUImage.a in Frameworks */,
 				C1CB31891A33A40900B515AE /* CoreImage.framework in Frameworks */,
-				12F708DFE8CAAE3664448C71 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +271,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C11C844F1CE41F1E00625DD8 /* CoreBluetooth.framework in Frameworks */,
+				C11C844E1CE41F1500625DD8 /* SafariServices.framework in Frameworks */,
 				C1A9F3FF1A1D9B8400513812 /* PhotixFilter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,7 +281,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1BEFF3C1CD9998E0033A878 /* libGPUImage.a in Frameworks */,
 				C1BEFF3D1CD9998E0033A878 /* libMBProgressHUD.a in Frameworks */,
 				C1BEFF3E1CD9998E0033A878 /* libMGInstagram.a in Frameworks */,
 				C1BEFF381CD9998E0033A878 /* libPods.a in Frameworks */,
@@ -462,6 +460,8 @@
 		C1DBBCDF18A6BFEF007BF4CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C11C844C1CE41EF700625DD8 /* CoreBluetooth.framework */,
+				C11C844A1CE41EEB00625DD8 /* SafariServices.framework */,
 				C1BEFF391CD9998E0033A878 /* libGPUImage.a */,
 				C1BEFF3A1CD9998E0033A878 /* libMBProgressHUD.a */,
 				C1BEFF3B1CD9998E0033A878 /* libMGInstagram.a */,
@@ -1103,7 +1103,6 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = (
 					"-ObjC",
-					"-l\"GPUImage\"",
 					"-l\"z\"",
 					"-framework",
 					"\"AVFoundation\"",
@@ -1166,7 +1165,6 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = (
 					"-ObjC",
-					"-l\"GPUImage\"",
 					"-l\"z\"",
 					"-framework",
 					"\"AVFoundation\"",
@@ -1224,6 +1222,41 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"GPUImage\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"MGInstagram\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"AudioToolbox\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreMedia\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"EventKit\"",
+					"-framework",
+					"\"EventKitUI\"",
+					"-framework",
+					"\"MediaPlayer\"",
+					"-framework",
+					"\"MessageUI\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-weak_framework",
+					"\"AdSupport\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.deanware.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1245,6 +1278,41 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"GPUImage\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"MGInstagram\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"AudioToolbox\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreMedia\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"EventKit\"",
+					"-framework",
+					"\"EventKitUI\"",
+					"-framework",
+					"\"MediaPlayer\"",
+					"-framework",
+					"\"MessageUI\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-weak_framework",
+					"\"AdSupport\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.deanware.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

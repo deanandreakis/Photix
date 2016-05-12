@@ -1,14 +1,17 @@
 PODS:
+  - Google-Mobile-Ads-SDK (7.8.0)
   - GPUImage (0.1.7)
   - MBProgressHUD (0.9.2)
   - MGInstagram (0.1.0)
 
 DEPENDENCIES:
+  - Google-Mobile-Ads-SDK (~> 7.0)
   - GPUImage
   - MBProgressHUD
   - MGInstagram
 
 SPEC CHECKSUMS:
+  Google-Mobile-Ads-SDK: 36b88dd2373f0ee4583e65971cb07b6965c29eef
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MGInstagram: c85a061e25b053ad1cb1227675e238ce6cc50221
