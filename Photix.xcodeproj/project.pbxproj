@@ -17,6 +17,16 @@
 		C11C844E1CE41F1500625DD8 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11C844A1CE41EEB00625DD8 /* SafariServices.framework */; };
 		C11C844F1CE41F1E00625DD8 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11C844C1CE41EF700625DD8 /* CoreBluetooth.framework */; };
 		C11C84521CE4266800625DD8 /* libGPUImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BEFF391CD9998E0033A878 /* libGPUImage.a */; };
+		C11C84541CE427C400625DD8 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11C84531CE427C400625DD8 /* AdSupport.framework */; };
+		C11C84561CE427D300625DD8 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11C84551CE427D300625DD8 /* AudioToolbox.framework */; };
+		C11C84581CE427DE00625DD8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11C84571CE427DE00625DD8 /* AVFoundation.framework */; };
+		C11C845A1CE427EF00625DD8 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11C84591CE427EF00625DD8 /* CoreMedia.framework */; };
+		C11C845C1CE427FA00625DD8 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11C845B1CE427FA00625DD8 /* CoreTelephony.framework */; };
+		C11C845F1CE4280B00625DD8 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11C845D1CE4280B00625DD8 /* EventKit.framework */; };
+		C11C84601CE4280B00625DD8 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11C845E1CE4280B00625DD8 /* EventKitUI.framework */; };
+		C11C84621CE4281600625DD8 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11C84611CE4281600625DD8 /* MediaPlayer.framework */; };
+		C11C84631CE4282200625DD8 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BAFD3A18B1B58F0078C88D /* MessageUI.framework */; };
+		C11C84651CE4283300625DD8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11C84641CE4283300625DD8 /* SystemConfiguration.framework */; };
 		C1210EB71996812000C1E4E7 /* DNWFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1210EB61996812000C1E4E7 /* DNWFilterViewController.m */; };
 		C1210EB81996812000C1E4E7 /* DNWFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1210EB61996812000C1E4E7 /* DNWFilterViewController.m */; };
 		C154481518B8445C007B54D1 /* DNWOtherApps.m in Sources */ = {isa = PBXBuildFile; fileRef = C154481418B8445C007B54D1 /* DNWOtherApps.m */; };
@@ -174,6 +184,15 @@
 		C1054CF019A434D800A4D8F3 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		C11C844A1CE41EEB00625DD8 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		C11C844C1CE41EF700625DD8 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		C11C84531CE427C400625DD8 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		C11C84551CE427D300625DD8 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		C11C84571CE427DE00625DD8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		C11C84591CE427EF00625DD8 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		C11C845B1CE427FA00625DD8 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		C11C845D1CE4280B00625DD8 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		C11C845E1CE4280B00625DD8 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
+		C11C84611CE4281600625DD8 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		C11C84641CE4283300625DD8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C1210EB51996812000C1E4E7 /* DNWFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNWFilterViewController.h; sourceTree = "<group>"; };
 		C1210EB61996812000C1E4E7 /* DNWFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNWFilterViewController.m; sourceTree = "<group>"; };
 		C149F4001999941A00584382 /* DNWFilteredImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DNWFilteredImageModel.h; path = ../Photix/DNWFilteredImageModel.h; sourceTree = "<group>"; };
@@ -281,6 +300,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C11C84651CE4283300625DD8 /* SystemConfiguration.framework in Frameworks */,
+				C11C84631CE4282200625DD8 /* MessageUI.framework in Frameworks */,
+				C11C84621CE4281600625DD8 /* MediaPlayer.framework in Frameworks */,
+				C11C845F1CE4280B00625DD8 /* EventKit.framework in Frameworks */,
+				C11C84601CE4280B00625DD8 /* EventKitUI.framework in Frameworks */,
+				C11C845C1CE427FA00625DD8 /* CoreTelephony.framework in Frameworks */,
+				C11C845A1CE427EF00625DD8 /* CoreMedia.framework in Frameworks */,
+				C11C84581CE427DE00625DD8 /* AVFoundation.framework in Frameworks */,
+				C11C84561CE427D300625DD8 /* AudioToolbox.framework in Frameworks */,
+				C11C84541CE427C400625DD8 /* AdSupport.framework in Frameworks */,
 				C1BEFF3D1CD9998E0033A878 /* libMBProgressHUD.a in Frameworks */,
 				C1BEFF3E1CD9998E0033A878 /* libMGInstagram.a in Frameworks */,
 				C1BEFF381CD9998E0033A878 /* libPods.a in Frameworks */,
@@ -460,6 +489,15 @@
 		C1DBBCDF18A6BFEF007BF4CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C11C84641CE4283300625DD8 /* SystemConfiguration.framework */,
+				C11C84611CE4281600625DD8 /* MediaPlayer.framework */,
+				C11C845D1CE4280B00625DD8 /* EventKit.framework */,
+				C11C845E1CE4280B00625DD8 /* EventKitUI.framework */,
+				C11C845B1CE427FA00625DD8 /* CoreTelephony.framework */,
+				C11C84591CE427EF00625DD8 /* CoreMedia.framework */,
+				C11C84571CE427DE00625DD8 /* AVFoundation.framework */,
+				C11C84551CE427D300625DD8 /* AudioToolbox.framework */,
+				C11C84531CE427C400625DD8 /* AdSupport.framework */,
 				C11C844C1CE41EF700625DD8 /* CoreBluetooth.framework */,
 				C11C844A1CE41EEB00625DD8 /* SafariServices.framework */,
 				C1BEFF391CD9998E0033A878 /* libGPUImage.a */,
