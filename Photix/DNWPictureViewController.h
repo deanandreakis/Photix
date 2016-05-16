@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @import PhotixFilter;
+@import GoogleMobileAds;
 
 @interface DNWPictureViewController : UIViewController <MFMailComposeViewControllerDelegate>
 

@@ -32,6 +32,7 @@
 @property (strong, nonatomic) IBOutlet UIBarButtonItem* shareButton;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem* instagramButton;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem* moreButton;
+@property (weak, nonatomic) IBOutlet GADBannerView  *adBannerView;
 
 @end
 
@@ -55,12 +56,17 @@
     [pictureImageView setImage:imageToSet];
     //[MBProgressHUD showHUDAddedTo:self.view animated:YES];
     //[self performSelector:@selector(processImage) withObject:nil afterDelay:0.5];
+    NSLog(@"Google Mobile Ads SDK version: %@", [GADRequest sdkVersion]);
+    self.adBannerView.adUnitID = ADMOB_KEY_TEST;
+    self.adBannerView.rootViewController = self;
+    [self.adBannerView loadRequest:[GADRequest request]];
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
     BOOL productPurchased = [[NSUserDefaults standardUserDefaults] boolForKey:USER_PURCHASED_TIP];
     if (productPurchased) {
+        self.adBannerView.hidden = YES;
     }
 }
 
@@ -321,15 +327,15 @@
     if ((self.traitCollection.verticalSizeClass != previousTraitCollection.verticalSizeClass)
         || self.traitCollection.horizontalSizeClass != previousTraitCollection.horizontalSizeClass) {
         // hide the ad banner view
-        if(self.traitCollection.verticalSizeClass == UIUserInterfaceSizeClassCompact) {
-           //||
-           //(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad &&
-            //UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation))) {
-            //adBannerView.hidden = YES;
+        if(self.traitCollection.verticalSizeClass == UIUserInterfaceSizeClassCompact
+           ||
+           (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad &&
+            UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation))) {
+            self.adBannerView.hidden = YES;
         } else {
             BOOL productPurchased = [[NSUserDefaults standardUserDefaults] boolForKey:USER_PURCHASED_TIP];
             if (!productPurchased) {
-                //adBannerView.hidden = NO;
+                self.adBannerView.hidden = NO;
             }
         }
     }

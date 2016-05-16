@@ -15,6 +15,7 @@
 #define CRASHLYTICS_KEY @"2eaad7ad1fecfce6c414905676a8175bb2a1c253"
 
 #define ADMOB_KEY @"ca-app-pub-1222083832444594/7907782064"
+#define ADMOB_KEY_TEST @"ca-app-pub-3940256099942544/2934735716"
 
 #define kAppDelegate ((DNWAppDelegate *)[[UIApplication sharedApplication] delegate])
 
