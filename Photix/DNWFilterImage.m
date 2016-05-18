@@ -30,31 +30,32 @@
         //the guideArray as the guideArray is used to define the order that the filters show up from left
         //to right in the DNWFilterViewController..
         filterNameDictionary = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"GPUImageKuwaharaFilter", @"Oil Paint",
-                                 @"GPUImagePixellateFilter",@"Pixels",
-                                 @"GPUImagePolarPixellateFilter",@"PolarPix",
+                                 //@"GPUImagePixellateFilter",@"Pixels",
+                                 //@"GPUImagePolarPixellateFilter",@"PolarPix",
                                  @"GPUImagePolkaDotFilter",@"Dots",
-                                 @"GPUImageHalftoneFilter",@"HalfTone",
-                                 @"GPUImageCrosshatchFilter",@"Crossy",
+                                 //@"GPUImageHalftoneFilter",@"HalfTone",
+                                 //@"GPUImageCrosshatchFilter",@"Crossy",
                                  @"GPUImageSketchFilter",@"Sketch",
                                  @"GPUImageToonFilter",@"Cartoon",
-                                 @"GPUImageSmoothToonFilter",@"Smoothy",
+                                 //@"GPUImageSmoothToonFilter",@"Smoothy",
                                  @"GPUImageEmbossFilter",@"Emboss",
-                                 @"GPUImagePosterizeFilter",@"Poster",
+                                 //@"GPUImagePosterizeFilter",@"Poster",
                                  @"GPUImageSwirlFilter",@"Swirly",
                                 @"GPUImageBulgeDistortionFilter",@"Bulge",
                                 @"GPUImagePinchDistortionFilter",@"Pinch",
                                 @"GPUImageStretchDistortionFilter",@"Stretch",
-                                @"GPUImageSphereRefractionFilter",@"Sphere",
+                                //@"GPUImageSphereRefractionFilter",@"Sphere",
                                 @"GPUImageGlassSphereFilter",@"Glass",
-                                @"GPUImageVignetteFilter",@"Vignette",
-                                @"GPUImageCGAColorspaceFilter",@"CGA",
-                                @"GPUImageSepiaFilter",@"Sepia",
-                                @"GPUImageiOSBlurFilter",@"Blur",
-                                @"GPUImageColorInvertFilter",@"Invert",
-                                @"GPUImageGrayscaleFilter",@"Gray",
-                                @"GPUImageFalseColorFilter",@"False",
-                                @"GPUImageSoftEleganceFilter",@"Soft",
-                                @"GPUImageHazeFilter",@"Haze",nil];
+                                //@"GPUImageVignetteFilter",@"Vignette",
+                                //@"GPUImageCGAColorspaceFilter",@"CGA",
+                                //@"GPUImageSepiaFilter",@"Sepia",
+                                //@"GPUImageiOSBlurFilter",@"Blur",
+                                //@"GPUImageColorInvertFilter",@"Invert",
+                                //@"GPUImageGrayscaleFilter",@"Gray",
+                                //@"GPUImageFalseColorFilter",@"False",
+                                //@"GPUImageSoftEleganceFilter",@"Soft",
+                                //@"GPUImageHazeFilter",@"Haze",
+                                nil];
         
         filterNameDictionaryCI = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
                                   @"CIAdditionCompositing",@"TEST1",
@@ -316,7 +317,7 @@
         
         UIImage *currentFilteredImage;
     
-        GPUImageKuwaharaFilter *oilPaintingTransformFilter = [[GPUImageKuwaharaFilter alloc] init];
+        /*GPUImageKuwaharaFilter *oilPaintingTransformFilter = [[GPUImageKuwaharaFilter alloc] init];
         oilPaintingTransformFilter.radius = 6.0;
     
         currentFilteredImage = [oilPaintingTransformFilter imageByFilteringImage:newImage];
@@ -325,9 +326,9 @@
         imageModel.imageName = @"Oil Paint";
         imageModel.filteredImage = currentFilteredImage;
     
-        [self.retVal addObject:imageModel];
+        [self.retVal addObject:imageModel];*/
     
-        /*for (id key in filterNameDictionary) {
+        for (id key in filterNameDictionary) {
             
             NSString* filterName = (NSString*)filterNameDictionary[key];
             Class filterClass = NSClassFromString(filterName);
@@ -340,7 +341,7 @@
             imageModel.filteredImage = currentFilteredImage;
             
             [self.retVal addObject:imageModel];
-        }*/
+        }
 }
 
 @end
