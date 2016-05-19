@@ -38,7 +38,7 @@
     
     picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
-    picker.allowsEditing = YES;
+    picker.allowsEditing = NO;
     //added to hide the nav bar on main screen to see full background
     [self.navigationController setNavigationBarHidden:TRUE];
 }
@@ -74,15 +74,8 @@
 -(void)imagePickerController:(UIImagePickerController *)imagePicker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     [imagePicker dismissViewControllerAnimated:YES completion:nil];
-    
-    /*DNWPictureViewController *pictureViewController = [[UIStoryboard storyboardWithName:kAppDelegate.storyboardName bundle:nil] instantiateViewControllerWithIdentifier:@"MyPicture"];
-    UIImage *temp = [info objectForKey:UIImagePickerControllerEditedImage];
-    kAppDelegate.imageToSet = [temp normalizedImage];
-    pictureViewController.imageToSet = kAppDelegate.imageToSet;
-    [self.navigationController pushViewController:pictureViewController animated:YES];*/
-    
     DNWFilterViewController *filterViewController = [[UIStoryboard storyboardWithName:kAppDelegate.storyboardName bundle:nil] instantiateViewControllerWithIdentifier:@"MyFilter"];
-    UIImage *temp = [info objectForKey:UIImagePickerControllerEditedImage];
+    UIImage *temp = [info objectForKey:UIImagePickerControllerOriginalImage];
     kAppDelegate.imageToSet = [temp normalizedImage];
     [self.navigationController pushViewController:filterViewController animated:YES];
 }

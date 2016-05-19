@@ -334,6 +334,12 @@
             Class filterClass = NSClassFromString(filterName);
             
             id oilPaintingTransformFilter = [[filterClass alloc] init];
+            
+            if([filterName isEqualToString:@"GPUImageGlassSphereFilter"]) {
+                GPUImageGlassSphereFilter* oilPaintingTransformFilter = [[filterClass alloc] init];
+                oilPaintingTransformFilter.radius = 1.0;
+            }
+            
             currentFilteredImage = [oilPaintingTransformFilter imageByFilteringImage:newImage];
             
             DNWFilteredImageModel* imageModel = [[DNWFilteredImageModel alloc] init];
