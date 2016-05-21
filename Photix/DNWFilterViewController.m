@@ -39,8 +39,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [pictureImageView setImage:kAppDelegate.imageToSet];
-    [self filterImage:kAppDelegate.imageToSet];
+    //[pictureImageView setImage:kAppDelegate.imageToSet];
+    //[self filterImage:kAppDelegate.imageToSet];
+    //[pictureImageView setImage:self.imageToSet];
+    //[self filterImage:self.imageToSet];
     thumbArray = [NSMutableArray array];
     // Do any additional setup after loading the view.
     // 1. Call method that returns array of UIImage objects that are the filtered thumbnails.
@@ -53,6 +55,8 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
+    [pictureImageView setImage:self.imageToSet];
+    [self filterImage:self.imageToSet];
 }
 
 - (void)didReceiveMemoryWarning {

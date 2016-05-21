@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GMImagePickerController.h"
 
-@interface DNWMainViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface DNWMainViewController : UIViewController <GMImagePickerControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 {}
 
 -(IBAction)TakePhotoButtonPressed:(id)sender;

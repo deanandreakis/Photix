@@ -46,6 +46,7 @@
 		C1A9F41F1A1EE1CC00513812 /* lookup_soft_elegance_2.png in Resources */ = {isa = PBXBuildFile; fileRef = C1A9F41E1A1EE1CC00513812 /* lookup_soft_elegance_2.png */; };
 		C1A9F4201A1EE1CC00513812 /* lookup_soft_elegance_2.png in Resources */ = {isa = PBXBuildFile; fileRef = C1A9F41E1A1EE1CC00513812 /* lookup_soft_elegance_2.png */; };
 		C1AD7DF91CE94E5500B06E85 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1AD7DF81CE94E5500B06E85 /* GoogleMobileAds.framework */; };
+		C1B59F7D1CEFF9E4008DEB05 /* libGMImagePicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1B59F7C1CEFF9E4008DEB05 /* libGMImagePicker.a */; };
 		C1BAFD2A18B14B4E0078C88D /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BAFD2918B14B4E0078C88D /* DatabaseManager.m */; };
 		C1BAFD3118B158570078C88D /* UIImage+normalizedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BAFD3018B158570078C88D /* UIImage+normalizedImage.m */; };
 		C1BAFD3718B15D720078C88D /* DNWPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BAFD3618B15D720078C88D /* DNWPictureViewController.m */; };
@@ -211,6 +212,7 @@
 		C1A9F41B1A1EE1BA00513812 /* lookup_soft_elegance_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lookup_soft_elegance_1.png; sourceTree = "<group>"; };
 		C1A9F41E1A1EE1CC00513812 /* lookup_soft_elegance_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lookup_soft_elegance_2.png; sourceTree = "<group>"; };
 		C1AD7DF81CE94E5500B06E85 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = "Pods/Google-Mobile-Ads-SDK/GoogleMobileAdsSdkiOS-7.8.0/GoogleMobileAds.framework"; sourceTree = "<group>"; };
+		C1B59F7C1CEFF9E4008DEB05 /* libGMImagePicker.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGMImagePicker.a; path = "../../Library/Developer/Xcode/DerivedData/Photix-ahztdgfwpfqdzkfkacllflryeoos/Build/Products/Debug-iphoneos/libGMImagePicker.a"; sourceTree = "<group>"; };
 		C1BAFD2718B14B2A0078C88D /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
 		C1BAFD2818B14B410078C88D /* DatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseManager.h; sourceTree = "<group>"; };
 		C1BAFD2918B14B4E0078C88D /* DatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseManager.m; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1B59F7D1CEFF9E4008DEB05 /* libGMImagePicker.a in Frameworks */,
 				C1AD7DF91CE94E5500B06E85 /* GoogleMobileAds.framework in Frameworks */,
 				C11C84651CE4283300625DD8 /* SystemConfiguration.framework in Frameworks */,
 				C11C84631CE4282200625DD8 /* MessageUI.framework in Frameworks */,
@@ -492,6 +495,7 @@
 		C1DBBCDF18A6BFEF007BF4CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C1B59F7C1CEFF9E4008DEB05 /* libGMImagePicker.a */,
 				C1AD7DF81CE94E5500B06E85 /* GoogleMobileAds.framework */,
 				C11C84641CE4283300625DD8 /* SystemConfiguration.framework */,
 				C11C84611CE4281600625DD8 /* MediaPlayer.framework */,
@@ -1456,7 +1460,7 @@
 					"$(inherited)",
 					/Users/dean_macmini/Documents/Photix,
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/Pods/Google-Mobile-Ads-SDK/GoogleMobileAdsSdkiOS-7.8.0",
+					"$(PROJECT_DIR)/Pods/Google-Mobile-Ads-SDK/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Photix/Photix-Prefix.pch";
@@ -1521,7 +1525,7 @@
 					"$(inherited)",
 					/Users/dean_macmini/Documents/Photix,
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/Pods/Google-Mobile-Ads-SDK/GoogleMobileAdsSdkiOS-7.8.0",
+					"$(PROJECT_DIR)/Pods/Google-Mobile-Ads-SDK/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Photix/Photix-Prefix.pch";

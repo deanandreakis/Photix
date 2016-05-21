@@ -12,4 +12,6 @@
 
 @interface DNWFilterViewController : UIViewController <UIScrollViewDelegate, FilteringCompleteDelegate>
 
+@property (strong, nonatomic) UIImage *imageToSet;
+
 @end
