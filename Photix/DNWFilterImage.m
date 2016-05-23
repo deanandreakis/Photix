@@ -10,19 +10,19 @@
 #import <QuartzCore/QuartzCore.h>
 #import "DNWFilteredImageModel.h"
 #import "GPUImage.h"
+#import "UIImage+normalizedImage.h"
 
 @interface DNWFilterImage ()
 
 @property (strong, nonatomic) NSMutableDictionary* filterNameDictionary;//lists all the names of the GPUImage filters we use
 @property (strong, nonatomic) NSMutableDictionary* filterNameDictionaryCI;//lists all the names of the CoreImage filters we use
 @property (strong, nonatomic) NSMutableDictionary* filterNameDictionaryCITest;//lists all the names of the CoreImage filters we use
-@property (strong, nonatomic) NSArray* guideArray;
 @property (strong, nonatomic) NSMutableArray* retVal;
 @end
 
 @implementation DNWFilterImage
 
-@synthesize filterDelegate, filterNameDictionary, guideArray, filterNameDictionaryCI, filterNameDictionaryCITest;
+@synthesize filterDelegate, filterNameDictionary, filterNameDictionaryCI, filterNameDictionaryCITest;
 
 - (id) init {
     if (self = [super init]) {
@@ -195,13 +195,66 @@
                                   @"CIVignetteEffect", @"Vignette",
                                   nil];
         
-        guideArray = [[NSArray alloc] initWithObjects:@"Oil Paint",@"Blur",@"Pixels",@"PolarPix",@"Dots",@"HalfTone",@"Crossy",
-                      @"Sketch",@"Cartoon",@"Smoothy",@"Emboss",@"Poster",@"Swirly",@"Bulge",@"Pinch",@"Stretch",
-                      @"Sphere",@"Glass",@"Vignette",@"CGA",@"Sepia",@"Invert",@"Gray",@"False",@"Soft",@"Haze",nil];
-        
         self.retVal = [NSMutableArray array];
     }
     return self;
+}
+
+- (UIImage *)resizeImageToSize:(CGSize)targetSize Image:(UIImage*)sourceImage
+{
+    UIImage *newImage = nil;
+    
+    CGSize imageSize = sourceImage.size;
+    CGFloat width = imageSize.width;
+    CGFloat height = imageSize.height;
+    
+    CGFloat targetWidth = targetSize.width;
+    CGFloat targetHeight = targetSize.height;
+    
+    CGFloat scaleFactor = 0.0;
+    CGFloat scaledWidth = targetWidth;
+    CGFloat scaledHeight = targetHeight;
+    
+    CGPoint thumbnailPoint = CGPointMake(0.0,0.0);
+    
+    if (CGSizeEqualToSize(imageSize, targetSize) == NO) {
+        
+        CGFloat widthFactor = targetWidth / width;
+        CGFloat heightFactor = targetHeight / height;
+        
+        if (widthFactor < heightFactor)
+            scaleFactor = widthFactor;
+        else
+            scaleFactor = heightFactor;
+        
+        scaledWidth  = width * scaleFactor;
+        scaledHeight = height * scaleFactor;
+        
+        // make image center aligned
+        if (widthFactor < heightFactor)
+        {
+            thumbnailPoint.y = (targetHeight - scaledHeight) * 0.5;
+        }
+        else if (widthFactor > heightFactor)
+        {
+            thumbnailPoint.x = (targetWidth - scaledWidth) * 0.5;
+        }
+    }
+    
+    UIGraphicsBeginImageContext(targetSize);
+    CGRect thumbnailRect = CGRectZero;
+    thumbnailRect.origin = thumbnailPoint;
+    thumbnailRect.size.width  = scaledWidth;
+    thumbnailRect.size.height = scaledHeight;
+    
+    [sourceImage drawInRect:thumbnailRect];
+    newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    //if(newImage == nil)
+    //NSLog(@"could not scale image");
+    
+    return newImage ;
 }
 
 -(void)filterImage:(UIImage*)imageToFilter
@@ -213,17 +266,31 @@
         imageModel.filteredImage = imageToFilter;
         [self.retVal addObject:imageModel];
         
-        [self processGPUImageFilters:imageToFilter];
-        
-        [self processCoreImageFilters:imageToFilter];
-        
-        /*[retVal sortUsingComparator:^(id o1, id o2) {
-            DNWFilteredImageModel *item1 = o1;
-            DNWFilteredImageModel *item2 = o2;
-            NSInteger idx1 = [guideArray indexOfObject:item1.imageName];
-            NSInteger idx2 = [guideArray indexOfObject:item2.imageName];
-            return idx1 - idx2;
-        }];*/
+        if(imageToFilter.size.width > 1000.0 || imageToFilter.size.height > 1000.0)
+        {
+            CGFloat width = imageToFilter.size.width;
+            CGFloat height = imageToFilter.size.height;
+            CGFloat scaleFactor = 0.0;
+            
+            CGFloat widthFactor = 1000.0 / width;
+            CGFloat heightFactor = 1000.0 / height;
+            
+            if (widthFactor < heightFactor)
+                scaleFactor = widthFactor;
+            else
+                scaleFactor = heightFactor;
+            
+            CGFloat scaledWidth  = width * scaleFactor;
+            CGFloat scaledHeight = height * scaleFactor;
+            
+            UIImage* newImage = [self resizeImageToSize:CGSizeMake(scaledWidth, scaledHeight) Image:imageToFilter];
+            
+            [self processGPUImageFilters:newImage];
+            [self processCoreImageFilters:newImage];
+        } else{
+            [self processGPUImageFilters:imageToFilter];
+            [self processCoreImageFilters:imageToFilter];
+        }
         
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.filterDelegate filteringComplete:self.retVal];
@@ -307,7 +374,7 @@
         
         CGImageRelease(cgimg);
     }
-    
+    context = nil;
 }
 
 
