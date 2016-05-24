@@ -269,7 +269,7 @@
                                     <constraint firstAttribute="width" constant="32" id="v1f-0S-z0x"/>
                                 </constraints>
                                 <attributedString key="attributedText">
-                                    <fragment content="v2.0">
+                                    <fragment content="v3.0">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="14" name="GillSans"/>

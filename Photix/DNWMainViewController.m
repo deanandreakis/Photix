@@ -21,8 +21,6 @@
 
 @implementation DNWMainViewController
 
-//@synthesize picker;
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -39,12 +37,25 @@
     self.gmPicker = [[GMImagePickerController alloc] init];
     self.gmPicker.delegate = self;
     self.gmPicker.allowsMultipleSelection = NO;
-    self.gmPicker.title = @"OilPaintPlus";
+    self.gmPicker.title = @"Albums";
     self.gmPicker.customDoneButtonTitle = @"Done";
     self.gmPicker.customCancelButtonTitle = @"Cancel";
     self.gmPicker.customNavigationBarPrompt = @"";
     self.gmPicker.showCameraButton = YES;
     self.gmPicker.autoSelectCameraImages = YES;
+    self.gmPicker.mediaTypes = @[@(PHAssetMediaTypeImage)];
+    self.gmPicker.pickerFontName = @"HelveticaNeue";
+    self.gmPicker.pickerBoldFontName = @"HelveticaNeue-Bold";
+    self.gmPicker.pickerFontNormalSize = 14.f;
+    self.gmPicker.pickerFontHeaderSize = 17.0f;
+    self.gmPicker.useCustomFontForNavigationBar = YES;
+    self.gmPicker.customSmartCollections = @[@(PHAssetCollectionSubtypeSmartAlbumFavorites),
+                                             @(PHAssetCollectionSubtypeSmartAlbumRecentlyAdded),
+                                             @(PHAssetCollectionSubtypeSmartAlbumSelfPortraits),
+                                             @(PHAssetCollectionSubtypeSmartAlbumScreenshots),
+                                             @(PHAssetCollectionSubtypeSmartAlbumTimelapses),
+                                             @(PHAssetCollectionSubtypeSmartAlbumBursts),
+                                             @(PHAssetCollectionSubtypeSmartAlbumPanoramas)];
     
     self.requestOptions = [[PHImageRequestOptions alloc] init];
     self.requestOptions.resizeMode   = PHImageRequestOptionsResizeModeExact;
@@ -60,6 +71,7 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
+    [self.gmPicker.selectedAssets removeAllObjects];
 }
 
 - (void)didReceiveMemoryWarning
@@ -73,19 +85,19 @@
 
 -(IBAction)TakePhotoButtonPressed:(id)sender
 {
-    [self.navigationController pushViewController:self.gmPicker animated:YES];
+    [self showViewController:self.gmPicker sender:self];
 }
 
 -(IBAction)ChooseExistingButtonPressed:(id)sender
 {
-    [self.navigationController pushViewController:self.gmPicker animated:YES];
+    [self showViewController:self.gmPicker sender:self];
 }
 
 #pragma mark
 #pragma mark GMImagePickerController Delegate Methods
 - (void)assetsPickerController:(GMImagePickerController *)thepicker didFinishPickingAssets:(NSArray *)assetArray
 {
-    [self.navigationController popViewControllerAnimated:YES];
+    [thepicker.presentingViewController dismissViewControllerAnimated:YES completion:nil];
     
     assetArray = [NSMutableArray arrayWithArray:assetArray];
     PHImageManager *manager = [PHImageManager defaultManager];
@@ -119,7 +131,7 @@
         filterViewController.imageToSet = images[0];
     }
     
-    [self.navigationController pushViewController:filterViewController animated:YES];
+    [self showViewController:filterViewController sender:self];
 }
 
 -(void)assetsPickerControllerDidCancel:(GMImagePickerController *)thepicker
