@@ -15,6 +15,7 @@
 @interface DNWMainViewController ()
 
 @property (strong, nonatomic) GMImagePickerController* gmPicker;
+@property (strong, nonatomic) UIImagePickerController* uiPicker;
 @property (nonatomic, strong) PHImageRequestOptions *requestOptions;
 
 @end
@@ -33,7 +34,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+	
+    self.uiPicker = [[UIImagePickerController alloc] init];
+    self.uiPicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    self.uiPicker.allowsEditing = NO;
+    self.uiPicker.delegate = self;
+    self.uiPicker.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+
+    
     self.gmPicker = [[GMImagePickerController alloc] init];
     self.gmPicker.delegate = self;
     self.gmPicker.allowsMultipleSelection = NO;
@@ -77,7 +85,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)exitSettings:(UIStoryboardSegue *)segue {
@@ -85,12 +92,28 @@
 
 -(IBAction)TakePhotoButtonPressed:(id)sender
 {
-    [self showViewController:self.gmPicker sender:self];
+    [self showViewController:self.uiPicker sender:self];
 }
 
 -(IBAction)ChooseExistingButtonPressed:(id)sender
 {
     [self showViewController:self.gmPicker sender:self];
+}
+
+#pragma mark
+#pragma mark UIImagePickerController Delegate Methods
+-(void)imagePickerController:(UIImagePickerController *)imagePicker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    [imagePicker.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+    DNWFilterViewController *filterViewController = [[UIStoryboard storyboardWithName:kAppDelegate.storyboardName bundle:nil] instantiateViewControllerWithIdentifier:@"MyFilter"];
+    UIImage *temp = [info objectForKey:UIImagePickerControllerOriginalImage];
+    filterViewController.imageToSet = temp;
+    [self showViewController:filterViewController sender:self];
+}
+
+-(void)imagePickerControllerDidCancel:(UIImagePickerController *)imagePicker
+{
+    [imagePicker.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark
