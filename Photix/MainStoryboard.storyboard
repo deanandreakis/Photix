@@ -349,6 +349,9 @@
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fYA-no-ebA">
                                 <rect key="frame" x="4" y="556" width="592" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="jXb-GL-mBG"/>
+                                </constraints>
                                 <items>
                                     <barButtonItem image="Instagram" id="WD0-UM-cI4">
                                         <connections>
@@ -374,6 +377,11 @@
                                         </connections>
                                     </barButtonItem>
                                 </items>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="jXb-GL-mBG"/>
+                                    </mask>
+                                </variation>
                             </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C3U-Im-eGV" userLabel="Button-Reset">
                                 <rect key="frame" x="5" y="22" width="44" height="44"/>
@@ -392,6 +400,22 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3eu-IA-KJG" customClass="GADBannerView">
                                 <rect key="frame" x="20" y="446" width="560" height="110"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="AWD-2d-Y64"/>
+                                    <constraint firstAttribute="width" id="iyG-lO-3Mg"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="AWD-2d-Y64"/>
+                                        <exclude reference="iyG-lO-3Mg"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="AWD-2d-Y64"/>
+                                        <include reference="iyG-lO-3Mg"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -399,32 +423,54 @@
                             <constraint firstItem="2mA-zc-gA8" firstAttribute="height" secondItem="Zii-gS-t0K" secondAttribute="height" multiplier="0.6" id="4UM-jM-dJX"/>
                             <constraint firstItem="2mA-zc-gA8" firstAttribute="top" secondItem="C3U-Im-eGV" secondAttribute="bottom" constant="10" id="7Bs-f7-gal"/>
                             <constraint firstItem="C3U-Im-eGV" firstAttribute="top" secondItem="Uya-Wf-krY" secondAttribute="bottom" constant="2" id="7Zs-L3-sd9"/>
+                            <constraint firstItem="2mA-zc-gA8" firstAttribute="bottom" secondItem="fYA-no-ebA" secondAttribute="top" constant="14" id="9zf-bZ-FD4">
+                                <variation key="heightClass=compact" constant="-14"/>
+                            </constraint>
                             <constraint firstAttribute="trailingMargin" secondItem="fYA-no-ebA" secondAttribute="trailing" constant="-16" id="FOa-rM-Yhi"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="2mA-zc-gA8" secondAttribute="bottom" constant="-2" id="KA9-HU-mBS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3eu-IA-KJG" secondAttribute="trailing" id="L0e-nC-yMR"/>
                             <constraint firstItem="2mA-zc-gA8" firstAttribute="top" secondItem="Uya-Wf-krY" secondAttribute="bottom" constant="7" id="Ucy-TB-bfu"/>
-                            <constraint firstItem="ikm-qk-1xF" firstAttribute="top" secondItem="fYA-no-ebA" secondAttribute="bottom" id="WIb-Zk-vuB"/>
+                            <constraint firstItem="fYA-no-ebA" firstAttribute="bottom" secondItem="ikm-qk-1xF" secondAttribute="top" id="WIb-Zk-vuB"/>
                             <constraint firstItem="C3U-Im-eGV" firstAttribute="leading" secondItem="Zii-gS-t0K" secondAttribute="leadingMargin" constant="-15" id="XJp-yE-zSH"/>
-                            <constraint firstItem="2mA-zc-gA8" firstAttribute="centerX" secondItem="Zii-gS-t0K" secondAttribute="centerX" id="Xk8-va-lds"/>
+                            <constraint firstItem="2mA-zc-gA8" firstAttribute="centerX" secondItem="Zii-gS-t0K" secondAttribute="centerX" id="Xk8-va-lds">
+                                <variation key="heightClass=compact" constant="0.5"/>
+                            </constraint>
+                            <constraint firstItem="3eu-IA-KJG" firstAttribute="top" secondItem="2mA-zc-gA8" secondAttribute="bottom" constant="19" id="Z4j-dP-Pid">
+                                <variation key="heightClass=compact" constant="0.0"/>
+                            </constraint>
                             <constraint firstItem="3eu-IA-KJG" firstAttribute="leading" secondItem="Zii-gS-t0K" secondAttribute="leadingMargin" id="jKR-Jk-48K"/>
+                            <constraint firstItem="3eu-IA-KJG" firstAttribute="centerX" secondItem="fYA-no-ebA" secondAttribute="centerX" id="lAm-r7-gaD"/>
                             <constraint firstItem="fYA-no-ebA" firstAttribute="leading" secondItem="Zii-gS-t0K" secondAttribute="leadingMargin" constant="-16" id="lTh-ma-biw"/>
                             <constraint firstItem="3eu-IA-KJG" firstAttribute="top" secondItem="2mA-zc-gA8" secondAttribute="bottom" constant="10" id="nfC-ZP-lEm"/>
-                            <constraint firstItem="2mA-zc-gA8" firstAttribute="height" secondItem="Zii-gS-t0K" secondAttribute="height" id="ocf-pc-K9M"/>
+                            <constraint firstItem="2mA-zc-gA8" firstAttribute="height" secondItem="Zii-gS-t0K" secondAttribute="height" id="ocf-pc-K9M">
+                                <variation key="heightClass=compact" constant="-85"/>
+                            </constraint>
                             <constraint firstItem="fYA-no-ebA" firstAttribute="top" secondItem="3eu-IA-KJG" secondAttribute="bottom" id="uHp-cP-oQ5"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="KA9-HU-mBS"/>
                                 <exclude reference="Ucy-TB-bfu"/>
                                 <exclude reference="ocf-pc-K9M"/>
+                                <exclude reference="9zf-bZ-FD4"/>
+                                <exclude reference="Z4j-dP-Pid"/>
+                                <exclude reference="lAm-r7-gaD"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="constraints">
                                 <exclude reference="4UM-jM-dJX"/>
                                 <exclude reference="7Bs-f7-gal"/>
+                                <exclude reference="KA9-HU-mBS"/>
                                 <include reference="Ucy-TB-bfu"/>
-                                <include reference="ocf-pc-K9M"/>
-                                <exclude reference="nfC-ZP-lEm"/>
+                                <exclude reference="ocf-pc-K9M"/>
+                                <include reference="9zf-bZ-FD4"/>
                                 <exclude reference="uHp-cP-oQ5"/>
+                                <exclude reference="L0e-nC-yMR"/>
+                                <include reference="Z4j-dP-Pid"/>
+                                <exclude reference="jKR-Jk-48K"/>
+                                <include reference="lAm-r7-gaD"/>
+                                <exclude reference="nfC-ZP-lEm"/>
                             </mask>
                         </variation>
                     </view>
