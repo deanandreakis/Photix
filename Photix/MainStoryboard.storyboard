@@ -35,18 +35,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBY-99-LLg">
-                                <rect key="frame" x="150" y="76" width="301" height="107"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBY-99-LLg">
+                                <rect key="frame" x="150" y="69" width="301" height="126"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="107" id="00Y-gn-r5u"/>
+                                    <constraint firstAttribute="height" constant="126" id="00Y-gn-r5u"/>
                                     <constraint firstAttribute="width" constant="301" id="cyB-ti-bBR"/>
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">OilPaintPlus relies on your support to fund its development. If you find it useful to enhance your pictures, please consider supporting the app by leaving a tip in our Tip Jar. Any tip given will also remove all advertisements from the app.</string>
                                         <attributes>
-                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <font key="NSFont" size="14" name="GillSans"/>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="GillSans"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
@@ -59,7 +59,7 @@
                                     <constraint firstAttribute="height" constant="65" id="57I-X9-PP2"/>
                                     <constraint firstAttribute="width" constant="65" id="oj9-da-p00"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                 <color key="textColor" name="selectedMenuItemColor" catalog="System" colorSpace="catalog"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -69,7 +69,7 @@
                                     <constraint firstAttribute="width" constant="65" id="3GJ-By-Wuh"/>
                                     <constraint firstAttribute="height" constant="65" id="rC8-SB-JGD"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                 <color key="textColor" name="selectedMenuItemColor" catalog="System" colorSpace="catalog"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -79,7 +79,7 @@
                                     <constraint firstAttribute="width" constant="65" id="6rQ-BX-UF6"/>
                                     <constraint firstAttribute="height" constant="65" id="hJO-I3-U2E"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                 <color key="textColor" name="selectedMenuItemColor" catalog="System" colorSpace="catalog"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -89,6 +89,7 @@
                                     <constraint firstAttribute="width" constant="65" id="jN4-TX-5zE"/>
                                     <constraint firstAttribute="height" constant="65" id="nzV-Ps-Ngw"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -102,6 +103,7 @@
                                     <constraint firstAttribute="width" constant="65" id="Wvo-Lb-JM1"/>
                                     <constraint firstAttribute="height" constant="65" id="mVp-aj-GaK"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -115,6 +117,7 @@
                                     <constraint firstAttribute="width" constant="65" id="iBL-DI-SJn"/>
                                     <constraint firstAttribute="height" constant="65" id="uPs-ox-rBu"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -169,7 +172,7 @@
                             <constraint firstItem="kId-P9-WN6" firstAttribute="top" secondItem="8bt-Ic-hqG" secondAttribute="bottom" constant="148" id="pHe-Mm-afb"/>
                             <constraint firstItem="wyd-zd-RUq" firstAttribute="top" secondItem="8bt-Ic-hqG" secondAttribute="bottom" constant="148" id="tKU-fQ-h0Y"/>
                             <constraint firstItem="Kyk-e9-Si1" firstAttribute="trailing" secondItem="UKe-aX-wjB" secondAttribute="trailingMargin" id="yQI-s3-j4L"/>
-                            <constraint firstItem="PBY-99-LLg" firstAttribute="top" secondItem="8bt-Ic-hqG" secondAttribute="bottom" constant="32" id="yjf-dE-zbT"/>
+                            <constraint firstItem="PBY-99-LLg" firstAttribute="top" secondItem="8bt-Ic-hqG" secondAttribute="bottom" constant="25" id="yjf-dE-zbT"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -405,7 +408,7 @@
                             <constraint firstItem="3eu-IA-KJG" firstAttribute="leading" secondItem="Zii-gS-t0K" secondAttribute="leadingMargin" id="jKR-Jk-48K"/>
                             <constraint firstItem="fYA-no-ebA" firstAttribute="leading" secondItem="Zii-gS-t0K" secondAttribute="leadingMargin" constant="-16" id="lTh-ma-biw"/>
                             <constraint firstItem="3eu-IA-KJG" firstAttribute="top" secondItem="2mA-zc-gA8" secondAttribute="bottom" constant="10" id="nfC-ZP-lEm"/>
-                            <constraint firstItem="2mA-zc-gA8" firstAttribute="height" secondItem="Zii-gS-t0K" secondAttribute="height" multiplier="0.8" id="ocf-pc-K9M"/>
+                            <constraint firstItem="2mA-zc-gA8" firstAttribute="height" secondItem="Zii-gS-t0K" secondAttribute="height" id="ocf-pc-K9M"/>
                             <constraint firstItem="fYA-no-ebA" firstAttribute="top" secondItem="3eu-IA-KJG" secondAttribute="bottom" id="uHp-cP-oQ5"/>
                         </constraints>
                         <variation key="default">
