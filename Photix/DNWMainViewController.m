@@ -49,8 +49,8 @@
     self.gmPicker.customDoneButtonTitle = @"Done";
     self.gmPicker.customCancelButtonTitle = @"Cancel";
     self.gmPicker.customNavigationBarPrompt = @"";
-    self.gmPicker.showCameraButton = YES;
-    self.gmPicker.autoSelectCameraImages = YES;
+    self.gmPicker.showCameraButton = NO;
+    self.gmPicker.autoSelectCameraImages = NO;
     self.gmPicker.mediaTypes = @[@(PHAssetMediaTypeImage)];
     self.gmPicker.pickerFontName = @"HelveticaNeue";
     self.gmPicker.pickerBoldFontName = @"HelveticaNeue-Bold";

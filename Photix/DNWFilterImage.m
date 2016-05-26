@@ -29,7 +29,7 @@
         //NOTE: All strings representing the keys from the filterNameDictionary MUST be present in
         //the guideArray as the guideArray is used to define the order that the filters show up from left
         //to right in the DNWFilterViewController..
-        filterNameDictionary = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"GPUImageKuwaharaFilter", @"Oil Paint",
+        filterNameDictionary = [[NSMutableDictionary alloc] initWithObjectsAndKeys://@"GPUImageKuwaharaFilter", @"Oil Paint",
                                  //@"GPUImagePixellateFilter",@"Pixels",
                                  //@"GPUImagePolarPixellateFilter",@"PolarPix",
                                  @"GPUImagePolkaDotFilter",@"Dots",
@@ -384,7 +384,7 @@
         
         UIImage *currentFilteredImage;
     
-        /*GPUImageKuwaharaFilter *oilPaintingTransformFilter = [[GPUImageKuwaharaFilter alloc] init];
+        GPUImageKuwaharaFilter *oilPaintingTransformFilter = [[GPUImageKuwaharaFilter alloc] init];
         oilPaintingTransformFilter.radius = 6.0;
     
         currentFilteredImage = [oilPaintingTransformFilter imageByFilteringImage:newImage];
@@ -393,7 +393,7 @@
         imageModel.imageName = @"Oil Paint";
         imageModel.filteredImage = currentFilteredImage;
     
-        [self.retVal addObject:imageModel];*/
+        [self.retVal addObject:imageModel];
     
         for (id key in filterNameDictionary) {
             
