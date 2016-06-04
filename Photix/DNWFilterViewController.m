@@ -145,6 +145,7 @@
      //kAppDelegate.imageToSet = [temp normalizedImage];
      pictureViewController.imageToSet = pictureImageView.image;
      [self.navigationController pushViewController:pictureViewController animated:YES];
+     //[self showViewController:pictureViewController sender:self];
 }
 
 //Image selected

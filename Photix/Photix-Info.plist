@@ -61,5 +61,21 @@
     <array>
         <string>instagram</string>
     </array>
+    <key>UIApplicationShortcutItems</key>
+    <array>
+        <dict>
+            <key>UIApplicationShortcutItemIconType</key>
+            <string>UIApplicationShortcutIconTypeCapturePhoto</string>
+            <key>UIApplicationShortcutItemTitle</key>
+            <string>Edit Last Picture</string>
+            <key>UIApplicationShortcutItemType</key>
+            <string>com.deanware.photix.newmessage</string>
+            <key>UIApplicationShortcutItemUserInfo</key>
+            <dict>
+                <key>key1</key>
+                <string>value1</string>
+            </dict>
+        </dict>
+    </array>
 </dict>
 </plist>

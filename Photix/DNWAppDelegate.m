@@ -9,6 +9,9 @@
 #import "DNWAppDelegate.h"
 #import "DatabaseManager.h"
 #import "Constants.h"
+//@import Photos;
+//@import PhotosUI;
+#import "DNWMainViewController.h"
 //#import <Crashlytics/Crashlytics.h>
 
 @implementation DNWAppDelegate
@@ -51,6 +54,20 @@
 {
     // Saves changes in the application's managed object context before the application terminates.
     [[DatabaseManager sharedDatabaseManager] saveContext];
+}
+
+- (void)application:(UIApplication *)application
+performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem
+  completionHandler:(void (^)(BOOL succeeded))completionHandler
+{
+    if ([shortcutItem.type isEqualToString:@"com.deanware.photix.newmessage"]) {
+        DNWMainViewController *mainViewController = [[UIStoryboard storyboardWithName:storyboardName bundle:nil] instantiateViewControllerWithIdentifier:@"MyMain"];
+        UINavigationController *navViewController = [[UIStoryboard storyboardWithName:storyboardName bundle:nil] instantiateViewControllerWithIdentifier:@"MyNav"];
+        [navViewController setViewControllers:@[mainViewController] animated:NO];
+        [self.window setRootViewController:navViewController];
+        [self.window makeKeyAndVisible];
+        [mainViewController EditLastPhoto];
+    }
 }
 
 -(void)executeBlock:(void (^)(void))block

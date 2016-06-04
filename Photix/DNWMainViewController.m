@@ -166,4 +166,25 @@
 {
 }
 
+- (void)EditLastPhoto
+{
+    PHFetchOptions *fetchOptions = [PHFetchOptions new];
+    fetchOptions.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:NO]];
+    fetchOptions.fetchLimit = 1;
+    PHFetchResult *fetchResult = [PHAsset fetchAssetsWithMediaType:PHAssetMediaTypeImage options:fetchOptions];
+    PHAsset *lastImageAsset = [fetchResult firstObject];
+    
+    [[PHImageManager defaultManager]requestImageForAsset:lastImageAsset targetSize:PHImageManagerMaximumSize contentMode:PHImageContentModeDefault options:nil resultHandler:^(UIImage *result, NSDictionary *info){
+        if ([info objectForKey:PHImageErrorKey] == nil && ![[info objectForKey:PHImageResultIsDegradedKey] boolValue]) {
+            
+            DNWFilterViewController *filterViewController = [[UIStoryboard storyboardWithName:kAppDelegate.storyboardName bundle:nil] instantiateViewControllerWithIdentifier:@"MyFilter"];
+            
+            filterViewController.imageToSet = result;
+            
+            [self showViewController:filterViewController sender:self];
+            //[self.navigationController pushViewController:filterViewController animated:YES];
+        }
+    }];
+}
+
 @end

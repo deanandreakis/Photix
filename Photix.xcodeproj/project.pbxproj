@@ -30,6 +30,8 @@
 		C1210EB71996812000C1E4E7 /* DNWFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1210EB61996812000C1E4E7 /* DNWFilterViewController.m */; };
 		C1210EB81996812000C1E4E7 /* DNWFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1210EB61996812000C1E4E7 /* DNWFilterViewController.m */; };
 		C154481518B8445C007B54D1 /* DNWOtherApps.m in Sources */ = {isa = PBXBuildFile; fileRef = C154481418B8445C007B54D1 /* DNWOtherApps.m */; };
+		C15E1C3B1CFFCEBF003075B1 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1054CE819A434D800A4D8F3 /* Photos.framework */; };
+		C15E1C3C1CFFCF41003075B1 /* PhotosUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1054CE619A434D800A4D8F3 /* PhotosUI.framework */; };
 		C16D78181B6ECF5600673C86 /* DNWInstagram.m in Sources */ = {isa = PBXBuildFile; fileRef = C16D78171B6ECF5600673C86 /* DNWInstagram.m */; };
 		C1A9F3F91A1D9B8400513812 /* PhotixFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = C1A9F3F81A1D9B8400513812 /* PhotixFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C1A9F3FF1A1D9B8400513812 /* PhotixFilter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A9F3F41A1D9B8400513812 /* PhotixFilter.framework */; };
@@ -304,6 +306,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C15E1C3C1CFFCF41003075B1 /* PhotosUI.framework in Frameworks */,
+				C15E1C3B1CFFCEBF003075B1 /* Photos.framework in Frameworks */,
 				C1B59F7D1CEFF9E4008DEB05 /* libGMImagePicker.a in Frameworks */,
 				C1AD7DF91CE94E5500B06E85 /* GoogleMobileAds.framework in Frameworks */,
 				C11C84651CE4283300625DD8 /* SystemConfiguration.framework in Frameworks */,

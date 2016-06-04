@@ -11,7 +11,7 @@
         <!--Navigation Controller-->
         <scene sceneID="w2u-17-cP2">
             <objects>
-                <navigationController definesPresentationContext="YES" id="BFI-CK-iBK" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MyNav" definesPresentationContext="YES" id="BFI-CK-iBK" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7U6-bw-8cq">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -184,7 +184,7 @@
         <!--Main View Controller-->
         <scene sceneID="YGm-LD-dwy">
             <objects>
-                <viewController id="tF0-p8-vEE" customClass="DNWMainViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyMain" id="tF0-p8-vEE" customClass="DNWMainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Lgo-rc-XmT"/>
                         <viewControllerLayoutGuide type="bottom" id="mZQ-nB-uld"/>
@@ -449,10 +449,10 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="9zf-bZ-FD4"/>
                                 <exclude reference="KA9-HU-mBS"/>
                                 <exclude reference="Ucy-TB-bfu"/>
                                 <exclude reference="ocf-pc-K9M"/>
-                                <exclude reference="9zf-bZ-FD4"/>
                                 <exclude reference="Z4j-dP-Pid"/>
                                 <exclude reference="lAm-r7-gaD"/>
                             </mask>
@@ -461,16 +461,16 @@
                             <mask key="constraints">
                                 <exclude reference="4UM-jM-dJX"/>
                                 <exclude reference="7Bs-f7-gal"/>
+                                <include reference="9zf-bZ-FD4"/>
                                 <exclude reference="KA9-HU-mBS"/>
                                 <include reference="Ucy-TB-bfu"/>
                                 <exclude reference="ocf-pc-K9M"/>
-                                <include reference="9zf-bZ-FD4"/>
-                                <exclude reference="uHp-cP-oQ5"/>
                                 <exclude reference="L0e-nC-yMR"/>
                                 <include reference="Z4j-dP-Pid"/>
                                 <exclude reference="jKR-Jk-48K"/>
                                 <include reference="lAm-r7-gaD"/>
                                 <exclude reference="nfC-ZP-lEm"/>
+                                <exclude reference="uHp-cP-oQ5"/>
                             </mask>
                         </variation>
                     </view>

@@ -14,5 +14,6 @@
 
 -(IBAction)TakePhotoButtonPressed:(id)sender;
 -(IBAction)ChooseExistingButtonPressed:(id)sender;
+-(void)EditLastPhoto;
 
 @end
