@@ -145,7 +145,7 @@
 #pragma mark Button Handlers
 
 -(IBAction)tip99ButtonSelected:(id)sender {
-    NSLog(@"99 cent tip");
+    //NSLog(@"99 cent tip");
     
         if(_99Product != nil) {
             if (![[PhotixIAPHelper sharedInstance] productPurchased:_99Product.productIdentifier]) { //have not purchased product
@@ -219,7 +219,7 @@
 }
 
 -(IBAction)tip199ButtonSelected:(id)sender {
-    NSLog(@"199 cent tip");
+    //NSLog(@"199 cent tip");
     
     if(_199Product != nil) {
         if (![[PhotixIAPHelper sharedInstance] productPurchased:_199Product.productIdentifier]) { //have not purchased product
@@ -293,7 +293,7 @@
 }
 
 -(IBAction)tip499ButtonSelected:(id)sender {
-    NSLog(@"499 cent tip");
+    //NSLog(@"499 cent tip");
     
     if(_499Product != nil) {
         if (![[PhotixIAPHelper sharedInstance] productPurchased:_499Product.productIdentifier]) { //have not purchased product

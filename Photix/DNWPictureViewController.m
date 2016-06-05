@@ -56,7 +56,7 @@
     [pictureImageView setImage:imageToSet];
     //[MBProgressHUD showHUDAddedTo:self.view animated:YES];
     //[self performSelector:@selector(processImage) withObject:nil afterDelay:0.5];
-    NSLog(@"Google Mobile Ads SDK version: %@", [GADRequest sdkVersion]);
+    //NSLog(@"Google Mobile Ads SDK version: %@", [GADRequest sdkVersion]);
     self.adBannerView.adUnitID = ADMOB_KEY;
     self.adBannerView.rootViewController = self;
     [self.adBannerView loadRequest:[GADRequest request]];
