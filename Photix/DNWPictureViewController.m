@@ -327,10 +327,11 @@
     if ((self.traitCollection.verticalSizeClass != previousTraitCollection.verticalSizeClass)
         || self.traitCollection.horizontalSizeClass != previousTraitCollection.horizontalSizeClass) {
         // hide the ad banner view
-        if(self.traitCollection.verticalSizeClass == UIUserInterfaceSizeClassCompact
-           ||
-           (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad &&
-            UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation))) {
+        if(self.traitCollection.verticalSizeClass == UIUserInterfaceSizeClassCompact)
+           //||
+           //(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad &&
+           // UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation)))
+        {
             self.adBannerView.hidden = YES;
         } else {
             BOOL productPurchased = [[NSUserDefaults standardUserDefaults] boolForKey:USER_PURCHASED_TIP];
