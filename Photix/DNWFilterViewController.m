@@ -51,12 +51,25 @@
     // in an argument of the array of UIImage objects.
     //3. Set the tag property on each UIImage object in the array so we can get the image back
     //out at the end.
+    
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"Next"
+                                                                    style:UIBarButtonItemStyleDone target:self action:@selector(DoneButtonPressed:)];
+    self.navigationItem.rightBarButtonItem = rightButton;
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
     [pictureImageView setImage:self.imageToSet];
     [self filterImage:self.imageToSet];
+    
+    [self.navigationController setNavigationBarHidden:FALSE];
+
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:TRUE];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -156,6 +169,8 @@
     UIImageView* tempView = (UIImageView*)[thumbArray objectAtIndex:tag];
     
     pictureImageView.image = tempView.image;
+    
+    //self.imageToSet = tempView.image;
 }
 
 @end

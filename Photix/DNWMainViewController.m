@@ -36,6 +36,11 @@
     [super viewDidLoad];
 	
     self.uiPicker = [[UIImagePickerController alloc] init];
+    
+    //FOR TESTING ONLY!!!
+    //[[NSUserDefaults standardUserDefaults] setBool:YES forKey:USER_PURCHASED_TIP];
+    //[[NSUserDefaults standardUserDefaults] synchronize];
+    
     self.uiPicker.sourceType = UIImagePickerControllerSourceTypeCamera;
     self.uiPicker.allowsEditing = NO;
     self.uiPicker.delegate = self;
@@ -73,13 +78,16 @@
     // this one is key
     self.requestOptions.synchronous = true;
     
-    //added to hide the nav bar on main screen to see full background
-    [self.navigationController setNavigationBarHidden:TRUE];
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
     [self.gmPicker.selectedAssets removeAllObjects];
+    
+    //added to hide the nav bar on main screen to see full background
+    [self.navigationController setNavigationBarHidden:TRUE];
+    //[self.gmPicker.navigationController setNavigationBarHidden:TRUE];
 }
 
 - (void)didReceiveMemoryWarning
@@ -151,7 +159,7 @@
     
     if(images.count > 0)
     {
-        filterViewController.imageToSet = images[0];
+        filterViewController.imageToSet = images[images.count - 1];
     }
     
     [self showViewController:filterViewController sender:self];

@@ -33,6 +33,7 @@
 @property (strong, nonatomic) IBOutlet UIBarButtonItem* instagramButton;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem* moreButton;
 @property (weak, nonatomic) IBOutlet GADBannerView  *adBannerView;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint* pictureContraint;
 
 @end
 
@@ -60,6 +61,11 @@
     self.adBannerView.adUnitID = ADMOB_KEY;
     self.adBannerView.rootViewController = self;
     [self.adBannerView loadRequest:[GADRequest request]];
+    
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"Done"
+                                                                    style:UIBarButtonItemStyleDone target:self action:@selector(StartOverButtonPressed:)];
+    self.navigationItem.rightBarButtonItem = rightButton;
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -68,6 +74,8 @@
     if (productPurchased) {
         self.adBannerView.hidden = YES;
     }
+    
+    [self.navigationController setNavigationBarHidden:FALSE];
 }
 
 - (UIImage *)resizeImageToSize:(CGSize)targetSize Image:(UIImage*)sourceImage
@@ -339,6 +347,15 @@
                 self.adBannerView.hidden = NO;
             }
         }
+    }
+    
+    if(self.adBannerView.hidden == YES)
+    {
+        [self.view addConstraint:_pictureContraint];
+    }
+    else
+    {
+        [self.view removeConstraint:_pictureContraint];
     }
 }
 
