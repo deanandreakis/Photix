@@ -487,6 +487,7 @@
                         <variation key="heightClass=compact">
                             <mask key="constraints">
                                 <include reference="gRB-64-5A3"/>
+                                <exclude reference="u2f-Ke-Bj4"/>
                             </mask>
                         </variation>
                     </view>
