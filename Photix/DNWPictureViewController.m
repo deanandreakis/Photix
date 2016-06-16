@@ -349,14 +349,14 @@
         }
     }
     
-    if(self.adBannerView.hidden == YES)
+    /*if(self.adBannerView.hidden == YES)
     {
         [self.view addConstraint:_pictureContraint];
     }
     else
     {
         [self.view removeConstraint:_pictureContraint];
-    }
+    }*/
 }
 
 
