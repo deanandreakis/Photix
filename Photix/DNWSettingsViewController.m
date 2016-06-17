@@ -371,6 +371,7 @@
     mailViewController.mailComposeDelegate = self;
     [mailViewController setSubject:@"OilPaintPlus Support"];
     [mailViewController setToRecipients:[NSArray arrayWithObjects:@"dean@deanware.co",nil]];
+    [mailViewController.navigationBar setTintColor:[UIColor blackColor]];
     [self presentViewController:mailViewController animated:YES completion:nil];
 }
 
