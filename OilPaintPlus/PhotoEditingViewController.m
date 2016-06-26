@@ -61,7 +61,7 @@
         PHContentEditingOutput *output = [[PHContentEditingOutput alloc] initWithContentEditingInput:self.input];
         
         // Provide new adjustments and render output to given location.
-        NSData *adjData = [NSKeyedArchiver archivedDataWithRootObject:self.input];
+        NSData *adjData = [NSKeyedArchiver archivedDataWithRootObject:bigImageView];
         output.adjustmentData = [[PHAdjustmentData alloc] initWithFormatIdentifier:@"AdjustementDataIdentifier" formatVersion:@"1.0" data:adjData];
         NSData *renderedJPEGData = UIImageJPEGRepresentation(bigImageView.image, 1.0);
         [renderedJPEGData writeToURL:output.renderedContentURL atomically:YES];
