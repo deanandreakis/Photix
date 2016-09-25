@@ -327,7 +327,8 @@
 #pragma mark review me!
 -(IBAction)ReviewButtonPressed:(id)sender
 {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:reviewString]];
+    NSDictionary *dict = [[NSDictionary alloc] init];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:reviewString] options:dict completionHandler:nil];
 }
 
 - (void) traitCollectionDidChange: (UITraitCollection *) previousTraitCollection {
