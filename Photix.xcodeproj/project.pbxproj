@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		146F2891BA4DAE3F024B1D63 /* libPods-OilPaintPlus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0986B5D48BC0D0D7792EB81 /* libPods-OilPaintPlus.a */; };
+		72921BDE2226A9A77CEAEDC1 /* libPods-PhotixFilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B6298F946C3630B3FA07167 /* libPods-PhotixFilter.a */; };
 		C10182261A2153DA0071A793 /* lookup_soft_elegance_1.png in Resources */ = {isa = PBXBuildFile; fileRef = C1A9F41B1A1EE1BA00513812 /* lookup_soft_elegance_1.png */; };
 		C10182271A2153E50071A793 /* lookup_soft_elegance_2.png in Resources */ = {isa = PBXBuildFile; fileRef = C1A9F41E1A1EE1CC00513812 /* lookup_soft_elegance_2.png */; };
 		C1054CE719A434D800A4D8F3 /* PhotosUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1054CE619A434D800A4D8F3 /* PhotosUI.framework */; };
@@ -14,8 +16,6 @@
 		C1054CEF19A434D800A4D8F3 /* PhotoEditingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1054CEE19A434D800A4D8F3 /* PhotoEditingViewController.m */; };
 		C1054CF119A434D800A4D8F3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1054CF019A434D800A4D8F3 /* MainInterface.storyboard */; };
 		C1054CF419A434D800A4D8F3 /* OilPaintPlus.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C1054CE519A434D800A4D8F3 /* OilPaintPlus.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		C11C844E1CE41F1500625DD8 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11C844A1CE41EEB00625DD8 /* SafariServices.framework */; };
-		C11C844F1CE41F1E00625DD8 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11C844C1CE41EF700625DD8 /* CoreBluetooth.framework */; };
 		C11C84521CE4266800625DD8 /* libGPUImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BEFF391CD9998E0033A878 /* libGPUImage.a */; };
 		C11C84541CE427C400625DD8 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11C84531CE427C400625DD8 /* AdSupport.framework */; };
 		C11C84561CE427D300625DD8 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11C84551CE427D300625DD8 /* AudioToolbox.framework */; };
@@ -32,10 +32,7 @@
 		C154481518B8445C007B54D1 /* DNWOtherApps.m in Sources */ = {isa = PBXBuildFile; fileRef = C154481418B8445C007B54D1 /* DNWOtherApps.m */; };
 		C15E1C3B1CFFCEBF003075B1 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1054CE819A434D800A4D8F3 /* Photos.framework */; };
 		C15E1C3C1CFFCF41003075B1 /* PhotosUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1054CE619A434D800A4D8F3 /* PhotosUI.framework */; };
-		C16D78181B6ECF5600673C86 /* DNWInstagram.m in Sources */ = {isa = PBXBuildFile; fileRef = C16D78171B6ECF5600673C86 /* DNWInstagram.m */; };
 		C1A9F3F91A1D9B8400513812 /* PhotixFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = C1A9F3F81A1D9B8400513812 /* PhotixFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C1A9F3FF1A1D9B8400513812 /* PhotixFilter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A9F3F41A1D9B8400513812 /* PhotixFilter.framework */; };
-		C1A9F4081A1D9B8400513812 /* PhotixFilterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A9F4071A1D9B8400513812 /* PhotixFilterTests.m */; };
 		C1A9F40B1A1D9B8400513812 /* PhotixFilter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A9F3F41A1D9B8400513812 /* PhotixFilter.framework */; };
 		C1A9F40C1A1D9B8400513812 /* PhotixFilter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C1A9F3F41A1D9B8400513812 /* PhotixFilter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C1A9F4141A1ECB8200513812 /* DNWFilterImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E0E40F199826EB00D3FD21 /* DNWFilterImage.m */; };
@@ -48,18 +45,11 @@
 		C1A9F41F1A1EE1CC00513812 /* lookup_soft_elegance_2.png in Resources */ = {isa = PBXBuildFile; fileRef = C1A9F41E1A1EE1CC00513812 /* lookup_soft_elegance_2.png */; };
 		C1A9F4201A1EE1CC00513812 /* lookup_soft_elegance_2.png in Resources */ = {isa = PBXBuildFile; fileRef = C1A9F41E1A1EE1CC00513812 /* lookup_soft_elegance_2.png */; };
 		C1AD7DF91CE94E5500B06E85 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1AD7DF81CE94E5500B06E85 /* GoogleMobileAds.framework */; };
-		C1B59F7D1CEFF9E4008DEB05 /* libGMImagePicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1B59F7C1CEFF9E4008DEB05 /* libGMImagePicker.a */; };
 		C1BAFD2A18B14B4E0078C88D /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BAFD2918B14B4E0078C88D /* DatabaseManager.m */; };
 		C1BAFD3118B158570078C88D /* UIImage+normalizedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BAFD3018B158570078C88D /* UIImage+normalizedImage.m */; };
 		C1BAFD3718B15D720078C88D /* DNWPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BAFD3618B15D720078C88D /* DNWPictureViewController.m */; };
 		C1BAFD3918B1B4E70078C88D /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BAFD3818B1B4E70078C88D /* Social.framework */; };
-		C1BEFF381CD9998E0033A878 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF75F98384E448F887006AB5 /* libPods.a */; };
-		C1BEFF3D1CD9998E0033A878 /* libMBProgressHUD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BEFF3A1CD9998E0033A878 /* libMBProgressHUD.a */; };
-		C1BEFF3E1CD9998E0033A878 /* libMGInstagram.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BEFF3B1CD9998E0033A878 /* libMGInstagram.a */; };
 		C1BEFF3F1CD999A30033A878 /* libGPUImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BEFF391CD9998E0033A878 /* libGPUImage.a */; };
-		C1BEFF401CD999A30033A878 /* libMBProgressHUD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BEFF3A1CD9998E0033A878 /* libMBProgressHUD.a */; };
-		C1BEFF411CD999A30033A878 /* libMGInstagram.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BEFF3B1CD9998E0033A878 /* libMGInstagram.a */; };
-		C1BEFF421CD999A30033A878 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF75F98384E448F887006AB5 /* libPods.a */; };
 		C1C1163B18D5FB9C00247E0F /* DNWImageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C1C1163A18D5FB9C00247E0F /* DNWImageTests.m */; };
 		C1C1163C18D60C4F00247E0F /* DNWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C1DBBCF218A6BFEF007BF4CE /* DNWAppDelegate.m */; };
 		C1C1163D18D60C4F00247E0F /* UIImage+normalizedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BAFD3018B158570078C88D /* UIImage+normalizedImage.m */; };
@@ -105,6 +95,7 @@
 		C1F699301B25EA1E0077C3FF /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F6992F1B25EA1E0077C3FF /* StoreKit.framework */; };
 		C1F699361B25EABA0077C3FF /* IAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F699331B25EABA0077C3FF /* IAPHelper.m */; };
 		C1F699371B25EABA0077C3FF /* PhotixIAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F699351B25EABA0077C3FF /* PhotixIAPHelper.m */; };
+		C35177202EBBDF8E8C54B171 /* libPods-Photix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB7C43E81E532226325C0502 /* libPods-Photix.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,20 +112,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = C1054CE419A434D800A4D8F3;
 			remoteInfo = OilPaintPlus;
-		};
-		C1A9F4001A1D9B8400513812 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C1DBBCD518A6BFEF007BF4CE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C1A9F3F31A1D9B8400513812;
-			remoteInfo = PhotixFilter;
-		};
-		C1A9F4021A1D9B8400513812 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C1DBBCD518A6BFEF007BF4CE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C1DBBCDC18A6BFEF007BF4CE;
-			remoteInfo = Photix;
 		};
 		C1A9F4091A1D9B8400513812 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -178,7 +155,21 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		372EB0A09762E440B29E4A95 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		0A9A4231C975E1196DB40842 /* Pods-BasePods-Photix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasePods-Photix.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BasePods-Photix/Pods-BasePods-Photix.debug.xcconfig"; sourceTree = "<group>"; };
+		31CAECB9C4AD2F7DBBFF5F87 /* libPods-BasePods-OilPaintPlus.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BasePods-OilPaintPlus.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EF3A174618FB74B327D1C23 /* libPods-BasePods-PhotixFilter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BasePods-PhotixFilter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EF7E7819CB92DCDC8E38095 /* Pods-OilPaintPlus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OilPaintPlus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OilPaintPlus/Pods-OilPaintPlus.debug.xcconfig"; sourceTree = "<group>"; };
+		47D30E2490B3CDF6C4E11AB9 /* Pods-BasePods-Photix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasePods-Photix.release.xcconfig"; path = "Pods/Target Support Files/Pods-BasePods-Photix/Pods-BasePods-Photix.release.xcconfig"; sourceTree = "<group>"; };
+		5D288833665117E446F1F30B /* Pods-OilPaintPlus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OilPaintPlus.release.xcconfig"; path = "Pods/Target Support Files/Pods-OilPaintPlus/Pods-OilPaintPlus.release.xcconfig"; sourceTree = "<group>"; };
+		71947EC2558290C66D575188 /* Pods-BasePods-OilPaintPlus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasePods-OilPaintPlus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BasePods-OilPaintPlus/Pods-BasePods-OilPaintPlus.debug.xcconfig"; sourceTree = "<group>"; };
+		8B6298F946C3630B3FA07167 /* libPods-PhotixFilter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PhotixFilter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C58F0539C9452401830ADD9 /* Pods-PhotixFilter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotixFilter.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotixFilter/Pods-PhotixFilter.release.xcconfig"; sourceTree = "<group>"; };
+		8F9E34E9D331FBCD34D5B629 /* Pods-Photix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Photix.release.xcconfig"; path = "Pods/Target Support Files/Pods-Photix/Pods-Photix.release.xcconfig"; sourceTree = "<group>"; };
+		934111497238785CB30658F8 /* Pods-BasePods-PhotixFilter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasePods-PhotixFilter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BasePods-PhotixFilter/Pods-BasePods-PhotixFilter.debug.xcconfig"; sourceTree = "<group>"; };
+		9EC1FDEFF5F03C6FE5B01546 /* Pods-BasePods-OilPaintPlus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasePods-OilPaintPlus.release.xcconfig"; path = "Pods/Target Support Files/Pods-BasePods-OilPaintPlus/Pods-BasePods-OilPaintPlus.release.xcconfig"; sourceTree = "<group>"; };
+		AD7E4DE9377025BA513CB864 /* libPods-BasePods-Photix.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BasePods-Photix.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B176F6D471A2B33DB6B298B0 /* Pods-BasePods-PhotixFilter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasePods-PhotixFilter.release.xcconfig"; path = "Pods/Target Support Files/Pods-BasePods-PhotixFilter/Pods-BasePods-PhotixFilter.release.xcconfig"; sourceTree = "<group>"; };
+		BAE96FD74F0C95ED6C06BF64 /* Pods-Photix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Photix.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Photix/Pods-Photix.debug.xcconfig"; sourceTree = "<group>"; };
 		C1054CE519A434D800A4D8F3 /* OilPaintPlus.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OilPaintPlus.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1054CE619A434D800A4D8F3 /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = System/Library/Frameworks/PhotosUI.framework; sourceTree = SDKROOT; };
 		C1054CE819A434D800A4D8F3 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
@@ -203,17 +194,15 @@
 		C149F4011999941A00584382 /* DNWFilteredImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DNWFilteredImageModel.m; path = ../Photix/DNWFilteredImageModel.m; sourceTree = "<group>"; };
 		C154481318B8445C007B54D1 /* DNWOtherApps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNWOtherApps.h; sourceTree = "<group>"; };
 		C154481418B8445C007B54D1 /* DNWOtherApps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNWOtherApps.m; sourceTree = "<group>"; };
-		C16D78161B6ECF5600673C86 /* DNWInstagram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNWInstagram.h; sourceTree = "<group>"; };
-		C16D78171B6ECF5600673C86 /* DNWInstagram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNWInstagram.m; sourceTree = "<group>"; };
 		C1A9F3F41A1D9B8400513812 /* PhotixFilter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PhotixFilter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1A9F3F71A1D9B8400513812 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1A9F3F81A1D9B8400513812 /* PhotixFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotixFilter.h; sourceTree = "<group>"; };
-		C1A9F3FE1A1D9B8400513812 /* PhotixFilterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotixFilterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1A9F4061A1D9B8400513812 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1A9F4071A1D9B8400513812 /* PhotixFilterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotixFilterTests.m; sourceTree = "<group>"; };
 		C1A9F41B1A1EE1BA00513812 /* lookup_soft_elegance_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lookup_soft_elegance_1.png; sourceTree = "<group>"; };
 		C1A9F41E1A1EE1CC00513812 /* lookup_soft_elegance_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lookup_soft_elegance_2.png; sourceTree = "<group>"; };
 		C1AD7DF81CE94E5500B06E85 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = "Pods/Google-Mobile-Ads-SDK/GoogleMobileAdsSdkiOS-7.8.0/GoogleMobileAds.framework"; sourceTree = "<group>"; };
+		C1AE037C1E3AF261001BFF32 /* libGPUImage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGPUImage.a; path = "../../Library/Developer/Xcode/DerivedData/Photix-ahztdgfwpfqdzkfkacllflryeoos/Build/Products/Debug-iphoneos/GPUImage/libGPUImage.a"; sourceTree = "<group>"; };
 		C1B59F7C1CEFF9E4008DEB05 /* libGMImagePicker.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGMImagePicker.a; path = "../../Library/Developer/Xcode/DerivedData/Photix-ahztdgfwpfqdzkfkacllflryeoos/Build/Products/Debug-iphoneos/libGMImagePicker.a"; sourceTree = "<group>"; };
 		C1BAFD2718B14B2A0078C88D /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
 		C1BAFD2818B14B410078C88D /* DatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseManager.h; sourceTree = "<group>"; };
@@ -268,8 +257,9 @@
 		C1F699331B25EABA0077C3FF /* IAPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAPHelper.m; sourceTree = "<group>"; };
 		C1F699341B25EABA0077C3FF /* PhotixIAPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotixIAPHelper.h; sourceTree = "<group>"; };
 		C1F699351B25EABA0077C3FF /* PhotixIAPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotixIAPHelper.m; sourceTree = "<group>"; };
-		DBF5E5725E8AD18B72030E01 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		EF75F98384E448F887006AB5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB7C43E81E532226325C0502 /* libPods-Photix.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Photix.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D99B0A1E700F9A86EF8122E9 /* Pods-PhotixFilter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotixFilter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotixFilter/Pods-PhotixFilter.debug.xcconfig"; sourceTree = "<group>"; };
+		F0986B5D48BC0D0D7792EB81 /* libPods-OilPaintPlus.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OilPaintPlus.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -280,6 +270,7 @@
 				C1A9F4181A1ECDA900513812 /* PhotixFilter.framework in Frameworks */,
 				C1054CE719A434D800A4D8F3 /* PhotosUI.framework in Frameworks */,
 				C1054CE919A434D800A4D8F3 /* Photos.framework in Frameworks */,
+				146F2891BA4DAE3F024B1D63 /* libPods-OilPaintPlus.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,16 +280,7 @@
 			files = (
 				C11C84521CE4266800625DD8 /* libGPUImage.a in Frameworks */,
 				C1CB31891A33A40900B515AE /* CoreImage.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C1A9F3FB1A1D9B8400513812 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C11C844F1CE41F1E00625DD8 /* CoreBluetooth.framework in Frameworks */,
-				C11C844E1CE41F1500625DD8 /* SafariServices.framework in Frameworks */,
-				C1A9F3FF1A1D9B8400513812 /* PhotixFilter.framework in Frameworks */,
+				72921BDE2226A9A77CEAEDC1 /* libPods-PhotixFilter.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,7 +290,6 @@
 			files = (
 				C15E1C3C1CFFCF41003075B1 /* PhotosUI.framework in Frameworks */,
 				C15E1C3B1CFFCEBF003075B1 /* Photos.framework in Frameworks */,
-				C1B59F7D1CEFF9E4008DEB05 /* libGMImagePicker.a in Frameworks */,
 				C1AD7DF91CE94E5500B06E85 /* GoogleMobileAds.framework in Frameworks */,
 				C11C84651CE4283300625DD8 /* SystemConfiguration.framework in Frameworks */,
 				C11C84631CE4282200625DD8 /* MessageUI.framework in Frameworks */,
@@ -320,9 +301,6 @@
 				C11C84581CE427DE00625DD8 /* AVFoundation.framework in Frameworks */,
 				C11C84561CE427D300625DD8 /* AudioToolbox.framework in Frameworks */,
 				C11C84541CE427C400625DD8 /* AdSupport.framework in Frameworks */,
-				C1BEFF3D1CD9998E0033A878 /* libMBProgressHUD.a in Frameworks */,
-				C1BEFF3E1CD9998E0033A878 /* libMGInstagram.a in Frameworks */,
-				C1BEFF381CD9998E0033A878 /* libPods.a in Frameworks */,
 				C1E20FB218B980E1001A2BE3 /* QuartzCore.framework in Frameworks */,
 				C1F699301B25EA1E0077C3FF /* StoreKit.framework in Frameworks */,
 				C1BAFD3918B1B4E70078C88D /* Social.framework in Frameworks */,
@@ -331,6 +309,7 @@
 				C1DBBCE518A6BFEF007BF4CE /* UIKit.framework in Frameworks */,
 				C1DBBCE118A6BFEF007BF4CE /* Foundation.framework in Frameworks */,
 				C1A9F40B1A1D9B8400513812 /* PhotixFilter.framework in Frameworks */,
+				C35177202EBBDF8E8C54B171 /* libPods-Photix.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,9 +318,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1BEFF3F1CD999A30033A878 /* libGPUImage.a in Frameworks */,
-				C1BEFF401CD999A30033A878 /* libMBProgressHUD.a in Frameworks */,
-				C1BEFF411CD999A30033A878 /* libMGInstagram.a in Frameworks */,
-				C1BEFF421CD999A30033A878 /* libPods.a in Frameworks */,
 				C1C1164A18D60DBF00247E0F /* CoreGraphics.framework in Frameworks */,
 				C1C1164918D60DB300247E0F /* Social.framework in Frameworks */,
 				C1C1164818D60DA900247E0F /* MessageUI.framework in Frameworks */,
@@ -356,6 +332,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9293523E01C6F7ADD47B288C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0A9A4231C975E1196DB40842 /* Pods-BasePods-Photix.debug.xcconfig */,
+				47D30E2490B3CDF6C4E11AB9 /* Pods-BasePods-Photix.release.xcconfig */,
+				934111497238785CB30658F8 /* Pods-BasePods-PhotixFilter.debug.xcconfig */,
+				B176F6D471A2B33DB6B298B0 /* Pods-BasePods-PhotixFilter.release.xcconfig */,
+				71947EC2558290C66D575188 /* Pods-BasePods-OilPaintPlus.debug.xcconfig */,
+				9EC1FDEFF5F03C6FE5B01546 /* Pods-BasePods-OilPaintPlus.release.xcconfig */,
+				3EF7E7819CB92DCDC8E38095 /* Pods-OilPaintPlus.debug.xcconfig */,
+				5D288833665117E446F1F30B /* Pods-OilPaintPlus.release.xcconfig */,
+				BAE96FD74F0C95ED6C06BF64 /* Pods-Photix.debug.xcconfig */,
+				8F9E34E9D331FBCD34D5B629 /* Pods-Photix.release.xcconfig */,
+				D99B0A1E700F9A86EF8122E9 /* Pods-PhotixFilter.debug.xcconfig */,
+				8C58F0539C9452401830ADD9 /* Pods-PhotixFilter.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C1054CEA19A434D800A4D8F3 /* OilPaintPlus */ = {
 			isa = PBXGroup;
 			children = (
@@ -432,8 +427,6 @@
 				C1BAFD2718B14B2A0078C88D /* SynthesizeSingleton.h */,
 				C154481318B8445C007B54D1 /* DNWOtherApps.h */,
 				C154481418B8445C007B54D1 /* DNWOtherApps.m */,
-				C16D78161B6ECF5600673C86 /* DNWInstagram.h */,
-				C16D78171B6ECF5600673C86 /* DNWInstagram.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -480,7 +473,7 @@
 				C1A9F4041A1D9B8400513812 /* PhotixFilterTests */,
 				C1DBBCDF18A6BFEF007BF4CE /* Frameworks */,
 				C1DBBCDE18A6BFEF007BF4CE /* Products */,
-				C783FEA67B66018BCA656469 /* Pods */,
+				9293523E01C6F7ADD47B288C /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -491,7 +484,6 @@
 				C1DBBCFD18A6BFEF007BF4CE /* PhotixTests.xctest */,
 				C1054CE519A434D800A4D8F3 /* OilPaintPlus.appex */,
 				C1A9F3F41A1D9B8400513812 /* PhotixFilter.framework */,
-				C1A9F3FE1A1D9B8400513812 /* PhotixFilterTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -499,6 +491,7 @@
 		C1DBBCDF18A6BFEF007BF4CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C1AE037C1E3AF261001BFF32 /* libGPUImage.a */,
 				C1B59F7C1CEFF9E4008DEB05 /* libGMImagePicker.a */,
 				C1AD7DF81CE94E5500B06E85 /* GoogleMobileAds.framework */,
 				C11C84641CE4283300625DD8 /* SystemConfiguration.framework */,
@@ -525,9 +518,14 @@
 				C1DBBCE418A6BFEF007BF4CE /* UIKit.framework */,
 				C1DBBCE618A6BFEF007BF4CE /* CoreData.framework */,
 				C1DBBCFE18A6BFEF007BF4CE /* XCTest.framework */,
-				EF75F98384E448F887006AB5 /* libPods.a */,
 				C1054CE619A434D800A4D8F3 /* PhotosUI.framework */,
 				C1054CE819A434D800A4D8F3 /* Photos.framework */,
+				AD7E4DE9377025BA513CB864 /* libPods-BasePods-Photix.a */,
+				3EF3A174618FB74B327D1C23 /* libPods-BasePods-PhotixFilter.a */,
+				31CAECB9C4AD2F7DBBFF5F87 /* libPods-BasePods-OilPaintPlus.a */,
+				F0986B5D48BC0D0D7792EB81 /* libPods-OilPaintPlus.a */,
+				CB7C43E81E532226325C0502 /* libPods-Photix.a */,
+				8B6298F946C3630B3FA07167 /* libPods-PhotixFilter.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -605,15 +603,6 @@
 			name = IAP;
 			sourceTree = "<group>";
 		};
-		C783FEA67B66018BCA656469 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				372EB0A09762E440B29E4A95 /* Pods.debug.xcconfig */,
-				DBF5E5725E8AD18B72030E01 /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -634,9 +623,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C1054CF919A434D800A4D8F3 /* Build configuration list for PBXNativeTarget "OilPaintPlus" */;
 			buildPhases = (
+				BCB4C924E2949B43C085937C /* [CP] Check Pods Manifest.lock */,
 				C1054CE119A434D800A4D8F3 /* Sources */,
 				C1054CE219A434D800A4D8F3 /* Frameworks */,
 				C1054CE319A434D800A4D8F3 /* Resources */,
+				02D42B0DB3A580E65881E1D7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -651,12 +642,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C1A9F40D1A1D9B8500513812 /* Build configuration list for PBXNativeTarget "PhotixFilter" */;
 			buildPhases = (
-				2512468DFCA04578D00DEC6C /* Check Pods Manifest.lock */,
+				F85A0F7F7E25164C687E0932 /* [CP] Check Pods Manifest.lock */,
 				C1A9F3EF1A1D9B8400513812 /* Sources */,
 				C1A9F3F01A1D9B8400513812 /* Frameworks */,
 				C1A9F3F11A1D9B8400513812 /* Headers */,
 				C1A9F3F21A1D9B8400513812 /* Resources */,
-				3CB425DCEADC839BF9ACCF07 /* Copy Pods Resources */,
+				D740FFECE3DF78CBD173A9FF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -667,34 +658,18 @@
 			productReference = C1A9F3F41A1D9B8400513812 /* PhotixFilter.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		C1A9F3FD1A1D9B8400513812 /* PhotixFilterTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C1A9F4111A1D9B8500513812 /* Build configuration list for PBXNativeTarget "PhotixFilterTests" */;
-			buildPhases = (
-				C1A9F3FA1A1D9B8400513812 /* Sources */,
-				C1A9F3FB1A1D9B8400513812 /* Frameworks */,
-				C1A9F3FC1A1D9B8400513812 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C1A9F4011A1D9B8400513812 /* PBXTargetDependency */,
-				C1A9F4031A1D9B8400513812 /* PBXTargetDependency */,
-			);
-			name = PhotixFilterTests;
-			productName = PhotixFilterTests;
-			productReference = C1A9F3FE1A1D9B8400513812 /* PhotixFilterTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		C1DBBCDC18A6BFEF007BF4CE /* Photix */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C1DBBD0F18A6BFEF007BF4CE /* Build configuration list for PBXNativeTarget "Photix" */;
 			buildPhases = (
+				EE881EDC615020AE0D482BDE /* [CP] Check Pods Manifest.lock */,
 				C1DBBCD918A6BFEF007BF4CE /* Sources */,
 				C1DBBCDA18A6BFEF007BF4CE /* Frameworks */,
 				C1DBBCDB18A6BFEF007BF4CE /* Resources */,
 				C1054CFA19A434D800A4D8F3 /* Embed App Extensions */,
 				C1A9F4101A1D9B8500513812 /* Embed Frameworks */,
+				E80D5C3E5A72682EEE72D4AB /* [CP] Embed Pods Frameworks */,
+				44FCAD22483C9DA4307DB441 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -745,11 +720,6 @@
 						CreatedOnToolsVersion = 6.1;
 						DevelopmentTeam = 6XBQPB83GR;
 					};
-					C1A9F3FD1A1D9B8400513812 = {
-						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = 6XBQPB83GR;
-						TestTargetID = C1DBBCDC18A6BFEF007BF4CE;
-					};
 					C1DBBCDC18A6BFEF007BF4CE = {
 						DevelopmentTeam = 6XBQPB83GR;
 						SystemCapabilities = {
@@ -779,7 +749,6 @@
 				C1DBBCFC18A6BFEF007BF4CE /* PhotixTests */,
 				C1054CE419A434D800A4D8F3 /* OilPaintPlus */,
 				C1A9F3F31A1D9B8400513812 /* PhotixFilter */,
-				C1A9F3FD1A1D9B8400513812 /* PhotixFilterTests */,
 			);
 		};
 /* End PBXProject section */
@@ -801,13 +770,6 @@
 			files = (
 				C1A9F4201A1EE1CC00513812 /* lookup_soft_elegance_2.png in Resources */,
 				C1A9F41D1A1EE1BA00513812 /* lookup_soft_elegance_1.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C1A9F3FC1A1D9B8400513812 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -843,34 +805,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2512468DFCA04578D00DEC6C /* Check Pods Manifest.lock */ = {
+		02D42B0DB3A580E65881E1D7 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OilPaintPlus/Pods-OilPaintPlus-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3CB425DCEADC839BF9ACCF07 /* Copy Pods Resources */ = {
+		44FCAD22483C9DA4307DB441 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Photix/Pods-Photix-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCB4C924E2949B43C085937C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		C1C1165018D626BA00247E0F /* ShellScript */ = {
@@ -885,6 +862,66 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "./Crashlytics.framework/run 2eaad7ad1fecfce6c414905676a8175bb2a1c253 1b87ad473cb8ac189cc245935c8f083c87fb1700b9d629c028086db540d14b95";
+		};
+		D740FFECE3DF78CBD173A9FF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhotixFilter/Pods-PhotixFilter-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E80D5C3E5A72682EEE72D4AB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Photix/Pods-Photix-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE881EDC615020AE0D482BDE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F85A0F7F7E25164C687E0932 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -906,20 +943,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C1A9F3FA1A1D9B8400513812 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C1A9F4081A1D9B8400513812 /* PhotixFilterTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C1DBBCD918A6BFEF007BF4CE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C1F699371B25EABA0077C3FF /* PhotixIAPHelper.m in Sources */,
-				C16D78181B6ECF5600673C86 /* DNWInstagram.m in Sources */,
 				C154481518B8445C007B54D1 /* DNWOtherApps.m in Sources */,
 				C1BAFD3118B158570078C88D /* UIImage+normalizedImage.m in Sources */,
 				C1DBBCF618A6BFEF007BF4CE /* Photix.xcdatamodeld in Sources */,
@@ -965,16 +993,6 @@
 			target = C1054CE419A434D800A4D8F3 /* OilPaintPlus */;
 			targetProxy = C1054CF519A434D800A4D8F3 /* PBXContainerItemProxy */;
 		};
-		C1A9F4011A1D9B8400513812 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C1A9F3F31A1D9B8400513812 /* PhotixFilter */;
-			targetProxy = C1A9F4001A1D9B8400513812 /* PBXContainerItemProxy */;
-		};
-		C1A9F4031A1D9B8400513812 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C1DBBCDC18A6BFEF007BF4CE /* Photix */;
-			targetProxy = C1A9F4021A1D9B8400513812 /* PBXContainerItemProxy */;
-		};
 		C1A9F40A1A1D9B8400513812 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C1A9F3F31A1D9B8400513812 /* PhotixFilter */;
@@ -1009,8 +1027,9 @@
 /* Begin XCBuildConfiguration section */
 		C1054CF719A434D800A4D8F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 372EB0A09762E440B29E4A95 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 3EF7E7819CB92DCDC8E38095 /* Pods-OilPaintPlus.debug.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1027,8 +1046,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-ObjC",
-					"-l\"MBProgressHUD\"",
-					"-l\"MGInstagram\"",
 					"-l\"z\"",
 					"-framework",
 					"\"AVFoundation\"",
@@ -1071,8 +1088,9 @@
 		};
 		C1054CF819A434D800A4D8F3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DBF5E5725E8AD18B72030E01 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 5D288833665117E446F1F30B /* Pods-OilPaintPlus.release.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1084,8 +1102,6 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = (
 					"-ObjC",
-					"-l\"MBProgressHUD\"",
-					"-l\"MGInstagram\"",
 					"-l\"z\"",
 					"-framework",
 					"\"AVFoundation\"",
@@ -1128,9 +1144,9 @@
 		};
 		C1A9F40E1A1D9B8500513812 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 372EB0A09762E440B29E4A95 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = D99B0A1E700F9A86EF8122E9 /* Pods-PhotixFilter.debug.xcconfig */;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1194,9 +1210,9 @@
 		};
 		C1A9F40F1A1D9B8500513812 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DBF5E5725E8AD18B72030E01 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 8C58F0539C9452401830ADD9 /* Pods-PhotixFilter.release.xcconfig */;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1254,126 +1270,11 @@
 			};
 			name = Release;
 		};
-		C1A9F4121A1D9B8500513812 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 372EB0A09762E440B29E4A95 /* Pods.debug.xcconfig */;
-			buildSettings = {
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = PhotixFilterTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-ObjC",
-					"-l\"GPUImage\"",
-					"-l\"MBProgressHUD\"",
-					"-l\"MGInstagram\"",
-					"-framework",
-					"\"AVFoundation\"",
-					"-framework",
-					"\"AudioToolbox\"",
-					"-framework",
-					"\"CoreGraphics\"",
-					"-framework",
-					"\"CoreMedia\"",
-					"-framework",
-					"\"CoreTelephony\"",
-					"-framework",
-					"\"EventKit\"",
-					"-framework",
-					"\"EventKitUI\"",
-					"-framework",
-					"\"MediaPlayer\"",
-					"-framework",
-					"\"MessageUI\"",
-					"-framework",
-					"\"OpenGLES\"",
-					"-framework",
-					"\"QuartzCore\"",
-					"-framework",
-					"\"StoreKit\"",
-					"-framework",
-					"\"SystemConfiguration\"",
-					"-weak_framework",
-					"\"AdSupport\"",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.deanware.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Photix.app/Photix";
-			};
-			name = Debug;
-		};
-		C1A9F4131A1D9B8500513812 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DBF5E5725E8AD18B72030E01 /* Pods.release.xcconfig */;
-			buildSettings = {
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = PhotixFilterTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-ObjC",
-					"-l\"GPUImage\"",
-					"-l\"MBProgressHUD\"",
-					"-l\"MGInstagram\"",
-					"-framework",
-					"\"AVFoundation\"",
-					"-framework",
-					"\"AudioToolbox\"",
-					"-framework",
-					"\"CoreGraphics\"",
-					"-framework",
-					"\"CoreMedia\"",
-					"-framework",
-					"\"CoreTelephony\"",
-					"-framework",
-					"\"EventKit\"",
-					"-framework",
-					"\"EventKitUI\"",
-					"-framework",
-					"\"MediaPlayer\"",
-					"-framework",
-					"\"MessageUI\"",
-					"-framework",
-					"\"OpenGLES\"",
-					"-framework",
-					"\"QuartzCore\"",
-					"-framework",
-					"\"StoreKit\"",
-					"-framework",
-					"\"SystemConfiguration\"",
-					"-weak_framework",
-					"\"AdSupport\"",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.deanware.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Photix.app/Photix";
-			};
-			name = Release;
-		};
 		C1DBBD0D18A6BFEF007BF4CE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -1423,6 +1324,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -1463,7 +1365,7 @@
 		};
 		C1DBBD1018A6BFEF007BF4CE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 372EB0A09762E440B29E4A95 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = BAE96FD74F0C95ED6C06BF64 /* Pods-Photix.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1483,8 +1385,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",
-					"-l\"MBProgressHUD\"",
-					"-l\"MGInstagram\"",
 					"-l\"z\"",
 					"-framework",
 					"\"AVFoundation\"",
@@ -1528,7 +1428,7 @@
 		};
 		C1DBBD1118A6BFEF007BF4CE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DBF5E5725E8AD18B72030E01 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 8F9E34E9D331FBCD34D5B629 /* Pods-Photix.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1548,8 +1448,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",
-					"-l\"MBProgressHUD\"",
-					"-l\"MGInstagram\"",
 					"-l\"z\"",
 					"-framework",
 					"\"AVFoundation\"",
@@ -1593,7 +1491,6 @@
 		};
 		C1DBBD1318A6BFEF007BF4CE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 372EB0A09762E440B29E4A95 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Photix.app/Photix";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1623,7 +1520,6 @@
 		};
 		C1DBBD1418A6BFEF007BF4CE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DBF5E5725E8AD18B72030E01 /* Pods.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Photix.app/Photix";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1664,15 +1560,6 @@
 			buildConfigurations = (
 				C1A9F40E1A1D9B8500513812 /* Debug */,
 				C1A9F40F1A1D9B8500513812 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C1A9F4111A1D9B8500513812 /* Build configuration list for PBXNativeTarget "PhotixFilterTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C1A9F4121A1D9B8500513812 /* Debug */,
-				C1A9F4131A1D9B8500513812 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

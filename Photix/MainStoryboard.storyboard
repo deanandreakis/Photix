@@ -1,8 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BFI-CK-iBK">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BFI-CK-iBK">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -38,14 +41,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBY-99-LLg">
-                                <frame key="frameInset" minX="150" minY="69" width="301" height="126"/>
+                                <rect key="frame" x="150" y="69" width="301" height="126"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="126" id="00Y-gn-r5u"/>
                                     <constraint firstAttribute="width" constant="301" id="cyB-ti-bBR"/>
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <string key="content">OilPaintPlus (v3.3) relies on your support to fund its development. If you find it useful to enhance your pictures, please consider supporting the app by leaving a tip in our Tip Jar. Any tip given will also remove all advertisements from the app.</string>
+                                        <string key="content">OilPaintPlus (v3.4) relies on your support to fund its development. If you find it useful to enhance your pictures, please consider supporting the app by leaving a tip in our Tip Jar. Any tip given will also remove all advertisements from the app.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="17" name="GillSans"/>
@@ -56,7 +59,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Generous Tip of $0.99" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kId-P9-WN6">
-                                <frame key="frameInset" minX="20" minY="192" width="65" height="65"/>
+                                <rect key="frame" x="20" y="192" width="65" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="57I-X9-PP2"/>
                                     <constraint firstAttribute="width" constant="65" id="oj9-da-p00"/>
@@ -66,7 +69,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Massive Tip of $1.99" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wyd-zd-RUq">
-                                <frame key="frameInset" minX="268" minY="192" width="65" height="65"/>
+                                <rect key="frame" x="268" y="192" width="65" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="65" id="3GJ-By-Wuh"/>
                                     <constraint firstAttribute="height" constant="65" id="rC8-SB-JGD"/>
@@ -76,7 +79,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Amazing Tip of $4.99" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2m-2k-Bkc">
-                                <frame key="frameInset" minX="515" minY="192" width="65" height="65"/>
+                                <rect key="frame" x="515" y="192" width="65" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="65" id="6rQ-BX-UF6"/>
                                     <constraint firstAttribute="height" constant="65" id="hJO-I3-U2E"/>
@@ -86,7 +89,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDy-Qu-ber" userLabel="Button_generous">
-                                <frame key="frameInset" minX="20" minY="192" width="65" height="65"/>
+                                <rect key="frame" x="20" y="192" width="65" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="65" id="jN4-TX-5zE"/>
                                     <constraint firstAttribute="height" constant="65" id="nzV-Ps-Ngw"/>
@@ -100,7 +103,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="slL-gp-MlB" userLabel="Button_massive">
-                                <frame key="frameInset" minX="268" minY="192" width="65" height="65"/>
+                                <rect key="frame" x="268" y="192" width="65" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="65" id="Wvo-Lb-JM1"/>
                                     <constraint firstAttribute="height" constant="65" id="mVp-aj-GaK"/>
@@ -114,7 +117,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kyk-e9-Si1" userLabel="Button_amazing">
-                                <frame key="frameInset" minX="515" minY="192" width="65" height="65"/>
+                                <rect key="frame" x="515" y="192" width="65" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="65" id="iBL-DI-SJn"/>
                                     <constraint firstAttribute="height" constant="65" id="uPs-ox-rBu"/>
@@ -128,7 +131,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7Q-So-yV9">
-                                <frame key="frameInset" minX="278" minY="277" width="44" height="44"/>
+                                <rect key="frame" x="278" y="277" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="G1P-RH-4G3"/>
                                     <constraint firstAttribute="width" constant="44" id="cv9-fo-xxP"/>
@@ -139,7 +142,7 @@
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8bt-Ic-hqG">
-                                <frame key="frameInset" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="7Bz-7K-hLD"/>
                                 </constraints>
@@ -196,7 +199,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pdg-oQ-XMq">
-                                <frame key="frameInset" minX="49" minY="520" width="44" height="44"/>
+                                <rect key="frame" x="49" y="520" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="44" id="NDO-N2-UN2"/>
                                     <constraint firstAttribute="height" constant="44" id="yO2-am-b0N"/>
@@ -210,7 +213,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kT1-A0-s8F">
-                                <frame key="frameInset" minX="212" minY="64" width="176" height="42"/>
+                                <rect key="frame" x="212" y="64" width="176" height="42"/>
                                 <attributedString key="attributedText">
                                     <fragment content="OilPaintPlus">
                                         <attributes>
@@ -223,7 +226,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mB2-pk-7Ca">
-                                <frame key="frameInset" minX="20" minY="569" width="103" height="21"/>
+                                <rect key="frame" x="20" y="569" width="103" height="21"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Take a Picture">
                                         <attributes>
@@ -236,7 +239,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ty-gT-d66">
-                                <frame key="frameInset" minX="453" minY="569" width="127" height="21"/>
+                                <rect key="frame" x="453" y="569" width="127" height="21"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Choose a Picture">
                                         <attributes>
@@ -249,7 +252,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPP-Ip-mQA">
-                                <frame key="frameInset" minX="495" minY="520" width="44" height="44"/>
+                                <rect key="frame" x="495" y="520" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="44" id="MPM-gR-4eX"/>
                                     <constraint firstAttribute="height" constant="44" id="UKA-RR-jVH"/>
@@ -263,13 +266,13 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="General" translatesAutoresizingMaskIntoConstraints="NO" id="OD8-Pp-DHk">
-                                <frame key="frameInset" minX="135" minY="135" width="330" height="330"/>
+                                <rect key="frame" x="135" y="135" width="330" height="330"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="OD8-Pp-DHk" secondAttribute="height" multiplier="1:1" id="ShK-ty-NCj"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpt-kQ-jAY">
-                                <frame key="frameInset" minX="291" minY="106" width="32"/>
+                                <rect key="frame" x="291" y="106" width="32" height="0.0"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="32" id="v1f-0S-z0x"/>
                                 </constraints>
@@ -277,7 +280,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C3y-Nc-Scz">
-                                <frame key="frameInset" minX="25" minY="69" width="44" height="44"/>
+                                <rect key="frame" x="25" y="69" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="44" id="AXI-a1-xTY"/>
                                     <constraint firstAttribute="height" constant="44" id="iW5-SV-iOr"/>
@@ -336,20 +339,14 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2mA-zc-gA8">
-                                <frame key="frameInset" minY="20" width="600" height="416"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="416"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fYA-no-ebA">
-                                <frame key="frameInset" minY="556" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="jXb-GL-mBG"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem image="Instagram" id="WD0-UM-cI4">
-                                        <connections>
-                                            <action selector="InstagramButtonPressed:" destination="Tag-Li-bGF" id="cqD-h2-qip"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="wzQ-Di-KB3"/>
                                     <barButtonItem systemItem="action" id="Omt-Hc-3hu">
                                         <connections>
                                             <action selector="ShareButtonPressed:" destination="Tag-Li-bGF" id="wtD-31-Tvu"/>
@@ -375,7 +372,7 @@
                                 </variation>
                             </toolbar>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3eu-IA-KJG" customClass="GADBannerView">
-                                <frame key="frameInset" minY="466" width="600" height="90"/>
+                                <rect key="frame" x="0.0" y="466" width="600" height="90"/>
                                 <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" id="AWD-2d-Y64"/>
@@ -431,7 +428,6 @@
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <connections>
                         <outlet property="adBannerView" destination="3eu-IA-KJG" id="h6m-9E-xD0"/>
-                        <outlet property="instagramButton" destination="WD0-UM-cI4" id="LBB-0k-vXL"/>
                         <outlet property="moreButton" destination="lLa-1t-8dL" id="Hck-Vv-5Iw"/>
                         <outlet property="pictureContraint" destination="9zf-bZ-FD4" id="wtH-3r-3r2"/>
                         <outlet property="pictureImageView" destination="2mA-zc-gA8" id="15p-dT-d84"/>
@@ -455,7 +451,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxM-ce-yoe">
-                                <frame key="frameInset" minY="492" width="600" height="100"/>
+                                <rect key="frame" x="0.0" y="492" width="600" height="100"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="fHf-9v-yED"/>
@@ -465,7 +461,7 @@
                                 </connections>
                             </scrollView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w0M-UL-ECr">
-                                <frame key="frameInset" width="600" height="482"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="482"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                         </subviews>
@@ -508,7 +504,6 @@
         <image name="Album" width="256" height="256"/>
         <image name="Camera" width="128" height="128"/>
         <image name="General" width="512" height="512"/>
-        <image name="Instagram" width="22" height="22"/>
         <image name="Like" width="22" height="22"/>
         <image name="More" width="22" height="22"/>
         <image name="Postcard" width="22" height="22"/>

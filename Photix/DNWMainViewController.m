@@ -11,12 +11,13 @@
 #import "UIImage+normalizedImage.h"
 #import "DNWPictureViewController.h"
 #import "DNWFilterViewController.h"
+#import <PhotosUI/PhotosUI.h>
 
 @interface DNWMainViewController ()
 
-@property (strong, nonatomic) GMImagePickerController* gmPicker;
+@property (strong, nonatomic) UIImagePickerController* gmPicker;
 @property (strong, nonatomic) UIImagePickerController* uiPicker;
-@property (nonatomic, strong) PHImageRequestOptions *requestOptions;
+//@property (nonatomic, strong) PHImageRequestOptions *requestOptions;
 
 @end
 
@@ -47,47 +48,15 @@
     self.uiPicker.cameraDevice = UIImagePickerControllerCameraDeviceRear;
 
     
-    self.gmPicker = [[GMImagePickerController alloc] init];
+    self.gmPicker = [[UIImagePickerController alloc] init];
     self.gmPicker.delegate = self;
-    self.gmPicker.allowsMultipleSelection = NO;
     self.gmPicker.title = @"Albums";
-    self.gmPicker.customDoneButtonTitle = @"Done";
-    self.gmPicker.customCancelButtonTitle = @"Cancel";
-    self.gmPicker.customNavigationBarPrompt = @"";
-    self.gmPicker.showCameraButton = NO;
-    self.gmPicker.autoSelectCameraImages = NO;
-    self.gmPicker.mediaTypes = @[@(PHAssetMediaTypeImage)];
-    self.gmPicker.pickerFontName = @"HelveticaNeue";
-    self.gmPicker.pickerBoldFontName = @"HelveticaNeue-Bold";
-    self.gmPicker.pickerFontNormalSize = 14.f;
-    self.gmPicker.pickerFontHeaderSize = 17.0f;
-    self.gmPicker.useCustomFontForNavigationBar = YES;
-    self.gmPicker.customSmartCollections = @[@(PHAssetCollectionSubtypeSmartAlbumFavorites),
-                                             @(PHAssetCollectionSubtypeSmartAlbumRecentlyAdded),
-                                             @(PHAssetCollectionSubtypeSmartAlbumSelfPortraits),
-                                             @(PHAssetCollectionSubtypeSmartAlbumScreenshots),
-                                             @(PHAssetCollectionSubtypeSmartAlbumTimelapses),
-                                             @(PHAssetCollectionSubtypeSmartAlbumBursts),
-                                             @(PHAssetCollectionSubtypeSmartAlbumPanoramas)];
-    
-    self.requestOptions = [[PHImageRequestOptions alloc] init];
-    self.requestOptions.resizeMode   = PHImageRequestOptionsResizeModeExact;
-    self.requestOptions.deliveryMode = PHImageRequestOptionsDeliveryModeHighQualityFormat;
-    self.requestOptions.networkAccessAllowed = YES;
-    
-    // this one is key
-    self.requestOptions.synchronous = true;
-    
-    
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    [self.gmPicker.selectedAssets removeAllObjects];
-    
     //added to hide the nav bar on main screen to see full background
     [self.navigationController setNavigationBarHidden:TRUE];
-    //[self.gmPicker.navigationController setNavigationBarHidden:TRUE];
 }
 
 - (void)didReceiveMemoryWarning
@@ -122,56 +91,6 @@
 -(void)imagePickerControllerDidCancel:(UIImagePickerController *)imagePicker
 {
     [imagePicker.presentingViewController dismissViewControllerAnimated:YES completion:nil];
-}
-
-#pragma mark
-#pragma mark GMImagePickerController Delegate Methods
-- (void)assetsPickerController:(GMImagePickerController *)thepicker didFinishPickingAssets:(NSArray *)assetArray
-{
-    [thepicker.presentingViewController dismissViewControllerAnimated:YES completion:nil];
-    
-    assetArray = [NSMutableArray arrayWithArray:assetArray];
-    PHImageManager *manager = [PHImageManager defaultManager];
-    NSMutableArray *images = [NSMutableArray arrayWithCapacity:[assetArray count]];
-    
-    // assets contains PHAsset objects.
-    __block UIImage *ima;
-    
-    for (PHAsset *asset in assetArray) {
-        // Do something with the asset
-        
-        [manager requestImageForAsset:asset
-                           targetSize:PHImageManagerMaximumSize
-                          contentMode:PHImageContentModeDefault
-                              options:self.requestOptions
-                        resultHandler:^void(UIImage *image, NSDictionary *info) {
-                            if(image != nil)
-                            {
-                                ima = image;
-                                [images addObject:ima];
-                            }
-                        }];
-        
-        
-    }
-    
-    DNWFilterViewController *filterViewController = [[UIStoryboard storyboardWithName:kAppDelegate.storyboardName bundle:nil] instantiateViewControllerWithIdentifier:@"MyFilter"];
-    
-    if(images.count > 0)
-    {
-        filterViewController.imageToSet = images[images.count - 1];
-    }
-    
-    [self showViewController:filterViewController sender:self];
-}
-
--(void)assetsPickerControllerDidCancel:(GMImagePickerController *)thepicker
-{
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
-- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
-{
 }
 
 - (void)EditLastPhoto

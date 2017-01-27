@@ -1,8 +1,24 @@
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '8.0'
-link_with 'PhotixFilter'
-pod 'GPUImage'
-pod 'MGInstagram'
-pod 'MBProgressHUD'
-pod 'Google-Mobile-Ads-SDK', '~> 7.0'
-pod 'GMImagePicker', '~> 0.0.2'
+platform :ios, '10.0'
+def main_pods
+    pod 'GPUImage'
+    pod 'Google-Mobile-Ads-SDK', '~> 7.0'
+end
+
+def other_pods
+    pod 'QBImagePickerController'
+end
+
+target 'Photix' do
+    main_pods
+    other_pods
+end
+
+target 'PhotixFilter' do
+    main_pods
+    other_pods
+end
+
+target 'OilPaintPlus' do
+   main_pods
+end

@@ -8,7 +8,7 @@
 
 #import "DNWPictureViewController.h"
 #import <Social/Social.h>
-#import "DNWInstagram.h"
+//#import "DNWInstagram.h"
 #import "DNWOtherApps.h"
 #import "Constants.h"
 
@@ -275,27 +275,6 @@
 
 -(IBAction)InstagramButtonPressed:(id)sender
 {
-    if ([DNWInstagram isAppInstalled])// && [MGInstagram isImageCorrectSize:pictureImageView.image])
-    {
-        //[MGInstagram postImage:pictureImageView.image withBarButtonItem:self.instagramButton inView:self.view];
-        [DNWInstagram postImage:pictureImageView.image withBarItem:self.instagramButton inView:self.view];
-    }
-    else
-    {
-        UIAlertController *alertController = [UIAlertController
-                                              alertControllerWithTitle:NSLocalizedString(@"Sorry",nil)
-                                              message:@"Instagram is not installed"
-                                              preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *cancelAction = [UIAlertAction
-                                       actionWithTitle:NSLocalizedString(@"Ok",nil)
-                                       style:UIAlertActionStyleCancel
-                                       handler:^(UIAlertAction *action)
-                                       {
-                                       }];
-        
-        [alertController addAction:cancelAction];
-        [self presentViewController:alertController animated:YES completion:nil];
-    }
 }
 
 -(IBAction)DropboxButtonPressed:(id)sender
