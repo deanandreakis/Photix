@@ -5,18 +5,12 @@ def main_pods
     pod 'Google-Mobile-Ads-SDK', '~> 7.0'
 end
 
-def other_pods
-    pod 'QBImagePickerController'
-end
-
 target 'Photix' do
     main_pods
-    other_pods
 end
 
 target 'PhotixFilter' do
     main_pods
-    other_pods
 end
 
 target 'OilPaintPlus' do

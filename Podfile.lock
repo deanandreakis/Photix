@@ -1,18 +1,20 @@
 PODS:
   - Google-Mobile-Ads-SDK (7.8.1)
   - GPUImage (0.1.7)
-  - QBImagePickerController (3.4.0)
 
 DEPENDENCIES:
   - Google-Mobile-Ads-SDK (~> 7.0)
   - GPUImage
-  - QBImagePickerController
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Google-Mobile-Ads-SDK
+    - GPUImage
 
 SPEC CHECKSUMS:
   Google-Mobile-Ads-SDK: 3c2a6656117989469bfe7645640aa1de024a4c6c
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
-  QBImagePickerController: d54cf93db6decf26baf6ed3472f336ef35cae022
 
-PODFILE CHECKSUM: 1a47c4a4a3970a599dbeb6bab14a2a04205ca457
+PODFILE CHECKSUM: f4a5020a2d64d0ae51686f0eada5ed44090365f2
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.5.0
