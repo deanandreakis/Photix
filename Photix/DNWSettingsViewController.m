@@ -123,16 +123,16 @@
     
     [[PhotixIAPHelper sharedInstance] requestProductsWithCompletionHandler:^(BOOL success, NSArray *products) {
         if (success) {
-            _products = products;
-            for (SKProduct* product in _products) {
+            self->_products = products;
+            for (SKProduct* product in self->_products) {
                 if([product.productIdentifier isEqualToString:STOREKIT_PRODUCT_ID_GENEROUS_99]) {
-                    _99Product = product;
+                    self->_99Product = product;
                 }
                 else if([product.productIdentifier isEqualToString:STOREKIT_PRODUCT_ID_MASSIVE_199]) {
-                    _199Product = product;
+                    self->_199Product = product;
                 }
                 else if([product.productIdentifier isEqualToString:STOREKIT_PRODUCT_ID_AMAZING_499]) {
-                    _499Product = product;
+                    self->_499Product = product;
                 }
             }
             //NSLog(@"IAP Response: %@", _products);
@@ -176,7 +176,7 @@
                                                 style:UIAlertActionStyleDefault
                                                 handler:^(UIAlertAction *action)
                                                 {
-                                                    [[PhotixIAPHelper sharedInstance] buyProduct:_99Product];
+                                                [[PhotixIAPHelper sharedInstance] buyProduct:self->_99Product];
                                                     [self presentViewController:self.pleaseWaitAlertController animated:NO completion:nil];
                                                     [self.activityIndicatorView startAnimating];
                                                 }];
@@ -250,7 +250,7 @@
                                             style:UIAlertActionStyleDefault
                                             handler:^(UIAlertAction *action)
                                             {
-                                                [[PhotixIAPHelper sharedInstance] buyProduct:_199Product];
+                                            [[PhotixIAPHelper sharedInstance] buyProduct:self->_199Product];
                                                 [self presentViewController:self.pleaseWaitAlertController animated:NO completion:nil];
                                                 [self.activityIndicatorView startAnimating];
                                             }];
@@ -324,7 +324,7 @@
                                             style:UIAlertActionStyleDefault
                                             handler:^(UIAlertAction *action)
                                             {
-                                                [[PhotixIAPHelper sharedInstance] buyProduct:_499Product];
+                                            [[PhotixIAPHelper sharedInstance] buyProduct:self->_499Product];
                                                 [self presentViewController:self.pleaseWaitAlertController animated:NO completion:nil];
                                                 [self.activityIndicatorView startAnimating];
                                             }];

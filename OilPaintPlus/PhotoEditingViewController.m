@@ -61,9 +61,9 @@
         PHContentEditingOutput *output = [[PHContentEditingOutput alloc] initWithContentEditingInput:self.input];
         
         // Provide new adjustments and render output to given location.
-        NSData *adjData = [NSKeyedArchiver archivedDataWithRootObject:bigImageView];
+        NSData *adjData = [NSKeyedArchiver archivedDataWithRootObject:self->bigImageView];
         output.adjustmentData = [[PHAdjustmentData alloc] initWithFormatIdentifier:@"AdjustementDataIdentifier" formatVersion:@"1.0" data:adjData];
-        NSData *renderedJPEGData = UIImageJPEGRepresentation(bigImageView.image, 1.0);
+        NSData *renderedJPEGData = UIImageJPEGRepresentation(self->bigImageView.image, 1.0);
         [renderedJPEGData writeToURL:output.renderedContentURL atomically:YES];
         
         // Call completion handler to commit edit to Photos.
