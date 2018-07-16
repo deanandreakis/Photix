@@ -10,7 +10,7 @@
 @import PhotixFilter;
 @import GoogleMobileAds;
 
-@interface DNWPictureViewController : UIViewController <MFMailComposeViewControllerDelegate>
+@interface DNWPictureViewController : UIViewController
 
 @property UIImage *imageToSet;
 

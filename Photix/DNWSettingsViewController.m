@@ -368,11 +368,14 @@
 
 -(IBAction)emailButtonSelected:(id)sender {
     MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
-    mailViewController.mailComposeDelegate = self;
-    [mailViewController setSubject:@"OilPaintPlus Support"];
-    [mailViewController setToRecipients:[NSArray arrayWithObjects:@"dean@deanware.co",nil]];
-    [mailViewController.navigationBar setTintColor:[UIColor blackColor]];
-    [self presentViewController:mailViewController animated:YES completion:nil];
+    if(mailViewController != nil)
+    {
+        mailViewController.mailComposeDelegate = self;
+        [mailViewController setSubject:@"OilPaintPlus Support"];
+        [mailViewController setToRecipients:[NSArray arrayWithObjects:@"dean@deanware.co",nil]];
+        [mailViewController.navigationBar setTintColor:[UIColor blackColor]];
+        [self presentViewController:mailViewController animated:YES completion:nil];
+    }
 }
 
 #pragma mark MFMailComposeViewControllerDelegate

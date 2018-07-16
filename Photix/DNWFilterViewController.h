@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 deanware. All rights reserved.
 //
 
+//TODO: Turn this into a simple UICollectionView...no need to have a large picture
+
 #import <UIKit/UIKit.h>
 //#import "DNWFilterImage.h"
 @import PhotixFilter;

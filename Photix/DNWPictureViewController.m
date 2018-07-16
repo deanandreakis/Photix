@@ -8,7 +8,6 @@
 
 #import "DNWPictureViewController.h"
 #import <Social/Social.h>
-//#import "DNWInstagram.h"
 #import "DNWOtherApps.h"
 #import "Constants.h"
 
@@ -18,20 +17,12 @@
 @interface DNWPictureViewController ()
 
 -(IBAction)StartOverButtonPressed:(id)sender;
--(IBAction)FacebookButtonPressed:(id)sender;
--(IBAction)TwitterButtonPressed:(id)sender;
--(IBAction)EmailButtonPressed:(id)sender;
 -(IBAction)ShareButtonPressed:(id)sender;
--(IBAction)InstagramButtonPressed:(id)sender;
--(IBAction)DropboxButtonPressed:(id)sender;//other apps to open into
--(IBAction)PostcardButtonPressed:(id)sender;
 -(IBAction)ReviewButtonPressed:(id)sender;
 
 
 @property (strong, nonatomic) IBOutlet UIImageView* pictureImageView;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem* shareButton;
-@property (strong, nonatomic) IBOutlet UIBarButtonItem* instagramButton;
-@property (strong, nonatomic) IBOutlet UIBarButtonItem* moreButton;
 @property (weak, nonatomic) IBOutlet GADBannerView  *adBannerView;
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint* pictureContraint;
 
@@ -168,76 +159,6 @@
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
--(IBAction)FacebookButtonPressed:(id)sender
-{
-    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook])
-    {
-        SLComposeViewController *fbSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
-        [fbSheet setInitialText:@"Look at my Oil Painting! #OilPaint+"];
-        //may need to resize image
-        [fbSheet addImage:pictureImageView.image];
-        [self presentViewController:fbSheet animated:YES completion:nil];
-    }
-    else
-    {
-        UIAlertController *alertController = [UIAlertController
-                                              alertControllerWithTitle:NSLocalizedString(@"Sorry",nil)
-                                              message:@"You can't facebook right now, make sure \
-                                              your device has an internet connection and you have \
-                                              at least one Facebook account setup"
-                                              preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *cancelAction = [UIAlertAction
-                                       actionWithTitle:NSLocalizedString(@"Ok",nil)
-                                       style:UIAlertActionStyleCancel
-                                       handler:^(UIAlertAction *action)
-                                       {
-                                       }];
-        
-        [alertController addAction:cancelAction];
-        [self presentViewController:alertController animated:YES completion:nil];
-    }
-}
-
--(IBAction)TwitterButtonPressed:(id)sender
-{
-    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
-    {
-        SLComposeViewController *tweetSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
-        [tweetSheet setInitialText:@"Look at my Oil Painting! #OilPaint+"];
-        [tweetSheet addImage:pictureImageView.image];
-        [self presentViewController:tweetSheet animated:YES completion:nil];
-    }
-    else
-    {
-        UIAlertController *alertController = [UIAlertController
-                                              alertControllerWithTitle:NSLocalizedString(@"Sorry",nil)
-                                              message:@"You can't send a tweet right now, make sure \
-                                              your device has an internet connection and you have \
-                                              at least one Twitter account setup"
-                                              preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *cancelAction = [UIAlertAction
-                                       actionWithTitle:NSLocalizedString(@"Ok",nil)
-                                       style:UIAlertActionStyleCancel
-                                       handler:^(UIAlertAction *action)
-                                       {
-                                       }];
-        
-        [alertController addAction:cancelAction];
-        [self presentViewController:alertController animated:YES completion:nil];
-    }
-}
-
--(IBAction)EmailButtonPressed:(id)sender
-{
-    MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
-    mailViewController.mailComposeDelegate = self;
-    [mailViewController setSubject:@"Oil Painting!"];
-    [mailViewController setMessageBody:@"I had fun using the OilPaint+ app to make my photo lool like an oil painting!" isHTML:NO];
-    NSData *myData = UIImageJPEGRepresentation(pictureImageView.image, 1.0);
-    [mailViewController addAttachmentData:myData mimeType:@"image/jpeg" fileName:@"PictOil.jpg"];
-    [self presentViewController:mailViewController animated:YES completion:nil];
-}
-
 -(IBAction)ShareButtonPressed:(id)sender
 {
     UIImage* newImage = [self resizeImageToSize:CGSizeMake(640, 640) Image:pictureImageView.image];
@@ -273,36 +194,6 @@
     }
 }
 
--(IBAction)InstagramButtonPressed:(id)sender
-{
-}
-
--(IBAction)DropboxButtonPressed:(id)sender
-{
-    NSString *prefixString = @"MyPhotix";
-    
-    NSString *guid = [[NSUUID new] UUIDString];
-    NSString *uniqueFileName = [NSString stringWithFormat:@"%@_%@.jpeg", prefixString, guid];
-    
-    //NSLog(@"uniqueFileName: '%@'", uniqueFileName);
-    
-    [DNWOtherApps setPhotoFileName:uniqueFileName];
-    [DNWOtherApps postImage:pictureImageView.image withBarItem:self.moreButton inView:self.view];
-}
-
-#pragma mark MFMailComposeViewControllerDelegate
-
-- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-
--(IBAction)PostcardButtonPressed:(id)sender
-{
-    
-}
-
 #pragma mark review me!
 -(IBAction)ReviewButtonPressed:(id)sender
 {
@@ -328,15 +219,6 @@
             }
         }
     }
-    
-    /*if(self.adBannerView.hidden == YES)
-    {
-        [self.view addConstraint:_pictureContraint];
-    }
-    else
-    {
-        [self.view removeConstraint:_pictureContraint];
-    }*/
 }
 
 

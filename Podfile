@@ -2,7 +2,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '10.0'
 def main_pods
     pod 'GPUImage'
-    pod 'Google-Mobile-Ads-SDK', '~> 7.0'
+    pod 'Google-Mobile-Ads-SDK'
 end
 
 target 'Photix' do

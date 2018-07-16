@@ -12,6 +12,7 @@
 #import "DNWPictureViewController.h"
 #import "DNWFilterViewController.h"
 #import <PhotosUI/PhotosUI.h>
+#import "TargetConditionals.h"
 
 @interface DNWMainViewController ()
 
@@ -35,18 +36,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
+#if !TARGET_IPHONE_SIMULATOR
     self.uiPicker = [[UIImagePickerController alloc] init];
     
     //FOR TESTING ONLY!!!
     //[[NSUserDefaults standardUserDefaults] setBool:YES forKey:USER_PURCHASED_TIP];
     //[[NSUserDefaults standardUserDefaults] synchronize];
-    
+
     self.uiPicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+
     self.uiPicker.allowsEditing = NO;
     self.uiPicker.delegate = self;
     self.uiPicker.cameraDevice = UIImagePickerControllerCameraDeviceRear;
-
+#endif
     
     self.gmPicker = [[UIImagePickerController alloc] init];
     self.gmPicker.delegate = self;
@@ -69,7 +71,9 @@
 
 -(IBAction)TakePhotoButtonPressed:(id)sender
 {
+#if !TARGET_IPHONE_SIMULATOR
     [self showViewController:self.uiPicker sender:self];
+#endif
 }
 
 -(IBAction)ChooseExistingButtonPressed:(id)sender
