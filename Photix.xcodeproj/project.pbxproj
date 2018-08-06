@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		146F2891BA4DAE3F024B1D63 /* libPods-OilPaintPlus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0986B5D48BC0D0D7792EB81 /* libPods-OilPaintPlus.a */; };
+		5E66A9AE2117E855003F5AB6 /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E66A9AD2117E855003F5AB6 /* PinterestLayout.swift */; };
+		5E66A9B02117E9E6003F5AB6 /* DNWFilteredImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E66A9AF2117E9E6003F5AB6 /* DNWFilteredImagesViewController.swift */; };
 		72921BDE2226A9A77CEAEDC1 /* libPods-PhotixFilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B6298F946C3630B3FA07167 /* libPods-PhotixFilter.a */; };
 		C10182261A2153DA0071A793 /* lookup_soft_elegance_1.png in Resources */ = {isa = PBXBuildFile; fileRef = C1A9F41B1A1EE1BA00513812 /* lookup_soft_elegance_1.png */; };
 		C10182271A2153E50071A793 /* lookup_soft_elegance_2.png in Resources */ = {isa = PBXBuildFile; fileRef = C1A9F41E1A1EE1CC00513812 /* lookup_soft_elegance_2.png */; };
@@ -161,6 +163,9 @@
 		3EF7E7819CB92DCDC8E38095 /* Pods-OilPaintPlus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OilPaintPlus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OilPaintPlus/Pods-OilPaintPlus.debug.xcconfig"; sourceTree = "<group>"; };
 		47D30E2490B3CDF6C4E11AB9 /* Pods-BasePods-Photix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasePods-Photix.release.xcconfig"; path = "Pods/Target Support Files/Pods-BasePods-Photix/Pods-BasePods-Photix.release.xcconfig"; sourceTree = "<group>"; };
 		5D288833665117E446F1F30B /* Pods-OilPaintPlus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OilPaintPlus.release.xcconfig"; path = "Pods/Target Support Files/Pods-OilPaintPlus/Pods-OilPaintPlus.release.xcconfig"; sourceTree = "<group>"; };
+		5E66A9AC2117E855003F5AB6 /* Photix-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Photix-Bridging-Header.h"; sourceTree = "<group>"; };
+		5E66A9AD2117E855003F5AB6 /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
+		5E66A9AF2117E9E6003F5AB6 /* DNWFilteredImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNWFilteredImagesViewController.swift; sourceTree = "<group>"; };
 		71947EC2558290C66D575188 /* Pods-BasePods-OilPaintPlus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasePods-OilPaintPlus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BasePods-OilPaintPlus/Pods-BasePods-OilPaintPlus.debug.xcconfig"; sourceTree = "<group>"; };
 		8B6298F946C3630B3FA07167 /* libPods-PhotixFilter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PhotixFilter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C58F0539C9452401830ADD9 /* Pods-PhotixFilter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotixFilter.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotixFilter/Pods-PhotixFilter.release.xcconfig"; sourceTree = "<group>"; };
@@ -332,6 +337,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E66A9AB2117E81B003F5AB6 /* Layouits */ = {
+			isa = PBXGroup;
+			children = (
+				5E66A9AD2117E855003F5AB6 /* PinterestLayout.swift */,
+			);
+			name = Layouits;
+			sourceTree = "<group>";
+		};
 		9293523E01C6F7ADD47B288C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -533,6 +546,7 @@
 		C1DBBCE818A6BFEF007BF4CE /* Photix */ = {
 			isa = PBXGroup;
 			children = (
+				5E66A9AB2117E81B003F5AB6 /* Layouits */,
 				C1F699311B25EA8F0077C3FF /* IAP */,
 				C1BAFD2D18B14BA20078C88D /* Resources */,
 				C1BAFD2C18B14B8D0078C88D /* Application Delegate */,
@@ -548,6 +562,7 @@
 		C1DBBCE918A6BFEF007BF4CE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5E66A9AC2117E855003F5AB6 /* Photix-Bridging-Header.h */,
 				C1DBBCEA18A6BFEF007BF4CE /* Photix-Info.plist */,
 				C1DBBCEB18A6BFEF007BF4CE /* InfoPlist.strings */,
 				C1DBBCEE18A6BFEF007BF4CE /* main.m */,
@@ -588,6 +603,7 @@
 				C1BAFD3618B15D720078C88D /* DNWPictureViewController.m */,
 				C1210EB51996812000C1E4E7 /* DNWFilterViewController.h */,
 				C1210EB61996812000C1E4E7 /* DNWFilterViewController.m */,
+				5E66A9AF2117E9E6003F5AB6 /* DNWFilteredImagesViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -721,6 +737,7 @@
 					};
 					C1DBBCDC18A6BFEF007BF4CE = {
 						DevelopmentTeam = 6XBQPB83GR;
+						LastSwiftMigration = 0940;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
 								enabled = 1;
@@ -981,6 +998,8 @@
 				C1BAFD3718B15D720078C88D /* DNWPictureViewController.m in Sources */,
 				C1F694F71AEF1CBF0062D187 /* DNWSettingsViewController.m in Sources */,
 				C1F699361B25EABA0077C3FF /* IAPHelper.m in Sources */,
+				5E66A9AE2117E855003F5AB6 /* PinterestLayout.swift in Sources */,
+				5E66A9B02117E9E6003F5AB6 /* DNWFilteredImagesViewController.swift in Sources */,
 				C1210EB71996812000C1E4E7 /* DNWFilterViewController.m in Sources */,
 				C1DBBCEF18A6BFEF007BF4CE /* main.m in Sources */,
 				C1BAFD2A18B14B4E0078C88D /* DatabaseManager.m in Sources */,
@@ -1411,6 +1430,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 6XBQPB83GR;
@@ -1462,6 +1482,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.deanware.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Photix/Photix-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
@@ -1474,6 +1497,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 6XBQPB83GR;
@@ -1525,6 +1549,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.deanware.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Photix/Photix-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
@@ -1534,6 +1560,7 @@
 		C1DBBD1318A6BFEF007BF4CE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Photix.app/Photix";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -1563,6 +1590,7 @@
 		C1DBBD1418A6BFEF007BF4CE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Photix.app/Photix";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
