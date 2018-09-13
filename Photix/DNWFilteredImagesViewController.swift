@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class PhotoStreamViewController: UICollectionViewController {
+class DNWFilteredImagesViewController: UICollectionViewController {
     
     //var photos = Photo.allPhotos()
     
@@ -33,7 +33,7 @@ class PhotoStreamViewController: UICollectionViewController {
     
 }
 
-extension PhotoStreamViewController {
+extension DNWFilteredImagesViewController {
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 1//photos.count
@@ -51,7 +51,7 @@ extension PhotoStreamViewController {
 }
 
 //MARK: - PINTEREST LAYOUT DELEGATE
-extension PhotoStreamViewController : PinterestLayoutDelegate {
+extension DNWFilteredImagesViewController : PinterestLayoutDelegate {
     
     // 1. Returns the photo height
     func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath:IndexPath) -> CGFloat {
