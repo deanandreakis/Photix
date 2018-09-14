@@ -484,14 +484,14 @@
         <!--Filtered Images View Controller-->
         <scene sceneID="clo-Du-yAB">
             <objects>
-                <collectionViewController id="ynf-qf-hzh" customClass="DNWFilteredImagesViewController" customModule="Pinterest" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="ynf-qf-hzh" customClass="DNWFilteredImagesViewController" customModule="Photix" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="bGA-5V-Smo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <collectionViewLayout key="collectionViewLayout" id="evC-To-Cbg" customClass="PinterestLayout" customModule="Pinterest" customModuleProvider="target"/>
+                        <collectionViewLayout key="collectionViewLayout" id="evC-To-Cbg" customClass="PinterestLayout" customModule="Photix" customModuleProvider="target"/>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AnnotatedPhotoCell" id="w2E-RM-OVw" customClass="AnnotatedPhotoCell" customModule="Pinterest" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AnnotatedPhotoCell" id="w2E-RM-OVw" customClass="AnnotatedPhotoCell" customModule="Photix" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -503,7 +503,7 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gz1-Nz-0IQ">
                                                     <rect key="frame" x="0.0" y="0.0" width="180" height="127.33333333333333"/>
-                                                    <color key="backgroundColor" red="0.047143883999999997" green="0.36116248369999998" blue="0.163305968" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.46666666670000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Caption" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYm-Ah-7jM">
                                                     <rect key="frame" x="4" y="137.33333333333334" width="172" height="17"/>
