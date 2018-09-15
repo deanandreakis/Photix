@@ -12,6 +12,8 @@ import AVFoundation
 class DNWFilteredImagesViewController: UICollectionViewController {
     
     //var photos = Photo.allPhotos()
+    var imageToSet:UIImage = UIImage(imageLiteralResourceName: "General")
+    var thumbArray:[DNWFilteredImageModel] = []
     
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return UIStatusBarStyle.lightContent
@@ -65,7 +67,9 @@ extension DNWFilteredImagesViewController : PinterestLayoutDelegate {
 extension DNWFilteredImagesViewController : FilteringCompleteDelegate {
     //array of DNWFilteredImageModel objects
     func filteringComplete(_ filteredImages:[Any]) {
-        
+        for item in filteredImages {
+            thumbArray.append(item as! DNWFilteredImageModel)
+        }
     }
 }
 
