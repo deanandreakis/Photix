@@ -10,6 +10,7 @@
 		146F2891BA4DAE3F024B1D63 /* libPods-OilPaintPlus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0986B5D48BC0D0D7792EB81 /* libPods-OilPaintPlus.a */; };
 		5E66A9AE2117E855003F5AB6 /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E66A9AD2117E855003F5AB6 /* PinterestLayout.swift */; };
 		5E66A9B02117E9E6003F5AB6 /* DNWFilteredImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E66A9AF2117E9E6003F5AB6 /* DNWFilteredImagesViewController.swift */; };
+		5ECEE7D2214B4CFE00CB7E1E /* AnnotatedPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECEE7D1214B4CFE00CB7E1E /* AnnotatedPhotoCell.swift */; };
 		72921BDE2226A9A77CEAEDC1 /* libPods-PhotixFilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B6298F946C3630B3FA07167 /* libPods-PhotixFilter.a */; };
 		C10182261A2153DA0071A793 /* lookup_soft_elegance_1.png in Resources */ = {isa = PBXBuildFile; fileRef = C1A9F41B1A1EE1BA00513812 /* lookup_soft_elegance_1.png */; };
 		C10182271A2153E50071A793 /* lookup_soft_elegance_2.png in Resources */ = {isa = PBXBuildFile; fileRef = C1A9F41E1A1EE1CC00513812 /* lookup_soft_elegance_2.png */; };
@@ -166,6 +167,7 @@
 		5E66A9AC2117E855003F5AB6 /* Photix-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Photix-Bridging-Header.h"; sourceTree = "<group>"; };
 		5E66A9AD2117E855003F5AB6 /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
 		5E66A9AF2117E9E6003F5AB6 /* DNWFilteredImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNWFilteredImagesViewController.swift; sourceTree = "<group>"; };
+		5ECEE7D1214B4CFE00CB7E1E /* AnnotatedPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotatedPhotoCell.swift; sourceTree = "<group>"; };
 		71947EC2558290C66D575188 /* Pods-BasePods-OilPaintPlus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasePods-OilPaintPlus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BasePods-OilPaintPlus/Pods-BasePods-OilPaintPlus.debug.xcconfig"; sourceTree = "<group>"; };
 		8B6298F946C3630B3FA07167 /* libPods-PhotixFilter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PhotixFilter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C58F0539C9452401830ADD9 /* Pods-PhotixFilter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotixFilter.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotixFilter/Pods-PhotixFilter.release.xcconfig"; sourceTree = "<group>"; };
@@ -447,6 +449,7 @@
 		C1BAFD2B18B14B600078C88D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5ECEE7D1214B4CFE00CB7E1E /* AnnotatedPhotoCell.swift */,
 				C1DBBD1518A70940007BF4CE /* MainStoryboard.storyboard */,
 				C1CB31861A339B2400B515AE /* LaunchScreen.xib */,
 			);
@@ -994,6 +997,7 @@
 				C154481518B8445C007B54D1 /* DNWOtherApps.m in Sources */,
 				C1BAFD3118B158570078C88D /* UIImage+normalizedImage.m in Sources */,
 				C1DBBCF618A6BFEF007BF4CE /* Photix.xcdatamodeld in Sources */,
+				5ECEE7D2214B4CFE00CB7E1E /* AnnotatedPhotoCell.swift in Sources */,
 				C1DBBCF318A6BFEF007BF4CE /* DNWAppDelegate.m in Sources */,
 				C1BAFD3718B15D720078C88D /* DNWPictureViewController.m in Sources */,
 				C1F694F71AEF1CBF0062D187 /* DNWSettingsViewController.m in Sources */,

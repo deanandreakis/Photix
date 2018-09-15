@@ -33,6 +33,7 @@ class DNWFilteredImagesViewController: UICollectionViewController {
     
 }
 
+//MARK: - UICollectionView Functions
 extension DNWFilteredImagesViewController {
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -58,5 +59,13 @@ extension DNWFilteredImagesViewController : PinterestLayoutDelegate {
         return 1//photos[indexPath.item].image.size.height
     }
     
+}
+
+//MARK: - FilteringCompleteDelegate
+extension DNWFilteredImagesViewController : FilteringCompleteDelegate {
+    //array of DNWFilteredImageModel objects
+    func filteringComplete(_ filteredImages:[Any]) {
+        
+    }
 }
 
