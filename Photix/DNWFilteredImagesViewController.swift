@@ -31,8 +31,18 @@ class DNWFilteredImagesViewController: UICollectionViewController {
         if let layout = collectionView?.collectionViewLayout as? PinterestLayout {
             layout.delegate = self
         }
+        
+        let rightBarButton = UIBarButtonItem(title: "Next", style: UIBarButtonItemStyle.done, target: self, action: #selector(NextButtonPressed(_:)))
+        self.navigationItem.rightBarButtonItem = rightBarButton
     }
     
+}
+
+//MARK: - Button Press Actions
+extension DNWFilteredImagesViewController {
+    func NextButtonPressed(_ sender:UIBarButtonItem!) {
+        
+    }
 }
 
 //MARK: - UICollectionView Functions
