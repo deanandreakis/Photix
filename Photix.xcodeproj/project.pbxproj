@@ -168,6 +168,7 @@
 		5E66A9AD2117E855003F5AB6 /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
 		5E66A9AF2117E9E6003F5AB6 /* DNWFilteredImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNWFilteredImagesViewController.swift; sourceTree = "<group>"; };
 		5ECEE7D1214B4CFE00CB7E1E /* AnnotatedPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotatedPhotoCell.swift; sourceTree = "<group>"; };
+		5EDD3DAA2153431700FCA483 /* GPUImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GPUImage.h; path = Pods/GPUImage/framework/Source/GPUImage.h; sourceTree = "<group>"; };
 		71947EC2558290C66D575188 /* Pods-BasePods-OilPaintPlus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasePods-OilPaintPlus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BasePods-OilPaintPlus/Pods-BasePods-OilPaintPlus.debug.xcconfig"; sourceTree = "<group>"; };
 		8B6298F946C3630B3FA07167 /* libPods-PhotixFilter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PhotixFilter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C58F0539C9452401830ADD9 /* Pods-PhotixFilter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotixFilter.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotixFilter/Pods-PhotixFilter.release.xcconfig"; sourceTree = "<group>"; };
@@ -482,6 +483,7 @@
 		C1DBBCD418A6BFEF007BF4CE = {
 			isa = PBXGroup;
 			children = (
+				5EDD3DAA2153431700FCA483 /* GPUImage.h */,
 				C1DBBCE818A6BFEF007BF4CE /* Photix */,
 				C1DBBD0518A6BFEF007BF4CE /* PhotixTests */,
 				C1054CEA19A434D800A4D8F3 /* OilPaintPlus */,

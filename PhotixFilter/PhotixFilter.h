@@ -12,7 +12,6 @@
 #import "GPUImage.h"
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
-//#import <ShipLib/ShipLib.h>
 #import <iAd/iAd.h>
 
 //! Project version number for PhotixFilter.

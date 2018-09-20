@@ -36,12 +36,19 @@ class DNWFilteredImagesViewController: UICollectionViewController {
         self.navigationItem.rightBarButtonItem = rightBarButton
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
+    
 }
 
 //MARK: - Button Press Actions
 extension DNWFilteredImagesViewController {
     func NextButtonPressed(_ sender:UIBarButtonItem!) {
-        
+        //let storyboard = UIStoryboard(name: "MainStoryboard", bundle: nil)
+        //let controller:DNWPictureViewController = storyboard.instantiateViewController(withIdentifier: "MyPicture") as! DNWPictureViewController
+        //controller.imageToSet = self.imageToSet
+        //self.navigationController?.pushViewController(controller, animated: true)
     }
 }
 
