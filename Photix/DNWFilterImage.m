@@ -9,8 +9,10 @@
 #import "DNWFilterImage.h"
 #import <QuartzCore/QuartzCore.h>
 #import "DNWFilteredImageModel.h"
-#import "GPUImage.h"
+//#import "GPUImage.h"
 #import "UIImage+normalizedImage.h"
+#import <PhotixFilter/PhotixFilter-Swift.h>
+
 
 @interface DNWFilterImage ()
 
@@ -285,10 +287,10 @@
             
             UIImage* newImage = [self resizeImageToSize:CGSizeMake(scaledWidth, scaledHeight) Image:imageToFilter];
             
-            [self processGPUImageFilters:newImage];
+            //[self processGPUImageFilters:newImage];
             [self processCoreImageFilters:newImage];
         } else{
-            [self processGPUImageFilters:imageToFilter];
+            //[self processGPUImageFilters:imageToFilter];
             [self processCoreImageFilters:imageToFilter];
         }
         
@@ -306,6 +308,26 @@
     CIImage* beginImage = [CIImage imageWithCGImage:imageToFilter.CGImage];
 
     CIContext *context = [CIContext contextWithOptions:nil];
+    
+    // FOR KUWAHARA
+    KuwaharaFilter* opFilter = [[KuwaharaFilter alloc] init];
+    opFilter.inputImage = beginImage;
+    
+    CIImage *outputImage = opFilter.outputImage;
+    
+    CGImageRef cgimg =
+    [context createCGImage:outputImage fromRect:[outputImage extent]];
+    
+    UIImage *newImage = [UIImage imageWithCGImage:cgimg scale:1.0 orientation:orientation];
+    
+    DNWFilteredImageModel* imageModel = [[DNWFilteredImageModel alloc] init];
+    imageModel.imageName = @"Oil Paint";
+    imageModel.filteredImage = newImage;
+    
+    [self.retVal addObject:imageModel];
+    
+    CGImageRelease(cgimg);
+    // END KUWAHARA
     
     /*for (NSString *name in [CIFilter filterNamesInCategory:kCICategoryBuiltIn])
     {
@@ -378,43 +400,43 @@
 }
 
 
-- (void)processGPUImageFilters:(UIImage*)imageToFilter
-{
-        UIImage* newImage = imageToFilter;
-        
-        UIImage *currentFilteredImage;
-    
-        GPUImageKuwaharaFilter *oilPaintingTransformFilter = [[GPUImageKuwaharaFilter alloc] init];
-        oilPaintingTransformFilter.radius = 6.0;
-    
-        currentFilteredImage = [oilPaintingTransformFilter imageByFilteringImage:newImage];
-    
-        DNWFilteredImageModel* imageModel = [[DNWFilteredImageModel alloc] init];
-        imageModel.imageName = @"Oil Paint";
-        imageModel.filteredImage = currentFilteredImage;
-    
-        [self.retVal addObject:imageModel];
-    
-        for (id key in filterNameDictionary) {
-            
-            NSString* filterName = (NSString*)filterNameDictionary[key];
-            Class filterClass = NSClassFromString(filterName);
-            
-            id oilPaintingTransformFilter = [[filterClass alloc] init];
-            
-            if([filterName isEqualToString:@"GPUImageGlassSphereFilter"]) {
-                GPUImageGlassSphereFilter* oilPaintingTransformFilter = [[filterClass alloc] init];
-                oilPaintingTransformFilter.radius = 1.0;
-            }
-            
-            currentFilteredImage = [oilPaintingTransformFilter imageByFilteringImage:newImage];
-            
-            DNWFilteredImageModel* imageModel = [[DNWFilteredImageModel alloc] init];
-            imageModel.imageName = (NSString*)key;
-            imageModel.filteredImage = currentFilteredImage;
-            
-            [self.retVal addObject:imageModel];
-        }
-}
+//- (void)processGPUImageFilters:(UIImage*)imageToFilter
+//{
+//        UIImage* newImage = imageToFilter;
+//
+//        UIImage *currentFilteredImage;
+//
+//        GPUImageKuwaharaFilter *oilPaintingTransformFilter = [[GPUImageKuwaharaFilter alloc] init];
+//        oilPaintingTransformFilter.radius = 6.0;
+//
+//        currentFilteredImage = [oilPaintingTransformFilter imageByFilteringImage:newImage];
+//
+//        DNWFilteredImageModel* imageModel = [[DNWFilteredImageModel alloc] init];
+//        imageModel.imageName = @"Oil Paint";
+//        imageModel.filteredImage = currentFilteredImage;
+//
+//        [self.retVal addObject:imageModel];
+//
+//        for (id key in filterNameDictionary) {
+//
+//            NSString* filterName = (NSString*)filterNameDictionary[key];
+//            Class filterClass = NSClassFromString(filterName);
+//
+//            id oilPaintingTransformFilter = [[filterClass alloc] init];
+//
+//            if([filterName isEqualToString:@"GPUImageGlassSphereFilter"]) {
+//                GPUImageGlassSphereFilter* oilPaintingTransformFilter = [[filterClass alloc] init];
+//                oilPaintingTransformFilter.radius = 1.0;
+//            }
+//
+//            currentFilteredImage = [oilPaintingTransformFilter imageByFilteringImage:newImage];
+//
+//            DNWFilteredImageModel* imageModel = [[DNWFilteredImageModel alloc] init];
+//            imageModel.imageName = (NSString*)key;
+//            imageModel.filteredImage = currentFilteredImage;
+//
+//            [self.retVal addObject:imageModel];
+//        }
+//}
 
 @end
