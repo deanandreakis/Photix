@@ -9,174 +9,25 @@
 #import "DNWFilterImage.h"
 #import <QuartzCore/QuartzCore.h>
 #import "DNWFilteredImageModel.h"
-//#import "GPUImage.h"
 #import "UIImage+normalizedImage.h"
 #import <PhotixFilter/PhotixFilter-Swift.h>
 
 
 @interface DNWFilterImage ()
 
-@property (strong, nonatomic) NSMutableDictionary* filterNameDictionary;//lists all the names of the GPUImage filters we use
-@property (strong, nonatomic) NSMutableDictionary* filterNameDictionaryCI;//lists all the names of the CoreImage filters we use
 @property (strong, nonatomic) NSMutableDictionary* filterNameDictionaryCITest;//lists all the names of the CoreImage filters we use
 @property (strong, nonatomic) NSMutableArray* retVal;
 @end
 
 @implementation DNWFilterImage
 
-@synthesize filterDelegate, filterNameDictionary, filterNameDictionaryCI, filterNameDictionaryCITest;
+@synthesize filterDelegate, filterNameDictionaryCITest;
 
 - (id) init {
     if (self = [super init]) {
         //NOTE: All strings representing the keys from the filterNameDictionary MUST be present in
         //the guideArray as the guideArray is used to define the order that the filters show up from left
-        //to right in the DNWFilterViewController..
-        filterNameDictionary = [[NSMutableDictionary alloc] initWithObjectsAndKeys://@"GPUImageKuwaharaFilter", @"Oil Paint",
-                                 //@"GPUImagePixellateFilter",@"Pixels",
-                                 //@"GPUImagePolarPixellateFilter",@"PolarPix",
-                                 @"GPUImagePolkaDotFilter",@"Dots",
-                                 //@"GPUImageHalftoneFilter",@"HalfTone",
-                                 //@"GPUImageCrosshatchFilter",@"Crossy",
-                                 @"GPUImageSketchFilter",@"Sketch",
-                                 @"GPUImageToonFilter",@"Cartoon",
-                                 //@"GPUImageSmoothToonFilter",@"Smoothy",
-                                 @"GPUImageEmbossFilter",@"Emboss",
-                                 //@"GPUImagePosterizeFilter",@"Poster",
-                                 @"GPUImageSwirlFilter",@"Swirly",
-                                @"GPUImageBulgeDistortionFilter",@"Bulge",
-                                @"GPUImagePinchDistortionFilter",@"Pinch",
-                                @"GPUImageStretchDistortionFilter",@"Stretch",
-                                //@"GPUImageSphereRefractionFilter",@"Sphere",
-                                @"GPUImageGlassSphereFilter",@"Glass",
-                                //@"GPUImageVignetteFilter",@"Vignette",
-                                //@"GPUImageCGAColorspaceFilter",@"CGA",
-                                //@"GPUImageSepiaFilter",@"Sepia",
-                                //@"GPUImageiOSBlurFilter",@"Blur",
-                                //@"GPUImageColorInvertFilter",@"Invert",
-                                //@"GPUImageGrayscaleFilter",@"Gray",
-                                //@"GPUImageFalseColorFilter",@"False",
-                                //@"GPUImageSoftEleganceFilter",@"Soft",
-                                //@"GPUImageHazeFilter",@"Haze",
-                                nil];
-        
-        filterNameDictionaryCI = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
-                                  @"CIAdditionCompositing",@"TEST1",
-                                  @"CIAffineClamp",@"TEST2",
-                                  @"CIAffineTile",@"TEST3",
-                                  @"CIAffineTransform",@"TEST4",
-                                  @"CIBarsSwipeTransition",@"TEST5",
-                                  @"CIBlendWithAlphaMask",@"TEST6",
-                                  @"CIBlendWithMask",@"TEST7",
-                                  @"CIBloom",@"TEST8",
-                                  @"CIBumpDistortion",@"TEST9",
-                                  @"CIBumpDistortionLinear",@"TEST10",
-                                  //@"CICheckerboardGenerator",@"TEST11",
-                                  @"CICircleSplashDistortion",@"TEST12",
-                                  @"CICircularScreen",@"TEST13",
-                                  @"CIColorBlendMode",@"TEST14",
-                                  @"CIColorBurnBlendMode",@"TEST15",
-                                  @"CIColorClamp",@"TEST16",
-                                  @"CIColorControls",@"TEST17",
-                                  @"CIColorCrossPolynomial",@"TEST18",
-                                  @"CIColorCube",@"TEST19",
-                                  @"CIColorCubeWithColorSpace",@"TEST20",
-                                  @"CIColorDodgeBlendMode",@"TEST21",
-                                  @"CIColorInvert",@"TEST22",
-                                  @"CIColorMap",@"TEST23",
-                                  @"CIColorMatrix",@"TEST24",
-                                  @"CIColorMonochrome",@"TEST25",
-                                  @"CIColorPolynomial",@"TEST26",
-                                  @"CIColorPosterize",@"TEST27",
-                                  //@"CIConstantColorGenerator",@"TEST28",
-                                  @"CIConvolution3X3",@"TEST29",
-                                  @"CIConvolution5X5",@"TEST30",
-                                  @"CIConvolution9Horizontal",@"TEST31",
-                                  @"CIConvolution9Vertical",@"TEST32",
-                                  @"CICopyMachineTransition",@"TEST33",
-                                  @"CICrop",@"TEST34",
-                                  @"CIDarkenBlendMode",@"TEST35",
-                                  @"CIDifferenceBlendMode",@"TEST36",
-                                  @"CIDisintegrateWithMaskTransition",@"TEST37",
-                                  @"CIDissolveTransition",@"TEST38",
-                                  @"CIDotScreen",@"TEST39",
-                                  @"CIEightfoldReflectedTile",@"TEST40",
-                                  @"CIExclusionBlendMode",@"TEST41",
-                                  @"CIExposureAdjust",@"TEST42",
-                                  @"CIFalseColor",@"TEST43",
-                                  @"CIFlashTransition",@"TEST44",
-                                  @"CIFourfoldReflectedTile",@"TEST45",
-                                  @"CIFourfoldRotatedTile",@"TEST46",
-                                  @"CIFourfoldTranslatedTile",@"TEST47",
-                                  @"CIGammaAdjust",@"TEST48",
-                                  @"CIGaussianBlur",@"TEST49",
-                                  //@"CIGaussianGradient",@"TEST50",
-                                  @"CIGlideReflectedTile",@"TEST51",
-                                  @"CIGloom",@"TEST52",
-                                  @"CIHardLightBlendMode",@"TEST53",
-                                  @"CIHatchedScreen",@"TEST54",
-                                  @"CIHighlightShadowAdjust",@"TEST55",
-                                  @"CIHoleDistortion",@"TEST56",
-                                  @"CIHueAdjust",@"TEST57",
-                                  @"CIHueBlendMode",@"TEST58",
-                                  @"CILanczosScaleTransform",@"TEST59",
-                                  @"CILightenBlendMode",@"TEST60",
-                                  @"CILightTunnel",@"TEST61",
-                                  //@"CILinearGradient",@"TEST62",
-                                  @"CILinearToSRGBToneCurve",@"TEST63",
-                                  @"CILineScreen",@"TEST64",
-                                  @"CILuminosityBlendMode",@"TEST65",
-                                  @"CIMaskToAlpha",@"TEST66",
-                                  @"CIMaximumComponent",@"TEST67",
-                                  @"CIMaximumCompositing",@"TEST68",
-                                  @"CIMinimumComponent",@"TEST69",
-                                  @"CIMinimumCompositing",@"TEST70",
-                                  @"CIModTransition",@"TEST71",
-                                  @"CIMultiplyBlendMode",@"TEST72",
-                                  @"CIMultiplyCompositing",@"TEST73",
-                                  @"CIOverlayBlendMode",@"TEST74",
-                                  @"CIPhotoEffectChrome",@"TEST75",
-                                  @"CIPhotoEffectFade",@"TEST76",
-                                  @"CIPhotoEffectInstant",@"TEST77",
-                                  @"CIPhotoEffectMono",@"TEST78",
-                                  @"CIPhotoEffectNoir",@"TEST79",
-                                  @"CIPhotoEffectProcess",@"TEST80",
-                                  @"CIPhotoEffectTonal",@"TEST81",
-                                  @"CIPhotoEffectTransfer",@"TEST82",
-                                  @"CIPinchDistortion",@"TEST83",
-                                  @"CIPixellate",@"TEST84",
-                                  //@"CIQRCodeGenerator",@"TEST85",
-                                  //@"CIRadialGradient",@"TEST86",
-                                  //@"CIRandomGenerator",@"TEST87",
-                                  @"CISaturationBlendMode",@"TEST88",
-                                  @"CIScreenBlendMode",@"TEST89",
-                                  @"CISepiaTone",@"TEST90",
-                                  @"CISharpenLuminance",@"TEST91",
-                                  @"CISixfoldReflectedTile",@"TEST92",
-                                  @"CISixfoldRotatedTile",@"TEST93",
-                                  //@"CISmoothLinearGradient",@"TEST94",
-                                  @"CISoftLightBlendMode",@"TEST95",
-                                  @"CISourceAtopCompositing",@"TEST96",
-                                  @"CISourceInCompositing",@"TEST97",
-                                  @"CISourceOutCompositing",@"TEST98",
-                                  @"CISourceOverCompositing",@"TEST99",
-                                  @"CISRGBToneCurveToLinear",@"TEST100",
-                                  //@"CIStarShineGenerator",@"TEST101",
-                                  @"CIStraightenFilter",@"TEST102",
-                                  //@"CIStripesGenerator",@"TEST103",
-                                  @"CISwipeTransition",@"TEST104",
-                                  @"CITemperatureAndTint",@"TEST105",
-                                  @"CIToneCurve",@"TEST106",
-                                  @"CITriangleKaleidoscope",@"TEST107",
-                                  @"CITwelvefoldReflectedTile",@"TEST108",
-                                  @"CITwirlDistortion",@"TEST109",
-                                  @"CIUnsharpMask",@"TEST110",
-                                  @"CIVibrance",@"TEST111",
-                                  @"CIVignette",@"TEST112",
-                                  @"CIVignetteEffect",@"TEST113",
-                                  @"CIVortexDistortion",@"TEST114",
-                                  @"CIWhitePointAdjust",@"TEST115",
-                                  nil];
-        
+        //to right in the DNWFilterViewController.
         filterNameDictionaryCITest = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
                                   @"CIColorMonochrome",@"Color Mono",
                                   @"CIGaussianBlur",@"Blur",
@@ -253,9 +104,6 @@
     newImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
-    //if(newImage == nil)
-    //NSLog(@"could not scale image");
-    
     return newImage ;
 }
 
@@ -286,11 +134,9 @@
             CGFloat scaledHeight = height * scaleFactor;
             
             UIImage* newImage = [self resizeImageToSize:CGSizeMake(scaledWidth, scaledHeight) Image:imageToFilter];
-            
-            //[self processGPUImageFilters:newImage];
+        
             [self processCoreImageFilters:newImage];
         } else{
-            //[self processGPUImageFilters:imageToFilter];
             [self processCoreImageFilters:imageToFilter];
         }
         
@@ -329,33 +175,6 @@
     CGImageRelease(cgimg);
     // END KUWAHARA
     
-    /*for (NSString *name in [CIFilter filterNamesInCategory:kCICategoryBuiltIn])
-    {
-        CIFilter *filter = [CIFilter filterWithName:name];
-        
-        NSArray* ikeys = [filter inputKeys];
-        NSLog(@"FILTER NAMES: %@", name);
-        
-        if([ikeys containsObject:@"inputImage"]){
-            [filter setValue:beginImage forKey:kCIInputImageKey];
-            
-            CIImage *outputImage = [filter outputImage];
-            
-            CGImageRef cgimg =
-            [context createCGImage:outputImage fromRect:[outputImage extent]];
-            
-            UIImage *newImage = [UIImage imageWithCGImage:cgimg scale:1.0 orientation:orientation];
-            
-            DNWFilteredImageModel* imageModel = [[DNWFilteredImageModel alloc] init];
-            imageModel.imageName = name;
-            imageModel.filteredImage = newImage;
-            
-            [self.retVal addObject:imageModel];
-            
-            CGImageRelease(cgimg);
-        }
-    }*/
-    
     for (id key in filterNameDictionaryCITest) {
         
         NSString* filterName = (NSString*)filterNameDictionaryCITest[key];
@@ -376,9 +195,6 @@
             } else {
                 [filter setValue:[NSNumber numberWithFloat:(centerX - .2*centerX)] forKey:@"inputRadius"];
             }
-            
-            //NSArray* ikeys = [filter inputKeys];
-            //NSLog(@"KEYS: %@", ikeys);
         }
         
         CIImage *outputImage = [filter outputImage];
@@ -398,45 +214,5 @@
     }
     context = nil;
 }
-
-
-//- (void)processGPUImageFilters:(UIImage*)imageToFilter
-//{
-//        UIImage* newImage = imageToFilter;
-//
-//        UIImage *currentFilteredImage;
-//
-//        GPUImageKuwaharaFilter *oilPaintingTransformFilter = [[GPUImageKuwaharaFilter alloc] init];
-//        oilPaintingTransformFilter.radius = 6.0;
-//
-//        currentFilteredImage = [oilPaintingTransformFilter imageByFilteringImage:newImage];
-//
-//        DNWFilteredImageModel* imageModel = [[DNWFilteredImageModel alloc] init];
-//        imageModel.imageName = @"Oil Paint";
-//        imageModel.filteredImage = currentFilteredImage;
-//
-//        [self.retVal addObject:imageModel];
-//
-//        for (id key in filterNameDictionary) {
-//
-//            NSString* filterName = (NSString*)filterNameDictionary[key];
-//            Class filterClass = NSClassFromString(filterName);
-//
-//            id oilPaintingTransformFilter = [[filterClass alloc] init];
-//
-//            if([filterName isEqualToString:@"GPUImageGlassSphereFilter"]) {
-//                GPUImageGlassSphereFilter* oilPaintingTransformFilter = [[filterClass alloc] init];
-//                oilPaintingTransformFilter.radius = 1.0;
-//            }
-//
-//            currentFilteredImage = [oilPaintingTransformFilter imageByFilteringImage:newImage];
-//
-//            DNWFilteredImageModel* imageModel = [[DNWFilteredImageModel alloc] init];
-//            imageModel.imageName = (NSString*)key;
-//            imageModel.filteredImage = currentFilteredImage;
-//
-//            [self.retVal addObject:imageModel];
-//        }
-//}
 
 @end

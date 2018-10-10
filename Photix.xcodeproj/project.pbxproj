@@ -20,7 +20,6 @@
 		C1054CEF19A434D800A4D8F3 /* PhotoEditingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1054CEE19A434D800A4D8F3 /* PhotoEditingViewController.m */; };
 		C1054CF119A434D800A4D8F3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1054CF019A434D800A4D8F3 /* MainInterface.storyboard */; };
 		C1054CF419A434D800A4D8F3 /* OilPaintPlus.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C1054CE519A434D800A4D8F3 /* OilPaintPlus.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		C11C84521CE4266800625DD8 /* libGPUImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BEFF391CD9998E0033A878 /* libGPUImage.a */; };
 		C11C84541CE427C400625DD8 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11C84531CE427C400625DD8 /* AdSupport.framework */; };
 		C11C84561CE427D300625DD8 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11C84551CE427D300625DD8 /* AudioToolbox.framework */; };
 		C11C84581CE427DE00625DD8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11C84571CE427DE00625DD8 /* AVFoundation.framework */; };
@@ -53,7 +52,6 @@
 		C1BAFD3118B158570078C88D /* UIImage+normalizedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BAFD3018B158570078C88D /* UIImage+normalizedImage.m */; };
 		C1BAFD3718B15D720078C88D /* DNWPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BAFD3618B15D720078C88D /* DNWPictureViewController.m */; };
 		C1BAFD3918B1B4E70078C88D /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BAFD3818B1B4E70078C88D /* Social.framework */; };
-		C1BEFF3F1CD999A30033A878 /* libGPUImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BEFF391CD9998E0033A878 /* libGPUImage.a */; };
 		C1C1163B18D5FB9C00247E0F /* DNWImageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C1C1163A18D5FB9C00247E0F /* DNWImageTests.m */; };
 		C1C1163C18D60C4F00247E0F /* DNWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C1DBBCF218A6BFEF007BF4CE /* DNWAppDelegate.m */; };
 		C1C1163D18D60C4F00247E0F /* UIImage+normalizedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BAFD3018B158570078C88D /* UIImage+normalizedImage.m */; };
@@ -170,7 +168,6 @@
 		5E66A9AD2117E855003F5AB6 /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
 		5E66A9AF2117E9E6003F5AB6 /* DNWFilteredImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNWFilteredImagesViewController.swift; sourceTree = "<group>"; };
 		5ECEE7D1214B4CFE00CB7E1E /* AnnotatedPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotatedPhotoCell.swift; sourceTree = "<group>"; };
-		5EDD3DAA2153431700FCA483 /* GPUImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GPUImage.h; path = Pods/GPUImage/framework/Source/GPUImage.h; sourceTree = "<group>"; };
 		71947EC2558290C66D575188 /* Pods-BasePods-OilPaintPlus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasePods-OilPaintPlus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BasePods-OilPaintPlus/Pods-BasePods-OilPaintPlus.debug.xcconfig"; sourceTree = "<group>"; };
 		8B6298F946C3630B3FA07167 /* libPods-PhotixFilter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PhotixFilter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C58F0539C9452401830ADD9 /* Pods-PhotixFilter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotixFilter.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotixFilter/Pods-PhotixFilter.release.xcconfig"; sourceTree = "<group>"; };
@@ -212,8 +209,6 @@
 		C1A9F41B1A1EE1BA00513812 /* lookup_soft_elegance_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lookup_soft_elegance_1.png; sourceTree = "<group>"; };
 		C1A9F41E1A1EE1CC00513812 /* lookup_soft_elegance_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lookup_soft_elegance_2.png; sourceTree = "<group>"; };
 		C1AD7DF81CE94E5500B06E85 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = "Pods/Google-Mobile-Ads-SDK/GoogleMobileAdsSdkiOS-7.8.0/GoogleMobileAds.framework"; sourceTree = "<group>"; };
-		C1AE037C1E3AF261001BFF32 /* libGPUImage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGPUImage.a; path = "../../Library/Developer/Xcode/DerivedData/Photix-ahztdgfwpfqdzkfkacllflryeoos/Build/Products/Debug-iphoneos/GPUImage/libGPUImage.a"; sourceTree = "<group>"; };
-		C1B59F7C1CEFF9E4008DEB05 /* libGMImagePicker.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGMImagePicker.a; path = "../../Library/Developer/Xcode/DerivedData/Photix-ahztdgfwpfqdzkfkacllflryeoos/Build/Products/Debug-iphoneos/libGMImagePicker.a"; sourceTree = "<group>"; };
 		C1BAFD2718B14B2A0078C88D /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
 		C1BAFD2818B14B410078C88D /* DatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseManager.h; sourceTree = "<group>"; };
 		C1BAFD2918B14B4E0078C88D /* DatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseManager.m; sourceTree = "<group>"; };
@@ -224,9 +219,6 @@
 		C1BAFD3618B15D720078C88D /* DNWPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNWPictureViewController.m; sourceTree = "<group>"; };
 		C1BAFD3818B1B4E70078C88D /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		C1BAFD3A18B1B58F0078C88D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		C1BEFF391CD9998E0033A878 /* libGPUImage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGPUImage.a; path = "../../Library/Developer/Xcode/DerivedData/Photix-ahztdgfwpfqdzkfkacllflryeoos/Build/Products/Debug-iphoneos/libGPUImage.a"; sourceTree = "<group>"; };
-		C1BEFF3A1CD9998E0033A878 /* libMBProgressHUD.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMBProgressHUD.a; path = "../../Library/Developer/Xcode/DerivedData/Photix-ahztdgfwpfqdzkfkacllflryeoos/Build/Products/Debug-iphoneos/libMBProgressHUD.a"; sourceTree = "<group>"; };
-		C1BEFF3B1CD9998E0033A878 /* libMGInstagram.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMGInstagram.a; path = "../../Library/Developer/Xcode/DerivedData/Photix-ahztdgfwpfqdzkfkacllflryeoos/Build/Products/Debug-iphoneos/libMGInstagram.a"; sourceTree = "<group>"; };
 		C1C1163818D495DC00247E0F /* PhotixTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotixTests.h; sourceTree = "<group>"; };
 		C1C1163918D5FB9C00247E0F /* DNWImageTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNWImageTests.h; sourceTree = "<group>"; };
 		C1C1163A18D5FB9C00247E0F /* DNWImageTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNWImageTests.m; sourceTree = "<group>"; };
@@ -288,7 +280,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C11C84521CE4266800625DD8 /* libGPUImage.a in Frameworks */,
 				C1CB31891A33A40900B515AE /* CoreImage.framework in Frameworks */,
 				72921BDE2226A9A77CEAEDC1 /* libPods-PhotixFilter.a in Frameworks */,
 			);
@@ -327,7 +318,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1BEFF3F1CD999A30033A878 /* libGPUImage.a in Frameworks */,
 				C1C1164A18D60DBF00247E0F /* CoreGraphics.framework in Frameworks */,
 				C1C1164918D60DB300247E0F /* Social.framework in Frameworks */,
 				C1C1164818D60DA900247E0F /* MessageUI.framework in Frameworks */,
@@ -486,7 +476,6 @@
 		C1DBBCD418A6BFEF007BF4CE = {
 			isa = PBXGroup;
 			children = (
-				5EDD3DAA2153431700FCA483 /* GPUImage.h */,
 				C1DBBCE818A6BFEF007BF4CE /* Photix */,
 				C1DBBD0518A6BFEF007BF4CE /* PhotixTests */,
 				C1054CEA19A434D800A4D8F3 /* OilPaintPlus */,
@@ -512,8 +501,6 @@
 		C1DBBCDF18A6BFEF007BF4CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C1AE037C1E3AF261001BFF32 /* libGPUImage.a */,
-				C1B59F7C1CEFF9E4008DEB05 /* libGMImagePicker.a */,
 				C1AD7DF81CE94E5500B06E85 /* GoogleMobileAds.framework */,
 				C11C84641CE4283300625DD8 /* SystemConfiguration.framework */,
 				C11C84611CE4281600625DD8 /* MediaPlayer.framework */,
@@ -526,9 +513,6 @@
 				C11C84531CE427C400625DD8 /* AdSupport.framework */,
 				C11C844C1CE41EF700625DD8 /* CoreBluetooth.framework */,
 				C11C844A1CE41EEB00625DD8 /* SafariServices.framework */,
-				C1BEFF391CD9998E0033A878 /* libGPUImage.a */,
-				C1BEFF3A1CD9998E0033A878 /* libMBProgressHUD.a */,
-				C1BEFF3B1CD9998E0033A878 /* libMGInstagram.a */,
 				C1F6992F1B25EA1E0077C3FF /* StoreKit.framework */,
 				C1CB31881A33A40900B515AE /* CoreImage.framework */,
 				C1E20FB118B980E1001A2BE3 /* QuartzCore.framework */,
@@ -651,7 +635,6 @@
 				C1054CE119A434D800A4D8F3 /* Sources */,
 				C1054CE219A434D800A4D8F3 /* Frameworks */,
 				C1054CE319A434D800A4D8F3 /* Resources */,
-				02D42B0DB3A580E65881E1D7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -671,7 +654,6 @@
 				C1A9F3F01A1D9B8400513812 /* Frameworks */,
 				C1A9F3F11A1D9B8400513812 /* Headers */,
 				C1A9F3F21A1D9B8400513812 /* Resources */,
-				D740FFECE3DF78CBD173A9FF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -692,7 +674,6 @@
 				C1DBBCDB18A6BFEF007BF4CE /* Resources */,
 				C1054CFA19A434D800A4D8F3 /* Embed App Extensions */,
 				C1A9F4101A1D9B8500513812 /* Embed Frameworks */,
-				44FCAD22483C9DA4307DB441 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -830,58 +811,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		02D42B0DB3A580E65881E1D7 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-OilPaintPlus/Pods-OilPaintPlus-resources.sh",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup.png",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_amatorka.png",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_miss_etikate.png",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_1.png",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_2.png",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_amatorka.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_miss_etikate.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_1.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_2.png",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OilPaintPlus/Pods-OilPaintPlus-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		44FCAD22483C9DA4307DB441 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Photix/Pods-Photix-resources.sh",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup.png",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_amatorka.png",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_miss_etikate.png",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_1.png",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_2.png",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_amatorka.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_miss_etikate.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_1.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_2.png",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Photix/Pods-Photix-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		BCB4C924E2949B43C085937C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -912,32 +841,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "./Crashlytics.framework/run 2eaad7ad1fecfce6c414905676a8175bb2a1c253 1b87ad473cb8ac189cc245935c8f083c87fb1700b9d629c028086db540d14b95";
-		};
-		D740FFECE3DF78CBD173A9FF /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PhotixFilter/Pods-PhotixFilter-resources.sh",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup.png",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_amatorka.png",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_miss_etikate.png",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_1.png",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_2.png",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_amatorka.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_miss_etikate.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_1.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_2.png",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhotixFilter/Pods-PhotixFilter-resources.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 		EE881EDC615020AE0D482BDE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

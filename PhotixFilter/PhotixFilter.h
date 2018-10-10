@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "DNWFilterImage.h"
 #import "DNWFilteredImageModel.h"
-//#import "GPUImage.h"
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
 #import <iAd/iAd.h>

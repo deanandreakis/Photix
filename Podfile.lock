@@ -1,20 +1,16 @@
 PODS:
   - Google-Mobile-Ads-SDK (7.33.1)
-  - GPUImage (0.1.7)
 
 DEPENDENCIES:
   - Google-Mobile-Ads-SDK
-  - GPUImage
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Google-Mobile-Ads-SDK
-    - GPUImage
 
 SPEC CHECKSUMS:
   Google-Mobile-Ads-SDK: 71c6d3e8d8f52673fa5a83fc0d027623b11fde16
-  GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
 
-PODFILE CHECKSUM: f1aca87057bbcfbef845cd357a95f1fe60af1237
+PODFILE CHECKSUM: ebc2a17321d41f9e1014fa1465387ac7ba1e9618
 
 COCOAPODS: 1.5.0
