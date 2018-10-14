@@ -23,7 +23,6 @@
 
 @property (strong, nonatomic) IBOutlet UIImageView* pictureImageView;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem* shareButton;
-@property (weak, nonatomic) IBOutlet GADBannerView  *adBannerView;
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint* pictureContraint;
 
 @end
@@ -46,12 +45,6 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     [pictureImageView setImage:imageToSet];
-    //[MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    //[self performSelector:@selector(processImage) withObject:nil afterDelay:0.5];
-    //NSLog(@"Google Mobile Ads SDK version: %@", [GADRequest sdkVersion]);
-    self.adBannerView.adUnitID = ADMOB_KEY;
-    self.adBannerView.rootViewController = self;
-    [self.adBannerView loadRequest:[GADRequest request]];
     
     UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"Done"
                                                                     style:UIBarButtonItemStyleDone target:self action:@selector(StartOverButtonPressed:)];
@@ -61,11 +54,6 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    BOOL productPurchased = [[NSUserDefaults standardUserDefaults] boolForKey:USER_PURCHASED_TIP];
-    if (productPurchased) {
-        self.adBannerView.hidden = YES;
-    }
-    
     [self.navigationController setNavigationBarHidden:FALSE];
 }
 
@@ -203,22 +191,6 @@
 
 - (void) traitCollectionDidChange: (UITraitCollection *) previousTraitCollection {
     [super traitCollectionDidChange: previousTraitCollection];
-    if ((self.traitCollection.verticalSizeClass != previousTraitCollection.verticalSizeClass)
-        || self.traitCollection.horizontalSizeClass != previousTraitCollection.horizontalSizeClass) {
-        // hide the ad banner view
-        if(self.traitCollection.verticalSizeClass == UIUserInterfaceSizeClassCompact)
-           //||
-           //(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad &&
-           // UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation)))
-        {
-            self.adBannerView.hidden = YES;
-        } else {
-            BOOL productPurchased = [[NSUserDefaults standardUserDefaults] boolForKey:USER_PURCHASED_TIP];
-            if (!productPurchased) {
-                self.adBannerView.hidden = NO;
-            }
-        }
-    }
 }
 
 

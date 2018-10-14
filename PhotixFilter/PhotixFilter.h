@@ -11,7 +11,6 @@
 #import "DNWFilteredImageModel.h"
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
-#import <iAd/iAd.h>
 
 //! Project version number for PhotixFilter.
 FOUNDATION_EXPORT double PhotixFilterVersionNumber;
