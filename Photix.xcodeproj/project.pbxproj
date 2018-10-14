@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5E3E0F732160446A0015BF52 /* KuwaharaFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3E0F722160446A0015BF52 /* KuwaharaFilter.swift */; };
-		5E66A9AE2117E855003F5AB6 /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E66A9AD2117E855003F5AB6 /* PinterestLayout.swift */; };
 		C10182261A2153DA0071A793 /* lookup_soft_elegance_1.png in Resources */ = {isa = PBXBuildFile; fileRef = C1A9F41B1A1EE1BA00513812 /* lookup_soft_elegance_1.png */; };
 		C10182271A2153E50071A793 /* lookup_soft_elegance_2.png in Resources */ = {isa = PBXBuildFile; fileRef = C1A9F41E1A1EE1CC00513812 /* lookup_soft_elegance_2.png */; };
 		C1054CE719A434D800A4D8F3 /* PhotosUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1054CE619A434D800A4D8F3 /* PhotosUI.framework */; };
@@ -152,7 +151,6 @@
 /* Begin PBXFileReference section */
 		5E3E0F722160446A0015BF52 /* KuwaharaFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KuwaharaFilter.swift; sourceTree = "<group>"; };
 		5E66A9AC2117E855003F5AB6 /* Photix-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Photix-Bridging-Header.h"; sourceTree = "<group>"; };
-		5E66A9AD2117E855003F5AB6 /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
 		C1054CE519A434D800A4D8F3 /* OilPaintPlus.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OilPaintPlus.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1054CE619A434D800A4D8F3 /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = System/Library/Frameworks/PhotosUI.framework; sourceTree = SDKROOT; };
 		C1054CE819A434D800A4D8F3 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
@@ -300,14 +298,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5E66A9AB2117E81B003F5AB6 /* Layouits */ = {
-			isa = PBXGroup;
-			children = (
-				5E66A9AD2117E855003F5AB6 /* PinterestLayout.swift */,
-			);
-			name = Layouits;
-			sourceTree = "<group>";
-		};
 		C1054CEA19A434D800A4D8F3 /* OilPaintPlus */ = {
 			isa = PBXGroup;
 			children = (
@@ -479,7 +469,6 @@
 		C1DBBCE818A6BFEF007BF4CE /* Photix */ = {
 			isa = PBXGroup;
 			children = (
-				5E66A9AB2117E81B003F5AB6 /* Layouits */,
 				C1F699311B25EA8F0077C3FF /* IAP */,
 				C1BAFD2D18B14BA20078C88D /* Resources */,
 				C1BAFD2C18B14B8D0078C88D /* Application Delegate */,
@@ -794,7 +783,6 @@
 				C1BAFD3718B15D720078C88D /* DNWPictureViewController.m in Sources */,
 				C1F694F71AEF1CBF0062D187 /* DNWSettingsViewController.m in Sources */,
 				C1F699361B25EABA0077C3FF /* IAPHelper.m in Sources */,
-				5E66A9AE2117E855003F5AB6 /* PinterestLayout.swift in Sources */,
 				C1210EB71996812000C1E4E7 /* DNWFilterViewController.m in Sources */,
 				C1DBBCEF18A6BFEF007BF4CE /* main.m in Sources */,
 				C1BAFD2A18B14B4E0078C88D /* DatabaseManager.m in Sources */,
@@ -1359,7 +1347,6 @@
 		C1DBBD1318A6BFEF007BF4CE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Photix.app/Photix";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -1390,7 +1377,6 @@
 		C1DBBD1418A6BFEF007BF4CE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Photix.app/Photix";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
