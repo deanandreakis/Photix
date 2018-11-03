@@ -12,7 +12,6 @@
 //@import Photos;
 //@import PhotosUI;
 #import "DNWMainViewController.h"
-//#import <Crashlytics/Crashlytics.h>
 
 @implementation DNWAppDelegate
 
@@ -20,18 +19,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    //[Crashlytics startWithAPIKey:CRASHLYTICS_KEY];
-    
     storyboardName = @"MainStoryboard";
     
     //Theming
     //This is good for the default theme of "light" with all black text etc.
     application.delegate.window.tintColor = [UIColor blackColor];
     [[UILabel appearance] setTextColor:[UIColor blackColor]];
-    
-    //OK...let's try for dark mode
-    //[[UINavigationBar appearance] setBackgroundColor:[UIColor greenColor]];
-    //application.delegate.window.tintColor = [UIColor whiteColor];
     
     return YES;
 }

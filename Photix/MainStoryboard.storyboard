@@ -15,7 +15,6 @@
             <objects>
                 <navigationController storyboardIdentifier="MyNav" definesPresentationContext="YES" id="BFI-CK-iBK" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7U6-bw-8cq">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>

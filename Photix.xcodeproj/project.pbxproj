@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5E3E0F732160446A0015BF52 /* KuwaharaFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3E0F722160446A0015BF52 /* KuwaharaFilter.swift */; };
+		5EC9AE8321780C2300D94638 /* OilPaintPlusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC9AE8221780C2300D94638 /* OilPaintPlusUITests.swift */; };
+		5EC9AE8B21780E4300D94638 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC9AE8A21780E4300D94638 /* SnapshotHelper.swift */; };
 		C10182261A2153DA0071A793 /* lookup_soft_elegance_1.png in Resources */ = {isa = PBXBuildFile; fileRef = C1A9F41B1A1EE1BA00513812 /* lookup_soft_elegance_1.png */; };
 		C10182271A2153E50071A793 /* lookup_soft_elegance_2.png in Resources */ = {isa = PBXBuildFile; fileRef = C1A9F41E1A1EE1CC00513812 /* lookup_soft_elegance_2.png */; };
 		C1054CE719A434D800A4D8F3 /* PhotosUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1054CE619A434D800A4D8F3 /* PhotosUI.framework */; };
@@ -93,6 +95,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		5EC9AE8521780C2400D94638 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1DBBCD518A6BFEF007BF4CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1DBBCDC18A6BFEF007BF4CE;
+			remoteInfo = Photix;
+		};
 		C1054CF219A434D800A4D8F3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C1DBBCD518A6BFEF007BF4CE /* Project object */;
@@ -151,6 +160,10 @@
 /* Begin PBXFileReference section */
 		5E3E0F722160446A0015BF52 /* KuwaharaFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KuwaharaFilter.swift; sourceTree = "<group>"; };
 		5E66A9AC2117E855003F5AB6 /* Photix-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Photix-Bridging-Header.h"; sourceTree = "<group>"; };
+		5EC9AE8021780C2300D94638 /* OilPaintPlusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OilPaintPlusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EC9AE8221780C2300D94638 /* OilPaintPlusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OilPaintPlusUITests.swift; sourceTree = "<group>"; };
+		5EC9AE8421780C2400D94638 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EC9AE8A21780E4300D94638 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		C1054CE519A434D800A4D8F3 /* OilPaintPlus.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OilPaintPlus.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1054CE619A434D800A4D8F3 /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = System/Library/Frameworks/PhotosUI.framework; sourceTree = SDKROOT; };
 		C1054CE819A434D800A4D8F3 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
@@ -235,6 +248,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5EC9AE7D21780C2300D94638 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C1054CE219A434D800A4D8F3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -297,6 +317,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5EC9AE8121780C2300D94638 /* OilPaintPlusUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5EC9AE8A21780E4300D94638 /* SnapshotHelper.swift */,
+				5EC9AE8221780C2300D94638 /* OilPaintPlusUITests.swift */,
+				5EC9AE8421780C2400D94638 /* Info.plist */,
+			);
+			path = OilPaintPlusUITests;
+			sourceTree = "<group>";
+		};
 		C1054CEA19A434D800A4D8F3 /* OilPaintPlus */ = {
 			isa = PBXGroup;
 			children = (
@@ -418,6 +448,7 @@
 				C1054CEA19A434D800A4D8F3 /* OilPaintPlus */,
 				C1A9F3F51A1D9B8400513812 /* PhotixFilter */,
 				C1A9F4041A1D9B8400513812 /* PhotixFilterTests */,
+				5EC9AE8121780C2300D94638 /* OilPaintPlusUITests */,
 				C1DBBCDF18A6BFEF007BF4CE /* Frameworks */,
 				C1DBBCDE18A6BFEF007BF4CE /* Products */,
 			);
@@ -430,6 +461,7 @@
 				C1DBBCFD18A6BFEF007BF4CE /* PhotixTests.xctest */,
 				C1054CE519A434D800A4D8F3 /* OilPaintPlus.appex */,
 				C1A9F3F41A1D9B8400513812 /* PhotixFilter.framework */,
+				5EC9AE8021780C2300D94638 /* OilPaintPlusUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -554,6 +586,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		5EC9AE7F21780C2300D94638 /* OilPaintPlusUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5EC9AE8721780C2400D94638 /* Build configuration list for PBXNativeTarget "OilPaintPlusUITests" */;
+			buildPhases = (
+				5EC9AE7C21780C2300D94638 /* Sources */,
+				5EC9AE7D21780C2300D94638 /* Frameworks */,
+				5EC9AE7E21780C2300D94638 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5EC9AE8621780C2400D94638 /* PBXTargetDependency */,
+			);
+			name = OilPaintPlusUITests;
+			productName = OilPaintPlusUITests;
+			productReference = 5EC9AE8021780C2300D94638 /* OilPaintPlusUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		C1054CE419A434D800A4D8F3 /* OilPaintPlus */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C1054CF919A434D800A4D8F3 /* Build configuration list for PBXNativeTarget "OilPaintPlus" */;
@@ -637,9 +687,16 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = DNW;
+				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = deanware;
 				TargetAttributes = {
+					5EC9AE7F21780C2300D94638 = {
+						CreatedOnToolsVersion = 10.0;
+						DevelopmentTeam = 6XBQPB83GR;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C1DBBCDC18A6BFEF007BF4CE;
+					};
 					C1054CE419A434D800A4D8F3 = {
 						CreatedOnToolsVersion = 6.0;
 						DevelopmentTeam = 6XBQPB83GR;
@@ -659,6 +716,7 @@
 						};
 					};
 					C1DBBCFC18A6BFEF007BF4CE = {
+						ProvisioningStyle = Automatic;
 						TestTargetID = C1DBBCDC18A6BFEF007BF4CE;
 					};
 				};
@@ -679,11 +737,19 @@
 				C1DBBCFC18A6BFEF007BF4CE /* PhotixTests */,
 				C1054CE419A434D800A4D8F3 /* OilPaintPlus */,
 				C1A9F3F31A1D9B8400513812 /* PhotixFilter */,
+				5EC9AE7F21780C2300D94638 /* OilPaintPlusUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5EC9AE7E21780C2300D94638 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C1054CE319A434D800A4D8F3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -745,12 +811,22 @@
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "./Crashlytics.framework/run 2eaad7ad1fecfce6c414905676a8175bb2a1c253 1b87ad473cb8ac189cc245935c8f083c87fb1700b9d629c028086db540d14b95";
+			shellScript = "
+";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5EC9AE7C21780C2300D94638 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EC9AE8321780C2300D94638 /* OilPaintPlusUITests.swift in Sources */,
+				5EC9AE8B21780E4300D94638 /* SnapshotHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C1054CE119A434D800A4D8F3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -809,6 +885,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		5EC9AE8621780C2400D94638 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C1DBBCDC18A6BFEF007BF4CE /* Photix */;
+			targetProxy = 5EC9AE8521780C2400D94638 /* PBXContainerItemProxy */;
+		};
 		C1054CF319A434D800A4D8F3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C1054CE419A434D800A4D8F3 /* OilPaintPlus */;
@@ -851,6 +932,68 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		5EC9AE8821780C2400D94638 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 6XBQPB83GR;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = OilPaintPlusUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.deanware.OilPaintPlusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Photix;
+			};
+			name = Debug;
+		};
+		5EC9AE8921780C2400D94638 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 6XBQPB83GR;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = OilPaintPlusUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.deanware.OilPaintPlusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Photix;
+			};
+			name = Release;
+		};
 		C1054CF719A434D800A4D8F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1344,6 +1487,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Photix.app/Photix";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1364,6 +1510,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.deanware.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = xctest;
@@ -1374,6 +1521,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Photix.app/Photix";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1390,6 +1540,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.deanware.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = xctest;
@@ -1399,6 +1550,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5EC9AE8721780C2400D94638 /* Build configuration list for PBXNativeTarget "OilPaintPlusUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EC9AE8821780C2400D94638 /* Debug */,
+				5EC9AE8921780C2400D94638 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C1054CF919A434D800A4D8F3 /* Build configuration list for PBXNativeTarget "OilPaintPlus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
