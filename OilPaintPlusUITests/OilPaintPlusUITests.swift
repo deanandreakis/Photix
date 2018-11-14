@@ -31,6 +31,8 @@ class OilPaintPlusUITests: XCTestCase {
     }
 
     func testExample() {
+        //snapshot("01MainScreen")
+        
         //choose the album button on the front screen
         XCUIApplication().buttons["Album"].tap()
         //choose the camera roll from within the UIImagePickerController
@@ -38,8 +40,23 @@ class OilPaintPlusUITests: XCTestCase {
         //choose a picture from the camera roll within the UIImagePickerController
         XCUIApplication().collectionViews["PhotosGridView"].cells["Photo, Landscape, March 12, 2011, 6:17 PM"].tap()
         
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        if (XCUIApplication().scrollViews.children(matching: .button).element(boundBy: 1).waitForExistence(timeout: 100))
+        {
+            //snapshot("02FilterScreenBefore")
+            XCUIApplication().scrollViews.children(matching: .button).element(boundBy: 1).tap()
+            //snapshot("03FilterScreenAfter")
+            XCUIApplication().navigationBars["DNWFilterView"].buttons["Next"].tap()
+            //snapshot("04PictureScreen")
+        }
+    }
+    
+    func testCoder() {
+        let app = XCUIApplication()
+        app.scrollViews.children(matching: .button).element(boundBy: 1).tap()
+        app.navigationBars["DNWFilterView"].buttons["Next"].tap()
+        app.toolbars["Toolbar"].buttons["Share"].tap()
+        app.buttons["Cancel"].tap()
+        app.navigationBars["DNWPictureView"].buttons["Done"].tap()
     }
 
 }
