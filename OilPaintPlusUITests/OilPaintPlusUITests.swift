@@ -30,9 +30,8 @@ class OilPaintPlusUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        //snapshot("01MainScreen")
-        
+    func testFastlaneSnapshot() {
+        snapshot("01MainScreen")
         //choose the album button on the front screen
         XCUIApplication().buttons["Album"].tap()
         //choose the camera roll from within the UIImagePickerController
@@ -42,21 +41,11 @@ class OilPaintPlusUITests: XCTestCase {
         
         if (XCUIApplication().scrollViews.children(matching: .button).element(boundBy: 1).waitForExistence(timeout: 100))
         {
-            //snapshot("02FilterScreenBefore")
+            snapshot("02FilterScreenBefore")
             XCUIApplication().scrollViews.children(matching: .button).element(boundBy: 1).tap()
-            //snapshot("03FilterScreenAfter")
+            snapshot("03FilterScreenAfter")
             XCUIApplication().navigationBars["DNWFilterView"].buttons["Next"].tap()
-            //snapshot("04PictureScreen")
+            snapshot("04PictureScreen")
         }
     }
-    
-    func testCoder() {
-        let app = XCUIApplication()
-        app.scrollViews.children(matching: .button).element(boundBy: 1).tap()
-        app.navigationBars["DNWFilterView"].buttons["Next"].tap()
-        app.toolbars["Toolbar"].buttons["Share"].tap()
-        app.buttons["Cancel"].tap()
-        app.navigationBars["DNWPictureView"].buttons["Done"].tap()
-    }
-
 }
