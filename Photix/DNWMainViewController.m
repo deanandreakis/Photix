@@ -13,6 +13,7 @@
 #import "DNWFilterViewController.h"
 #import <PhotosUI/PhotosUI.h>
 #import "TargetConditionals.h"
+#import "Photix-Swift.h"
 
 @interface DNWMainViewController ()
 
@@ -36,6 +37,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // Add navigation bar button for new SwiftUI interface
+    UIBarButtonItem *modernButton = [[UIBarButtonItem alloc] initWithTitle:@"Modern" style:UIBarButtonItemStylePlain target:self action:@selector(openModernInterface)];
+    self.navigationItem.rightBarButtonItem = modernButton;
+    
 #if !TARGET_IPHONE_SIMULATOR
     self.uiPicker = [[UIImagePickerController alloc] init];
     
@@ -86,10 +92,15 @@
 -(void)imagePickerController:(UIImagePickerController *)imagePicker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     [imagePicker.presentingViewController dismissViewControllerAnimated:YES completion:nil];
-    DNWFilterViewController *filterViewController = [[UIStoryboard storyboardWithName:kAppDelegate.storyboardName bundle:nil] instantiateViewControllerWithIdentifier:@"MyFilter"];
     UIImage *temp = [info objectForKey:UIImagePickerControllerOriginalImage];
-    filterViewController.imageToSet = temp;
-    [self showViewController:filterViewController sender:self];
+    
+    // Use modern SwiftUI interface by default
+    // Set the preference for future launches
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"UseModernInterface"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    // Present SwiftUI filter selection
+    [SwiftUIBridge presentFilterSelectionFromViewController:self withImage:temp];
 }
 
 -(void)imagePickerControllerDidCancel:(UIImagePickerController *)imagePicker
@@ -110,14 +121,26 @@
     [[PHImageManager defaultManager]requestImageForAsset:lastImageAsset targetSize:PHImageManagerMaximumSize contentMode:PHImageContentModeDefault options:options resultHandler:^(UIImage *result, NSDictionary *info){
         if ([info objectForKey:PHImageErrorKey] == nil && ![[info objectForKey:PHImageResultIsDegradedKey] boolValue] && result != nil) {
             
-            DNWFilterViewController *filterViewController = [[UIStoryboard storyboardWithName:kAppDelegate.storyboardName bundle:nil] instantiateViewControllerWithIdentifier:@"MyFilter"];
-            
-            filterViewController.imageToSet = result;
-            
-            [self showViewController:filterViewController sender:self];
-            //[self.navigationController pushViewController:filterViewController animated:YES];
+            // Option: Use modern SwiftUI interface or legacy interface
+            if ([[NSUserDefaults standardUserDefaults] boolForKey:@"UseModernInterface"]) {
+                // Present SwiftUI filter selection
+                [SwiftUIBridge presentFilterSelectionFromViewController:self withImage:result];
+            } else {
+                // Use legacy Objective-C interface
+                DNWFilterViewController *filterViewController = [[UIStoryboard storyboardWithName:kAppDelegate.storyboardName bundle:nil] instantiateViewControllerWithIdentifier:@"MyFilter"];
+                filterViewController.imageToSet = result;
+                [self showViewController:filterViewController sender:self];
+            }
         }
     }];
+}
+
+#pragma mark - Modern Interface Methods
+
+- (void)openModernInterface
+{
+    // Present the full SwiftUI interface
+    [SwiftUIBridge presentPhotoCaptureFromViewController:self];
 }
 
 @end

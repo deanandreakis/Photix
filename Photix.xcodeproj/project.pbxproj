@@ -8,6 +8,42 @@
 
 /* Begin PBXBuildFile section */
 		5E3E0F732160446A0015BF52 /* KuwaharaFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3E0F722160446A0015BF52 /* KuwaharaFilter.swift */; };
+		5E81251C2DF385070074AED7 /* PhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E81251A2DF385070074AED7 /* PhotoManager.swift */; };
+		5E81251D2DF385070074AED7 /* FilteredImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E81251B2DF385070074AED7 /* FilteredImage.swift */; };
+		5E8125222DF3853A0074AED7 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E81251E2DF3853A0074AED7 /* DataManager.swift */; };
+		5E8125232DF3853A0074AED7 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E81251F2DF3853A0074AED7 /* DependencyContainer.swift */; };
+		5E8125242DF3853A0074AED7 /* FilterProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8125202DF3853A0074AED7 /* FilterProcessor.swift */; };
+		5E8125252DF3853A0074AED7 /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8125212DF3853A0074AED7 /* StoreManager.swift */; };
+		5E8125272DF386280074AED7 /* PhotixApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8125262DF386280074AED7 /* PhotixApp.swift */; };
+		5E8125292DF386540074AED7 /* AppNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8125282DF386540074AED7 /* AppNavigation.swift */; };
+		5E8125302DF389120074AED7 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E81252A2DF389120074AED7 /* CameraView.swift */; };
+		5E8125312DF389120074AED7 /* PhotoEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E81252B2DF389120074AED7 /* PhotoEditView.swift */; };
+		5E8125322DF389120074AED7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E81252C2DF389120074AED7 /* SettingsView.swift */; };
+		5E8125332DF389120074AED7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E81252D2DF389120074AED7 /* ContentView.swift */; };
+		5E8125342DF389120074AED7 /* PhotoCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E81252E2DF389120074AED7 /* PhotoCaptureView.swift */; };
+		5E8125352DF389120074AED7 /* FilterSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E81252F2DF389120074AED7 /* FilterSelectionView.swift */; };
+		5E8125462DF38B620074AED7 /* RealtimeFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8125362DF38B610074AED7 /* RealtimeFilterView.swift */; };
+		5E8125472DF38B620074AED7 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8125372DF38B610074AED7 /* ImageCache.swift */; };
+		5E8125482DF38B620074AED7 /* AdvancedCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8125382DF38B610074AED7 /* AdvancedCameraView.swift */; };
+		5E8125492DF38B620074AED7 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8125392DF38B610074AED7 /* LoadingView.swift */; };
+		5E81254A2DF38B620074AED7 /* LazyFilterGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E81253A2DF38B610074AED7 /* LazyFilterGrid.swift */; };
+		5E81254B2DF38B620074AED7 /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E81253B2DF38B610074AED7 /* PhotoPickerView.swift */; };
+		5E81254C2DF38B620074AED7 /* BackgroundProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E81253C2DF38B620074AED7 /* BackgroundProcessor.swift */; };
+		5E81254D2DF38B620074AED7 /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E81253D2DF38B620074AED7 /* CameraManager.swift */; };
+		5E81254E2DF38B620074AED7 /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E81253E2DF38B620074AED7 /* CameraPreviewView.swift */; };
+		5E81254F2DF38B620074AED7 /* LiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E81253F2DF38B620074AED7 /* LiveActivity.swift */; };
+		5E8125502DF38B620074AED7 /* ObjectiveCBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8125402DF38B620074AED7 /* ObjectiveCBridge.swift */; };
+		5E8125512DF38B620074AED7 /* AccessibilitySupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8125412DF38B620074AED7 /* AccessibilitySupport.swift */; };
+		5E8125522DF38B620074AED7 /* MetalFilterRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8125422DF38B620074AED7 /* MetalFilterRenderer.swift */; };
+		5E8125532DF38B620074AED7 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8125432DF38B620074AED7 /* AsyncImageView.swift */; };
+		5E8125542DF38B620074AED7 /* PhotoLibraryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8125442DF38B620074AED7 /* PhotoLibraryManager.swift */; };
+		5E8125552DF38B620074AED7 /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8125452DF38B620074AED7 /* ViewModifiers.swift */; };
+		5E8125572DF38B8D0074AED7 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8125562DF38B8D0074AED7 /* SwiftUI.framework */; };
+		5E8125592DF38F430074AED7 /* Combine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8125582DF38F430074AED7 /* Combine.framework */; };
+		5E81255B2DF38F530074AED7 /* ActivityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E81255A2DF38F530074AED7 /* ActivityKit.framework */; };
+		5E81255D2DF38F5F0074AED7 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E81255C2DF38F5F0074AED7 /* WidgetKit.framework */; };
+		5E81255F2DF38F6C0074AED7 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E81255E2DF38F6C0074AED7 /* Metal.framework */; };
+		5E8125612DF38F7C0074AED7 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8125602DF38F7C0074AED7 /* MetalKit.framework */; };
 		5EC9AE8321780C2300D94638 /* OilPaintPlusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC9AE8221780C2300D94638 /* OilPaintPlusUITests.swift */; };
 		5EC9AE8B21780E4300D94638 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC9AE8A21780E4300D94638 /* SnapshotHelper.swift */; };
 		C10182261A2153DA0071A793 /* lookup_soft_elegance_1.png in Resources */ = {isa = PBXBuildFile; fileRef = C1A9F41B1A1EE1BA00513812 /* lookup_soft_elegance_1.png */; };
@@ -38,7 +74,6 @@
 		C1A9F4151A1ECB8B00513812 /* DNWFilteredImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C149F4011999941A00584382 /* DNWFilteredImageModel.m */; };
 		C1A9F4161A1ECBD000513812 /* DNWFilterImage.h in Headers */ = {isa = PBXBuildFile; fileRef = C1E0E40E199826EB00D3FD21 /* DNWFilterImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C1A9F4171A1ECBDB00513812 /* DNWFilteredImageModel.h in Headers */ = {isa = PBXBuildFile; fileRef = C149F4001999941A00584382 /* DNWFilteredImageModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C1A9F4181A1ECDA900513812 /* PhotixFilter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A9F3F41A1D9B8400513812 /* PhotixFilter.framework */; };
 		C1A9F41C1A1EE1BA00513812 /* lookup_soft_elegance_1.png in Resources */ = {isa = PBXBuildFile; fileRef = C1A9F41B1A1EE1BA00513812 /* lookup_soft_elegance_1.png */; };
 		C1A9F41D1A1EE1BA00513812 /* lookup_soft_elegance_1.png in Resources */ = {isa = PBXBuildFile; fileRef = C1A9F41B1A1EE1BA00513812 /* lookup_soft_elegance_1.png */; };
 		C1A9F41F1A1EE1CC00513812 /* lookup_soft_elegance_2.png in Resources */ = {isa = PBXBuildFile; fileRef = C1A9F41E1A1EE1CC00513812 /* lookup_soft_elegance_2.png */; };
@@ -160,6 +195,44 @@
 /* Begin PBXFileReference section */
 		5E3E0F722160446A0015BF52 /* KuwaharaFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KuwaharaFilter.swift; sourceTree = "<group>"; };
 		5E66A9AC2117E855003F5AB6 /* Photix-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Photix-Bridging-Header.h"; sourceTree = "<group>"; };
+		5E8125182DF382D40074AED7 /* Photix.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Photix.entitlements; sourceTree = "<group>"; };
+		5E8125192DF383F80074AED7 /* OilPaintPlus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OilPaintPlus.entitlements; sourceTree = "<group>"; };
+		5E81251A2DF385070074AED7 /* PhotoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhotoManager.swift; path = Photix/Models/PhotoManager.swift; sourceTree = "<group>"; };
+		5E81251B2DF385070074AED7 /* FilteredImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FilteredImage.swift; path = Photix/Models/FilteredImage.swift; sourceTree = "<group>"; };
+		5E81251E2DF3853A0074AED7 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataManager.swift; path = Photix/Services/DataManager.swift; sourceTree = "<group>"; };
+		5E81251F2DF3853A0074AED7 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DependencyContainer.swift; path = Photix/Services/DependencyContainer.swift; sourceTree = "<group>"; };
+		5E8125202DF3853A0074AED7 /* FilterProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FilterProcessor.swift; path = Photix/Services/FilterProcessor.swift; sourceTree = "<group>"; };
+		5E8125212DF3853A0074AED7 /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StoreManager.swift; path = Photix/Services/StoreManager.swift; sourceTree = "<group>"; };
+		5E8125262DF386280074AED7 /* PhotixApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhotixApp.swift; path = Photix/SwiftUI/PhotixApp.swift; sourceTree = "<group>"; };
+		5E8125282DF386540074AED7 /* AppNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppNavigation.swift; path = Photix/SwiftUI/Navigation/AppNavigation.swift; sourceTree = "<group>"; };
+		5E81252A2DF389120074AED7 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraView.swift; path = Photix/SwiftUI/Views/CameraView.swift; sourceTree = "<group>"; };
+		5E81252B2DF389120074AED7 /* PhotoEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhotoEditView.swift; path = Photix/SwiftUI/Views/PhotoEditView.swift; sourceTree = "<group>"; };
+		5E81252C2DF389120074AED7 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsView.swift; path = Photix/SwiftUI/Views/SettingsView.swift; sourceTree = "<group>"; };
+		5E81252D2DF389120074AED7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = Photix/SwiftUI/Views/ContentView.swift; sourceTree = "<group>"; };
+		5E81252E2DF389120074AED7 /* PhotoCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhotoCaptureView.swift; path = Photix/SwiftUI/Views/PhotoCaptureView.swift; sourceTree = "<group>"; };
+		5E81252F2DF389120074AED7 /* FilterSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FilterSelectionView.swift; path = Photix/SwiftUI/Views/FilterSelectionView.swift; sourceTree = "<group>"; };
+		5E8125362DF38B610074AED7 /* RealtimeFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RealtimeFilterView.swift; path = Photix/Rendering/RealtimeFilterView.swift; sourceTree = "<group>"; };
+		5E8125372DF38B610074AED7 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageCache.swift; path = Photix/Performance/ImageCache.swift; sourceTree = "<group>"; };
+		5E8125382DF38B610074AED7 /* AdvancedCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AdvancedCameraView.swift; path = Photix/Camera/AdvancedCameraView.swift; sourceTree = "<group>"; };
+		5E8125392DF38B610074AED7 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoadingView.swift; path = Photix/SwiftUI/Components/LoadingView.swift; sourceTree = "<group>"; };
+		5E81253A2DF38B610074AED7 /* LazyFilterGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LazyFilterGrid.swift; path = Photix/Performance/LazyFilterGrid.swift; sourceTree = "<group>"; };
+		5E81253B2DF38B610074AED7 /* PhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhotoPickerView.swift; path = Photix/Photos/PhotoPickerView.swift; sourceTree = "<group>"; };
+		5E81253C2DF38B620074AED7 /* BackgroundProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BackgroundProcessor.swift; path = Photix/Processing/BackgroundProcessor.swift; sourceTree = "<group>"; };
+		5E81253D2DF38B620074AED7 /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraManager.swift; path = Photix/Camera/CameraManager.swift; sourceTree = "<group>"; };
+		5E81253E2DF38B620074AED7 /* CameraPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraPreviewView.swift; path = Photix/Camera/CameraPreviewView.swift; sourceTree = "<group>"; };
+		5E81253F2DF38B620074AED7 /* LiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LiveActivity.swift; path = Photix/iOS17Features/LiveActivity.swift; sourceTree = "<group>"; };
+		5E8125402DF38B620074AED7 /* ObjectiveCBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ObjectiveCBridge.swift; path = Photix/SwiftUI/Bridge/ObjectiveCBridge.swift; sourceTree = "<group>"; };
+		5E8125412DF38B620074AED7 /* AccessibilitySupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AccessibilitySupport.swift; path = Photix/Accessibility/AccessibilitySupport.swift; sourceTree = "<group>"; };
+		5E8125422DF38B620074AED7 /* MetalFilterRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MetalFilterRenderer.swift; path = Photix/Rendering/MetalFilterRenderer.swift; sourceTree = "<group>"; };
+		5E8125432DF38B620074AED7 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AsyncImageView.swift; path = Photix/SwiftUI/Components/AsyncImageView.swift; sourceTree = "<group>"; };
+		5E8125442DF38B620074AED7 /* PhotoLibraryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhotoLibraryManager.swift; path = Photix/Photos/PhotoLibraryManager.swift; sourceTree = "<group>"; };
+		5E8125452DF38B620074AED7 /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewModifiers.swift; path = Photix/SwiftUI/Modifiers/ViewModifiers.swift; sourceTree = "<group>"; };
+		5E8125562DF38B8D0074AED7 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		5E8125582DF38F430074AED7 /* Combine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Combine.framework; path = System/Library/Frameworks/Combine.framework; sourceTree = SDKROOT; };
+		5E81255A2DF38F530074AED7 /* ActivityKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ActivityKit.framework; path = System/Library/Frameworks/ActivityKit.framework; sourceTree = SDKROOT; };
+		5E81255C2DF38F5F0074AED7 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		5E81255E2DF38F6C0074AED7 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		5E8125602DF38F7C0074AED7 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
 		5EC9AE8021780C2300D94638 /* OilPaintPlusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OilPaintPlusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EC9AE8221780C2300D94638 /* OilPaintPlusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OilPaintPlusUITests.swift; sourceTree = "<group>"; };
 		5EC9AE8421780C2400D94638 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -259,7 +332,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1A9F4181A1ECDA900513812 /* PhotixFilter.framework in Frameworks */,
 				C1054CE719A434D800A4D8F3 /* PhotosUI.framework in Frameworks */,
 				C1054CE919A434D800A4D8F3 /* Photos.framework in Frameworks */,
 			);
@@ -277,6 +349,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E8125612DF38F7C0074AED7 /* MetalKit.framework in Frameworks */,
+				5E81255F2DF38F6C0074AED7 /* Metal.framework in Frameworks */,
+				5E81255D2DF38F5F0074AED7 /* WidgetKit.framework in Frameworks */,
+				5E81255B2DF38F530074AED7 /* ActivityKit.framework in Frameworks */,
+				5E8125592DF38F430074AED7 /* Combine.framework in Frameworks */,
+				5E8125572DF38B8D0074AED7 /* SwiftUI.framework in Frameworks */,
 				C15E1C3C1CFFCF41003075B1 /* PhotosUI.framework in Frameworks */,
 				C15E1C3B1CFFCEBF003075B1 /* Photos.framework in Frameworks */,
 				C11C84651CE4283300625DD8 /* SystemConfiguration.framework in Frameworks */,
@@ -330,6 +408,7 @@
 		C1054CEA19A434D800A4D8F3 /* OilPaintPlus */ = {
 			isa = PBXGroup;
 			children = (
+				5E8125192DF383F80074AED7 /* OilPaintPlus.entitlements */,
 				C1054CED19A434D800A4D8F3 /* PhotoEditingViewController.h */,
 				C1054CEE19A434D800A4D8F3 /* PhotoEditingViewController.m */,
 				C1054CF019A434D800A4D8F3 /* MainInterface.storyboard */,
@@ -443,6 +522,36 @@
 		C1DBBCD418A6BFEF007BF4CE = {
 			isa = PBXGroup;
 			children = (
+				5E8125412DF38B620074AED7 /* AccessibilitySupport.swift */,
+				5E8125382DF38B610074AED7 /* AdvancedCameraView.swift */,
+				5E8125432DF38B620074AED7 /* AsyncImageView.swift */,
+				5E81253C2DF38B620074AED7 /* BackgroundProcessor.swift */,
+				5E81253D2DF38B620074AED7 /* CameraManager.swift */,
+				5E81253E2DF38B620074AED7 /* CameraPreviewView.swift */,
+				5E8125372DF38B610074AED7 /* ImageCache.swift */,
+				5E81253A2DF38B610074AED7 /* LazyFilterGrid.swift */,
+				5E81253F2DF38B620074AED7 /* LiveActivity.swift */,
+				5E8125392DF38B610074AED7 /* LoadingView.swift */,
+				5E8125422DF38B620074AED7 /* MetalFilterRenderer.swift */,
+				5E8125402DF38B620074AED7 /* ObjectiveCBridge.swift */,
+				5E8125442DF38B620074AED7 /* PhotoLibraryManager.swift */,
+				5E81253B2DF38B610074AED7 /* PhotoPickerView.swift */,
+				5E8125362DF38B610074AED7 /* RealtimeFilterView.swift */,
+				5E8125452DF38B620074AED7 /* ViewModifiers.swift */,
+				5E81252A2DF389120074AED7 /* CameraView.swift */,
+				5E81252D2DF389120074AED7 /* ContentView.swift */,
+				5E81252F2DF389120074AED7 /* FilterSelectionView.swift */,
+				5E81252E2DF389120074AED7 /* PhotoCaptureView.swift */,
+				5E81252B2DF389120074AED7 /* PhotoEditView.swift */,
+				5E81252C2DF389120074AED7 /* SettingsView.swift */,
+				5E8125282DF386540074AED7 /* AppNavigation.swift */,
+				5E8125262DF386280074AED7 /* PhotixApp.swift */,
+				5E81251E2DF3853A0074AED7 /* DataManager.swift */,
+				5E81251F2DF3853A0074AED7 /* DependencyContainer.swift */,
+				5E8125202DF3853A0074AED7 /* FilterProcessor.swift */,
+				5E8125212DF3853A0074AED7 /* StoreManager.swift */,
+				5E81251B2DF385070074AED7 /* FilteredImage.swift */,
+				5E81251A2DF385070074AED7 /* PhotoManager.swift */,
 				C1DBBCE818A6BFEF007BF4CE /* Photix */,
 				C1DBBD0518A6BFEF007BF4CE /* PhotixTests */,
 				C1054CEA19A434D800A4D8F3 /* OilPaintPlus */,
@@ -469,6 +578,12 @@
 		C1DBBCDF18A6BFEF007BF4CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5E8125602DF38F7C0074AED7 /* MetalKit.framework */,
+				5E81255E2DF38F6C0074AED7 /* Metal.framework */,
+				5E81255C2DF38F5F0074AED7 /* WidgetKit.framework */,
+				5E81255A2DF38F530074AED7 /* ActivityKit.framework */,
+				5E8125582DF38F430074AED7 /* Combine.framework */,
+				5E8125562DF38B8D0074AED7 /* SwiftUI.framework */,
 				C11C84641CE4283300625DD8 /* SystemConfiguration.framework */,
 				C11C84611CE4281600625DD8 /* MediaPlayer.framework */,
 				C11C845D1CE4280B00625DD8 /* EventKit.framework */,
@@ -499,6 +614,7 @@
 		C1DBBCE818A6BFEF007BF4CE /* Photix */ = {
 			isa = PBXGroup;
 			children = (
+				5E8125182DF382D40074AED7 /* Photix.entitlements */,
 				C1F699311B25EA8F0077C3FF /* IAP */,
 				C1BAFD2D18B14BA20078C88D /* Resources */,
 				C1BAFD2C18B14B8D0078C88D /* Application Delegate */,
@@ -726,6 +842,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = C1DBBCD418A6BFEF007BF4CE;
@@ -811,6 +928,7 @@
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
 			shellScript = "
 ";
 			showEnvVarsInLog = 0;
@@ -849,6 +967,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E8125462DF38B620074AED7 /* RealtimeFilterView.swift in Sources */,
+				5E8125472DF38B620074AED7 /* ImageCache.swift in Sources */,
+				5E8125482DF38B620074AED7 /* AdvancedCameraView.swift in Sources */,
+				5E8125492DF38B620074AED7 /* LoadingView.swift in Sources */,
+				5E81254A2DF38B620074AED7 /* LazyFilterGrid.swift in Sources */,
+				5E81254B2DF38B620074AED7 /* PhotoPickerView.swift in Sources */,
+				5E81254C2DF38B620074AED7 /* BackgroundProcessor.swift in Sources */,
+				5E81254D2DF38B620074AED7 /* CameraManager.swift in Sources */,
+				5E81254E2DF38B620074AED7 /* CameraPreviewView.swift in Sources */,
+				5E81254F2DF38B620074AED7 /* LiveActivity.swift in Sources */,
+				5E8125502DF38B620074AED7 /* ObjectiveCBridge.swift in Sources */,
+				5E8125512DF38B620074AED7 /* AccessibilitySupport.swift in Sources */,
+				5E8125522DF38B620074AED7 /* MetalFilterRenderer.swift in Sources */,
+				5E8125532DF38B620074AED7 /* AsyncImageView.swift in Sources */,
+				5E8125542DF38B620074AED7 /* PhotoLibraryManager.swift in Sources */,
+				5E8125552DF38B620074AED7 /* ViewModifiers.swift in Sources */,
+				5E8125302DF389120074AED7 /* CameraView.swift in Sources */,
+				5E8125312DF389120074AED7 /* PhotoEditView.swift in Sources */,
+				5E8125322DF389120074AED7 /* SettingsView.swift in Sources */,
+				5E8125332DF389120074AED7 /* ContentView.swift in Sources */,
+				5E8125342DF389120074AED7 /* PhotoCaptureView.swift in Sources */,
+				5E8125352DF389120074AED7 /* FilterSelectionView.swift in Sources */,
+				5E8125292DF386540074AED7 /* AppNavigation.swift in Sources */,
+				5E8125272DF386280074AED7 /* PhotixApp.swift in Sources */,
+				5E8125222DF3853A0074AED7 /* DataManager.swift in Sources */,
+				5E8125232DF3853A0074AED7 /* DependencyContainer.swift in Sources */,
+				5E8125242DF3853A0074AED7 /* FilterProcessor.swift in Sources */,
+				5E8125252DF3853A0074AED7 /* StoreManager.swift in Sources */,
+				5E81251C2DF385070074AED7 /* PhotoManager.swift in Sources */,
+				5E81251D2DF385070074AED7 /* FilteredImage.swift in Sources */,
 				C1F699371B25EABA0077C3FF /* PhotixIAPHelper.m in Sources */,
 				C154481518B8445C007B54D1 /* DNWOtherApps.m in Sources */,
 				C1BAFD3118B158570078C88D /* UIImage+normalizedImage.m in Sources */,
@@ -948,7 +1096,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = OilPaintPlusUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -980,7 +1128,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = OilPaintPlusUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -997,10 +1145,12 @@
 		C1054CF719A434D800A4D8F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_ENTITLEMENTS = OilPaintPlus/OilPaintPlus.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 6XBQPB83GR;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -1008,7 +1158,7 @@
 				);
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = OilPaintPlus/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1057,14 +1207,16 @@
 		C1054CF819A434D800A4D8F3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_ENTITLEMENTS = OilPaintPlus/OilPaintPlus.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 6XBQPB83GR;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = OilPaintPlus/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = (
@@ -1131,7 +1283,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = PhotixFilter/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -1171,6 +1323,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1196,7 +1349,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = PhotixFilter/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -1236,6 +1389,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "";
 				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1291,10 +1445,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "a52830a9-30d4-4a47-9990-160bd89763fc";
 				SDKROOT = iphoneos;
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "Photix/Photix-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
@@ -1342,10 +1498,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				PROVISIONING_PROFILE = "a52830a9-30d4-4a47-9990-160bd89763fc";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "Photix/Photix-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -1359,6 +1517,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Photix/Photix.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 6XBQPB83GR;
@@ -1370,7 +1529,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Photix/Photix-Prefix.pch";
 				INFOPLIST_FILE = "Photix/Photix-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -1425,6 +1584,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Photix/Photix.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 6XBQPB83GR;
@@ -1436,7 +1596,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Photix/Photix-Prefix.pch";
 				INFOPLIST_FILE = "Photix/Photix-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -1503,6 +1663,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "PhotixTests/PhotixTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
@@ -1533,6 +1694,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Photix/Photix-Prefix.pch";
 				INFOPLIST_FILE = "PhotixTests/PhotixTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",

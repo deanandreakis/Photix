@@ -1,0 +1,78 @@
+//
+//  Photix.xcconfig
+//  Configuration settings file format documentation can be found at:
+//  https://help.apple.com/xcode/#/dev745c5c974
+
+// Swift Integration
+SWIFT_OBJC_BRIDGING_HEADER = Photix/Photix-Bridging-Header.h
+SWIFT_VERSION = 5.9
+DEFINES_MODULE = YES
+CLANG_ENABLE_MODULES = YES
+
+// iOS Deployment
+IPHONEOS_DEPLOYMENT_TARGET = 16.0
+SUPPORTED_PLATFORMS = iphoneos iphonesimulator
+
+// SwiftUI Features
+ENABLE_PREVIEWS = YES
+ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES
+
+// Metal and Graphics
+METAL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE
+METAL_FAST_MATH = YES
+
+// Live Activities and Extensions
+SUPPORTS_LIVE_ACTIVITIES = YES
+
+// Background Processing
+ENABLE_BACKGROUND_PROCESSING = YES
+
+// Product Configuration
+PRODUCT_BUNDLE_IDENTIFIER = com.deanware.photix
+MARKETING_VERSION = 2.0.0
+CURRENT_PROJECT_VERSION = 1
+
+// Code Signing (placeholder - configure with your team)
+// DEVELOPMENT_TEAM = YOUR_TEAM_ID
+// CODE_SIGN_STYLE = Automatic
+
+// App Transport Security
+ENABLE_HARDENED_RUNTIME = NO
+
+// Privacy Manifest
+GENERATE_PRIVACY_FILE = YES
+
+// Bitcode (disabled for iOS 14+)
+ENABLE_BITCODE = NO
+
+// Asset Catalog
+ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon
+ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor
+
+// Launch Screen
+ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage
+
+// Optimization
+GCC_OPTIMIZATION_LEVEL = s
+SWIFT_OPTIMIZATION_LEVEL = -O
+
+// Warnings
+CLANG_WARN_DOCUMENTATION_COMMENTS = YES
+SWIFT_TREAT_WARNINGS_AS_ERRORS = NO
+GCC_TREAT_WARNINGS_AS_ERRORS = NO
+
+// Architecture
+ONLY_ACTIVE_ARCH = YES
+VALID_ARCHS = arm64 arm64e
+
+// Library Search Paths
+LIBRARY_SEARCH_PATHS = $(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)
+
+// Framework Search Paths  
+FRAMEWORK_SEARCH_PATHS = $(inherited) $(PLATFORM_DIR)/Developer/Library/Frameworks
+
+// Header Search Paths
+HEADER_SEARCH_PATHS = $(inherited) $(SRCROOT)/Photix
+
+// Other Linker Flags
+OTHER_LDFLAGS = $(inherited) -ObjC

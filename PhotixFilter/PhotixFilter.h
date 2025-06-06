@@ -6,11 +6,8 @@
 //  Copyright (c) 2014 deanware. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "DNWFilterImage.h"
-#import "DNWFilteredImageModel.h"
-#import <MessageUI/MessageUI.h>
-#import <MessageUI/MFMailComposeViewController.h>
+#import <Foundation/Foundation.h>
+#import <CoreImage/CoreImage.h>
 
 //! Project version number for PhotixFilter.
 FOUNDATION_EXPORT double PhotixFilterVersionNumber;
@@ -18,6 +15,7 @@ FOUNDATION_EXPORT double PhotixFilterVersionNumber;
 //! Project version string for PhotixFilter.
 FOUNDATION_EXPORT const unsigned char PhotixFilterVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <PhotixFilter/PublicHeader.h>
+// Pure Swift framework for image filtering
+// Main classes are implemented in Swift and exported automatically
 
 

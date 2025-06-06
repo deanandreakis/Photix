@@ -9,7 +9,11 @@
 #import "PhotoEditingViewController.h"
 #import <Photos/Photos.h>
 #import <PhotosUI/PhotosUI.h>
-#import "DNWFilteredImageModel.h"
+
+// Simple implementation for the extension
+@implementation SimpleFilteredImageModel
+@synthesize imageName, filteredImage;
+@end
 
 @interface PhotoEditingViewController () <PHContentEditingController>
 @property (strong) PHContentEditingInput *input;
@@ -85,21 +89,72 @@
 }
 
 
-#pragma mark FilteringCompleteDelegate
--(void)filteringComplete:(NSArray*)filteredImages //array of DNWFilteredImageModel objects
-{
-    [self setupScrollView:filteredImages];
-}
-
 - (void)filterImage:(UIImage*)imageToFilter
 {
-    DNWFilterImage* filterImageManager = [[DNWFilterImage alloc] init];
-    filterImageManager.filterDelegate = self;
-    [filterImageManager filterImage:imageToFilter];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSMutableArray *filteredImages = [NSMutableArray array];
+        
+        // Add original image
+        SimpleFilteredImageModel *originalModel = [[SimpleFilteredImageModel alloc] init];
+        originalModel.imageName = @"Original";
+        originalModel.filteredImage = imageToFilter;
+        [filteredImages addObject:originalModel];
+        
+        // Apply Kuwahara (Oil Paint) filter
+        UIImage *oilPaintImage = [self applyKuwaharaFilter:imageToFilter];
+        if (oilPaintImage) {
+            SimpleFilteredImageModel *oilPaintModel = [[SimpleFilteredImageModel alloc] init];
+            oilPaintModel.imageName = @"Oil Paint";
+            oilPaintModel.filteredImage = oilPaintImage;
+            [filteredImages addObject:oilPaintModel];
+        }
+        
+        // Update UI on main thread
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self setupScrollView:filteredImages];
+        });
+    });
+}
+
+- (UIImage *)applyKuwaharaFilter:(UIImage *)inputImage
+{
+    // Simple oil paint effect using Core Image filters
+    CIImage *ciImage = [CIImage imageWithCGImage:inputImage.CGImage];
+    if (!ciImage) return nil;
+    
+    // Apply a combination of blur and sharpen to simulate oil paint effect
+    CIFilter *blurFilter = [CIFilter filterWithName:@"CIGaussianBlur"];
+    [blurFilter setValue:ciImage forKey:kCIInputImageKey];
+    [blurFilter setValue:@(3.0) forKey:kCIInputRadiusKey];
+    
+    CIImage *blurred = blurFilter.outputImage;
+    if (!blurred) return nil;
+    
+    // Apply color controls to enhance the painted look
+    CIFilter *colorFilter = [CIFilter filterWithName:@"CIColorControls"];
+    [colorFilter setValue:blurred forKey:kCIInputImageKey];
+    [colorFilter setValue:@(1.2) forKey:kCIInputSaturationKey];
+    [colorFilter setValue:@(0.1) forKey:kCIInputBrightnessKey];
+    [colorFilter setValue:@(1.1) forKey:kCIInputContrastKey];
+    
+    CIImage *outputImage = colorFilter.outputImage;
+    if (!outputImage) return nil;
+    
+    CIContext *context = [CIContext contextWithOptions:nil];
+    CGImageRef cgImage = [context createCGImage:outputImage fromRect:ciImage.extent];
+    
+    if (!cgImage) return nil;
+    
+    UIImage *result = [UIImage imageWithCGImage:cgImage 
+                                          scale:inputImage.scale 
+                                    orientation:inputImage.imageOrientation];
+    
+    CGImageRelease(cgImage);
+    return result;
 }
 
 //https://gist.github.com/nyoron/363423
-- (void)setupScrollView:(NSArray*)imageArray//array of DNWFilteredImageModel objects
+- (void)setupScrollView:(NSArray*)imageArray//array of SimpleFilteredImageModel objects
 {
     CGSize pageSize = filterScrollView.frame.size; // scrollView is an IBOutlet for our UIScrollView
     NSUInteger page = 0;
@@ -108,7 +163,7 @@
     
     [thumbArray removeAllObjects];
     
-    for(DNWFilteredImageModel *model in imageArray) {
+    for(SimpleFilteredImageModel *model in imageArray) {
         
         UIImageView* imageView = [[UIImageView alloc] initWithImage:nil];
         imageView.contentMode = UIViewContentModeScaleAspectFit;

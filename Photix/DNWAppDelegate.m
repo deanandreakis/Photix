@@ -9,9 +9,8 @@
 #import "DNWAppDelegate.h"
 #import "DatabaseManager.h"
 #import "Constants.h"
-//@import Photos;
-//@import PhotosUI;
 #import "DNWMainViewController.h"
+@import SwiftUI;
 
 @implementation DNWAppDelegate
 
@@ -21,12 +20,21 @@
 {
     storyboardName = @"MainStoryboard";
     
+    // Initialize modern Swift services
+    [self initializeSwiftServices];
+    
     //Theming
     //This is good for the default theme of "light" with all black text etc.
     application.delegate.window.tintColor = [UIColor blackColor];
     [[UILabel appearance] setTextColor:[UIColor blackColor]];
     
     return YES;
+}
+
+- (void)initializeSwiftServices
+{
+    // This will be called from Swift to initialize the dependency container
+    // The actual initialization happens in Swift code
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

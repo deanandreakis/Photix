@@ -1,0 +1,55 @@
+//
+//  PhotixFilter.xcconfig
+//  Configuration for PhotixFilter Framework Target
+//
+
+// Framework Configuration
+PRODUCT_NAME = PhotixFilter
+PRODUCT_BUNDLE_IDENTIFIER = com.deanware.photix.filter
+FRAMEWORK_VERSION = A
+
+// Swift Configuration
+SWIFT_VERSION = 5.9
+DEFINES_MODULE = YES
+CLANG_ENABLE_MODULES = YES
+
+// NO Bridging Header for Framework Target
+SWIFT_OBJC_BRIDGING_HEADER = 
+
+// iOS Deployment
+IPHONEOS_DEPLOYMENT_TARGET = 16.0
+SUPPORTED_PLATFORMS = iphoneos iphonesimulator
+
+// Framework Specific Settings
+SKIP_INSTALL = YES
+BUILD_LIBRARY_FOR_DISTRIBUTION = YES
+INSTALL_PATH = $(LOCAL_LIBRARY_DIR)/Frameworks
+
+// Code Generation
+GCC_GENERATE_DEBUGGING_SYMBOLS = YES
+DEBUG_INFORMATION_FORMAT = dwarf-with-dsym
+
+// Optimization
+GCC_OPTIMIZATION_LEVEL = s
+SWIFT_OPTIMIZATION_LEVEL = -O
+
+// Warnings
+CLANG_WARN_DOCUMENTATION_COMMENTS = YES
+SWIFT_TREAT_WARNINGS_AS_ERRORS = NO
+
+// Architecture
+ONLY_ACTIVE_ARCH = YES
+VALID_ARCHS = arm64 arm64e
+
+// Linking
+DYLIB_COMPATIBILITY_VERSION = 1
+DYLIB_CURRENT_VERSION = 1
+DYLIB_INSTALL_NAME_BASE = @rpath
+
+// Module Settings
+MODULEMAP_FILE = 
+SWIFT_OBJC_INTERFACE_HEADER_NAME = $(SWIFT_MODULE_NAME)-Swift.h
+
+// Other Settings
+ENABLE_BITCODE = NO
+SUPPORTS_MACCATALYST = NO

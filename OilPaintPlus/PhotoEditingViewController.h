@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-//#import "DNWFilterImage.h"
-@import PhotixFilter;
+#import <CoreImage/CoreImage.h>
 
-@interface PhotoEditingViewController : UIViewController <UIScrollViewDelegate, FilteringCompleteDelegate>
+// Simple filtered image model for extension
+@interface SimpleFilteredImageModel : NSObject
+@property (strong, nonatomic) UIImage* filteredImage;
+@property (strong, nonatomic) NSString* imageName;
+@end
+
+@interface PhotoEditingViewController : UIViewController <UIScrollViewDelegate>
 
 @end

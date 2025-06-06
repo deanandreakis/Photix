@@ -11,7 +11,7 @@ import CoreImage
 @objc public class KuwaharaFilter: CIFilter
 {
     @objc public var inputImage: CIImage?
-    public var inputRadius: CGFloat = 15
+    @objc public var inputRadius: CGFloat = 15
     
     public override var attributes: [String : Any]
     {
