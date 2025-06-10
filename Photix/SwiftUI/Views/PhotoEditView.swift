@@ -31,19 +31,13 @@ struct PhotoEditView: View {
                     .frame(height: geometry.size.height * 0.2)
             }
         }
-        .navigationTitle("Edit")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button("Done") {
                     navigationState.navigateToRoot()
                 }
-                .foregroundStyle(.white)
-                .fontWeight(.semibold)
-                .padding(.horizontal, 12)
-                .padding(.vertical, 6)
-                .background(.blue)
-                .clipShape(RoundedRectangle(cornerRadius: 8))
+                .foregroundStyle(.primary)
             }
         }
         .sheet(isPresented: $showingShareSheet) {
@@ -60,7 +54,7 @@ struct PhotoEditView: View {
     
     private var imageDisplayView: some View {
         ZStack {
-            Color.black
+            Color.white
             
             if let image = photoManager.filteredImage {
                 Image(uiImage: image)
@@ -69,7 +63,7 @@ struct PhotoEditView: View {
                     .clipped()
             } else {
                 Text("No Image Selected")
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
                     .font(.headline)
             }
         }
@@ -92,29 +86,10 @@ struct PhotoEditView: View {
                 EditActionButton(
                     title: "Share",
                     icon: "square.and.arrow.up",
-                    backgroundColor: .blue
+                    backgroundColor: .green
                 ) {
                     showingShareSheet = true
                 }
-            }
-            .padding(.horizontal, 20)
-            
-            // Start Over button - full width and prominent
-            Button(action: {
-                navigationState.navigateToRoot()
-            }) {
-                HStack {
-                    Image(systemName: "arrow.counterclockwise")
-                        .font(.title2)
-                    Text("Start Over - New Photo")
-                        .font(.headline)
-                        .fontWeight(.semibold)
-                }
-                .foregroundStyle(.white)
-                .frame(maxWidth: .infinity)
-                .frame(height: 50)
-                .background(.red)
-                .clipShape(RoundedRectangle(cornerRadius: 12))
             }
             .padding(.horizontal, 20)
             
@@ -128,7 +103,7 @@ struct PhotoEditView: View {
                     Text("Review App")
                         .font(.caption)
                 }
-                .foregroundStyle(.orange)
+                .foregroundStyle(.green)
                 .frame(height: 30)
             }
         }

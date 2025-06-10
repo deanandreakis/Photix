@@ -35,7 +35,7 @@ struct PhotoCaptureView: View {
                             .clipShape(RoundedRectangle(cornerRadius: 16))
                             .shadow(radius: 8)
                         
-                        Text("Photix")
+                        Text("OilPaintPlus")
                             .font(.largeTitle)
                             .fontWeight(.bold)
                             .foregroundStyle(.primary)
@@ -154,7 +154,7 @@ struct ActionButtonLabel: View {
         .frame(height: 56)
         .background(
             LinearGradient(
-                colors: [Color.blue, Color.blue.opacity(0.8)],
+                colors: [Color.green, Color.green.opacity(0.8)],
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
             )

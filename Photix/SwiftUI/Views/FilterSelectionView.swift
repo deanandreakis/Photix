@@ -74,7 +74,7 @@ struct FilterSelectionViewModal: View {
                     )
                 }
                 .frame(height: 80)
-                .background(Color(.systemBackground))
+                .background(Color.white)
             }
         }
         .navigationTitle("Choose Filter")
@@ -144,33 +144,18 @@ struct FilterSelectionView: View {
                         photoManager.selectFilter(filter)
                     }
                 )
-                .frame(height: geometry.size.height * 0.25)
-                
-                // Navigation controls at bottom (fallback for when toolbar is not visible)
-                NavigationControlsView(
-                    isNextEnabled: photoManager.selectedFilter != nil,
-                    onStartOver: {
-                        photoManager.clearSelection()
-                        navigationState.navigateToRoot()
-                    },
-                    onNext: {
-                        navigationState.navigateTo(.photoEdit)
-                    }
-                )
-                .frame(height: geometry.size.height * 0.05)
+                .frame(height: geometry.size.height * 0.3)
             }
         }
-        .navigationTitle("Filters")
+        .background(
+            Rectangle()
+                .fill(Color.white)
+                .ignoresSafeArea(.all)
+        )
+        .colorScheme(.light)
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarHidden(false)
         .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                Button("Start Over") {
-                    photoManager.clearSelection()
-                    navigationState.navigateToRoot()
-                }
-            }
-            
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button("Next") {
                     navigationState.navigateTo(.photoEdit)
@@ -218,21 +203,21 @@ struct MainImageDisplayView: View {
             }
             
             if isProcessing {
-                Color.black.opacity(0.3)
+                Color.white.opacity(0.9)
                     .overlay(
                         VStack(spacing: 16) {
                             ProgressView()
                                 .scaleEffect(1.5)
-                                .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                                .progressViewStyle(CircularProgressViewStyle(tint: .green))
                             
                             Text("Processing Filters...")
-                                .foregroundColor(.white)
+                                .foregroundColor(.black)
                                 .font(.headline)
                         }
                     )
             }
         }
-        .background(Color.black)
+        .background(Color.white)
     }
 }
 
@@ -272,7 +257,7 @@ struct FilterCarouselView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
         }
-        .background(Color(.systemBackground))
+        .background(Color.white)
     }
 }
 
@@ -290,12 +275,12 @@ struct FilterThumbnailView: View {
                 .overlay(
                     RoundedRectangle(cornerRadius: 8)
                         .stroke(
-                            isSelected ? Color.blue : Color.clear,
+                            isSelected ? Color.green : Color.clear,
                             lineWidth: 3
                         )
                 )
                 .shadow(
-                    color: isSelected ? .blue.opacity(0.3) : .black.opacity(0.2),
+                    color: isSelected ? .green.opacity(0.3) : .black.opacity(0.2),
                     radius: isSelected ? 4 : 2,
                     x: 0,
                     y: 2
@@ -306,7 +291,7 @@ struct FilterThumbnailView: View {
             Text(filter.name)
                 .font(.caption)
                 .fontWeight(isSelected ? .semibold : .regular)
-                .foregroundColor(isSelected ? .blue : .primary)
+                .foregroundColor(isSelected ? .green : .primary)
                 .lineLimit(1)
                 .frame(width: 80)
         }
@@ -331,14 +316,14 @@ struct NavigationControlsView: View {
             Button("Next") {
                 onNext()
             }
-            .foregroundColor(isNextEnabled ? .blue : .gray)
+            .foregroundColor(isNextEnabled ? .green : .gray)
             .font(.headline)
             .fontWeight(.semibold)
             .disabled(!isNextEnabled)
         }
         .padding(.horizontal, 20)
         .padding(.vertical, 10)
-        .background(Color(.systemBackground))
+        .background(Color.white)
         .border(Color(.systemGray4), width: 0.5)
     }
 }
@@ -369,7 +354,7 @@ struct ModalNavigationControlsView: View {
             .fontWeight(.bold)
             .frame(maxWidth: .infinity)
             .frame(height: 50)
-            .background(isNextEnabled ? Color.blue : Color.gray)
+            .background(isNextEnabled ? Color.green : Color.gray)
             .clipShape(RoundedRectangle(cornerRadius: 12))
             .disabled(!isNextEnabled)
         }
@@ -472,7 +457,7 @@ struct PhotoEditModalView: View {
                     .foregroundColor(.white)
                     .frame(maxWidth: .infinity)
                     .frame(height: 50)
-                    .background(Color.blue)
+                    .background(Color.green)
                     .clipShape(RoundedRectangle(cornerRadius: 12))
                     
                     Button("Start Over - New Photo") {

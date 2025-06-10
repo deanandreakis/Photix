@@ -46,7 +46,7 @@ struct PrimaryButtonStyle: ButtonStyle {
     let backgroundColor: Color
     let foregroundColor: Color
     
-    init(backgroundColor: Color = .blue, foregroundColor: Color = .white) {
+    init(backgroundColor: Color = .green, foregroundColor: Color = .white) {
         self.backgroundColor = backgroundColor
         self.foregroundColor = foregroundColor
     }
@@ -65,7 +65,7 @@ struct PrimaryButtonStyle: ButtonStyle {
 }
 
 extension ButtonStyle where Self == PrimaryButtonStyle {
-    static func primary(backgroundColor: Color = .blue, foregroundColor: Color = .white) -> PrimaryButtonStyle {
+    static func primary(backgroundColor: Color = .green, foregroundColor: Color = .white) -> PrimaryButtonStyle {
         PrimaryButtonStyle(backgroundColor: backgroundColor, foregroundColor: foregroundColor)
     }
 }

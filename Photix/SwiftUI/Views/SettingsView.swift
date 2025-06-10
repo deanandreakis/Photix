@@ -92,7 +92,7 @@ struct SettingsView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 12))
             
             VStack(spacing: 4) {
-                Text("Photix")
+                Text("OilPaintPlus")
                     .font(.title2)
                     .fontWeight(.bold)
                 
@@ -154,7 +154,7 @@ struct SettingsView: View {
                 SupportButton(
                     title: "Email Support",
                     icon: "envelope.fill",
-                    color: .blue
+                    color: .green
                 ) {
                     if MFMailComposeViewController.canSendMail() {
                         showingMailComposer = true
@@ -251,7 +251,7 @@ struct TipButton: View {
                     Text(product.displayPrice)
                         .font(.headline)
                         .fontWeight(.semibold)
-                        .foregroundColor(.blue)
+                        .foregroundColor(.green)
                 }
             }
             .padding(16)
