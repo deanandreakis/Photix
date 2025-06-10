@@ -224,8 +224,6 @@
 		C1054CE619A434D800A4D8F3 /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = System/Library/Frameworks/PhotosUI.framework; sourceTree = SDKROOT; };
 		C1054CE819A434D800A4D8F3 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		C1054CEC19A434D800A4D8F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C1054CED19A434D800A4D8F3 /* PhotoEditingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoEditingViewController.h; sourceTree = "<group>"; };
-		C1054CEE19A434D800A4D8F3 /* PhotoEditingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoEditingViewController.m; sourceTree = "<group>"; };
 		C1054CF019A434D800A4D8F3 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		C11C844A1CE41EEB00625DD8 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		C11C844C1CE41EF700625DD8 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
@@ -238,12 +236,8 @@
 		C11C845E1CE4280B00625DD8 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
 		C11C84611CE4281600625DD8 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		C11C84641CE4283300625DD8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		C1210EB51996812000C1E4E7 /* DNWFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNWFilterViewController.h; sourceTree = "<group>"; };
-		C1210EB61996812000C1E4E7 /* DNWFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNWFilterViewController.m; sourceTree = "<group>"; };
 		C149F4001999941A00584382 /* DNWFilteredImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DNWFilteredImageModel.h; path = ../Photix/DNWFilteredImageModel.h; sourceTree = "<group>"; };
 		C149F4011999941A00584382 /* DNWFilteredImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DNWFilteredImageModel.m; path = ../Photix/DNWFilteredImageModel.m; sourceTree = "<group>"; };
-		C154481318B8445C007B54D1 /* DNWOtherApps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNWOtherApps.h; sourceTree = "<group>"; };
-		C154481418B8445C007B54D1 /* DNWOtherApps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNWOtherApps.m; sourceTree = "<group>"; };
 		C1A9F3F41A1D9B8400513812 /* PhotixFilter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PhotixFilter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1A9F3F71A1D9B8400513812 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1A9F3F81A1D9B8400513812 /* PhotixFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotixFilter.h; sourceTree = "<group>"; };
@@ -251,19 +245,8 @@
 		C1A9F4071A1D9B8400513812 /* PhotixFilterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotixFilterTests.m; sourceTree = "<group>"; };
 		C1A9F41B1A1EE1BA00513812 /* lookup_soft_elegance_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lookup_soft_elegance_1.png; sourceTree = "<group>"; };
 		C1A9F41E1A1EE1CC00513812 /* lookup_soft_elegance_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lookup_soft_elegance_2.png; sourceTree = "<group>"; };
-		C1BAFD2718B14B2A0078C88D /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
-		C1BAFD2818B14B410078C88D /* DatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseManager.h; sourceTree = "<group>"; };
-		C1BAFD2918B14B4E0078C88D /* DatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseManager.m; sourceTree = "<group>"; };
-		C1BAFD2E18B14D130078C88D /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		C1BAFD2F18B1584D0078C88D /* UIImage+normalizedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+normalizedImage.h"; sourceTree = "<group>"; };
-		C1BAFD3018B158570078C88D /* UIImage+normalizedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+normalizedImage.m"; sourceTree = "<group>"; };
-		C1BAFD3518B15D720078C88D /* DNWPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNWPictureViewController.h; sourceTree = "<group>"; };
-		C1BAFD3618B15D720078C88D /* DNWPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNWPictureViewController.m; sourceTree = "<group>"; };
 		C1BAFD3818B1B4E70078C88D /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		C1BAFD3A18B1B58F0078C88D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		C1C1163818D495DC00247E0F /* PhotixTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotixTests.h; sourceTree = "<group>"; };
-		C1C1163918D5FB9C00247E0F /* DNWImageTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNWImageTests.h; sourceTree = "<group>"; };
-		C1C1163A18D5FB9C00247E0F /* DNWImageTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNWImageTests.m; sourceTree = "<group>"; };
 		C1C1165E18D65F9A00247E0F /* test1_2448_3264.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test1_2448_3264.jpg; sourceTree = "<group>"; };
 		C1C1166118D65FAA00247E0F /* test2_3264_2448.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test2_3264_2448.jpg; sourceTree = "<group>"; };
 		C1C1166418D65FB200247E0F /* test3_640_640.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test3_640_640.jpg; sourceTree = "<group>"; };
@@ -276,30 +259,18 @@
 		C1DBBCE618A6BFEF007BF4CE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		C1DBBCEA18A6BFEF007BF4CE /* Photix-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Photix-Info.plist"; sourceTree = "<group>"; };
 		C1DBBCEC18A6BFEF007BF4CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		C1DBBCEE18A6BFEF007BF4CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C1DBBCF018A6BFEF007BF4CE /* Photix-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Photix-Prefix.pch"; sourceTree = "<group>"; };
-		C1DBBCF118A6BFEF007BF4CE /* DNWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNWAppDelegate.h; sourceTree = "<group>"; };
-		C1DBBCF218A6BFEF007BF4CE /* DNWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DNWAppDelegate.m; sourceTree = "<group>"; };
 		C1DBBCF518A6BFEF007BF4CE /* Photix.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photix.xcdatamodel; sourceTree = "<group>"; };
 		C1DBBCF718A6BFEF007BF4CE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C1DBBCFD18A6BFEF007BF4CE /* PhotixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotixTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1DBBCFE18A6BFEF007BF4CE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		C1DBBD0718A6BFEF007BF4CE /* PhotixTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PhotixTests-Info.plist"; sourceTree = "<group>"; };
 		C1DBBD0918A6BFEF007BF4CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		C1DBBD0B18A6BFEF007BF4CE /* PhotixTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotixTests.m; sourceTree = "<group>"; };
-		C1DBBD1A18A7186E007BF4CE /* DNWMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNWMainViewController.h; sourceTree = "<group>"; };
-		C1DBBD1B18A7186E007BF4CE /* DNWMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNWMainViewController.m; sourceTree = "<group>"; };
 		C1E0E40E199826EB00D3FD21 /* DNWFilterImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DNWFilterImage.h; path = ../Photix/DNWFilterImage.h; sourceTree = "<group>"; };
 		C1E0E40F199826EB00D3FD21 /* DNWFilterImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DNWFilterImage.m; path = ../Photix/DNWFilterImage.m; sourceTree = "<group>"; };
 		C1E20FB118B980E1001A2BE3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C1F3B28E1A3E78600064CF67 /* TODO.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = TODO.txt; sourceTree = "<group>"; };
-		C1F694F51AEF1CBF0062D187 /* DNWSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNWSettingsViewController.h; sourceTree = "<group>"; };
-		C1F694F61AEF1CBF0062D187 /* DNWSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNWSettingsViewController.m; sourceTree = "<group>"; };
 		C1F6992F1B25EA1E0077C3FF /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		C1F699321B25EABA0077C3FF /* IAPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAPHelper.h; sourceTree = "<group>"; };
-		C1F699331B25EABA0077C3FF /* IAPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAPHelper.m; sourceTree = "<group>"; };
-		C1F699341B25EABA0077C3FF /* PhotixIAPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotixIAPHelper.h; sourceTree = "<group>"; };
-		C1F699351B25EABA0077C3FF /* PhotixIAPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotixIAPHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -391,8 +362,6 @@
 			isa = PBXGroup;
 			children = (
 				5E8125192DF383F80074AED7 /* OilPaintPlus.entitlements */,
-				C1054CED19A434D800A4D8F3 /* PhotoEditingViewController.h */,
-				C1054CEE19A434D800A4D8F3 /* PhotoEditingViewController.m */,
 				C1054CF019A434D800A4D8F3 /* MainInterface.storyboard */,
 				C1054CEB19A434D800A4D8F3 /* Supporting Files */,
 			);
@@ -449,24 +418,9 @@
 		C1BAFD2518B14AF10078C88D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C1BAFD2918B14B4E0078C88D /* DatabaseManager.m */,
-				C1BAFD2818B14B410078C88D /* DatabaseManager.h */,
 				C1DBBCF418A6BFEF007BF4CE /* Photix.xcdatamodeld */,
 			);
 			name = Model;
-			sourceTree = "<group>";
-		};
-		C1BAFD2618B14B040078C88D /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				C1BAFD2F18B1584D0078C88D /* UIImage+normalizedImage.h */,
-				C1BAFD3018B158570078C88D /* UIImage+normalizedImage.m */,
-				C1BAFD2E18B14D130078C88D /* Constants.h */,
-				C1BAFD2718B14B2A0078C88D /* SynthesizeSingleton.h */,
-				C154481318B8445C007B54D1 /* DNWOtherApps.h */,
-				C154481418B8445C007B54D1 /* DNWOtherApps.m */,
-			);
-			name = Utilities;
 			sourceTree = "<group>";
 		};
 		C1BAFD2B18B14B600078C88D /* Views */ = {
@@ -475,15 +429,6 @@
 				C1CB31861A339B2400B515AE /* LaunchScreen.xib */,
 			);
 			name = Views;
-			sourceTree = "<group>";
-		};
-		C1BAFD2C18B14B8D0078C88D /* Application Delegate */ = {
-			isa = PBXGroup;
-			children = (
-				C1DBBCF218A6BFEF007BF4CE /* DNWAppDelegate.m */,
-				C1DBBCF118A6BFEF007BF4CE /* DNWAppDelegate.h */,
-			);
-			name = "Application Delegate";
 			sourceTree = "<group>";
 		};
 		C1BAFD2D18B14BA20078C88D /* Resources */ = {
@@ -601,13 +546,9 @@
 			isa = PBXGroup;
 			children = (
 				5E8125182DF382D40074AED7 /* Photix.entitlements */,
-				C1F699311B25EA8F0077C3FF /* IAP */,
 				C1BAFD2D18B14BA20078C88D /* Resources */,
-				C1BAFD2C18B14B8D0078C88D /* Application Delegate */,
 				C1BAFD2B18B14B600078C88D /* Views */,
-				C1BAFD2618B14B040078C88D /* Utilities */,
 				C1BAFD2518B14AF10078C88D /* Model */,
-				C1DBBD1918A717C9007BF4CE /* Controllers */,
 				C1DBBCE918A6BFEF007BF4CE /* Supporting Files */,
 			);
 			path = Photix;
@@ -618,7 +559,6 @@
 			children = (
 				C1DBBCEA18A6BFEF007BF4CE /* Photix-Info.plist */,
 				C1DBBCEB18A6BFEF007BF4CE /* InfoPlist.strings */,
-				C1DBBCEE18A6BFEF007BF4CE /* main.m */,
 				C1DBBCF018A6BFEF007BF4CE /* Photix-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -627,10 +567,6 @@
 		C1DBBD0518A6BFEF007BF4CE /* PhotixTests */ = {
 			isa = PBXGroup;
 			children = (
-				C1DBBD0B18A6BFEF007BF4CE /* PhotixTests.m */,
-				C1C1163818D495DC00247E0F /* PhotixTests.h */,
-				C1C1163918D5FB9C00247E0F /* DNWImageTests.h */,
-				C1C1163A18D5FB9C00247E0F /* DNWImageTests.m */,
 				C1DBBD0618A6BFEF007BF4CE /* Supporting Files */,
 			);
 			path = PhotixTests;
@@ -643,32 +579,6 @@
 				C1DBBD0818A6BFEF007BF4CE /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		C1DBBD1918A717C9007BF4CE /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				C1F694F51AEF1CBF0062D187 /* DNWSettingsViewController.h */,
-				C1F694F61AEF1CBF0062D187 /* DNWSettingsViewController.m */,
-				C1DBBD1A18A7186E007BF4CE /* DNWMainViewController.h */,
-				C1DBBD1B18A7186E007BF4CE /* DNWMainViewController.m */,
-				C1BAFD3518B15D720078C88D /* DNWPictureViewController.h */,
-				C1BAFD3618B15D720078C88D /* DNWPictureViewController.m */,
-				C1210EB51996812000C1E4E7 /* DNWFilterViewController.h */,
-				C1210EB61996812000C1E4E7 /* DNWFilterViewController.m */,
-			);
-			name = Controllers;
-			sourceTree = "<group>";
-		};
-		C1F699311B25EA8F0077C3FF /* IAP */ = {
-			isa = PBXGroup;
-			children = (
-				C1F699321B25EABA0077C3FF /* IAPHelper.h */,
-				C1F699331B25EABA0077C3FF /* IAPHelper.m */,
-				C1F699341B25EABA0077C3FF /* PhotixIAPHelper.h */,
-				C1F699351B25EABA0077C3FF /* PhotixIAPHelper.m */,
-			);
-			name = IAP;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
