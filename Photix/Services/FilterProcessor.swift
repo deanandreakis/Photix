@@ -147,16 +147,72 @@ actor FilterProcessor {
                     
                     filter.setValue(ciImage, forKey: kCIInputImageKey)
                     
-                    // Special handling for vignette effect
-                    if filterType == .vignette {
+                    // Special parameter handling for filters that need it
+                    switch filterType {
+                    case .vignette:
                         let centerX = ciImage.extent.size.width / 2.0
                         let centerY = ciImage.extent.size.height / 2.0
                         let center = CIVector(x: centerX, y: centerY)
                         filter.setValue(center, forKey: kCIInputCenterKey)
                         filter.setValue(1.0, forKey: "inputIntensity")
-                        
                         let radius = min(centerX, centerY) * 0.8
                         filter.setValue(radius, forKey: "inputRadius")
+                        
+                    case .cool:
+                        // Cool temperature effect
+                        filter.setValue(CIVector(x: -1000, y: 0), forKey: "inputNeutral")
+                        filter.setValue(CIVector(x: -1000, y: 0), forKey: "inputTargetNeutral")
+                        
+                    case .warm:
+                        // Warm temperature effect
+                        filter.setValue(CIVector(x: 1000, y: 0), forKey: "inputNeutral")
+                        filter.setValue(CIVector(x: 1000, y: 0), forKey: "inputTargetNeutral")
+                        
+                    case .sharpen:
+                        filter.setValue(0.4, forKey: "inputSharpness")
+                        
+                    case .softFocus:
+                        filter.setValue(2.0, forKey: "inputRadius")
+                        
+                    case .vibrant:
+                        filter.setValue(1.0, forKey: "inputAmount")
+                        
+                    case .sketch:
+                        filter.setValue(0.7, forKey: "inputNRNoiseLevel")
+                        filter.setValue(0.02, forKey: "inputNRSharpness")
+                        filter.setValue(1.0, forKey: "inputEdgeIntensity")
+                        
+                    case .comic:
+                        // CIComicEffect doesn't have adjustable parameters
+                        break
+                        
+                    case .crystallize:
+                        filter.setValue(20.0, forKey: "inputRadius")
+                        let centerX = ciImage.extent.size.width / 2.0
+                        let centerY = ciImage.extent.size.height / 2.0
+                        let center = CIVector(x: centerX, y: centerY)
+                        filter.setValue(center, forKey: kCIInputCenterKey)
+                        
+                    case .edges:
+                        filter.setValue(1.0, forKey: "inputIntensity")
+                        
+                    case .pixelate:
+                        filter.setValue(8.0, forKey: "inputScale")
+                        
+                    case .kaleidoscope:
+                        // CITriangleKaleidoscope doesn't use inputCenter, only inputPoint
+                        let centerX = ciImage.extent.size.width / 2.0
+                        let centerY = ciImage.extent.size.height / 2.0
+                        let center = CIVector(x: centerX, y: centerY)
+                        filter.setValue(center, forKey: "inputPoint")
+                        filter.setValue(6.0, forKey: "inputSize")
+                        filter.setValue(0.0, forKey: "inputDecay")
+                        
+                    case .blur:
+                        filter.setValue(10.0, forKey: "inputRadius")
+                        
+                    default:
+                        break
                     }
                     
                     guard let outputImage = filter.outputImage,

@@ -13,6 +13,7 @@ import MessageUI
 struct SettingsView: View {
     @EnvironmentObject private var storeManager: StoreManager
     @EnvironmentObject private var dependencies: DependencyContainer
+    @Environment(\.dismiss) private var dismiss
     
     @State private var showingMailComposer = false
     @State private var showingPurchaseConfirmation = false
@@ -24,24 +25,83 @@ struct SettingsView: View {
     
     var body: some View {
         NavigationView {
-            ScrollView {
-                VStack(spacing: 24) {
-                    // Header
-                    headerSection
+            VStack(spacing: 0) {
+                // Main content
+                VStack(spacing: 30) {
+                    Spacer(minLength: 40)
                     
-                    // Tip Jar Section
-                    tipJarSection
+                    // Main description text
+                    VStack(spacing: 20) {
+                        Text("OilPaintPlus (v4.0) relies on your support to fund its development. If you find it useful to enhance your pictures, please consider supporting the app by leaving a tip in our Tip Jar.")
+                            .font(.body)
+                            .multilineTextAlignment(.center)
+                            .padding(.horizontal, 30)
+                    }
                     
-                    // Support Section
-                    supportSection
+                    // Tip Jar buttons
+                    if storeManager.isLoading {
+                        VStack(spacing: 20) {
+                            ProgressView()
+                                .scaleEffect(1.2)
+                            Text("Loading...")
+                                .font(.subheadline)
+                                .foregroundColor(.secondary)
+                        }
+                        .frame(height: 100)
+                    } else if storeManager.products.isEmpty {
+                        // Show mock tip buttons when products aren't available
+                        HStack(spacing: 20) {
+                            MockTipButton(title: "Generous", price: "$0.99")
+                            MockTipButton(title: "Massive", price: "$1.99")
+                            MockTipButton(title: "Amazing", price: "$4.99")
+                        }
+                        .padding(.horizontal, 20)
+                    } else {
+                        HStack(spacing: 20) {
+                            ForEach(storeManager.products.prefix(3), id: \.id) { product in
+                                TipJarButton(
+                                    product: product,
+                                    isPurchased: storeManager.isPurchased(product.id)
+                                ) {
+                                    selectedProduct = product
+                                    showingPurchaseConfirmation = true
+                                }
+                            }
+                        }
+                        .padding(.horizontal, 20)
+                    }
                     
-                    Spacer(minLength: 20)
+                    Spacer()
                 }
-                .padding(.horizontal, 20)
-                .padding(.top, 20)
+                
+                // Email icon at bottom
+                VStack {
+                    Button(action: {
+                        if MFMailComposeViewController.canSendMail() {
+                            showingMailComposer = true
+                        } else {
+                            alertTitle = "Mail Not Available"
+                            alertMessage = "Please configure Mail app to send emails."
+                            showingAlert = true
+                        }
+                    }) {
+                        Image(systemName: "envelope")
+                            .font(.title2)
+                            .foregroundColor(.primary)
+                            .frame(width: 40, height: 40)
+                    }
+                    .padding(.bottom, 40)
+                }
             }
             .navigationTitle("Settings")
-            .navigationBarTitleDisplayMode(.large)
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("Done") {
+                        dismiss()
+                    }
+                }
+            }
             .sheet(isPresented: $showingMailComposer) {
                 MailComposeView()
             }
@@ -83,114 +143,6 @@ struct SettingsView: View {
         }
     }
     
-    private var headerSection: some View {
-        VStack(spacing: 16) {
-            Image("General")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 80, height: 80)
-                .clipShape(RoundedRectangle(cornerRadius: 12))
-            
-            VStack(spacing: 4) {
-                Text("OilPaintPlus")
-                    .font(.title2)
-                    .fontWeight(.bold)
-                
-                Text("Oil Paint Effect Photo Editor")
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
-            }
-        }
-    }
-    
-    private var tipJarSection: some View {
-        VStack(alignment: .leading, spacing: 16) {
-            Text("Support Development")
-                .font(.headline)
-                .fontWeight(.semibold)
-            
-            Text("Enjoying Photix? Consider leaving a tip to support continued development!")
-                .font(.subheadline)
-                .foregroundColor(.secondary)
-            
-            if storeManager.isLoading {
-                HStack {
-                    ProgressView()
-                        .scaleEffect(0.8)
-                    Text("Loading products...")
-                        .font(.subheadline)
-                        .foregroundColor(.secondary)
-                }
-                .frame(maxWidth: .infinity)
-                .padding(.vertical, 20)
-            } else {
-                VStack(spacing: 12) {
-                    ForEach(storeManager.products, id: \.id) { product in
-                        TipButton(
-                            product: product,
-                            isPurchased: storeManager.isPurchased(product.id)
-                        ) {
-                            selectedProduct = product
-                            showingPurchaseConfirmation = true
-                        }
-                    }
-                }
-            }
-        }
-        .padding(20)
-        .background(
-            RoundedRectangle(cornerRadius: 16)
-                .fill(Color(.secondarySystemBackground))
-        )
-    }
-    
-    private var supportSection: some View {
-        VStack(alignment: .leading, spacing: 16) {
-            Text("Get Support")
-                .font(.headline)
-                .fontWeight(.semibold)
-            
-            VStack(spacing: 12) {
-                SupportButton(
-                    title: "Email Support",
-                    icon: "envelope.fill",
-                    color: .green
-                ) {
-                    if MFMailComposeViewController.canSendMail() {
-                        showingMailComposer = true
-                    } else {
-                        alertTitle = "Mail Not Available"
-                        alertMessage = "Please configure Mail app to send emails."
-                        showingAlert = true
-                    }
-                }
-                
-                SupportButton(
-                    title: "Rate App",
-                    icon: "star.fill",
-                    color: .orange
-                ) {
-                    rateApp()
-                }
-                
-                SupportButton(
-                    title: "Restore Purchases",
-                    icon: "arrow.clockwise",
-                    color: .green
-                ) {
-                    Task {
-                        await storeManager.restorePurchases()
-                    }
-                }
-            }
-        }
-        .padding(20)
-        .background(
-            RoundedRectangle(cornerRadius: 16)
-                .fill(Color(.secondarySystemBackground))
-        )
-    }
-    
     private func purchaseProduct() {
         guard let product = selectedProduct else { return }
         
@@ -214,34 +166,58 @@ struct SettingsView: View {
             }
         }
     }
+}
+
+struct MockTipButton: View {
+    let title: String
+    let price: String
     
-    private func rateApp() {
-        let reviewURL = "itms-apps://itunes.apple.com/app/id827491007"
-        if let url = URL(string: reviewURL) {
-            UIApplication.shared.open(url)
+    var body: some View {
+        Button(action: {
+            // Show alert that this is a demo
+        }) {
+            VStack(spacing: 12) {
+                Text(title)
+                    .font(.headline)
+                    .fontWeight(.medium)
+                    .multilineTextAlignment(.center)
+                
+                Text("Tip of")
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+                
+                Text(price)
+                    .font(.headline)
+                    .fontWeight(.semibold)
+                    .foregroundColor(.primary)
+            }
+            .frame(maxWidth: .infinity)
+            .frame(height: 120)
+            .background(
+                RoundedRectangle(cornerRadius: 12)
+                    .fill(Color(.secondarySystemBackground))
+                    .shadow(color: .black.opacity(0.1), radius: 2, x: 0, y: 1)
+            )
         }
     }
 }
 
-struct TipButton: View {
+struct TipJarButton: View {
     let product: Product
     let isPurchased: Bool
     let onTap: () -> Void
     
     var body: some View {
         Button(action: onTap) {
-            HStack {
-                VStack(alignment: .leading, spacing: 4) {
-                    Text(product.displayName)
-                        .font(.headline)
-                        .fontWeight(.medium)
-                    
-                    Text(product.description)
-                        .font(.subheadline)
-                        .foregroundColor(.secondary)
-                }
+            VStack(spacing: 12) {
+                Text(getTipName())
+                    .font(.headline)
+                    .fontWeight(.medium)
+                    .multilineTextAlignment(.center)
                 
-                Spacer()
+                Text("Tip of")
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
                 
                 if isPurchased {
                     Image(systemName: "checkmark.circle.fill")
@@ -251,52 +227,32 @@ struct TipButton: View {
                     Text(product.displayPrice)
                         .font(.headline)
                         .fontWeight(.semibold)
-                        .foregroundColor(.green)
+                        .foregroundColor(.primary)
                 }
             }
-            .padding(16)
+            .frame(maxWidth: .infinity)
+            .frame(height: 120)
             .background(
                 RoundedRectangle(cornerRadius: 12)
-                    .fill(Color(.systemBackground))
+                    .fill(Color(.secondarySystemBackground))
                     .shadow(color: .black.opacity(0.1), radius: 2, x: 0, y: 1)
             )
         }
         .disabled(isPurchased)
         .opacity(isPurchased ? 0.7 : 1.0)
     }
-}
-
-struct SupportButton: View {
-    let title: String
-    let icon: String
-    let color: Color
-    let action: () -> Void
     
-    var body: some View {
-        Button(action: action) {
-            HStack(spacing: 12) {
-                Image(systemName: icon)
-                    .font(.title3)
-                    .foregroundColor(color)
-                    .frame(width: 24)
-                
-                Text(title)
-                    .font(.headline)
-                    .fontWeight(.medium)
-                    .foregroundColor(.primary)
-                
-                Spacer()
-                
-                Image(systemName: "chevron.right")
-                    .font(.caption)
-                    .foregroundColor(.secondary)
-            }
-            .padding(16)
-            .background(
-                RoundedRectangle(cornerRadius: 12)
-                    .fill(Color(.systemBackground))
-                    .shadow(color: .black.opacity(0.1), radius: 2, x: 0, y: 1)
-            )
+    private func getTipName() -> String {
+        // Map product IDs to tip names based on common patterns
+        let price = product.displayPrice
+        if price.contains("0.99") {
+            return "Generous"
+        } else if price.contains("1.99") {
+            return "Massive"
+        } else if price.contains("4.99") {
+            return "Amazing"
+        } else {
+            return product.displayName
         }
     }
 }

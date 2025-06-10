@@ -128,23 +128,52 @@ struct FilterSelectionView: View {
     
     var body: some View {
         GeometryReader { geometry in
-            VStack(spacing: 0) {
-                // Main image display
-                MainImageDisplayView(
-                    image: photoManager.filteredImage,
-                    isProcessing: photoManager.isProcessing
-                )
-                .frame(height: geometry.size.height * 0.7)
-                
-                // Filter selection carousel
-                FilterCarouselView(
-                    filters: photoManager.availableFilters,
-                    selectedIndex: $selectedFilterIndex,
-                    onFilterSelected: { filter in
-                        photoManager.selectFilter(filter)
-                    }
-                )
-                .frame(height: geometry.size.height * 0.3)
+            let isLandscape = geometry.size.width > geometry.size.height
+            
+            if isLandscape {
+                // Landscape: Side-by-side layout
+                HStack(spacing: 0) {
+                    // Main image display
+                    MainImageDisplayView(
+                        image: photoManager.filteredImage,
+                        isProcessing: photoManager.isProcessing
+                    )
+                    .frame(width: geometry.size.width * 0.65)
+                    
+                    // Filter grid on the right
+                    FilterGridView(
+                        filters: photoManager.availableFilters,
+                        selectedIndex: $selectedFilterIndex,
+                        onFilterSelected: { filter in
+                            photoManager.selectFilter(filter)
+                        },
+                        isLandscape: true
+                    )
+                    .frame(width: geometry.size.width * 0.35)
+                    .background(Color(.systemGroupedBackground))
+                }
+            } else {
+                // Portrait: Top/bottom layout
+                VStack(spacing: 0) {
+                    // Main image display
+                    MainImageDisplayView(
+                        image: photoManager.filteredImage,
+                        isProcessing: photoManager.isProcessing
+                    )
+                    .frame(height: geometry.size.height * 0.6)
+                    
+                    // Filter grid below
+                    FilterGridView(
+                        filters: photoManager.availableFilters,
+                        selectedIndex: $selectedFilterIndex,
+                        onFilterSelected: { filter in
+                            photoManager.selectFilter(filter)
+                        },
+                        isLandscape: false
+                    )
+                    .frame(height: geometry.size.height * 0.4)
+                    .background(Color(.systemGroupedBackground))
+                }
             }
         }
         .background(
@@ -218,6 +247,61 @@ struct MainImageDisplayView: View {
             }
         }
         .background(Color.white)
+    }
+}
+
+struct FilterGridView: View {
+    let filters: [FilteredImage]
+    @Binding var selectedIndex: Int
+    let onFilterSelected: (FilteredImage) -> Void
+    let isLandscape: Bool
+    
+    private var columns: [GridItem] {
+        // Detect iPad vs iPhone
+        let isIPad = UIDevice.current.userInterfaceIdiom == .pad
+        
+        let columnCount: Int
+        if isIPad {
+            columnCount = isLandscape ? 4 : 3
+        } else {
+            columnCount = isLandscape ? 2 : 3
+        }
+        
+        return Array(repeating: GridItem(.flexible(), spacing: 12), count: columnCount)
+    }
+    
+    var body: some View {
+        VStack(spacing: 0) {
+            if !filters.isEmpty {
+                ScrollView {
+                    LazyVGrid(columns: columns, spacing: 12) {
+                        ForEach(Array(filters.enumerated()), id: \.element.id) { index, filter in
+                            FilterGridThumbnailView(
+                                filter: filter,
+                                isSelected: index == selectedIndex,
+                                isLandscape: isLandscape
+                            )
+                            .onTapGesture {
+                                selectedIndex = index
+                                onFilterSelected(filter)
+                            }
+                        }
+                    }
+                    .padding(.horizontal, 12)
+                    .padding(.vertical, 16)
+                }
+            } else {
+                VStack {
+                    ProgressView()
+                        .scaleEffect(1.2)
+                    Text("Loading filters...")
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                        .padding(.top, 8)
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+            }
+        }
     }
 }
 
@@ -295,6 +379,55 @@ struct FilterThumbnailView: View {
                 .lineLimit(1)
                 .frame(width: 80)
         }
+    }
+}
+
+struct FilterGridThumbnailView: View {
+    let filter: FilteredImage
+    let isSelected: Bool
+    let isLandscape: Bool
+    
+    private var thumbnailSize: CGFloat {
+        let isIPad = UIDevice.current.userInterfaceIdiom == .pad
+        
+        if isIPad {
+            return isLandscape ? 140 : 120
+        } else {
+            return isLandscape ? 110 : 90
+        }
+    }
+    
+    var body: some View {
+        VStack(spacing: 8) {
+            Image(uiImage: filter.image)
+                .resizable()
+                .scaledToFill()
+                .frame(width: thumbnailSize, height: thumbnailSize)
+                .clipShape(RoundedRectangle(cornerRadius: 12))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 12)
+                        .stroke(
+                            isSelected ? Color.green : Color.clear,
+                            lineWidth: 3
+                        )
+                )
+                .shadow(
+                    color: isSelected ? .green.opacity(0.4) : .black.opacity(0.15),
+                    radius: isSelected ? 6 : 3,
+                    x: 0,
+                    y: 2
+                )
+                .scaleEffect(isSelected ? 1.05 : 1.0)
+                .animation(.easeInOut(duration: 0.2), value: isSelected)
+            
+            Text(filter.name)
+                .font(.caption)
+                .fontWeight(isSelected ? .semibold : .medium)
+                .foregroundColor(isSelected ? .green : .primary)
+                .lineLimit(1)
+                .frame(maxWidth: thumbnailSize)
+        }
+        .padding(.vertical, 4)
     }
 }
 

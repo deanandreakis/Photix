@@ -217,9 +217,61 @@ class MetalFilterRenderer: NSObject, ObservableObject {
         
         filter.setValue(image, forKey: kCIInputImageKey)
         
-        // Apply intensity where applicable
-        if filter.inputKeys.contains(kCIInputIntensityKey) {
-            filter.setValue(intensity, forKey: kCIInputIntensityKey)
+        // Special parameter handling for filters that need it
+        switch filterType {
+        case .cool:
+            // Cool temperature effect with intensity scaling
+            let tempValue = CGFloat(-1000 * intensity)
+            filter.setValue(CIVector(x: tempValue, y: 0), forKey: "inputNeutral")
+            filter.setValue(CIVector(x: tempValue, y: 0), forKey: "inputTargetNeutral")
+            
+        case .warm:
+            // Warm temperature effect with intensity scaling
+            let tempValue = CGFloat(1000 * intensity)
+            filter.setValue(CIVector(x: tempValue, y: 0), forKey: "inputNeutral")
+            filter.setValue(CIVector(x: tempValue, y: 0), forKey: "inputTargetNeutral")
+            
+        case .sharpen:
+            filter.setValue(0.4 * intensity, forKey: "inputSharpness")
+            
+        case .softFocus:
+            filter.setValue(2.0 * intensity, forKey: "inputRadius")
+            
+        case .vibrant:
+            filter.setValue(intensity, forKey: "inputAmount")
+            
+        case .sketch:
+            filter.setValue(0.7, forKey: "inputNRNoiseLevel")
+            filter.setValue(0.02, forKey: "inputNRSharpness")
+            filter.setValue(intensity, forKey: "inputEdgeIntensity")
+            
+        case .crystallize:
+            filter.setValue(20.0 * intensity, forKey: "inputRadius")
+            let centerX = image.extent.size.width / 2.0
+            let centerY = image.extent.size.height / 2.0
+            let center = CIVector(x: centerX, y: centerY)
+            filter.setValue(center, forKey: kCIInputCenterKey)
+            
+        case .edges:
+            filter.setValue(intensity, forKey: "inputIntensity")
+            
+        case .pixelate:
+            filter.setValue(8.0 * intensity, forKey: "inputScale")
+            
+        case .kaleidoscope:
+            // CITriangleKaleidoscope doesn't use inputCenter, only inputPoint
+            let centerX = image.extent.size.width / 2.0
+            let centerY = image.extent.size.height / 2.0
+            let center = CIVector(x: centerX, y: centerY)
+            filter.setValue(center, forKey: "inputPoint")
+            filter.setValue(6.0, forKey: "inputSize")
+            filter.setValue(0.0, forKey: "inputDecay")
+            
+        default:
+            // Apply intensity where applicable for other filters
+            if filter.inputKeys.contains(kCIInputIntensityKey) {
+                filter.setValue(intensity, forKey: kCIInputIntensityKey)
+            }
         }
         
         guard let outputImage = filter.outputImage else {

@@ -37,11 +37,11 @@ class DependencyContainer: ObservableObject {
     }
     
     private func configureStoreManager() {
-        // Configure with your actual product identifiers
+        // Configure with tip jar product identifiers from App Store Connect
         let productIdentifiers: Set<String> = [
-            "com.deanware.photix.tip",
-            "com.deanware.photix.premium"
-            // Add your actual product IDs here
+            "tip99",   // Generous Tip $0.99
+            "tip199",  // Massive Tip $1.99  
+            "tip499"   // Amazing Tip $4.99
         ]
         
         storeManager.configure(with: productIdentifiers)

@@ -40,6 +40,21 @@ enum FilterType: String, CaseIterable, Identifiable {
     case eightBitRetro = "8-bit Retro"
     case vignette = "Vignette"
     
+    // New popular filters
+    case dramatic = "Dramatic"
+    case vintage = "Vintage"
+    case cool = "Cool"
+    case warm = "Warm"
+    case sharpen = "Sharpen"
+    case softFocus = "Soft Focus"
+    case vibrant = "Vibrant"
+    case sketch = "Sketch"
+    case comic = "Comic"
+    case crystallize = "Crystallize"
+    case edges = "Edges"
+    case pixelate = "Mosaic"
+    case kaleidoscope = "Kaleidoscope"
+    
     var id: String { rawValue }
     
     var coreImageFilterName: String? {
@@ -80,6 +95,32 @@ enum FilterType: String, CaseIterable, Identifiable {
             return "CIPixellate"
         case .vignette:
             return "CIVignetteEffect"
+        case .dramatic:
+            return "CIPhotoEffectDramatic"
+        case .vintage:
+            return "CIPhotoEffectVintage"
+        case .cool:
+            return "CITemperatureAndTint"
+        case .warm:
+            return "CITemperatureAndTint"
+        case .sharpen:
+            return "CISharpenLuminance"
+        case .softFocus:
+            return "CIGaussianBlur"
+        case .vibrant:
+            return "CIVibrance"
+        case .sketch:
+            return "CILineOverlay"
+        case .comic:
+            return "CIComicEffect"
+        case .crystallize:
+            return "CICrystallize"
+        case .edges:
+            return "CIEdges"
+        case .pixelate:
+            return "CIPixellate"
+        case .kaleidoscope:
+            return "CITriangleKaleidoscope"
         }
     }
 }
