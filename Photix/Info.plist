@@ -60,6 +60,13 @@
 		<string>background-processing</string>
 	</array>
 	
+	<!-- Background Task Scheduler Identifiers -->
+	<key>BGTaskSchedulerPermittedIdentifiers</key>
+	<array>
+		<string>com.deanware.photix.background-processing</string>
+		<string>com.deanware.photix.image-processing</string>
+	</array>
+	
 	<!-- App Transport Security -->
 	<key>NSAppTransportSecurity</key>
 	<dict>
