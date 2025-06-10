@@ -2,22 +2,19 @@
 //  DNWFilterImage.h
 //  Photix
 //
-//  Created by Dean Andreakis on 8/10/14.
-//  Copyright (c) 2014 deanware. All rights reserved.
+//  Legacy compatibility header - functionality migrated to Swift
+//  This file exists only for build compatibility and will be removed
 //
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@protocol FilteringCompleteDelegate <NSObject>
-
--(void)filteringComplete:(NSArray*)filteredImages;//array of filtered images DNWFilteredImageModel
-
-@end
-
+// Legacy compatibility - all functionality moved to Swift FilterProcessor
 @interface DNWFilterImage : NSObject
 
-- (void)filterImage:(UIImage*)imageToFilter;
-@property (nonatomic, strong) id <FilteringCompleteDelegate> filterDelegate;
+// Deprecated - use Swift FilterProcessor instead
++ (void)processImageInBackground:(UIImage *)image
+                      filterName:(NSString *)filterName
+                        delegate:(id)delegate __attribute__((deprecated("Use Swift FilterProcessor")));
 
 @end

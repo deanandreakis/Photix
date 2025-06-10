@@ -11,27 +11,32 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject private var photoManager: PhotoManager
     @EnvironmentObject private var dependencies: DependencyContainer
-    @State private var navigationState = NavigationState()
+    @StateObject private var navigationState = NavigationState()
     
     var body: some View {
         NavigationStack(path: $navigationState.path) {
             PhotoCaptureView()
                 .navigationDestination(for: NavigationDestination.self) { destination in
-                    switch destination {
-                    case .filters:
-                        FilterSelectionView()
-                            .environmentObject(navigationState)
-                    case .photoEdit:
-                        PhotoEditView()
-                            .environmentObject(navigationState)
-                            .environmentObject(dependencies)
-                    case .settings:
-                        SettingsView()
-                            .environmentObject(navigationState)
-                    }
+                    destinationView(for: destination)
                 }
                 .environmentObject(navigationState)
         }
         .tint(.primary)
+    }
+    
+    @ViewBuilder
+    private func destinationView(for destination: NavigationDestination) -> some View {
+        switch destination {
+        case .filters:
+            FilterSelectionView()
+                .environmentObject(navigationState)
+        case .photoEdit:
+            PhotoEditView()
+                .environmentObject(navigationState)
+                .environmentObject(dependencies)
+        case .settings:
+            SettingsView()
+                .environmentObject(navigationState)
+        }
     }
 }

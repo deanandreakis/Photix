@@ -91,11 +91,12 @@ import SwiftUI
     @objc static func createFilteredImageModel(
         image: UIImage,
         name: String
-    ) -> DNWFilteredImageModel {
-        let model = DNWFilteredImageModel()
-        model.filteredImage = image
-        model.imageName = name
-        return model
+    ) -> [String: Any] {
+        // Return dictionary for Objective-C compatibility
+        return [
+            "filteredImage": image,
+            "imageName": name
+        ]
     }
 }
 

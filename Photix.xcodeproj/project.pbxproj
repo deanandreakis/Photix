@@ -44,13 +44,17 @@
 		5E81255D2DF38F5F0074AED7 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E81255C2DF38F5F0074AED7 /* WidgetKit.framework */; };
 		5E81255F2DF38F6C0074AED7 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E81255E2DF38F6C0074AED7 /* Metal.framework */; };
 		5E8125612DF38F7C0074AED7 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8125602DF38F7C0074AED7 /* MetalKit.framework */; };
+		5E8125652DF8B6BC0074AED7 /* ImageProcessingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8125622DF8B6BB0074AED7 /* ImageProcessingTests.swift */; };
+		5E8125662DF8B6BC0074AED7 /* StoreManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8125632DF8B6BB0074AED7 /* StoreManagerTests.swift */; };
+		5E8125672DF8B6BC0074AED7 /* PhotixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8125642DF8B6BC0074AED7 /* PhotixTests.swift */; };
+		5E8125692DF8B8440074AED7 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8125682DF8B8440074AED7 /* UIImage+Extensions.swift */; };
+		5E81256B2DF8B9530074AED7 /* PhotoEditingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E81256A2DF8B9530074AED7 /* PhotoEditingViewController.swift */; };
 		5EC9AE8321780C2300D94638 /* OilPaintPlusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC9AE8221780C2300D94638 /* OilPaintPlusUITests.swift */; };
 		5EC9AE8B21780E4300D94638 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC9AE8A21780E4300D94638 /* SnapshotHelper.swift */; };
 		C10182261A2153DA0071A793 /* lookup_soft_elegance_1.png in Resources */ = {isa = PBXBuildFile; fileRef = C1A9F41B1A1EE1BA00513812 /* lookup_soft_elegance_1.png */; };
 		C10182271A2153E50071A793 /* lookup_soft_elegance_2.png in Resources */ = {isa = PBXBuildFile; fileRef = C1A9F41E1A1EE1CC00513812 /* lookup_soft_elegance_2.png */; };
 		C1054CE719A434D800A4D8F3 /* PhotosUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1054CE619A434D800A4D8F3 /* PhotosUI.framework */; };
 		C1054CE919A434D800A4D8F3 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1054CE819A434D800A4D8F3 /* Photos.framework */; };
-		C1054CEF19A434D800A4D8F3 /* PhotoEditingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1054CEE19A434D800A4D8F3 /* PhotoEditingViewController.m */; };
 		C1054CF119A434D800A4D8F3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1054CF019A434D800A4D8F3 /* MainInterface.storyboard */; };
 		C1054CF419A434D800A4D8F3 /* OilPaintPlus.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C1054CE519A434D800A4D8F3 /* OilPaintPlus.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C11C84561CE427D300625DD8 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11C84551CE427D300625DD8 /* AudioToolbox.framework */; };
@@ -62,41 +66,24 @@
 		C11C84621CE4281600625DD8 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11C84611CE4281600625DD8 /* MediaPlayer.framework */; };
 		C11C84631CE4282200625DD8 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BAFD3A18B1B58F0078C88D /* MessageUI.framework */; };
 		C11C84651CE4283300625DD8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11C84641CE4283300625DD8 /* SystemConfiguration.framework */; };
-		C1210EB71996812000C1E4E7 /* DNWFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1210EB61996812000C1E4E7 /* DNWFilterViewController.m */; };
-		C1210EB81996812000C1E4E7 /* DNWFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1210EB61996812000C1E4E7 /* DNWFilterViewController.m */; };
-		C154481518B8445C007B54D1 /* DNWOtherApps.m in Sources */ = {isa = PBXBuildFile; fileRef = C154481418B8445C007B54D1 /* DNWOtherApps.m */; };
 		C15E1C3B1CFFCEBF003075B1 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1054CE819A434D800A4D8F3 /* Photos.framework */; };
 		C15E1C3C1CFFCF41003075B1 /* PhotosUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1054CE619A434D800A4D8F3 /* PhotosUI.framework */; };
 		C1A9F3F91A1D9B8400513812 /* PhotixFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = C1A9F3F81A1D9B8400513812 /* PhotixFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C1A9F40B1A1D9B8400513812 /* PhotixFilter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A9F3F41A1D9B8400513812 /* PhotixFilter.framework */; };
 		C1A9F40C1A1D9B8400513812 /* PhotixFilter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C1A9F3F41A1D9B8400513812 /* PhotixFilter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C1A9F4141A1ECB8200513812 /* DNWFilterImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E0E40F199826EB00D3FD21 /* DNWFilterImage.m */; };
-		C1A9F4151A1ECB8B00513812 /* DNWFilteredImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C149F4011999941A00584382 /* DNWFilteredImageModel.m */; };
 		C1A9F4161A1ECBD000513812 /* DNWFilterImage.h in Headers */ = {isa = PBXBuildFile; fileRef = C1E0E40E199826EB00D3FD21 /* DNWFilterImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C1A9F4171A1ECBDB00513812 /* DNWFilteredImageModel.h in Headers */ = {isa = PBXBuildFile; fileRef = C149F4001999941A00584382 /* DNWFilteredImageModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C1A9F41C1A1EE1BA00513812 /* lookup_soft_elegance_1.png in Resources */ = {isa = PBXBuildFile; fileRef = C1A9F41B1A1EE1BA00513812 /* lookup_soft_elegance_1.png */; };
 		C1A9F41D1A1EE1BA00513812 /* lookup_soft_elegance_1.png in Resources */ = {isa = PBXBuildFile; fileRef = C1A9F41B1A1EE1BA00513812 /* lookup_soft_elegance_1.png */; };
 		C1A9F41F1A1EE1CC00513812 /* lookup_soft_elegance_2.png in Resources */ = {isa = PBXBuildFile; fileRef = C1A9F41E1A1EE1CC00513812 /* lookup_soft_elegance_2.png */; };
 		C1A9F4201A1EE1CC00513812 /* lookup_soft_elegance_2.png in Resources */ = {isa = PBXBuildFile; fileRef = C1A9F41E1A1EE1CC00513812 /* lookup_soft_elegance_2.png */; };
-		C1BAFD2A18B14B4E0078C88D /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BAFD2918B14B4E0078C88D /* DatabaseManager.m */; };
-		C1BAFD3118B158570078C88D /* UIImage+normalizedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BAFD3018B158570078C88D /* UIImage+normalizedImage.m */; };
-		C1BAFD3718B15D720078C88D /* DNWPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BAFD3618B15D720078C88D /* DNWPictureViewController.m */; };
 		C1BAFD3918B1B4E70078C88D /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BAFD3818B1B4E70078C88D /* Social.framework */; };
-		C1C1163B18D5FB9C00247E0F /* DNWImageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C1C1163A18D5FB9C00247E0F /* DNWImageTests.m */; };
-		C1C1163C18D60C4F00247E0F /* DNWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C1DBBCF218A6BFEF007BF4CE /* DNWAppDelegate.m */; };
-		C1C1163D18D60C4F00247E0F /* UIImage+normalizedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BAFD3018B158570078C88D /* UIImage+normalizedImage.m */; };
-		C1C1163E18D60C4F00247E0F /* DNWOtherApps.m in Sources */ = {isa = PBXBuildFile; fileRef = C154481418B8445C007B54D1 /* DNWOtherApps.m */; };
-		C1C1163F18D60C4F00247E0F /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BAFD2918B14B4E0078C88D /* DatabaseManager.m */; };
-		C1C1164018D60C4F00247E0F /* DNWMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1DBBD1B18A7186E007BF4CE /* DNWMainViewController.m */; };
-		C1C1164118D60C4F00247E0F /* DNWPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BAFD3618B15D720078C88D /* DNWPictureViewController.m */; };
-		C1C1164218D60C4F00247E0F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C1DBBCEE18A6BFEF007BF4CE /* main.m */; };
 		C1C1164318D60D2D00247E0F /* Photix.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C1DBBCF418A6BFEF007BF4CE /* Photix.xcdatamodeld */; };
 		C1C1164718D60D9F00247E0F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1E20FB118B980E1001A2BE3 /* QuartzCore.framework */; };
 		C1C1164818D60DA900247E0F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BAFD3A18B1B58F0078C88D /* MessageUI.framework */; };
 		C1C1164918D60DB300247E0F /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BAFD3818B1B4E70078C88D /* Social.framework */; };
 		C1C1164A18D60DBF00247E0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1DBBCE218A6BFEF007BF4CE /* CoreGraphics.framework */; };
 		C1C1164B18D60F5A00247E0F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1DBBCF718A6BFEF007BF4CE /* Images.xcassets */; };
-		C1C1164D18D60F5A00247E0F /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1DBBD1518A70940007BF4CE /* MainStoryboard.storyboard */; };
 		C1C1165F18D65F9A00247E0F /* test1_2448_3264.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C1C1165E18D65F9A00247E0F /* test1_2448_3264.jpg */; };
 		C1C1166018D65F9A00247E0F /* test1_2448_3264.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C1C1165E18D65F9A00247E0F /* test1_2448_3264.jpg */; };
 		C1C1166218D65FAA00247E0F /* test2_3264_2448.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C1C1166118D65FAA00247E0F /* test2_3264_2448.jpg */; };
@@ -110,8 +97,6 @@
 		C1DBBCE518A6BFEF007BF4CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1DBBCE418A6BFEF007BF4CE /* UIKit.framework */; };
 		C1DBBCE718A6BFEF007BF4CE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1DBBCE618A6BFEF007BF4CE /* CoreData.framework */; };
 		C1DBBCED18A6BFEF007BF4CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C1DBBCEB18A6BFEF007BF4CE /* InfoPlist.strings */; };
-		C1DBBCEF18A6BFEF007BF4CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C1DBBCEE18A6BFEF007BF4CE /* main.m */; };
-		C1DBBCF318A6BFEF007BF4CE /* DNWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C1DBBCF218A6BFEF007BF4CE /* DNWAppDelegate.m */; };
 		C1DBBCF618A6BFEF007BF4CE /* Photix.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C1DBBCF418A6BFEF007BF4CE /* Photix.xcdatamodeld */; };
 		C1DBBCF818A6BFEF007BF4CE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1DBBCF718A6BFEF007BF4CE /* Images.xcassets */; };
 		C1DBBCFF18A6BFEF007BF4CE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1DBBCFE18A6BFEF007BF4CE /* XCTest.framework */; };
@@ -119,14 +104,8 @@
 		C1DBBD0118A6BFEF007BF4CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1DBBCE418A6BFEF007BF4CE /* UIKit.framework */; };
 		C1DBBD0218A6BFEF007BF4CE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1DBBCE618A6BFEF007BF4CE /* CoreData.framework */; };
 		C1DBBD0A18A6BFEF007BF4CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C1DBBD0818A6BFEF007BF4CE /* InfoPlist.strings */; };
-		C1DBBD0C18A6BFEF007BF4CE /* PhotixTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C1DBBD0B18A6BFEF007BF4CE /* PhotixTests.m */; };
-		C1DBBD1618A70940007BF4CE /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1DBBD1518A70940007BF4CE /* MainStoryboard.storyboard */; };
-		C1DBBD1C18A7186E007BF4CE /* DNWMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1DBBD1B18A7186E007BF4CE /* DNWMainViewController.m */; };
 		C1E20FB218B980E1001A2BE3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1E20FB118B980E1001A2BE3 /* QuartzCore.framework */; };
-		C1F694F71AEF1CBF0062D187 /* DNWSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F694F61AEF1CBF0062D187 /* DNWSettingsViewController.m */; };
 		C1F699301B25EA1E0077C3FF /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F6992F1B25EA1E0077C3FF /* StoreKit.framework */; };
-		C1F699361B25EABA0077C3FF /* IAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F699331B25EABA0077C3FF /* IAPHelper.m */; };
-		C1F699371B25EABA0077C3FF /* PhotixIAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F699351B25EABA0077C3FF /* PhotixIAPHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -194,7 +173,6 @@
 
 /* Begin PBXFileReference section */
 		5E3E0F722160446A0015BF52 /* KuwaharaFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KuwaharaFilter.swift; sourceTree = "<group>"; };
-		5E66A9AC2117E855003F5AB6 /* Photix-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Photix-Bridging-Header.h"; sourceTree = "<group>"; };
 		5E8125182DF382D40074AED7 /* Photix.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Photix.entitlements; sourceTree = "<group>"; };
 		5E8125192DF383F80074AED7 /* OilPaintPlus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OilPaintPlus.entitlements; sourceTree = "<group>"; };
 		5E81251A2DF385070074AED7 /* PhotoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhotoManager.swift; path = Photix/Models/PhotoManager.swift; sourceTree = "<group>"; };
@@ -233,6 +211,11 @@
 		5E81255C2DF38F5F0074AED7 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		5E81255E2DF38F6C0074AED7 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		5E8125602DF38F7C0074AED7 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		5E8125622DF8B6BB0074AED7 /* ImageProcessingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageProcessingTests.swift; path = PhotixTests/ImageProcessingTests.swift; sourceTree = "<group>"; };
+		5E8125632DF8B6BB0074AED7 /* StoreManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StoreManagerTests.swift; path = PhotixTests/StoreManagerTests.swift; sourceTree = "<group>"; };
+		5E8125642DF8B6BC0074AED7 /* PhotixTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhotixTests.swift; path = PhotixTests/PhotixTests.swift; sourceTree = "<group>"; };
+		5E8125682DF8B8440074AED7 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIImage+Extensions.swift"; path = "Photix/UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		5E81256A2DF8B9530074AED7 /* PhotoEditingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhotoEditingViewController.swift; path = OilPaintPlus/PhotoEditingViewController.swift; sourceTree = "<group>"; };
 		5EC9AE8021780C2300D94638 /* OilPaintPlusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OilPaintPlusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EC9AE8221780C2300D94638 /* OilPaintPlusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OilPaintPlusUITests.swift; sourceTree = "<group>"; };
 		5EC9AE8421780C2400D94638 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -304,7 +287,6 @@
 		C1DBBD0718A6BFEF007BF4CE /* PhotixTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PhotixTests-Info.plist"; sourceTree = "<group>"; };
 		C1DBBD0918A6BFEF007BF4CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C1DBBD0B18A6BFEF007BF4CE /* PhotixTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotixTests.m; sourceTree = "<group>"; };
-		C1DBBD1518A70940007BF4CE /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		C1DBBD1A18A7186E007BF4CE /* DNWMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNWMainViewController.h; sourceTree = "<group>"; };
 		C1DBBD1B18A7186E007BF4CE /* DNWMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNWMainViewController.m; sourceTree = "<group>"; };
 		C1E0E40E199826EB00D3FD21 /* DNWFilterImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DNWFilterImage.h; path = ../Photix/DNWFilterImage.h; sourceTree = "<group>"; };
@@ -490,7 +472,6 @@
 		C1BAFD2B18B14B600078C88D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C1DBBD1518A70940007BF4CE /* MainStoryboard.storyboard */,
 				C1CB31861A339B2400B515AE /* LaunchScreen.xib */,
 			);
 			name = Views;
@@ -522,6 +503,11 @@
 		C1DBBCD418A6BFEF007BF4CE = {
 			isa = PBXGroup;
 			children = (
+				5E81256A2DF8B9530074AED7 /* PhotoEditingViewController.swift */,
+				5E8125682DF8B8440074AED7 /* UIImage+Extensions.swift */,
+				5E8125622DF8B6BB0074AED7 /* ImageProcessingTests.swift */,
+				5E8125642DF8B6BC0074AED7 /* PhotixTests.swift */,
+				5E8125632DF8B6BB0074AED7 /* StoreManagerTests.swift */,
 				5E8125412DF38B620074AED7 /* AccessibilitySupport.swift */,
 				5E8125382DF38B610074AED7 /* AdvancedCameraView.swift */,
 				5E8125432DF38B620074AED7 /* AsyncImageView.swift */,
@@ -630,7 +616,6 @@
 		C1DBBCE918A6BFEF007BF4CE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5E66A9AC2117E855003F5AB6 /* Photix-Bridging-Header.h */,
 				C1DBBCEA18A6BFEF007BF4CE /* Photix-Info.plist */,
 				C1DBBCEB18A6BFEF007BF4CE /* InfoPlist.strings */,
 				C1DBBCEE18A6BFEF007BF4CE /* main.m */,
@@ -890,7 +875,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1DBBD1618A70940007BF4CE /* MainStoryboard.storyboard in Resources */,
 				C1C1166218D65FAA00247E0F /* test2_3264_2448.jpg in Resources */,
 				C1DBBCED18A6BFEF007BF4CE /* InfoPlist.strings in Resources */,
 				C1CB31871A339B2400B515AE /* LaunchScreen.xib in Resources */,
@@ -908,7 +892,6 @@
 			files = (
 				C1C1164B18D60F5A00247E0F /* Images.xcassets in Resources */,
 				C1C1166318D65FAA00247E0F /* test2_3264_2448.jpg in Resources */,
-				C1C1164D18D60F5A00247E0F /* MainStoryboard.storyboard in Resources */,
 				C1C1166618D65FB200247E0F /* test3_640_640.jpg in Resources */,
 				C1C1166018D65F9A00247E0F /* test1_2448_3264.jpg in Resources */,
 				C1DBBD0A18A6BFEF007BF4CE /* InfoPlist.strings in Resources */,
@@ -949,7 +932,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1054CEF19A434D800A4D8F3 /* PhotoEditingViewController.m in Sources */,
+				5E81256B2DF8B9530074AED7 /* PhotoEditingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -957,9 +940,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1A9F4151A1ECB8B00513812 /* DNWFilteredImageModel.m in Sources */,
 				5E3E0F732160446A0015BF52 /* KuwaharaFilter.swift in Sources */,
-				C1A9F4141A1ECB8200513812 /* DNWFilterImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -967,6 +948,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E8125692DF8B8440074AED7 /* UIImage+Extensions.swift in Sources */,
 				5E8125462DF38B620074AED7 /* RealtimeFilterView.swift in Sources */,
 				5E8125472DF38B620074AED7 /* ImageCache.swift in Sources */,
 				5E8125482DF38B620074AED7 /* AdvancedCameraView.swift in Sources */,
@@ -997,18 +979,7 @@
 				5E8125252DF3853A0074AED7 /* StoreManager.swift in Sources */,
 				5E81251C2DF385070074AED7 /* PhotoManager.swift in Sources */,
 				5E81251D2DF385070074AED7 /* FilteredImage.swift in Sources */,
-				C1F699371B25EABA0077C3FF /* PhotixIAPHelper.m in Sources */,
-				C154481518B8445C007B54D1 /* DNWOtherApps.m in Sources */,
-				C1BAFD3118B158570078C88D /* UIImage+normalizedImage.m in Sources */,
 				C1DBBCF618A6BFEF007BF4CE /* Photix.xcdatamodeld in Sources */,
-				C1DBBCF318A6BFEF007BF4CE /* DNWAppDelegate.m in Sources */,
-				C1BAFD3718B15D720078C88D /* DNWPictureViewController.m in Sources */,
-				C1F694F71AEF1CBF0062D187 /* DNWSettingsViewController.m in Sources */,
-				C1F699361B25EABA0077C3FF /* IAPHelper.m in Sources */,
-				C1210EB71996812000C1E4E7 /* DNWFilterViewController.m in Sources */,
-				C1DBBCEF18A6BFEF007BF4CE /* main.m in Sources */,
-				C1BAFD2A18B14B4E0078C88D /* DatabaseManager.m in Sources */,
-				C1DBBD1C18A7186E007BF4CE /* DNWMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1016,17 +987,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1C1163E18D60C4F00247E0F /* DNWOtherApps.m in Sources */,
-				C1C1163D18D60C4F00247E0F /* UIImage+normalizedImage.m in Sources */,
+				5E8125652DF8B6BC0074AED7 /* ImageProcessingTests.swift in Sources */,
+				5E8125662DF8B6BC0074AED7 /* StoreManagerTests.swift in Sources */,
+				5E8125672DF8B6BC0074AED7 /* PhotixTests.swift in Sources */,
 				C1C1164318D60D2D00247E0F /* Photix.xcdatamodeld in Sources */,
-				C1C1163C18D60C4F00247E0F /* DNWAppDelegate.m in Sources */,
-				C1C1164118D60C4F00247E0F /* DNWPictureViewController.m in Sources */,
-				C1C1164218D60C4F00247E0F /* main.m in Sources */,
-				C1C1163F18D60C4F00247E0F /* DatabaseManager.m in Sources */,
-				C1C1164018D60C4F00247E0F /* DNWMainViewController.m in Sources */,
-				C1DBBD0C18A6BFEF007BF4CE /* PhotixTests.m in Sources */,
-				C1C1163B18D5FB9C00247E0F /* DNWImageTests.m in Sources */,
-				C1210EB81996812000C1E4E7 /* DNWFilterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1200,6 +1164,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "";
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
@@ -1257,6 +1222,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "";
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
@@ -1568,9 +1534,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.deanware.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "Photix/Photix-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
@@ -1635,8 +1601,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.deanware.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "Photix/Photix-Bridging-Header.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
@@ -1672,6 +1638,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = xctest;
@@ -1703,6 +1670,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = xctest;

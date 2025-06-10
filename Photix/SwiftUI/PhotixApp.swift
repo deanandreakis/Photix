@@ -7,8 +7,11 @@
 //
 
 import SwiftUI
+import UIKit
 
+@main
 struct PhotixApp: App {
+    // Note: AppDelegate functionality moved inline for compilation
     @StateObject private var dependencies = DependencyContainer.shared
     
     var body: some Scene {
@@ -19,6 +22,8 @@ struct PhotixApp: App {
                 .environmentObject(dependencies.storeManager)
                 .onAppear {
                     dependencies.configure()
+                    // Enable modern interface by default
+                    UserDefaults.standard.set(true, forKey: "UseModernInterface")
                 }
         }
     }

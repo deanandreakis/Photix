@@ -92,15 +92,25 @@ struct PhotoCaptureView: View {
         }
         .onChange(of: selectedPhotoItem) { newItem in
             Task {
-                guard let newItem = newItem else { return }
+                guard let newItem = newItem else { 
+                    print("PhotoCaptureView: selectedPhotoItem is nil")
+                    return 
+                }
+                
+                print("PhotoCaptureView: Loading selected photo...")
                 do {
                     if let data = try await newItem.loadTransferable(type: Data.self),
                        let image = UIImage(data: data) {
+                        print("PhotoCaptureView: Image loaded successfully, size: \(image.size)")
                         photoManager.setImage(image)
+                        print("PhotoCaptureView: Navigating to filters...")
                         navigationState.navigateTo(.filters)
+                        print("PhotoCaptureView: Navigation called")
+                    } else {
+                        print("PhotoCaptureView: Failed to convert data to image")
                     }
                 } catch {
-                    print("Failed to load image: \(error)")
+                    print("PhotoCaptureView: Failed to load image: \(error)")
                 }
             }
         }

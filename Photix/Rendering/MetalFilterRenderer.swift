@@ -11,6 +11,7 @@ import MetalKit
 import CoreImage
 import UIKit
 import Combine
+import PhotixFilter
 
 @MainActor
 class MetalFilterRenderer: NSObject, ObservableObject {

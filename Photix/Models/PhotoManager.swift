@@ -25,6 +25,7 @@ class PhotoManager: ObservableObject, FilterProcessorDelegate {
     }
     
     func setImage(_ image: UIImage) {
+        print("PhotoManager: setImage called with size: \(image.size)")
         selectedImage = image
         filteredImage = image
         selectedFilter = nil
@@ -32,6 +33,7 @@ class PhotoManager: ObservableObject, FilterProcessorDelegate {
         processingError = nil
         
         Task {
+            print("PhotoManager: Starting filter processing...")
             await processFilters(for: image)
         }
     }
@@ -60,18 +62,22 @@ class PhotoManager: ObservableObject, FilterProcessorDelegate {
     // MARK: - FilterProcessorDelegate
     
     func filteringCompleted(_ filteredImages: [FilteredImage]) {
+        print("PhotoManager: filteringCompleted with \(filteredImages.count) filters")
         self.availableFilters = filteredImages
         self.isProcessing = false
         
         // Auto-select original image
         if let originalFilter = filteredImages.first(where: { $0.filterType == .original }) {
+            print("PhotoManager: Auto-selecting original filter")
             selectFilter(originalFilter)
+        } else {
+            print("PhotoManager: No original filter found")
         }
     }
     
     func filteringFailed(_ error: FilterProcessorError) {
+        print("PhotoManager: filteringFailed with error: \(error.localizedDescription)")
         self.processingError = error
         self.isProcessing = false
-        print("Filter processing failed: \(error.localizedDescription)")
     }
 }

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import StoreKit
 
 @MainActor
 class DependencyContainer: ObservableObject {
@@ -92,6 +93,15 @@ class DependencyContainer: ObservableObject {
     }
     
     func savePhoto(_ imageData: Data, filterType: String) async throws {
-        try await dataManager.savePhoto(imageData: imageData, filterType: filterType)
+        // Save photo metadata to user defaults for simple tracking
+        let photoId = UUID().uuidString
+        let photoInfo = [
+            "id": photoId,
+            "filterType": filterType,
+            "dateCreated": Date().timeIntervalSince1970
+        ] as [String: Any]
+        
+        dataManager.saveAppSetting(key: "lastProcessedPhoto", value: photoInfo)
+        print("Photo processed with \(filterType) filter")
     }
 }

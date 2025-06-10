@@ -38,6 +38,12 @@ struct PhotoEditView: View {
                 Button("Done") {
                     navigationState.navigateToRoot()
                 }
+                .foregroundStyle(.white)
+                .fontWeight(.semibold)
+                .padding(.horizontal, 12)
+                .padding(.vertical, 6)
+                .background(.blue)
+                .clipShape(RoundedRectangle(cornerRadius: 8))
             }
         }
         .sheet(isPresented: $showingShareSheet) {
@@ -71,10 +77,11 @@ struct PhotoEditView: View {
     
     private var actionButtonsView: some View {
         VStack(spacing: 16) {
+            // Top row - main actions
             HStack(spacing: 20) {
                 // Save to Photos
                 EditActionButton(
-                    title: "Save",
+                    title: "Save to Photos",
                     icon: "square.and.arrow.down",
                     backgroundColor: .green
                 ) {
@@ -89,17 +96,41 @@ struct PhotoEditView: View {
                 ) {
                     showingShareSheet = true
                 }
-                
-                // Review App
-                EditActionButton(
-                    title: "Review",
-                    icon: "star.fill",
-                    backgroundColor: .orange
-                ) {
-                    reviewApp()
-                }
             }
             .padding(.horizontal, 20)
+            
+            // Start Over button - full width and prominent
+            Button(action: {
+                navigationState.navigateToRoot()
+            }) {
+                HStack {
+                    Image(systemName: "arrow.counterclockwise")
+                        .font(.title2)
+                    Text("Start Over - New Photo")
+                        .font(.headline)
+                        .fontWeight(.semibold)
+                }
+                .foregroundStyle(.white)
+                .frame(maxWidth: .infinity)
+                .frame(height: 50)
+                .background(.red)
+                .clipShape(RoundedRectangle(cornerRadius: 12))
+            }
+            .padding(.horizontal, 20)
+            
+            // Review App button - smaller
+            Button(action: {
+                reviewApp()
+            }) {
+                HStack {
+                    Image(systemName: "star.fill")
+                        .font(.caption)
+                    Text("Review App")
+                        .font(.caption)
+                }
+                .foregroundStyle(.orange)
+                .frame(height: 30)
+            }
         }
         .padding(.vertical, 16)
         .background(Color(.systemBackground))

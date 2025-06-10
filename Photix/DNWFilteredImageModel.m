@@ -2,16 +2,14 @@
 //  DNWFilteredImageModel.m
 //  Photix
 //
-//  Created by Dean Andreakis on 8/11/14.
-//  Copyright (c) 2014 deanware. All rights reserved.
+//  Legacy compatibility implementation - functionality migrated to Swift
+//  This file exists only for build compatibility and will be removed
 //
 
 #import "DNWFilteredImageModel.h"
 
 @implementation DNWFilteredImageModel
 
-@synthesize imageName, filteredImage;
-
-
+@synthesize filteredImage, imageName;
 
 @end

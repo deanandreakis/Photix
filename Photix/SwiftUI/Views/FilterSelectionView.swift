@@ -179,13 +179,20 @@ struct FilterSelectionView: View {
             }
         }
         .onAppear {
+            print("FilterSelectionView: onAppear called")
+            print("FilterSelectionView: selectedImage exists: \(photoManager.selectedImage != nil)")
+            print("FilterSelectionView: filteredImage exists: \(photoManager.filteredImage != nil)")
+            print("FilterSelectionView: Available filters: \(photoManager.availableFilters.count)")
+            
             // Auto-select the first filter (Original) if available
             if let firstFilter = photoManager.availableFilters.first {
+                print("FilterSelectionView: Auto-selecting first filter: \(firstFilter.name)")
                 photoManager.selectFilter(firstFilter)
                 selectedFilterIndex = 0
+            } else {
+                print("FilterSelectionView: No filters available to auto-select")
             }
-            print("FilterSelectionView appeared - Available filters: \(photoManager.availableFilters.count)")
-            print("Selected filter: \(photoManager.selectedFilter?.name ?? "None")")
+            print("FilterSelectionView: Selected filter: \(photoManager.selectedFilter?.name ?? "None")")
         }
     }
 }
@@ -466,6 +473,17 @@ struct PhotoEditModalView: View {
                     .frame(maxWidth: .infinity)
                     .frame(height: 50)
                     .background(Color.blue)
+                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                    
+                    Button("Start Over - New Photo") {
+                        onDismiss()
+                    }
+                    .font(.title2)
+                    .fontWeight(.semibold)
+                    .foregroundColor(.white)
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 50)
+                    .background(Color.red)
                     .clipShape(RoundedRectangle(cornerRadius: 12))
                 }
                 .padding(.horizontal, 20)
