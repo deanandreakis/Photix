@@ -56,13 +56,14 @@ actor FilterProcessor {
             throw FilterProcessorError.invalidImage
         }
         
-        // Resize image if too large
-        let processedImage = resizeImageIfNeeded(originalImage)
+        // Ensure image has correct orientation and resize if too large
+        let normalizedImage = originalImage.normalizedImage()
+        let processedImage = resizeImageIfNeeded(normalizedImage)
         let ciImage = CIImage(cgImage: processedImage.cgImage!)
         
         var filteredImages: [FilteredImage] = []
         
-        // Add original image
+        // Add original image (already normalized)
         filteredImages.append(FilteredImage(
             image: processedImage,
             name: FilterType.original.rawValue,
@@ -70,7 +71,7 @@ actor FilterProcessor {
         ))
         
         // Process Kuwahara (Oil Paint) filter
-        if let oilPaintImage = try await processKuwaharaFilter(ciImage: ciImage, orientation: originalImage.imageOrientation) {
+        if let oilPaintImage = try await processKuwaharaFilter(ciImage: ciImage) {
             filteredImages.append(FilteredImage(
                 image: oilPaintImage,
                 name: FilterType.oilPaint.rawValue,
@@ -79,13 +80,13 @@ actor FilterProcessor {
         }
         
         // Process Core Image filters
-        let coreImageFilters = try await processCoreImageFilters(ciImage: ciImage, orientation: originalImage.imageOrientation)
+        let coreImageFilters = try await processCoreImageFilters(ciImage: ciImage)
         filteredImages.append(contentsOf: coreImageFilters)
         
         return filteredImages
     }
     
-    private func processKuwaharaFilter(ciImage: CIImage, orientation: UIImage.Orientation) async throws -> UIImage? {
+    private func processKuwaharaFilter(ciImage: CIImage) async throws -> UIImage? {
         return try await withCheckedThrowingContinuation { continuation in
             Task {
                 do {
@@ -98,7 +99,8 @@ actor FilterProcessor {
                         return
                     }
                     
-                    let filteredImage = UIImage(cgImage: cgImage, scale: 1.0, orientation: orientation)
+                    // Create UIImage with .up orientation since we've already normalized the input
+                    let filteredImage = UIImage(cgImage: cgImage, scale: 1.0, orientation: .up)
                     continuation.resume(returning: filteredImage)
                 } catch {
                     continuation.resume(throwing: FilterProcessorError.processingFailed("Kuwahara filter error: \(error.localizedDescription)"))
@@ -107,7 +109,7 @@ actor FilterProcessor {
         }
     }
     
-    private func processCoreImageFilters(ciImage: CIImage, orientation: UIImage.Orientation) async throws -> [FilteredImage] {
+    private func processCoreImageFilters(ciImage: CIImage) async throws -> [FilteredImage] {
         var filteredImages: [FilteredImage] = []
         
         for filterType in FilterType.allCases {
@@ -117,8 +119,7 @@ actor FilterProcessor {
                 if let filteredImage = try await applyCoreImageFilter(
                     filterName: coreImageFilterName,
                     to: ciImage,
-                    filterType: filterType,
-                    orientation: orientation
+                    filterType: filterType
                 ) {
                     filteredImages.append(filteredImage)
                 }
@@ -134,8 +135,7 @@ actor FilterProcessor {
     private func applyCoreImageFilter(
         filterName: String,
         to ciImage: CIImage,
-        filterType: FilterType,
-        orientation: UIImage.Orientation
+        filterType: FilterType
     ) async throws -> FilteredImage? {
         return try await withCheckedThrowingContinuation { continuation in
             Task {
@@ -221,7 +221,8 @@ actor FilterProcessor {
                         return
                     }
                     
-                    let filteredUIImage = UIImage(cgImage: cgImage, scale: 1.0, orientation: orientation)
+                    // Create UIImage with .up orientation since we've already normalized the input
+                    let filteredUIImage = UIImage(cgImage: cgImage, scale: 1.0, orientation: .up)
                     let filteredImage = FilteredImage(
                         image: filteredUIImage,
                         name: filterType.rawValue,

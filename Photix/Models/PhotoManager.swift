@@ -26,15 +26,17 @@ class PhotoManager: ObservableObject, FilterProcessorDelegate {
     
     func setImage(_ image: UIImage) {
         print("PhotoManager: setImage called with size: \(image.size)")
-        selectedImage = image
-        filteredImage = image
+        // Fix image orientation before processing
+        let normalizedImage = image.normalizedImage()
+        selectedImage = normalizedImage
+        filteredImage = normalizedImage
         selectedFilter = nil
         availableFilters = []
         processingError = nil
         
         Task {
             print("PhotoManager: Starting filter processing...")
-            await processFilters(for: image)
+            await processFilters(for: normalizedImage)
         }
     }
     
