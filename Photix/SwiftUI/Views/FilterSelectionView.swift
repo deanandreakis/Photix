@@ -74,7 +74,7 @@ struct FilterSelectionViewModal: View {
                     )
                 }
                 .frame(height: 80)
-                .background(Color.white)
+                .background(Color(.systemBackground))
             }
         }
         .navigationTitle("Choose Filter")
@@ -84,12 +84,14 @@ struct FilterSelectionViewModal: View {
                 Button("Cancel") {
                     onDismiss()
                 }
+                .foregroundColor(.primary)
             }
             
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button("Next") {
                     showingPhotoEdit = true
                 }
+                .foregroundColor(photoManager.selectedFilter != nil ? .green : .secondary)
                 .disabled(photoManager.selectedFilter == nil)
             }
         }
@@ -178,10 +180,9 @@ struct FilterSelectionView: View {
         }
         .background(
             Rectangle()
-                .fill(Color.white)
+                .fill(Color(.systemBackground))
                 .ignoresSafeArea(.all)
         )
-        .colorScheme(.light)
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarHidden(false)
         .toolbar {
@@ -189,6 +190,7 @@ struct FilterSelectionView: View {
                 Button("Next") {
                     navigationState.navigateTo(.photoEdit)
                 }
+                .foregroundColor(photoManager.selectedFilter != nil ? .green : .secondary)
                 .disabled(photoManager.selectedFilter == nil)
             }
         }
@@ -246,7 +248,7 @@ struct MainImageDisplayView: View {
                     )
             }
         }
-        .background(Color.white)
+        .background(Color(.systemBackground))
     }
 }
 
@@ -341,7 +343,7 @@ struct FilterCarouselView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
         }
-        .background(Color.white)
+        .background(Color(.systemBackground))
     }
 }
 
@@ -456,7 +458,7 @@ struct NavigationControlsView: View {
         }
         .padding(.horizontal, 20)
         .padding(.vertical, 10)
-        .background(Color.white)
+        .background(Color(.systemBackground))
         .border(Color(.systemGray4), width: 0.5)
     }
 }
